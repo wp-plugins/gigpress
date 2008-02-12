@@ -1,0 +1,621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GigPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-06 12:24-0400\n"
+"PO-Revision-Date: 2008-02-07 22:09+0100\n"
+"Last-Translator: Márton András <net@szemtanu.hu>\n"
+"Language-Team: András Márton <net@szemtanu.hu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-Bookmarks: 92,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:197
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:319
+msgid "Add a show"
+msgstr "Koncert hozzáadása"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:198
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:986
+msgid "Upcoming shows"
+msgstr "Következő koncertek"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:199
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1286
+msgid "Tours"
+msgstr "Turnék"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:200
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1088
+msgid "Past shows"
+msgstr "Korábbi koncertek"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:201
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1445
+msgid "Options"
+msgstr "Beállítások"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "<strong>Welcome to GigPress!</strong> You should first"
+msgstr "<strong>Üdvözöl a GigPress!</strong> Először"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "customize some of the options"
+msgstr "végezz el néhány alapbeállítást"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "then get right into adding shows below. Questions?  Please check out the"
+msgstr "utána rögtön elkezdheted beírni a koncerteket. Kérdésed van?  Olvasd el"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "documentation"
+msgstr "a dokumentációt - angolul"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "and"
+msgstr "és a"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "FAQ"
+msgstr "FAQ-ot"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "on the GigPress website. Enjoy!"
+msgstr "a GigPress website-ján. Kellemes időtöltést!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:242
+msgid "Don't show this again"
+msgstr "Ez ne jelenjen meg újra!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:305
+msgid "Sorry, but we had trouble loading that show for editing."
+msgstr "Elnézést, de ezt a koncertet nem sikerült megnyitni szerkesztésre."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:310
+msgid "Edit this show"
+msgstr "Koncert szerkesztése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:328
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:991
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1093
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2083
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2201
+msgid "Date"
+msgstr "Dátum"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:397
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2425
+msgid "at"
+msgstr "Időpont"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:567
+msgid "This is a multi-day event"
+msgstr "Többnapos rendezvény"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:572
+msgid "End date"
+msgstr "Utolsó nap"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:703
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:992
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1094
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2084
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2202
+msgid "City"
+msgstr "Város"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:705
+msgid "I&rsquo;d suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
+msgstr "A javasolt formátum: <strong>Honolulu, HI</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:708
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:993
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1095
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2085
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2203
+msgid "Venue"
+msgstr "Helyszín"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:710
+msgid "This is a required field, so if you don&rsquo;t know, just put <strong>TBA</strong>."
+msgstr "Kötelező mező. Ha még nem tudod megadni a helyszínt, akkor írd be például ezt: <strong>Hamarosan</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:713
+msgid "Venue website"
+msgstr "Helyszín weblapja"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:715
+msgid "Any value entered here will be added as a hyperlink attached to the name of the venue."
+msgstr "Az itt megadott címet a helyszín nevére kattintva lehet majd elérni."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:718
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:994
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1096
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2376
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2656
+msgid "Address"
+msgstr "Cím"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:720
+msgid "If you enter a street address, it will enable auto-linkage to Google Maps.  True that, double true."
+msgstr "Ha megadod a pontos címet (utca, házszám), az kattintásra automatikusan megjelenik a Google Maps-ben."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:723
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:995
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1097
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2087
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2205
+msgid "Country"
+msgstr "Ország"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:895
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:996
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1098
+msgid "Admittance"
+msgstr "Belépés"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:897
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1208
+msgid "Not sure"
+msgstr "Nincs információ"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:898
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1211
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2343
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2637
+msgid "No minors"
+msgstr "Kiskorúaknak tilos"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:899
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1210
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2342
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2636
+msgid "All Ages/Licensed"
+msgstr "Korhatár nélkül (igazolvánnyal)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:900
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1209
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2341
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2635
+msgid "All Ages"
+msgstr "Korhatár nélkül"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:905
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:997
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1099
+msgid "Price"
+msgstr "Jegyár"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:907
+msgid "To accomodate various currency display formats, no auto-formatting will be applied to what you enter here. Keep that in mind!"
+msgstr "Különböző pénznemek beírásakor figyelj arra, hogy nincs automatikus formázás, azok úgy jelennek meg, ahogyan megadod őket."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:910
+msgid "Ticket URL"
+msgstr "Jegyvásárlás url-je"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:912
+msgid "This will enable the &ldquo;buy link&rdquo; when displaying your tour dates."
+msgstr "URL megadása esetén a koncert adatai mellett aktív lesz a \"Jegyvásárlás\" link."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:915
+msgid "Notes"
+msgstr "Megjegyzés"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:918
+msgid ""
+"Use this space to list opening (or headlining) bands, &ldquo;presented by&rdquo; info, or whatever else you like.<br />\n"
+"\t\t\t\tKeep it brief, and maybe don&rsquo;t try to display images inline in this field."
+msgstr "Itt adhatsz meg bármilyen kiegészítő információt (előzenekarok, vendégművészek, szervező, támogató stb.). Fogalmazz tömören, és képeket ne illessz be ide."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:922
+msgid "Part of a tour?"
+msgstr "Melyik turné része?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:924
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1204
+msgid "Nope"
+msgstr "Nem része turnénak"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:937
+msgid "No tours in the database"
+msgstr "Nincs turné a listában"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:942
+msgid "If this show is part of a tour you&rsquo;ve already entered into GigPress, select it here.<br />No tours yet?"
+msgstr "Ha ez a koncert állomása egy a GigPress-ben már megadott turnénak, akkor azt válaszd ki itt.<br />Még nem írtad be a turnét?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:942
+msgid "Create them here."
+msgstr "Hozd létre itt."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:949
+msgid "Update show"
+msgstr "Adatok frissítése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:951
+msgid "Add show"
+msgstr "Koncert hozzáadása"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:998
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1100
+msgid "Buy link"
+msgstr "Jegyvásárlás"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:999
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1101
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1372
+msgid "Actions"
+msgstr "Műveletek"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1022
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1124
+msgid "Tour"
+msgstr "Turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1043
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1145
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2137
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2255
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2482
+msgid "Individual shows"
+msgstr "Koncertek"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1202
+msgid "Link"
+msgstr "Link"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1240
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1410
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1241
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1411
+msgid "Delete"
+msgstr "Törlés"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1288
+msgid "A tour is simply a collection of shows that you want to group together.  When displayed on your site, tours are grouped together under their respective headings."
+msgstr "Összetartozó koncerteket turnéba gyűjthetsz, azok az általad megadott elnevezéssel jelennek meg."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1315
+msgid "Edit your tour name"
+msgstr "Turné elnevezésének szerkesztése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1322
+msgid "Update tour"
+msgstr "Adatok frissítése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1335
+msgid "Sorry, but we had trouble loading that tour for editing."
+msgstr "Elnézést, de ezt a turnét nem sikerült megnyitni szerkesztésre."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1347
+msgid "Add a new tour"
+msgstr "Turné elnevezése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1354
+msgid "Add tour"
+msgstr "Turné hozzáadása"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1362
+msgid "All tours"
+msgstr "Minden turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1364
+msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
+msgstr "Ha törölsz egy turnét, azzal a hozzá tartozó koncertek <strong>NEM</strong> törlődnek."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1369
+msgid "Date added"
+msgstr "Hozzáadott dátumok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1370
+msgid "Tour name"
+msgstr "Turné neve"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1371
+msgid "Shows in tour"
+msgstr "Turnéállomások száma"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1418
+msgid "No tours in the database!"
+msgstr "Nincs turné a listában"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1452
+msgid "General options"
+msgstr "Általános beállítások"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1456
+msgid "Name of your band"
+msgstr "A zenekar neve"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1460
+msgid "This is used in your RSS feed and hCalendar data."
+msgstr "Ez jelenik meg az RSS-ben és a hCalendar adataiban."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1464
+msgid "User level required to use GigPress"
+msgstr "A GigPress használatához szükséges felhasználói szint"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1467
+msgid "Administrator"
+msgstr "Administrator"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1468
+msgid "Editor"
+msgstr "Editor"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1469
+msgid "Author"
+msgstr "Author"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1470
+msgid "Contributor"
+msgstr "Contributor"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1476
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1743
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1775
+msgid "Update Options"
+msgstr "Beállítások frissítése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1484
+msgid "Display &amp; Formatting"
+msgstr "Megjelenés és formátumok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1489
+msgid "Date format"
+msgstr "Dátum formátuma"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1495
+msgid "Time format"
+msgstr "Idő formátuma"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1498
+msgid "Output"
+msgstr "Így fog megjelenni"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1500
+msgid "Here&rsquo;s some documentation on date and time formatting"
+msgstr "Segítség a dátum és az idő formátumának beállításához - angolul"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1500
+msgid "Click &ldquo;Update options&rdquo; to update the sample output."
+msgstr "A minta frissítéséhez kattints a \"Beállítások frissítése\" gombra."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1506
+msgid "Full URL to your &lsquo;Upcoming Shows&rsquo; page"
+msgstr "A \"Következő koncertek\" oldalra mutató teljes URL"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1510
+msgid "Show a link to this page below my sidebar listing."
+msgstr "A link megjelenítése az oldalsó menüben a koncertek listája alatt."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1515
+msgid "No upcoming shows message"
+msgstr "Megjelenő szöveg, amikor nincs következő koncert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1521
+msgid "No past shows message"
+msgstr "Megjelenő szöveg, amikor nincs korábbi koncert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1528
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1530
+msgid "Please include a link to my upcoming shows RSS feed"
+msgstr "Tegyél egy RSS Feed linket a \"Következő koncertek\"-hez"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1531
+msgid "below my upcoming shows table"
+msgstr "a \"Következő koncertek\" táblázata alá"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1532
+msgid "below my sidebar listing"
+msgstr "az oldalsó menü listája alá"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1533
+msgid "in the <code>head</code> portion of my page"
+msgstr "az oldalam fejlécébe: <code>head</code>"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1534
+msgid "Your RSS feed for upcoming shows is"
+msgstr "A \"Következő koncertek\" RSS Feedje: "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1539
+msgid "Default Country"
+msgstr "Ország alapbeállítása"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1707
+msgid "Display &lsquo;Country&rsquo; column?"
+msgstr "Ország oszlopának megjelenítése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1712
+msgid "Heading level of tour names"
+msgstr "Turnénevek címsorának formázási szintje (betűméret, kiemelés stb)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1722
+msgid "Depending on the semantic structure of your page template, you may want the headings which display the name of your tour(s) to be a different level."
+msgstr "Az oldal sablonjában meghatározott felépítéstől függően különböző ott beállított formázásokkal jelenítheted meg a turnénevek címsorait."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1722
+msgid "More on HTML headings."
+msgstr "További segítség a HTML címsorokról - angolul."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1726
+msgid "Cascading Style Sheets"
+msgstr "Stíluslapok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1726
+msgid "CSS"
+msgstr "CSS"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1730
+msgid "Use GigPress&rsquo; default style sheet to display your tour dates"
+msgstr "Turnénevek megjelenítése a GigPress alapbeállításában megadott stíluslappal."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1734
+msgid "Use your own custom styles to display your tour dates"
+msgstr "Turnénevek megjelenítése testreszabott stíluslappal."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1736
+msgid "For more information on using your own style sheet,"
+msgstr "Segítséget találsz a saját stíluslapok testreszabásához - angolul - a"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1736
+msgid "please refer to the documentation"
+msgstr "dokumentációban"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1751
+msgid "Widget options"
+msgstr "Widget beállításai"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1755
+msgid "List heading"
+msgstr "Lista címsorának szövege"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1761
+msgid "Number of shows to list"
+msgstr "Megjelenő koncertek száma"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1764
+msgid "Any number from 1 to 99"
+msgstr "Adj meg egy számot 1-99 között"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1768
+msgid "Segment sidebar list into tours?"
+msgstr "Lista megjelenítése az oldalsó menüben turnék szerint"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1811
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1876
+msgid "You must enter a city."
+msgstr "Add meg a város nevét."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1812
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1877
+msgid "You must enter a venue (perhaps it's TBA?)"
+msgstr "Add meg a helyszín nevét (vagy írd be, hogy: Hamarosan)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1848
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1912
+msgid "Your show  in"
+msgstr "A koncert adatai: "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1848
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1912
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2650
+msgid "on"
+msgstr "- Időpont: "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1848
+msgid "was successfully added."
+msgstr "felkerültek a listára."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1853
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1917
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1985
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2024
+msgid "Something ain&rsquo;t right - try again?"
+msgstr "Hiba történt! Próbáld meg újra!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1912
+msgid "was successfully updated."
+msgstr "frissültek."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1941
+msgid "Show successfully deleted from the database."
+msgstr "A koncertet törölted a listából."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1943
+msgid "We ran into some trouble deleting the show. Sorry."
+msgstr "Elnézést, de a koncert törlése közben hiba törént."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1966
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2009
+msgid "You need to enter a name for the tour. It&rsquo;s the only field for crying out loud!"
+msgstr "Add meg a turné nevét! Itt ez az egyetlen dolog, amit meg kell adni!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:1981
+msgid "was successfully added to the database."
+msgstr "felkerült a listára."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2021
+msgid "Tour name successfully changed to"
+msgstr "A turné neve erre változott"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2054
+msgid "Tour successfully deleted from the database."
+msgstr "A turnét törölted a listából."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2056
+msgid "We ran into some trouble deleting the tour. Sorry."
+msgstr "Elnézést, de a turné törlése közben hiba történt."
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2154
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2516
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2706
+msgid "Upcoming shows RSS feed"
+msgstr "Következő koncertek RSS Feedje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2335
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2644
+msgid "Buy tickets"
+msgstr "Jegyvásárlás"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2357
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2650
+msgid "in"
+msgstr ": "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2367
+msgid "Time"
+msgstr "Időpont: "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2370
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2653
+msgid "Admission"
+msgstr "Jegyár"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2373
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2654
+msgid "Age restrictions"
+msgstr "Korhatár"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2513
+msgid "View all shows"
+msgstr "Összes koncert megjelenítése"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2559
+msgid "GigPress widget options can be found on the"
+msgstr "A GigPress widget beállításai"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2561
+msgid "GigPress options page"
+msgstr "a GigPress beállítások alatt találhatók"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2605
+msgid "Tour dates from"
+msgstr "Turné kezdete"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2652
+msgid "Ends"
+msgstr "Utolsó dátum"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2658
+msgid "Part of"
+msgstr "Ennek a része: "
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2697
+msgid "You&rsquo;re using GigPress"
+msgstr "Készült a GigPress-szel"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:2731
+msgid "Find this address using Google Maps."
+msgstr "Keresd meg ezt a címet a Google Maps-szel!"
+
