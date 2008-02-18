@@ -1,0 +1,89 @@
+.gigpress {
+	background-image: url(images/gigpress_bg.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 1em;
+}
+
+.gigpress .widefat, .gp-table {
+	margin: 1em 0;
+}
+
+.gp-table th {
+	vertical-align: top;
+}
+
+.gp-table td .submit {
+	text-align: left;
+}
+
+.gp-table p {
+	margin-top: 0;
+}
+
+span.gigpress-date {
+	font-weight: bold;
+}
+
+span.gigpress-time {
+	font-size: 90%;
+	color: #666;
+}
+
+th.gp-thead {
+	background-color: #e5f3ff;
+}
+
+th.gp-thead h3 {
+	margin: .2em 0;
+	font-size: 110%;
+}
+
+small.gp-instructions, p.gp-instructions {
+	margin: 0;
+	color: #666;
+	font-size: 100%;
+}
+
+td.notes {
+	font-size: 90%;
+	color: #333;
+	background-color: #fafafa;
+}
+
+td.gp-centre, th.gp-centre {
+	text-align: center;
+}
+
+.optiontable th {
+	font-weight:normal;
+	width:33%;
+}
+
+.optiontable td, .optiontable th {
+	padding:0.5em;
+}
+
+.gigpress fieldset {
+	margin: 1em 0 0;
+	border: none;
+}
+
+.gigpress legend {
+	font-weight: bold;
+}
+
+p.gigpress-footer {
+	text-align: center;
+	margin: 240px 0px 20px;
+}
+
+p.gigpress-footer a {
+	color: #FFF;
+	border-bottom: none;
+}
+
+p.gigpress-footer a:hover {
+	color: #000;
+}
