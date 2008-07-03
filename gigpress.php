@@ -30,7 +30,7 @@ global $gigpress;
 $gigpress = array();
 $gigpress['gigs_table'] = $wpdb->prefix . "gigpress_shows";
 $gigpress['tours_table'] = $wpdb->prefix . "gigpress_tours";
-$gigpress['version'] = "1.3.2";
+$gigpress['version'] = "1.3.3";
 $gigpress['db_version'] = "1.2";
 $gigpress['rss'] = get_bloginfo('home') . "/?feed=gigpress";
 
@@ -43,7 +43,15 @@ if($GLOBALS['wp_version'] < "2.5") {
 global $now;
 $now = mysql2date('Y-m-d', current_time('mysql'));
 
+// URL to wp-content for < 2.6 compatibility
+if ( !defined('WP_CONTENT_URL') ) {
+    define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
+}
 
+// ABS PATH to our plugins directory
+if ( !defined('WP_PLUGIN_DIR') ) {
+    define( 'WP_PLUGIN_DIR', PLUGINDIR);
+}
 
 // -------------------- ADMINISTRATION, BACK-END SHIZZLE ---------------------//
 
@@ -861,7 +869,8 @@ function gigpress_add() {
 				  		<option value="0"><?php _e("None", "gigpress") ?></option>
 				  		<option value="0">-------------</option>
 				  	<?php 
-				  	$entries = get_posts("numberposts=100&orderby=post_date&order=DESC");
+				  	// $entries = get_posts("numberposts=100&orderby=post_date&order=DESC");
+				  	$entries = $wpdb->get_results("SELECT ID, post_title, post_date FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 100");
 						foreach($entries as $entry) {
 							$date = mysql2date(get_option('gigpress_date_format'), $entry->post_date);
 						?>
@@ -1071,7 +1080,7 @@ function gigpress_admin_past() {
 		// Get all upcoming dates from the DB that are NOT part of a tour
 		
 		$past = $wpdb->get_results("
-			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id == 0 AND show_status == 'active' ORDER BY show_date DESC");
+			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id = 0 AND show_status = 'active' ORDER BY show_date DESC");
 		
 		// Do we have dates?
 		if($past != FALSE) { ?>
@@ -2813,11 +2822,11 @@ function gigpress_admin_head() {
 	
 	// Helps some formatting on our admin pages ...
 	echo('
-	<link rel="stylesheet" type="text/css" href="'. get_bloginfo('wpurl') .'/wp-content/plugins/gigpress/gigpress-admin.css" />
+	<link rel="stylesheet" type="text/css" href="'. WP_CONTENT_URL .'/plugins/gigpress/gigpress-admin.css" />
 	');
 	// Load our JS if we're on the 'Add a show' page
 	if(strpos($_SERVER['QUERY_STRING'], 'gigpress') !== false ) {
-		echo('<script type="text/javascript" src="'. get_bloginfo('wpurl') .'/wp-content/plugins/gigpress/scripts/gigpress.js"></script>
+		echo('<script type="text/javascript" src="'. WP_CONTENT_URL .'/plugins/gigpress/scripts/gigpress.js"></script>
 		');
 	}
 }
@@ -2844,7 +2853,7 @@ function gigpress_related_link($postid, $edit = FALSE) {
 function gigpress_styles() {
 	// Default style sheet
 	echo('
-	<link rel="stylesheet" type="text/css" href="'. get_bloginfo('wpurl') .'/wp-content/plugins/gigpress/gigpress.css" />
+	<link rel="stylesheet" type="text/css" href="'. WP_CONTENT_URL .'/plugins/gigpress/gigpress.css" />
 	');
 	// If there's a custom stylesheet, load it too ...
 	if (file_exists(get_template_directory()."/gigpress.css")) {
@@ -2905,7 +2914,7 @@ function gigpress_sanitize($input) {
 // Internationalize
 function gigpress_intl() {
 	global $locale;
-	load_plugin_textdomain('gigpress', 'wp-content/plugins/gigpress/langs/');
+	load_plugin_textdomain('gigpress', WP_PLUGIN_DIR.'/gigpress/langs/');
 }
 
 
