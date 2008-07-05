@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: An easy way for bands to list and manage tour dates on their WordPress-powered website.
-Version: 1.3.2
+Version: 1.3.3
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
