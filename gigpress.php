@@ -3,11 +3,11 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: An easy way for bands to list and manage tour dates on their WordPress-powered website.
-Version: 1.3.3
+Version: 1.3.4
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
-Copyright 2008  AMANDA KISSENHUG
+Copyright 2008 DEREK HOGUE
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ global $gigpress;
 $gigpress = array();
 $gigpress['gigs_table'] = $wpdb->prefix . "gigpress_shows";
 $gigpress['tours_table'] = $wpdb->prefix . "gigpress_tours";
-$gigpress['version'] = "1.3.3";
+$gigpress['version'] = "1.3.4";
 $gigpress['db_version'] = "1.2";
 $gigpress['rss'] = get_bloginfo('home') . "/?feed=gigpress";
 
@@ -48,10 +48,6 @@ if ( !defined('WP_CONTENT_URL') ) {
     define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
 }
 
-// ABS PATH to our plugins directory
-if ( !defined('WP_PLUGIN_DIR') ) {
-    define( 'WP_PLUGIN_DIR', PLUGINDIR);
-}
 
 // -------------------- ADMINISTRATION, BACK-END SHIZZLE ---------------------//
 
@@ -929,7 +925,7 @@ function gigpress_admin_upcoming() {
 	<h2><?php _e("Upcoming shows", "gigpress"); ?></h2>
 			
 		<table class="widefat">
-			<thead>
+			<tbody>
 				<tr>
 					<th scope="col"><?php _e("Date", "gigpress"); ?></th>
 					<th scope="col"><?php _e("City", "gigpress"); ?></th>
@@ -939,7 +935,7 @@ function gigpress_admin_upcoming() {
 					<th scope="col"><?php _e("Buy link", "gigpress"); ?></th>
 					<th colspan="3" class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 				</tr>
-			</thead>
+			</tbody>
 	
 	<?php
 		
@@ -1035,7 +1031,7 @@ function gigpress_admin_past() {
 	<h2><?php _e("Past shows", "gigpress"); ?></h2>
 	
 	<table class="widefat">
-			<thead>
+			<tbody>
 				<tr>
 					<th scope="col"><?php _e("Date", "gigpress"); ?></th>
 					<th scope="col"><?php _e("City", "gigpress"); ?></th>
@@ -1045,7 +1041,7 @@ function gigpress_admin_past() {
 					<th scope="col"><?php _e("Buy link", "gigpress"); ?></th>
 					<th colspan="3" class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 				</tr>
-			</thead>
+			</tbody>
 	
 	<?php
 		
@@ -1347,14 +1343,14 @@ function gigpress_tours() {
 		<input type="hidden" name="gpaction" value="setorder" />
 	
 	<table class="widefat">
-		<thead>
+		<tbody>
 			<tr>
 				<th scope="col"><?php _e("Display order", "gigpress"); ?></th>
 				<th scope="col"><?php _e("Tour name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Shows in tour", "gigpress"); ?></th>
 				<th colspan="2" class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>
-		</thead>
+		</tbody>
 	<?php
 		// Get all upcoming tours from the DB
 		$tours = $wpdb->get_results("SELECT * from ". $gigpress['tours_table'] ." WHERE tour_status = 'active' ORDER BY tour_order ASC");
@@ -1419,14 +1415,14 @@ function gigpress_tours() {
 	?>
 	
 	<table class="widefat">
-		<thead>
+		<tbody>
 			<tr>
 				<th scope="col"><?php _e("Display order", "gigpress"); ?> <small>(<a href="<?php echo $reorder; ?>"><?php _e("edit", "gigpress"); ?></a>)</small></th>
 				<th scope="col"><?php _e("Tour name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Shows in tour", "gigpress"); ?></th>
 				<th colspan="2" class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>
-		</thead>
+		</tbody>
 	<?php
 		// Get all upcoming tours from the DB
 		$tours = $wpdb->get_results("SELECT * from ". $gigpress['tours_table'] ." WHERE tour_status = 'active' ORDER BY tour_order ASC");
@@ -2130,7 +2126,7 @@ function gigpress_upcoming() {
 	?>
 	
 	<table class="gigpress-table hcalendar" cellspacing="0">
-		<thead>
+		<tbody>
 			<tr class="gigpress-header">
 				<th scope="col" class="gigpress-date"><?php _e("Date", "gigpress"); ?></th>
 				<th scope="col" class="gigpress-city"><?php _e("City", "gigpress"); ?></th>
@@ -2139,7 +2135,7 @@ function gigpress_upcoming() {
 				<th scope="col" class="gigpress-country"><?php _e("Country", "gigpress"); ?></th>
 				<?php } ?>
 		</tr>
-		</thead>
+		</tbody>
 
 	<?php 
 	// If grouping by tour	
@@ -2163,12 +2159,16 @@ function gigpress_upcoming() {
 	if($have_tours == FALSE && $have_shows == FALSE) {
 	// We don't have shows of any kind to show you
 	?>
+	<tbody>
 		<tr><td colspan="<?php echo $cols; ?>" class="gigpress-row"><?php echo gigpress_sanitize(get_option('gigpress_noupcoming')); ?></td></tr>
+	</tbody>
 	<?php }
 	if(get_option('gigpress_rss_upcoming') == 1) { ?>
+	<tbody>
 	<tr>
 		<td class="gigpress-rss gigpress-row" colspan="<?php echo $cols; ?>"><a href="<?php echo $gigpress['rss']; ?>" title="<?php _e("Upcoming shows RSS feed", "gigpress"); ?>">RSS</a></td>
 	</tr>
+	</tbody>	
 	<?php } ?>
 	</table>
 
@@ -2214,7 +2214,7 @@ function gigpress_archive() {
 	if(get_option('gigpress_display_country') == 1) { $cols = 4; } else { $cols = 3; }
 	?>
 	<table class="gigpress-table hcalendar" cellspacing="0">
-		<thead>
+		<tbody>
 			<tr class="gigpress-header">
 				<th scope="col" class="gigpress-date"><?php _e("Date", "gigpress"); ?></th>
 				<th scope="col" class="gigpress-city"><?php _e("City", "gigpress"); ?></th>
@@ -2223,7 +2223,7 @@ function gigpress_archive() {
 				<th scope="col" class="gigpress-country"><?php _e("Country", "gigpress"); ?></th>
 				<?php } ?>
 		</tr>
-		</thead>
+		</tbody>
 
 <?php
 	// If grouping by tour	
@@ -2247,7 +2247,9 @@ function gigpress_archive() {
 	if($have_tours == FALSE && $have_shows == FALSE) {
 	// We don't have shows of any kind to show you
 	?>
-		<tr><td colspan="<?php echo $cols; ?>" class="gigpress-row"><?php echo gigpress_sanitize(get_option('gigpress_nopast')); ?></td></tr>
+	<tbody>
+	<tr><td colspan="<?php echo $cols; ?>" class="gigpress-row"><?php echo gigpress_sanitize(get_option('gigpress_nopast')); ?></td></tr>
+	</tbody>
 	<?php } ?>
 	</table>
 
@@ -2311,11 +2313,13 @@ function gigpress_tours_lister($dates) {
 			if($shows != FALSE) {
 			$have_tours = TRUE;
 			?>
+			<tbody>	
 			<tr>
 				<th colspan="<?php echo $cols; ?>" class="gigpress-heading" id="tour-<?php echo $tour->tour_id; ?>">
 					<?php echo "<".$heading.">".gigpress_sanitize($tour->tour_name)."</".$heading.">"; ?>
 				</th>
 			</tr>
+			</tbody>
 			<?php
 			gigpress_gigs_table($shows, "tour", "$dates");
 				
@@ -2358,11 +2362,13 @@ function gigpress_shows_lister($dates) {
 		
 		// Only show a heading for these little guys if there were tours above them ...
 		if($have_tours == TRUE) { ?>
+		<tbody>
 			<tr>
 				<th colspan="<?php echo $cols; ?>" class="gigpress-heading">
 				<?php echo "<".$heading.">".__("Individual shows", "gigpress")."</".$heading.">"; ?>
 				</th>
 			</tr>
+		</tbody>
 	<?php }
 		$have_shows = TRUE;
 		gigpress_gigs_table($shows, "individual", "$dates");	
@@ -2913,8 +2919,7 @@ function gigpress_sanitize($input) {
 
 // Internationalize
 function gigpress_intl() {
-	global $locale;
-	load_plugin_textdomain('gigpress', WP_PLUGIN_DIR.'/gigpress/langs/');
+	load_plugin_textdomain('gigpress', PLUGINDIR.'/gigpress/langs/');
 }
 
 
