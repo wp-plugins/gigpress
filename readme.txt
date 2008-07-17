@@ -3,7 +3,7 @@ Contributors: mrherbivore
 Donate link: http://gigpress.com/donate
 Tags: concerts, bands, tours
 Requires at least: 2.2.3
-Tested up to: 2.5
+Tested up to: 2.6
 
 GigPress provides an easy way for bands to list and manage their concerts and tours on their WordPress-powered website.
 
