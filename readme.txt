@@ -9,7 +9,7 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 
 == Description ==
 
-*GigPress is a WordPress plugin built specifically with musicians and performers in mind.*  Manage all of your upcoming and past performances or events right from within WordPress, and display them using simple shortcodes or template tags on your WordPress-powered website. You can optionally link each show or performance to a post, or automatically create a new post each time you add a new show.  Other features include:
+**GigPress is a WordPress plugin built specifically with musicians and performers in mind.**  Manage all of your upcoming and past performances or events right from within WordPress, and display them using simple shortcodes or template tags on your WordPress-powered website. You can optionally link each show or performance to a post, or automatically create a new post each time you add a new show.  Other features include:
 
 * Ability to list both upcoming shows and past shows, chronologically rolled-over as tour dates pass
 * Grouping of shows into tours
