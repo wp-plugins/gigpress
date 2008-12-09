@@ -1,13 +1,24 @@
 .gigpress {
-	background-image: url(images/gigpress_bg.jpg);
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	border-bottom: 1px solid #CCC;
-	padding-bottom: 1em;
+}
+
+#icon-gigpress {
+	background: transparent url(../images/gigpress-icon-32.png) no-repeat 3px 5px;
 }
 
 .gigpress .widefat, .gp-table {
 	margin: 1em 0;
+}
+
+tr.gigpress-cancelled td, tr.gigpress-cancelled .gigpress-time {
+	color: #999;
+}
+
+strong.gigpress-cancelled, strong.gigpress-soldout {
+	text-transform: uppercase;
+}
+
+strong.gigpress-soldout {
+	color: red;
 }
 
 .gp-table th {
@@ -46,12 +57,20 @@ td.gp-centre, th.gp-centre {
 
 span.gigpress-date {
 	font-weight: bold;
-	display: block;
 }
 
 span.gigpress-time {
 	font-size: 90%;
 	color: #666;
+	padding: 3px 0;
+	display: block;	
+}
+
+span.moreVenue {
+	display: block;
+	font-weight: normal;
+	font-size: 80%;
+	padding: 5px 0;
 }
 
 td.gigpress-notes {
@@ -70,10 +89,15 @@ small.gp-instructions, p.gp-instructions {
 	font-size: 0.9em;
 }
 
+p.gigpress-download {
+	font-weight: bold;
+}
+
 p.gigpress-footer {
 	text-align: center;
 	margin: 240px 0px 20px;
 	font-size: 0.9em;
+	display: none;
 }
 
 p.gigpress-footer a {
@@ -145,6 +169,10 @@ p.gp-trash {
 
 .v23 .submit {
 	margin-left: 34%;
+}
+
+.v23 td.gp-centre a.edit, .v23 td.gp-centre a.delete {
+	display: inline;
 }
 
 /* @end */

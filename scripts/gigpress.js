@@ -2,16 +2,18 @@ $gp=jQuery.noConflict();
 
 $gp(document).ready(function()
 	{
-
-		var time = $gp('select#hh option:selected').parent().attr('label');
-		$gp('span#ampm').text(time);
-		
-		$gp('select#hh').change(function()
-			{
-				var time = $gp('select#hh option:selected').parent().attr('label');
-				$gp('span#ampm').text(time);
-			}
-		);
+		// If we're using the 12-hour clock, then do this magic
+		if ( $gp('select#gp_hh.twelve').length > 0 ) {
+			var time = $gp('select#gp_hh option:selected').parent().attr('label');
+			$gp('span#ampm').text(time);
+			
+			$gp('select#gp_hh.twelve').change(function()
+				{
+					var time = $gp('select#gp_hh option:selected').parent().attr('label');
+					$gp('span#ampm').text(time);
+				}
+			);
+		}
 		
 		$gp('tr#expire.inactive').hide();
 		
@@ -19,6 +21,16 @@ $gp(document).ready(function()
 			{
 				$gp('tr#expire').toggle();
 				this.blur();
+			}
+		);
+		
+		$gp('tr span.moreVenue').show();
+		$gp('tbody#venueInfo').hide();
+		
+		$gp('tr span.moreVenue a').click(function()
+			{
+				$gp('tbody#venueInfo').toggle();
+				return false;
 			}
 		);
 		

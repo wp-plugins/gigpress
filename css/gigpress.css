@@ -55,7 +55,7 @@ th.gigpress-heading h1, th.gigpress-heading h2, th.gigpress-heading h3, th.gigpr
 }
 
 /* To set an alternating row style */
-.gigpress-alt {
+tr.gigpress-alt {
 }
 
 /* Individual classes for the label header cells that start the table */
@@ -92,6 +92,10 @@ tr.gigpress-info td {
 	border-bottom: 1px solid #CCC;
 }
 
+tr.gigpress-row.cancelled, tr.gigpress-info.cancelled, tr.cancelled span.gigpress-info-label, tr.cancelled span.gigpress-info-item {
+	color: #999;
+}
+
 /* This wraps each of the address, admission, etc spans in the "info" cell */
 span.gigpress-info-item {
 }
@@ -110,6 +114,13 @@ a.buy-tickets {
 	font-weight: bold;
 }
 
+/* Notices for Cancelled or Sold Out shows */
+strong.gigpress-cancelled, strong.gigpress-soldout {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: red;
+}
+
 /* In case you want to style the Googlefied address link */
 a.gigpress-address {
 }
@@ -117,7 +128,7 @@ a.gigpress-address {
 /* This is for the RSS link */
 td.gigpress-rss a {
 	padding-left: 14px;
-	background: transparent url(images/feed-icon-10x10.png) no-repeat left center;
+	background: transparent url(../images/feed-icon-10x10.png) no-repeat left center;
 }
 
 
@@ -146,16 +157,34 @@ li.gigpress-list-first {
 li.gigpress-list-last {
 }
 
+/* So if you like you can syle each alternating list item differently */
+li.gigpress-alt {
+	
+}
+
 /* So if you like you can syle the date differently */
 span.gigpress-date {
 	font-weight: bold;
+}
+
+/* Sold Out shows in the sidebar */
+ul.gigpress-listing strong.gigpress-soldout {
 	display: block;
 }
 
 /* Add a feed icon to the RSS link */
 li.gigpress-list-rss a {
 	padding-left: 14px;
-	background: transparent url(images/feed-icon-10x10.png) no-repeat left center;
+	background: transparent url(../images/feed-icon-10x10.png) no-repeat left center;
+}
+
+
+ul.gigpress-related-show {
+	margin-bottom: 2em;
+}
+
+.gigpress-related-label {
+	font-weight: bold;
 }
 
 
@@ -168,4 +197,5 @@ span.hide {
 abbr {
 	border: none;
 	text-decoration: none;
+	font-size: 100%;
 }
