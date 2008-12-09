@@ -25,6 +25,9 @@ function gigpress_archive($filter) {
 	
 	// See if we're displaying the country, and build the table accordingly
 	if($gpo['display_country'] == 1) { $cols = 4; } else { $cols = 3; }
+	
+	ob_start();
+	
 	?>
 	<table class="gigpress-table hcalendar" cellspacing="0">
 		<tbody>
@@ -74,8 +77,11 @@ function gigpress_archive($filter) {
 	<?php } ?>
 	</table>
 
-<?php }
-
+<?php
+	$output = ob_get_contents();
+	ob_end_clean();
+	return $output;
+}
 
 
 // PAST SHOWS TABLE FUNCTION WRAPPER

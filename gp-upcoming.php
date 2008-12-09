@@ -3,7 +3,7 @@
 // UPCOMING SHOWS TABLE FUNCTION
 // =============================
 
-function gigpress_upcoming($filter = null) {
+function gigpress_upcoming($filter = null, $content = null) {
 	
 	global $wpdb;
 	global $gigpress;
@@ -25,6 +25,9 @@ function gigpress_upcoming($filter = null) {
 		
 	// See if we're displaying the country, and build the table accordingly
 	if($gpo['display_country'] == 1) { $cols = 4; } else { $cols = 3; }
+	
+	ob_start();
+	
 	?>
 	
 	<table class="gigpress-table hcalendar" cellspacing="0">
@@ -82,7 +85,11 @@ function gigpress_upcoming($filter = null) {
 	<?php } ?>
 	</table>
 
-<?php }
+<?php
+	$output = ob_get_contents();
+	ob_end_clean();
+	return $output;
+}
 
 
 
