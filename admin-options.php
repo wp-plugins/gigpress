@@ -28,7 +28,7 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Name of your band", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[band]" value="<?php echo gigpress_sanitize($gpo['band']); ?>" /><br />
+				<input type="text" name="gigpress_settings[band]" value="<?php echo stripslashes($gpo['band']); ?>" /><br />
 
 				<small class="gp-instructions"><?php _e("This is used in your RSS feed and hCalendar data.", "gigpress") ?></small>
 			</td>
@@ -37,7 +37,7 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Full URL to your 'Upcoming Shows' page", "gigpress") ?>:</th>
 			<td>
-				<input type="text" size="48" name="gigpress_settings[shows_page]" value="<?php echo gigpress_sanitize($gpo['shows_page']); ?>" /><br />
+				<input type="text" size="48" name="gigpress_settings[shows_page]" value="<?php echo stripslashes($gpo['shows_page']); ?>" /><br />
 
 				<p><label><input type="checkbox" name="gigpress_settings[sidebar_link]" value="1" <?php if($gpo['sidebar_link'] == 1) echo('checked="checked"'); ?> /> <?php _e("Show a link to this page below my sidebar listing.", "gigpress"); ?></label></p>
 			</td>
@@ -45,19 +45,19 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Upcoming Shows link phrase", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[upcoming_phrase]" size="48" value="<?php echo gigpress_sanitize($gpo['upcoming_phrase']); ?>" />
+				<input type="text" name="gigpress_settings[upcoming_phrase]" size="48" value="<?php echo stripslashes($gpo['upcoming_phrase']); ?>" />
 			</td>
 		</tr>	
 		<tr>
 			<th scope="row"><?php _e("No upcoming shows message", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[noupcoming]" size="48" value="<?php echo gigpress_sanitize($gpo['noupcoming']); ?>" />
+				<input type="text" name="gigpress_settings[noupcoming]" size="48" value="<?php echo stripslashes($gpo['noupcoming']); ?>" />
 			</td>
 		</tr>	
 		<tr>
 			<th scope="row"><?php _e("No past shows message", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[nopast]" size="48" value="<?php echo gigpress_sanitize($gpo['nopast']); ?>" />
+				<input type="text" name="gigpress_settings[nopast]" size="48" value="<?php echo stripslashes($gpo['nopast']); ?>" />
 			</td>
 		</tr>
 
@@ -109,7 +109,7 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Related show heading", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[related_heading]" size="48" value="<?php echo gigpress_sanitize($gpo['related_heading']); ?>" /><br />
+				<input type="text" name="gigpress_settings[related_heading]" size="48" value="<?php echo stripslashes($gpo['related_heading']); ?>" /><br />
 				<small class="gp-instructions"><?php _e("This appears before the gig details in your Related Post entry.", "gigpress") ?></small>
 			</td>
 		</tr>			
@@ -141,7 +141,7 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Related post phrase", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[related]" size="48" value="<?php echo gigpress_sanitize($gpo['related']); ?>" /><br />
+				<input type="text" name="gigpress_settings[related]" size="48" value="<?php echo stripslashes($gpo['related']); ?>" /><br />
 				<small class="gp-instructions"><?php _e("This appears in your shows listing.", "gigpress") ?></small>
 			</td>
 		</tr>	
@@ -158,7 +158,7 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("RSS Feed title", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[rss_title]" size="48" value="<?php echo gigpress_sanitize($gpo['rss_title']); ?>" /><br />
+				<input type="text" name="gigpress_settings[rss_title]" size="48" value="<?php echo stripslashes($gpo['rss_title']); ?>" /><br />
 			</td>
 		</tr>
 		<tr>
@@ -173,13 +173,13 @@ function gigpress_options() {
 		<tr>
 			<th scope="row"><?php _e("Tour label", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[tour_label]" size="48" value="<?php echo gigpress_sanitize($gpo['tour_label']); ?>" /><br />
+				<input type="text" name="gigpress_settings[tour_label]" size="48" value="<?php echo stripslashes($gpo['tour_label']); ?>" /><br />
 			</td>
 		</tr>	
 		<tr>
 			<th scope="row"><?php _e("Individual Shows heading", "gigpress") ?>:</th>
 			<td>
-				<input type="text" name="gigpress_settings[individual_heading]" size="48" value="<?php echo gigpress_sanitize($gpo['individual_heading']); ?>" /><br />
+				<input type="text" name="gigpress_settings[individual_heading]" size="48" value="<?php echo stripslashes($gpo['individual_heading']); ?>" /><br />
 			</td>
 		</tr>				
 		<tr>
