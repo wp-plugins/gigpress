@@ -1,0 +1,1018 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GigPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-03 12:16-0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Espen M. Kvalheim <postoffice@unbornchikken.com>\n"
+"Language-Team: Espen M. Kvalheim <postoffice@unbornchikken.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Norwegian Bokmal\n"
+"X-Poedit-Country: NORWAY\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "<strong>Welcome to GigPress!</strong> You should first"
+msgstr "<strong>Velkomen til GigPress!</strong> Aller først bør du"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "customize some of the options"
+msgstr "justere nokon av innstillingane"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "then get right into adding shows below. Questions?  Please check out the"
+msgstr "for så å leggje til konsertar. Spørsmål? Les vidare under"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "documentation"
+msgstr "dokumentasjonen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "and"
+msgstr "og"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "FAQ"
+msgstr "FAQ (tidligare besvarte spørsmål)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "on the GigPress website. Enjoy!"
+msgstr "på GigPress si heimeside. Ha det skoi!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "Don't show this again"
+msgstr "Ikkje vis dette igjen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:89
+msgid "Sorry, but we had trouble loading that show for editing."
+msgstr "Orsak, denne konserten kunne ikkje lastast."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:97
+msgid "Edit this show"
+msgstr "Rediger denne konserten"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:137
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:130
+msgid "Add a show"
+msgstr "Legg til konsert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:147
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:136
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:35
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:103
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:35
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:102
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:32
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:17
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:76
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:83
+msgid "Date"
+msgstr "Dato"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:149
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:339
+msgid "January"
+msgstr "januar"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:150
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:340
+msgid "February"
+msgstr "februar"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:151
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:341
+msgid "March"
+msgstr "mars"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:152
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:342
+msgid "April"
+msgstr "april"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:153
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:343
+msgid "May"
+msgstr "mai"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:154
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:344
+msgid "June"
+msgstr "juni"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:155
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:345
+msgid "July"
+msgstr "juli"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:156
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:346
+msgid "August"
+msgstr "august"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:157
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:347
+msgid "September"
+msgstr "september"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:158
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:348
+msgid "October"
+msgstr "oktober"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:159
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:349
+msgid "November"
+msgstr "november"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:160
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:350
+msgid "December"
+msgstr "desember"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:251
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:160
+msgid "at"
+msgstr "på"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:282
+msgid "N/A"
+msgstr "TBA"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:332
+msgid "This is a multi-day event"
+msgstr "Dette er eit fleirdagars arrangement"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:337
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:19
+msgid "End date"
+msgstr "Sluttdato"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:443
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:137
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:104
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:103
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:33
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:20
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:80
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:91
+msgid "City"
+msgstr "By"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:445
+msgid "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
+msgstr "Foreslår eit format i stil med: <strong>5411 Stord</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:451
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:33
+msgid "Status"
+msgstr "Status"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:453
+msgid "Active"
+msgstr "Aktiv"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:454
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:53
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:64
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:67
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:161
+msgid "Sold Out"
+msgstr "Utseld"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:455
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:51
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:62
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:65
+msgid "Cancelled"
+msgstr "Kansellert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:462
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:105
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:104
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:34
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:22
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:81
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:92
+msgid "Venue"
+msgstr "Arena"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:463
+msgid "toggle venue info"
+msgstr "vis/skjul info om arena"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:466
+msgid "This is a required field, so if you don't know, just put <strong>TBA</strong>."
+msgstr "Dette er eit obligatorisk felt, er du usikker, skriv <strong>TBA</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:472
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:23
+msgid "Venue address"
+msgstr "Arena-adresse"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:474
+msgid "If you enter a street address, it will enable auto-linkage to Google Maps.  True that, double true."
+msgstr "Om du skriv inn ei gateadresse, kjem det automatisk ei lenkje til Google Maps. Banna bein!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:477
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:25
+msgid "Venue website"
+msgstr "Arenaens heimeside"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:479
+msgid "Any value entered here will be added as a hyperlink attached to the name of the venue."
+msgstr "Det du skriv inn her kjem som ei lenkje på arenaens namn."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:482
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:24
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:87
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:98
+msgid "Venue phone"
+msgstr "Telefon til arena"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:489
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:21
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:89
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:100
+msgid "Country"
+msgstr "Land"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:659
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:38
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:38
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:105
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:26
+msgid "Admittance"
+msgstr "Adgang"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:661
+msgid "Not sure"
+msgstr "Veit ikkje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:662
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:261
+msgid "No minors"
+msgstr "Ingen mindreårige"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:663
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:260
+msgid "All Ages/Licensed"
+msgstr "For alle aldersgrupper/lisensiert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:664
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:259
+msgid "All Ages"
+msgstr "For alle"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:669
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:39
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:107
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:39
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:27
+msgid "Price"
+msgstr "Pris"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:671
+msgid "To accomodate various currency display formats, no auto-formatting will be applied to what you enter here. Keep that in mind!"
+msgstr "Vèr obs på at det du skriv inn her ikkje vil autoformaterast. Dette fordi det er så sabla mange forskjellige valutaformat."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:674
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:28
+msgid "Ticket URL"
+msgstr "Billettlenkje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:676
+msgid "This will enable the purchase link when displaying your tour dates."
+msgstr "Dette vil aktivera lenkje til billettkjøp når dine turnedatoar visar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:679
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:29
+msgid "Ticket phone"
+msgstr "Billettelefon"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:683
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:138
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:30
+msgid "Notes"
+msgstr "Notatar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:686
+msgid "Use this space to list opening (or headlining) bands, 'presented by' info, or whatever other info you like."
+msgstr "Bruk denne plassen til å liste oppvarmingsband (eller hovudband), 'presenterast av'-info, eller kva du måtte ynskje å putte inn av informasjon."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:689
+msgid "Part of a tour?"
+msgstr "Del av ein turné?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:704
+msgid "No tours in the database"
+msgstr "Ingen turnéar i databasen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:709
+msgid "If this show is part of a tour you've already entered into GigPress, select it here.<br />No tours yet?"
+msgstr "Om denne konserten er ein del av ein turné som du allereie har lagt til i GigPress, velg den her.<br />Ingen turné enda?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:709
+msgid "Create them here."
+msgstr "Legg den/dei til her."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:713
+msgid "Related post"
+msgstr "Relaterte innlegg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:716
+msgid "None"
+msgstr "Ingen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:717
+msgid "Create a new post"
+msgstr "Lag eit nytt innlegg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:729
+msgid "You can link any show to a WordPress post, useful for show recaps, tour journals, uploading pictures, and allowing user comments."
+msgstr "Du kan lenkje kva som helst konsert til eit WordPress-innlegg; praktisk for informasjon om konsertar, turnéoppdateringar, opplasting av bilete og kommentarar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+msgid "Update show"
+msgstr "Oppdater konsert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "or"
+msgstr "eller"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "cancel"
+msgstr "angre"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:737
+msgid "Add show"
+msgstr "Legg til konsert"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:14
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:135
+msgid "Export"
+msgstr "Eksporter"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:16
+msgid "Download your complete show database as a tab-separated CSV file (compatible with programs such as Microsoft Excel.)"
+msgstr "Last ned di komplette speleliste-database som tabulator-separert CSV-fil (kompatibel med program som Microsoft Excel)."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:21
+msgid "Download file."
+msgstr "Last ned fil."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:20
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:123
+msgid "You must enter a city."
+msgstr "Du må skrive inn ein by."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:21
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:124
+msgid "You must enter a venue (perhaps it's TBA?)"
+msgstr "Du må skrive inn ein arena (evt. skriv inn at det kjem info seinare?)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:64
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:167
+msgid "We had trouble creating your Related Post. Sorry."
+msgstr "Me hadde visst trøbbel med å lage ditt relaterte innlegg. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+msgid "Your show  in"
+msgstr "Konserten i"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:70
+msgid "on"
+msgstr "den"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+msgid "was successfully added."
+msgstr "er lagt til."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:98
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:188
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:261
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:298
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:427
+msgid "Something ain't right - try again?"
+msgstr "Her er det noko muffins - gjere eit forsøk til?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+msgid "was successfully updated."
+msgstr "er oppdatert."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:220
+msgid "Show successfully deleted."
+msgstr "Konserten vart sletta."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:220
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:337
+msgid "Undo"
+msgstr "Angre"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:224
+msgid "We ran into some trouble deleting the show. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved slettinga av konserten. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:247
+msgid "You need to enter a name for the tour. It's the only field for crying out loud!"
+msgstr "Angi eit namn for turnéen – det er det einaste feltet..."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:259
+msgid "was successfully added to the database."
+msgstr "vart lagt til i databasen."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:285
+msgid "You need to enter a name for the tour!"
+msgstr "Du må angi eit namn for turnéen!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:296
+msgid "Tour name successfully changed to"
+msgstr "Turnénamnet er endra til"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:337
+msgid "Tour successfully deleted."
+msgstr "Turnéen er sletta."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:341
+msgid "We ran into some trouble deleting the tour. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved slettinga av turnéen. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:365
+msgid "Show successfully restored."
+msgstr "Konserten vart gjenoppretta."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:367
+msgid "We ran into some trouble restoring that show. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved gjennopprettinga av konserten. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:384
+msgid "Tour successfully restored from the database."
+msgstr "Turnéen vart gjenoppretta frå databasen."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:386
+msgid "We ran into some trouble restoring the tour. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved gjennopprettinga av turnéen. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:425
+msgid "Tours successfully reordered."
+msgstr "Rekkjefølgja av turnéane oppdatert."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:452
+msgid "All shows in the trash have been permanently deleted."
+msgstr "Alle konsertar i bossbytta er sletta permanent."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:454
+msgid "We ran into some trouble deleting shows from the trash. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved slettinga av konsertane i bossbytta. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:462
+msgid "All tours in the trash have been permanently deleted."
+msgstr "Alle turnéar i bossbytta er sletta permanent."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:464
+msgid "We ran into some trouble deleting tours from the trash. Sorry."
+msgstr "Det ser ut til at noko gjekk gale ved slettinga av turnéane i bossbytta. Orsak."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:22
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:134
+msgid "Settings"
+msgstr "Innstillingar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:29
+msgid "Name of your band"
+msgstr "Gruppenamn"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:33
+msgid "This is used in your RSS feed and hCalendar data."
+msgstr "Dette anvendes i din RSS-feed og hCalendar informasjon."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:38
+msgid "Full URL to your 'Upcoming Shows' page"
+msgstr "Full URL til di 'Kommande konsertar'-side"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:42
+msgid "Show a link to this page below my sidebar listing."
+msgstr "Vis ei lenkje til denne sida under oppføringa i sidepanelet."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:46
+msgid "Upcoming Shows link phrase"
+msgstr "'Kommande konsertar'-lenkje frase"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:52
+msgid "No upcoming shows message"
+msgstr "Melding som visast når det ikkje er kommande konsertar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:58
+msgid "No past shows message"
+msgstr "Melding som visast når det ikkje er tidlegare konsertar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:65
+msgid "User level required to use GigPress"
+msgstr "Brukarnivå for å bruke GigPress"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:68
+msgid "Administrator"
+msgstr "Administrator"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:69
+msgid "Editor"
+msgstr "Redaktør"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:70
+msgid "Author"
+msgstr "Forfatter"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:71
+msgid "Contributor"
+msgstr "Medarbeidar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:77
+msgid "Short Date Format"
+msgstr "Kort datoformat"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:80
+msgid "Used in the main show listings."
+msgstr "Brukt i hovudkonsert-listinga."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:80
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:87
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:94
+msgid "Output"
+msgstr "Visning"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:84
+msgid "Long Date Format"
+msgstr "Langt datoformat"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:87
+msgid "Used in the Related Post entry."
+msgstr "Brukt i relatert innlegg."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:91
+msgid "Time Format"
+msgstr "Tidsformat"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:93
+msgid "I use a 24 hour clock"
+msgstr "Eg brukar 24-timars-klokke"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:95
+msgid "Here's some documentation on date and time formatting"
+msgstr "Her fins meir informasjon om dato- og tidsformatering."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:95
+msgid "Click 'Update options' to update the sample output."
+msgstr "Trykk 'Oppdater visning' for å oppdatera eksempel-informasjonen."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:100
+msgid "Related Posts"
+msgstr "Relaterte innlegg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:102
+msgid "Display gig info in Related Post entries"
+msgstr "Vis konsert-info i relaterte innlegg."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:103
+msgid "before the post content"
+msgstr "før innleggsinnholdet"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:104
+msgid "after the post content"
+msgstr "etter innlegget"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:105
+msgid "nowhere at all"
+msgstr "ingen stader"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:106
+msgid "If a gig has a Related Post, that gig's details will appear at the specified position in that post."
+msgstr "Om ein konsert har eit relatert innlegg, vil den konsertens detaljar plasserast på den angitte plassen i det innlegget."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:110
+msgid "Related show heading"
+msgstr "Tittel på relatert innlegg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:113
+msgid "This appears before the gig details in your Related Post entry."
+msgstr "Dette dukkar opp før konsertdetaljane i ditt 'Relatert innlegg'-innhold."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:117
+msgid "Related Posts Category"
+msgstr "Relaterte innlegg-kategori"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:119
+msgid "Automatically create a Related Post for every new show I enter."
+msgstr "Lag eit relatert innlegg for kvar ny konsert eg opprettar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:120
+msgid "When creating Related Posts, put them in this category"
+msgstr "Putt relaterte innlegg i denne kategorien når eg opprettar dei"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:128
+msgid "Exclude this category from my normal post listings."
+msgstr "Ekskluder denne kategorien frå min normale innleggslisting."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:133
+msgid "Related Posts Linking"
+msgstr "Relaterte innlegg lenkje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:135
+msgid "Place a link to each show's Related Post in the following fields"
+msgstr "Putt ei lenkje til kvar konsert sitt relaterte innlegg i følgjande felt"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:142
+msgid "Related post phrase"
+msgstr "Melding som vert vist når det fins relaterte innlegg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:145
+msgid "This appears in your shows listing."
+msgstr "Dette dukkar opp kor dine konsertar er lista opp."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:149
+msgid "RSS Feed"
+msgstr "RSS-feed"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:151
+msgid "Please include a link to my upcoming shows RSS feed"
+msgstr "Legg til ei lenkje til min RSS-flyt for kommande konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:152
+msgid "below my upcoming shows table"
+msgstr "under tabellen for kommande konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:153
+msgid "below my sidebar listing"
+msgstr "under lista i sidepanelet"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:154
+msgid "in the <code>head</code> portion of my page"
+msgstr "i <code>head</code>-delen av sida"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:155
+msgid "Your RSS feed for upcoming shows is"
+msgstr "RSS-feed for kommande konsertar er"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:155
+msgid "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
+msgstr "Merk at FeedBurner FeedSmith ikkje er kompatibel med GigPress."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:159
+msgid "RSS Feed title"
+msgstr "RSS-feed tittel"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:165
+msgid "Tour grouping"
+msgstr "Turnégruppering"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:167
+msgid "Group shows into tours"
+msgstr "Grupper konsertar til å verta turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:169
+msgid "display tours <b>before</b> non-tour shows"
+msgstr "vis turnéar <b>før</b> individuelle konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:170
+msgid "display tours <b>after</b> non-tour shows"
+msgstr "vis turnéar <b>etter</b> individuelle konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:174
+msgid "Tour label"
+msgstr "Turné-merking"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:180
+msgid "Individual Shows heading"
+msgstr "Tittel til dei enkelte konsertane"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:186
+msgid "Heading level of tour names"
+msgstr "Tittelnivå for turnénamn"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:196
+msgid "Depending on the semantic structure of your page template, you may want the headings which display the name of your tour(s) to be a different level."
+msgstr "Basert på strukturen av dine malar, vil du kanskje at titlane som visar dine turnéar skal vere på eit anna nivå."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:196
+msgid "More on HTML headings."
+msgstr "Meir informasjon om HTML-titlar."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:200
+msgid "Country display"
+msgstr "Land-visning"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:202
+msgid "Display 'Country' column."
+msgstr "Vis 'Land' kolonna."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:206
+msgid "Link behaviour"
+msgstr "Lenkje-oppførsel"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:207
+msgid "Open external links in new windows."
+msgstr "Åpne eksterne lenkjer i nytt vindu."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:208
+msgid "This will add the"
+msgstr "Dette legg"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:208
+msgid "attribute to all venue, ticket and Google Maps links. Keep in mind that this behaviour can be annoying to users who like to control their own web browser, and that this attribute does not validate under strict HTML doctypes."
+msgstr "attributten til alle arena-, billett og Google Maps-lenkjer. Tenk på at denne funksjonen kanskje kan virke irriterande for brukarar som likar å ha full kontroll i nettlesaren, og at denne attributten ikkje validerar HTML Strict."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:214
+msgid "Save Changes"
+msgstr "Lagre endringar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "You currently have"
+msgstr "Du har for augneblinken"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "shows"
+msgstr "konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "tours"
+msgstr "turnéar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "in your trash"
+msgstr "i di bossbytte"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:257
+msgid "Take out the trash now"
+msgstr "Ta bosset og tøm den på dynga no"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:30
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:133
+msgid "Past shows"
+msgstr "Tidligare konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:40
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:108
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:40
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:107
+msgid "Buy link"
+msgstr "Billettlenkje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:41
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:109
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:134
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:192
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:218
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:270
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:41
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:108
+msgid "Actions"
+msgstr "Handling"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:31
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:239
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:56
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:59
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:125
+msgid "opens in a new window"
+msgstr "opnar i eit nytt vindauge"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:47
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:31
+msgid "Link"
+msgstr "Lenkje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:174
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:254
+msgid "Edit"
+msgstr "Endre"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+msgid "Copy"
+msgstr "Kopier"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:174
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:254
+msgid "Delete"
+msgstr "Slett"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:132
+msgid "Tours"
+msgstr "Turnéar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:39
+msgid "A tour is simply a collection of shows that you want to group together."
+msgstr "Ein turnè er enkelt og greit ei samling konsertar som du vil samla under ein og same bolk."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:58
+msgid "Edit this tour"
+msgstr "Endre denne turnéen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:67
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:131
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:189
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:215
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:267
+msgid "Tour name"
+msgstr "Turnénamn"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+msgid "Update tour"
+msgstr "Oppdatert turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:83
+msgid "Sorry, but we had trouble loading that tour for editing."
+msgstr "Orsak, turnèen kunne ikkje lastast inn for å endrast."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:90
+msgid "Add a tour"
+msgstr "Legg til ein turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:112
+msgid "Add tour"
+msgstr "Legg til turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:121
+msgid "Reorder tours"
+msgstr "Endre rekkjefølgja på turnéane"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:130
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:188
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:214
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:266
+msgid "Display order"
+msgstr "Vis rekkjefølgje"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:132
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:190
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:216
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:268
+msgid "Tour ID"
+msgstr "Turne-ID"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:133
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:191
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:217
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:269
+msgid "Number of shows"
+msgstr "Antall konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:183
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:261
+msgid "No tours in the database!"
+msgstr "Ingen turnéar i databasen!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "Save order"
+msgstr "Lagre rekkjefølgjen"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:203
+msgid "All tours"
+msgstr "Alle turnéar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:205
+msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
+msgstr "Merk at om du slettar ein turné vil <strong>IKKJE</strong> konsertane knytta til den verta sletta."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:214
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:266
+msgid "edit"
+msgstr "endre"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:30
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:131
+msgid "Upcoming shows"
+msgstr "Kommande konsertar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:181
+msgid "You're using"
+msgstr "Du brukar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:239
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:241
+msgid "Find this address using Google Maps."
+msgstr "Finn denne adressa ved hjelp av Google Maps"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:18
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:78
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:89
+msgid "Time"
+msgstr "Tidspunkt"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:32
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:81
+msgid "Tour"
+msgstr "Turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:56
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:59
+msgid "Buy Tickets"
+msgstr "Kjøp billettar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:58
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:61
+msgid "Buy tickets"
+msgstr "Kjøp billettar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:70
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:91
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:152
+msgid "in"
+msgstr "i"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:84
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:95
+msgid "Address"
+msgstr "Adresse"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:91
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:102
+msgid "Admission"
+msgstr "Inngongspengar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:94
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:105
+msgid "Age restrictions"
+msgstr "Aldersgrense"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:97
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:108
+msgid "Box office"
+msgstr "Billettkontor"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:36
+msgid "Title"
+msgstr "Tittel"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:37
+msgid "Number of shows to list"
+msgstr "Antall konsertar å vise"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:40
+msgid "Segment list into tours?"
+msgstr "Del lista inn i turneer?"
+
+#~ msgid "Options"
+#~ msgstr "Valg"
+#~ msgid "Nope"
+#~ msgstr "Nei"
+#~ msgid "Shows in tour"
+#~ msgstr "Konserter i turnéen"
+#~ msgid "General options"
+#~ msgstr "Genrelle innstillinger"
+#~ msgid "Display &amp; Formatting"
+#~ msgstr "Visning og formatering"
+#~ msgid "Widget options"
+#~ msgstr "Widget-innstillinger"
+#~ msgid "List heading"
+#~ msgstr "Listetittel"
+#~ msgid "Any number from 1 to 99"
+#~ msgstr "Et nummer mellom 1 og 99"
+#~ msgid "Update Options"
+#~ msgstr "Oppdater innstillinger"
+#~ msgid "View all shows"
+#~ msgstr "Vis alle konserter"
+#~ msgid "GigPress widget options can be found on the"
+#~ msgstr "GigPress widget-innstillinger fins i"
+#~ msgid "GigPress options page"
+#~ msgstr "GigPress innstillinger"
+#~ msgid "Tour dates from"
+#~ msgstr "Turnédato fra"
+#~ msgid "Ends"
+#~ msgstr "Slutter"
+#~ msgid "Part of"
+#~ msgstr "Del av"
+
