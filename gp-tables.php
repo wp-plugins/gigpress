@@ -254,7 +254,7 @@ function gigpress_gigs_table($showarray, $type, $scope) {
 			<td>&nbsp;</td>
 			<td colspan="<?php echo $cols ?>" class="description">
 			<?php if($show->show_status != 'cancelled') { ?>
-				<?php if($tour) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php echo $gpo['tour_label']; ?>:</span> <?php echo gigpress_sanitize($tour).". " ?></span><?php } ?>
+				<?php if($tour) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php echo gigpress_sanitize($gpo['tour_label']); ?>:</span> <?php echo gigpress_sanitize($tour).". " ?></span><?php } ?>
 				<?php if($secs != "1") { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Time", "gigpress"); ?>:</span> <?php echo $time.". " ?></span><?php } ?>
 				<?php if($show->show_price) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Admission", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($show->show_price) .'. '; ?></span><?php } ?>
 				<?php if($show->show_ages != "Not sure") { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Age restrictions", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($admittance) .'. '; ?></span><?php } ?>

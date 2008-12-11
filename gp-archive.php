@@ -3,7 +3,7 @@
 // PAST SHOWS TABLE FUNCTION
 // =========================
 
-function gigpress_archive($filter) {
+function gigpress_archive($filter = null, $content = null) {
 	
 	global $wpdb;
 	global $gigpress;
@@ -12,13 +12,15 @@ function gigpress_archive($filter) {
 	global $have_tours; $have_tours = FALSE;
 	global $have_shows; $have_shows = FALSE;
 	
-	if( function_exists('shortcode_atts') ) {
-	extract( shortcode_atts( array(
-		'tour' => FALSE,
-		'band' => FALSE
-		), $filter ) );
-	} else {
-		extract($filter);
+	if( is_array($filter) ) {	
+		if( function_exists('shortcode_atts') ) {
+		extract( shortcode_atts( array(
+			'tour' => FALSE,
+			'band' => FALSE
+			), $filter ) );
+		} else {
+			extract($filter);
+		}
 	}
 
 	$heading = gigpress_sanitize($gpo['tour_heading']);

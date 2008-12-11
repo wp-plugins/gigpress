@@ -78,7 +78,7 @@ function gigpress_show_related($content) {
 												
 				<ul class="gigpress-related-show <?php if($show->show_status != 'cancelled') { echo('vevent '); } echo $show->show_status; ?>">
 				<?php if($tourname) { ?>
-					<li><span class="gigpress-related-label"><?php _e("Tour", "gigpress"); ?>:</span> <span class="gigpress-related-item"><?php echo $tourname; ?></span></li>
+					<li><span class="gigpress-related-label"><?php echo gigpress_sanitize($gpo['tour_label']); ?>:</span> <span class="gigpress-related-item"><?php echo $tourname; ?></span></li>
 				<?php } ?>
 					<li><span class="gigpress-related-label"><?php _e("Date", "gigpress"); ?>:</span> <span class="gigpress-related-item"><abbr class="dtstart" title="<?php echo $hdate; ?>"><?php echo $date; ?></abbr>
 					<?php if($show->show_multi == 1) { ?>
