@@ -262,7 +262,7 @@ msgstr "País"
 #: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:105
 #: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:26
 msgid "Admittance"
-msgstr "Admisión:"
+msgstr "Admisión"
 
 #: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:661
 msgid "Not sure"
@@ -581,7 +581,7 @@ msgstr "Formato de hora"
 
 #: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:93
 msgid "I use a 24 hour clock"
-msgstr "Utilizo un reloj de 24 hoeas"
+msgstr "Utilizo un reloj de 24 horas"
 
 #: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:95
 msgid "Here's some documentation on date and time formatting"
