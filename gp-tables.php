@@ -108,7 +108,7 @@ function gigpress_shows_lister($dates) {
 // ALL SHOWS LISTER
 // ================
 
-function gigpress_allshows_lister($dates, $tour = FALSE) {
+function gigpress_allshows_lister($dates, $tour = FALSE, $limit = FALSE) {
 
 	global $wpdb;
 	global $gigpress;
@@ -129,6 +129,10 @@ function gigpress_allshows_lister($dates, $tour = FALSE) {
 		$query .= "show_expire >= '$now' ORDER BY show_date ASC";
 	} else {
 		$query .= "show_expire < '$now' ORDER BY show_date DESC";
+	}
+	
+	if( is_numeric($limit) ) {
+		$query .= " LIMIT $limit";
 	}
 		
 	// Get all upcoming dates from the DB

@@ -16,7 +16,8 @@ function gigpress_archive($filter = null, $content = null) {
 		if( function_exists('shortcode_atts') ) {
 		extract( shortcode_atts( array(
 			'tour' => FALSE,
-			'band' => FALSE
+			'band' => FALSE,
+			'limit' => FALSE			
 			), $filter ) );
 		} else {
 			extract($filter);
@@ -45,15 +46,15 @@ function gigpress_archive($filter = null, $content = null) {
 
 <?php
 	
-	if($tour) {
+	if( is_numeric($tour) ) {
 	
-		gigpress_allshows_lister("past",$tour);
+		gigpress_allshows_lister("past", $tour, $limit);
 		
 	} else {
 	
 		// If grouping by tour	
 			
-		if($gpo['tour_segment'] == 1) {
+		if($gpo['tour_segment'] == 1 && $limit == FALSE) {
 	
 			if($gpo['tour_location'] == "before") {	
 				gigpress_tours_lister("past");
@@ -66,7 +67,7 @@ function gigpress_archive($filter = null, $content = null) {
 		// End if grouping by tour
 			
 		} else {
-			gigpress_allshows_lister("past");		
+			gigpress_allshows_lister("past", $tour, $limit);		
 		}
 	}
 				

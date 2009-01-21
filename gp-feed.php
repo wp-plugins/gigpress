@@ -99,12 +99,15 @@ function gigpress_feed() {
 	<?php if( ($show->show_date <= $now && $buy != "") || ($show->show_status != 'active') ) { ?>
 		<li><?php echo $buy; ?></li>
 	<?php } ?>
-	<?php if($show->show_related != 0) { ?>
-		<li><?php echo gigpress_related_link($show->show_related, 'view'); ?></li>
-	<?php } ?>
 <?php } else { ?>
 	<li><?php echo $buy; ?></li>
 <?php } ?>
+	<?php if($show->show_notes) { ?>
+	<li><strong><?php _e("Notes", "gigpress"); ?>:</strong> <?php echo stripslashes($show->show_notes); ?></li>
+	<?php } ?>
+	<?php if($show->show_related != 0) { ?>
+		<li><?php echo gigpress_related_link($show->show_related, 'view'); ?></li>
+	<?php } ?>	
 </ul>
 <?php echo(']]></description>
 				<link>');

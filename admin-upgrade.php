@@ -12,9 +12,7 @@ if ( $gpo == FALSE ) {
 	$gpo = get_option('gigpress_settings');
 }	
 
-
-if ( $gpo['db_verson'] < $gigpress['db_version'] ) {
-	
+ if ( $gpo['db_version'] < $gigpress['db_version'] ) {
 	$charset_collate = '';
 
 	if ( version_compare(mysql_get_server_info(), '4.1.0', '>=') ) {

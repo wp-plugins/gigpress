@@ -113,6 +113,9 @@ function gigpress_show_related($content) {
 					} else {
 						echo("<li>$buy</li>");
 					} ?>
+					<?php if($show->show_notes) { ?>
+							<li><span class="gigpress-related-label"><?php _e("Notes", "gigpress"); ?>:</span> <span class="gigpress-related-item"><?php echo gigpress_sanitize($show->show_notes); ?></span></li>
+					<?php } ?>
 				</ul>
 				
 		<?php }

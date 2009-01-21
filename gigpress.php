@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: An easy way for bands to list and manage tour dates on their WordPress-powered website.
-Version: 1.4.2
+Version: 1.4.3
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -43,7 +43,7 @@ global $now; $now = mysql2date('Y-m-d', current_time('mysql'));
 global $gigpress; $gigpress = array();
 	$gigpress['gigs_table'] = $wpdb->prefix . "gigpress_shows";
 	$gigpress['tours_table'] = $wpdb->prefix . "gigpress_tours";
-	$gigpress['version'] = "1.4.2";
+	$gigpress['version'] = "1.4.3";
 	$gigpress['db_version'] = "1.3";
 	$gigpress['rss'] = get_bloginfo('home') . "/?feed=gigpress";
 	
@@ -264,7 +264,16 @@ function gigpress_intl() {
 }
 
 function register_gigpress_settings() {
-	register_setting('gigpress','gigpress_settings');
+	if ( function_exists('register_setting') ) {
+		register_setting('gigpress','gigpress_settings');
+	}
+}
+
+function gigpress_favorites($actions) {
+	$gpo = get_option('gigpress_settings');
+	$level = "level_" . $gpo['user_level']; 
+	$actions['admin.php?page=gigpress/gigpress.php'] = array('Add a show', $level);
+    return $actions;
 }
 
 
@@ -274,28 +283,21 @@ register_activation_hook(__FILE__,'gigpress_install');
 register_activation_hook(__FILE__,'gigpress_flush_rules');
 
 add_action(init,'add_gigpress_feed');
-add_action(init,'gigpress_load_jquery');
 add_action(init,'gigpress_intl');
 
-if ( function_exists('register_setting') ) {	
-	add_action('admin_init', 'register_gigpress_settings'); 
-}
+add_action('admin_init','gigpress_load_jquery');
+add_action('admin_init', 'register_gigpress_settings'); 
 add_action('admin_head', 'gigpress_admin_head');
 add_action('admin_menu', 'gigpress_admin');
-add_action('widgets_init', 'gigpress_widget_init');
-add_action('wp_head', 'gigpress_styles');
-add_action('delete_post', 'gigpress_remove_related');
-
+add_filter('favorite_actions', 'gigpress_favorites');
 if ( strpos($_SERVER['QUERY_STRING'], 'gigpress') !== FALSE ) {
 	add_action('in_admin_footer', 'gigpress_admin_footer', 9);
 }
+add_action('widgets_init', 'gigpress_widget_init');
 
+add_action('wp_head', 'gigpress_styles');
 if ( $gpo['rss_head'] == 1 ) {
 	add_action('wp_head', 'gigpress_head_feed');
-}
-
-if ( $gpo['category_exclude'] == 1) {
-	add_action('pre_get_posts','gigpress_exclude_shows');
 }
 
 if ( function_exists('add_shortcode') ) {
@@ -306,10 +308,16 @@ if ( function_exists('add_shortcode') ) {
 	add_filter('the_content', 'gigpress_archive_wrapper');
 }
 
+if ( $gpo['category_exclude'] == 1) {
+	add_action('pre_get_posts','gigpress_exclude_shows');
+}
 if ( $gpo['related_position'] != "nowhere" ) {
 	add_filter('get_the_excerpt', 'gigpress_check_excerpt', 1);
 	add_filter('the_content', 'gigpress_show_related');
 }
+add_action('delete_post', 'gigpress_remove_related');
+
+
 
 // We're forced to bed, but we're free to dream.
 

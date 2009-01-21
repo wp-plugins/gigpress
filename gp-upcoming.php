@@ -11,18 +11,19 @@ function gigpress_upcoming($filter = null, $content = null) {
 	global $now;	
 	global $have_tours; $have_tours = FALSE;
 	global $have_shows; $have_shows = FALSE;
-
+	
 	if ( is_array($filter) ) {
 		if( function_exists('shortcode_atts') ) {
 		extract( shortcode_atts( array(
 			'tour' => FALSE,
-			'band' => FALSE
+			'band' => FALSE,
+			'limit' => FALSE
 			), $filter ) );
 		} else {
 			extract($filter);
 		}
 	}
-		
+			
 	// See if we're displaying the country, and build the table accordingly
 	if($gpo['display_country'] == 1) { $cols = 4; } else { $cols = 3; }
 	
@@ -43,15 +44,16 @@ function gigpress_upcoming($filter = null, $content = null) {
 		</tbody>
 
 	<?php 
-	// If grouping by tour	
-		
-	if($tour) {
 	
-		gigpress_allshows_lister("upcoming",$tour);
+	// if we're specifying a tour	
+	if( is_numeric($tour) ) {
+	
+		gigpress_allshows_lister("upcoming", $tour, $limit);
 		
 	} else {
 	
-		if($gpo['tour_segment'] == 1) {				
+		// If grouping by tour	
+		if($gpo['tour_segment'] == 1 && $limit == FALSE) {				
 		
 			if($gpo['tour_location'] == "before") {	
 				gigpress_tours_lister("upcoming");
@@ -64,7 +66,7 @@ function gigpress_upcoming($filter = null, $content = null) {
 		// End if grouping by tour
 			
 		} else {	
-			gigpress_allshows_lister("upcoming");		
+			gigpress_allshows_lister("upcoming", $tour, $limit);		
 		}
 		
 	}

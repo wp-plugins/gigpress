@@ -22,7 +22,6 @@ function gigpress_options() {
 	<h2><?php _e("Settings", "gigpress"); ?></h2>
 	
 	<form method="post" action="options.php">
-	<?php wp_nonce_field('update-options'); ?>
 	
 	<table class="optiontable editform gp-table form-table">
 		<tr>
@@ -66,7 +65,7 @@ function gigpress_options() {
 			<td>
 				<select name="gigpress_settings[user_level]">
 					<option value="8"<?php if ($gpo['user_level'] == '8') echo (' selected="selected"'); ?>><?php _e("Administrator", "gigpress"); ?></option>
-					<option value="3"<?php if ($gpo['user_level'] == '3') echo (' selected="selected"'); ?>><?php _e("Editor", "gigpress"); ?></option>
+					<option value="5"<?php if ($gpo['user_level'] == '5') echo (' selected="selected"'); ?>><?php _e("Editor", "gigpress"); ?></option>
 					<option value="2"<?php if ($gpo['user_level'] == '2') echo (' selected="selected"'); ?>><?php _e("Author", "gigpress"); ?></option>
 					<option value="1"<?php if ($gpo['user_level'] == '1') echo (' selected="selected"'); ?>><?php _e("Contributor", "gigpress"); ?></option>
 				</select>
@@ -210,9 +209,7 @@ function gigpress_options() {
 		</tr>
 		
 	</table>
-		
-	<p class="submit"><input type="submit" name="Submit" class="button-primary" value="<?php _e("Save Changes", "gigpress") ?>" /></p>
-	
+			
 		<?php // We need to populate the form with the options not represented here, or else they'll get deleted ?>
 		<input type="hidden" name="gigpress_settings[db_version]" value="<?php echo $gpo['db_version']; ?>" />
 		<input type="hidden" name="gigpress_settings[default_country]" value="<?php echo $gpo['default_country']; ?>" />
@@ -225,11 +222,19 @@ function gigpress_options() {
 		<input type="hidden" name="gigpress_settings[widget_segment]" value="<?php echo $gpo['widget_segment']; ?>" />
 		
 		<?php if ( function_exists('settings_fields') ) {
+		
 			settings_fields('gigpress');
+			
 		} else { ?>
-		<input type="hidden" name="action" value="update" />
-		<input type="hidden" name="page_options" value="gigpress_settings" />
-		<?php } ?>	
+		
+			<input type="hidden" name="action" value="update" />
+			<input type="hidden" name="page_options" value="gigpress_settings" />
+			<?php wp_nonce_field('update-options');
+		
+		} ?>
+		
+		<p class="submit"><input type="submit" name="Submit" class="button-primary" value="<?php _e("Save Changes", "gigpress") ?>" /></p>
+
 	</form>
 		
 	<?php
