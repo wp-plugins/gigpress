@@ -64,7 +64,7 @@ if ( $gpo == FALSE ) {
 	dbDelta($upgrade);
 	
 	// Upgrading from DB version 1.0
-	if($installed_db == "1.0") {
+	if($gpo['db_version'] == "1.0") {
 		
 		// Added in DB version 1.1
 		
@@ -101,7 +101,7 @@ if ( $gpo == FALSE ) {
 	} // End upgrade from DB version 1.0
 
 	// Upgrading from DB version 1.1
-	if($installed_db == "1.1") {
+	if($gpo['db_version'] == "1.1") {
 	
 		// Added in DB version 1.2	
 		
@@ -118,7 +118,7 @@ if ( $gpo == FALSE ) {
 	}
 	
 	// Upgrading from DB version 1.2
-	if($installed_db == "1.2") {
+	if($gpo['db_version'] == "1.2") {
 
 		// Added in DB version 1.3
 		$gpo['date_format_long'] = $gpo['date_format'];
@@ -127,6 +127,7 @@ if ( $gpo == FALSE ) {
 	
 	}	
 	
+	$gpo['db_version'] = $gigpress['db_version'];
 	update_option('gigpress_settings', $gpo);
 
 }
