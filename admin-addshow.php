@@ -518,6 +518,7 @@ function gigpress_add() {
 						<option value="BH"<?php if($country == "BH") echo(' selected="selected"'); ?>>Bahrain</option>
 						<option value="BD"<?php if($country == "BD") echo(' selected="selected"'); ?>>Bangladesh</option>
 						<option value="BB"<?php if($country == "BB") echo(' selected="selected"'); ?>>Barbados</option>
+						<option value="BY"<?php if($country == "BY") echo(' selected="selected"'); ?>>Belarus</option>
 						<option value="BE"<?php if($country == "BE") echo(' selected="selected"'); ?>>Belgium</option>
 						<option value="BZ"<?php if($country == "BZ") echo(' selected="selected"'); ?>>Belize</option>
 						<option value="BM"<?php if($country == "BM") echo(' selected="selected"'); ?>>Bermuda</option>

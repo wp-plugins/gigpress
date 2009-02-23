@@ -201,7 +201,7 @@ function gigpress_gigs_table($showarray, $type, $scope) {
 
 		// See if there's a buy link
 		// if so, make magic happen with the clicking and such
-		if(!empty($show->show_tix_url) && $show->show_status = 'active') {
+		if(!empty($show->show_tix_url) && $show->show_status == 'active') {
 		
 			if($gpo['target_blank'] == 1) {
 				$buy = "<a href=\"$tix_url\" target=\"_blank\" title=\"(".__("opens in a new window", "gigpress").")\">".__("Buy Tickets", "gigpress")."</a>. ";
@@ -262,7 +262,8 @@ function gigpress_gigs_table($showarray, $type, $scope) {
 				<?php if($secs != "1") { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Time", "gigpress"); ?>:</span> <?php echo $time.". " ?></span><?php } ?>
 				<?php if($show->show_price) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Admission", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($show->show_price) .'. '; ?></span><?php } ?>
 				<?php if($show->show_ages != "Not sure") { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Age restrictions", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($admittance) .'. '; ?></span><?php } ?>
-				<?php if($scope == "upcoming" && $buy != "") { ?> <span class="gigpress-info-item"><?php echo $buy; ?></span><?php } ?>
+				<?php if($scope == "upcoming" && $buy != "" && $show->show_status == "active") { ?> <span class="gigpress-info-item"><?php echo $buy; ?></span><?php } ?>
+				<?php if($show->show_status == "soldout") echo $buy; ?>
 				<?php if($show->show_tix_phone) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Box office", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($show->show_tix_phone) .'. '; ?></span><?php } ?>
 				<?php if($address) { ?> <span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Address", "gigpress"); ?>:</span> <?php echo $address .'. '; ?></span><?php } ?>
 				<?php if($show->show_venue_phone) { ?><span class="gigpress-info-item"><span class="gigpress-info-label"><?php _e("Venue phone", "gigpress"); ?>:</span> <?php echo gigpress_sanitize($show->show_venue_phone) .'. '; ?></span><?php } ?>				

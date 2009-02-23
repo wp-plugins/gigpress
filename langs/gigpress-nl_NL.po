@@ -1,0 +1,990 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GigPress 1.2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-03 12:16-0400\n"
+"PO-Revision-Date: 2009-02-20 18:07+0100\n"
+"Last-Translator: Teley, M.P.G. <martin.teley@gmail.com>\n"
+"Language-Team: GigPress <derek@gigpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch (Nederlands)\n"
+"X-Poedit-Country: The Nederlands\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "<strong>Welcome to GigPress!</strong> You should first"
+msgstr "<strong>Welkom bij GigPress!</strong> Je moet eerst"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "customize some of the options"
+msgstr "een paar opties aanpassen"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "then get right into adding shows below. Questions?  Please check out the"
+msgstr "en dan kun je hieronder beginnen met optredens toevoegen. Vragen? Kijk"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "documentation"
+msgstr "in de documentatie"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+#: wp-content/plugins/gigpress/admin-options.php:255
+msgid "and"
+msgstr "en"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "FAQ"
+msgstr "de FAQ"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "on the GigPress website. Enjoy!"
+msgstr "op de GigPress website. Veel plezier!"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:25
+msgid "Don't show this again"
+msgstr "Laat dit niet meer zien"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:89
+msgid "Sorry, but we had trouble loading that show for editing."
+msgstr "Sorry, maar we hadden een probleem met het laden van dit optreden."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:97
+msgid "Edit this show"
+msgstr "Bewerk dit optreden"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:137
+#: wp-content/plugins/gigpress/gigpress.php:130
+msgid "Add a show"
+msgstr "Voeg een optreden toe"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:147
+#: wp-content/plugins/gigpress/admin-options.php:136
+#: wp-content/plugins/gigpress/admin-past.php:35
+#: wp-content/plugins/gigpress/admin-past.php:103
+#: wp-content/plugins/gigpress/admin-upcoming.php:35
+#: wp-content/plugins/gigpress/admin-upcoming.php:102
+#: wp-content/plugins/gigpress/gp-archive.php:32
+#: wp-content/plugins/gigpress/gp-export.php:17
+#: wp-content/plugins/gigpress/gp-feed.php:76
+#: wp-content/plugins/gigpress/gp-related.php:83
+msgid "Date"
+msgstr "Datum"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:149
+#: wp-content/plugins/gigpress/admin-addshow.php:339
+msgid "January"
+msgstr "januari"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:150
+#: wp-content/plugins/gigpress/admin-addshow.php:340
+msgid "February"
+msgstr "februari"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:151
+#: wp-content/plugins/gigpress/admin-addshow.php:341
+msgid "March"
+msgstr "maart"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:152
+#: wp-content/plugins/gigpress/admin-addshow.php:342
+msgid "April"
+msgstr "april"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:153
+#: wp-content/plugins/gigpress/admin-addshow.php:343
+msgid "May"
+msgstr "mei"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:154
+#: wp-content/plugins/gigpress/admin-addshow.php:344
+msgid "June"
+msgstr "juni"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:155
+#: wp-content/plugins/gigpress/admin-addshow.php:345
+msgid "July"
+msgstr "juli"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:156
+#: wp-content/plugins/gigpress/admin-addshow.php:346
+msgid "August"
+msgstr "augustus"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:157
+#: wp-content/plugins/gigpress/admin-addshow.php:347
+msgid "September"
+msgstr "september"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:158
+#: wp-content/plugins/gigpress/admin-addshow.php:348
+msgid "October"
+msgstr "oktober"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:159
+#: wp-content/plugins/gigpress/admin-addshow.php:349
+msgid "November"
+msgstr "november"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: wp-content/plugins/gigpress/admin-addshow.php:160
+#: wp-content/plugins/gigpress/admin-addshow.php:350
+msgid "December"
+msgstr "december"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:251
+#: wp-content/plugins/gigpress/gp-sidebar.php:160
+msgid "at"
+msgstr "om"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:282
+msgid "N/A"
+msgstr "N/A"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:332
+msgid "This is a multi-day event"
+msgstr "Dit is een meerdaags evenement"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:337
+#: wp-content/plugins/gigpress/gp-export.php:19
+msgid "End date"
+msgstr "Einddatum"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:443
+#: wp-content/plugins/gigpress/admin-options.php:137
+#: wp-content/plugins/gigpress/admin-past.php:36
+#: wp-content/plugins/gigpress/admin-past.php:104
+#: wp-content/plugins/gigpress/admin-upcoming.php:36
+#: wp-content/plugins/gigpress/admin-upcoming.php:103
+#: wp-content/plugins/gigpress/gp-archive.php:33
+#: wp-content/plugins/gigpress/gp-export.php:20
+#: wp-content/plugins/gigpress/gp-feed.php:80
+#: wp-content/plugins/gigpress/gp-related.php:91
+msgid "City"
+msgstr "Plaats"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:445
+msgid "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
+msgstr "Het aanbevolen formaat is: <strong>Horn, Limburg</strong>."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:451
+#: wp-content/plugins/gigpress/gp-export.php:33
+msgid "Status"
+msgstr "Status"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:453
+msgid "Active"
+msgstr "Actief"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:454
+#: wp-content/plugins/gigpress/admin-tables.php:53
+#: wp-content/plugins/gigpress/gp-feed.php:64
+#: wp-content/plugins/gigpress/gp-related.php:67
+#: wp-content/plugins/gigpress/gp-sidebar.php:161
+msgid "Sold Out"
+msgstr "Uitverkocht"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:455
+#: wp-content/plugins/gigpress/admin-tables.php:51
+#: wp-content/plugins/gigpress/gp-feed.php:62
+#: wp-content/plugins/gigpress/gp-related.php:65
+msgid "Cancelled"
+msgstr "Afgelast"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:462
+#: wp-content/plugins/gigpress/admin-past.php:37
+#: wp-content/plugins/gigpress/admin-past.php:105
+#: wp-content/plugins/gigpress/admin-upcoming.php:37
+#: wp-content/plugins/gigpress/admin-upcoming.php:104
+#: wp-content/plugins/gigpress/gp-archive.php:34
+#: wp-content/plugins/gigpress/gp-export.php:22
+#: wp-content/plugins/gigpress/gp-feed.php:81
+#: wp-content/plugins/gigpress/gp-related.php:92
+msgid "Venue"
+msgstr "Podium"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:463
+msgid "toggle venue info"
+msgstr "show/hide adresinformatie"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:466
+msgid "This is a required field, so if you don't know, just put <strong>TBA</strong>."
+msgstr "Dit is een verplicht veld, dus als je het niet weet, vul <strong>n.n.b.</strong> in."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:472
+#: wp-content/plugins/gigpress/gp-export.php:23
+msgid "Venue address"
+msgstr "Podium adress"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:474
+msgid "If you enter a street address, it will enable auto-linkage to Google Maps.  True that, double true."
+msgstr "Als je een adres invult, zal het automatisch linken naar Google Maps. Geen grapje."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:477
+#: wp-content/plugins/gigpress/gp-export.php:25
+msgid "Venue website"
+msgstr "Podium website"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:479
+msgid "Any value entered here will be added as a hyperlink attached to the name of the venue."
+msgstr "Alles wat hier ingevuld wordt, zal toegevoegd worden als hyperlink naar de naam van het podium."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:482
+#: wp-content/plugins/gigpress/gp-export.php:24
+#: wp-content/plugins/gigpress/gp-feed.php:87
+#: wp-content/plugins/gigpress/gp-related.php:98
+msgid "Venue phone"
+msgstr "Telefoon"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:489
+#: wp-content/plugins/gigpress/gp-archive.php:36
+#: wp-content/plugins/gigpress/gp-export.php:21
+#: wp-content/plugins/gigpress/gp-feed.php:89
+#: wp-content/plugins/gigpress/gp-related.php:100
+msgid "Country"
+msgstr "Land"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:659
+#: wp-content/plugins/gigpress/admin-past.php:38
+#: wp-content/plugins/gigpress/admin-past.php:106
+#: wp-content/plugins/gigpress/admin-upcoming.php:38
+#: wp-content/plugins/gigpress/admin-upcoming.php:105
+#: wp-content/plugins/gigpress/gp-export.php:26
+msgid "Admittance"
+msgstr "Toelating"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:661
+msgid "Not sure"
+msgstr "Onzeker"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:662
+#: wp-content/plugins/gigpress/gigpress.php:261
+msgid "No minors"
+msgstr "Geen jongeren"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:663
+#: wp-content/plugins/gigpress/gigpress.php:260
+msgid "All Ages/Licensed"
+msgstr "Alle leeftijden/Met licentie"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:664
+#: wp-content/plugins/gigpress/gigpress.php:259
+msgid "All Ages"
+msgstr "Alle leeftijden"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:669
+#: wp-content/plugins/gigpress/admin-past.php:39
+#: wp-content/plugins/gigpress/admin-past.php:107
+#: wp-content/plugins/gigpress/admin-upcoming.php:39
+#: wp-content/plugins/gigpress/admin-upcoming.php:106
+#: wp-content/plugins/gigpress/gp-export.php:27
+msgid "Price"
+msgstr "Prijs"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:671
+msgid "To accomodate various currency display formats, no auto-formatting will be applied to what you enter here. Keep that in mind!"
+msgstr "Om de verscheidene valuta correct weer te geven, zal er geen auto-formatting plaatsvinden op wat je hier invult. Denk hieraan!"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:674
+#: wp-content/plugins/gigpress/gp-export.php:28
+msgid "Ticket URL"
+msgstr "Ticket URL"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:676
+msgid "This will enable the purchase link when displaying your tour dates."
+msgstr "Dit zal een link naar de verkoopsite mogelijk maken wanneer de tour data weergegeven worden."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:679
+#: wp-content/plugins/gigpress/gp-export.php:29
+msgid "Ticket phone"
+msgstr "Ticket telefoon"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:683
+#: wp-content/plugins/gigpress/admin-options.php:138
+#: wp-content/plugins/gigpress/gp-export.php:30
+msgid "Notes"
+msgstr "Overige informatie"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:686
+msgid "Use this space to list opening (or headlining) bands, 'presented by' info, or whatever other info you like."
+msgstr "Gebruik deze ruimte om het voorprogramma, 'presented by' info, of andere informatie weer te geven."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:689
+msgid "Part of a tour?"
+msgstr "Onderdeel van een tour?"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:704
+msgid "No tours in the database"
+msgstr "Geen tours in de database"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:709
+msgid "If this show is part of a tour you've already entered into GigPress, select it here.<br />No tours yet?"
+msgstr "Als dit optreden deel uitmaakt van een tour die al aangemaakt is in GigPress, selecteer het hier.<br />Nog geen tours?"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:709
+msgid "Create them here."
+msgstr "Maak ze hier aan."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:713
+msgid "Related post"
+msgstr "Verwant bericht"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:716
+msgid "None"
+msgstr "Geen"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:717
+msgid "Create a new post"
+msgstr "Maak een nieuw bericht aan"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:729
+msgid "You can link any show to a WordPress post, useful for show recaps, tour journals, uploading pictures, and allowing user comments."
+msgstr "Je kunt een WordPress bericht aan het optreden koppelen. Dit is handig voor aankondigingen, verslagen, foto's of om bezoekers te laten reageren."
+
+#: wp-content/plugins/gigpress/admin-addshow.php:735
+msgid "Update show"
+msgstr "Update dit optreden"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:735
+#: wp-content/plugins/gigpress/admin-tours.php:72
+#: wp-content/plugins/gigpress/admin-tours.php:196
+msgid "or"
+msgstr "of"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:735
+#: wp-content/plugins/gigpress/admin-tours.php:72
+#: wp-content/plugins/gigpress/admin-tours.php:196
+msgid "cancel"
+msgstr "cancel"
+
+#: wp-content/plugins/gigpress/admin-addshow.php:737
+msgid "Add show"
+msgstr "Voeg optreden toe"
+
+#: wp-content/plugins/gigpress/admin-export.php:14
+#: wp-content/plugins/gigpress/gigpress.php:135
+msgid "Export"
+msgstr "Exporteren"
+
+#: wp-content/plugins/gigpress/admin-export.php:16
+msgid "Download your complete show database as a tab-separated CSV file (compatible with programs such as Microsoft Excel.)"
+msgstr "Download je complete database met optredens als een tab-onderscheiden CSV bestand (ondersteund door programma's als MS Excel)."
+
+#: wp-content/plugins/gigpress/admin-export.php:21
+msgid "Download file."
+msgstr "Download bestand."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:20
+#: wp-content/plugins/gigpress/admin-handlers.php:123
+msgid "You must enter a city."
+msgstr "Je moet een plaatsnaam invullen."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:21
+#: wp-content/plugins/gigpress/admin-handlers.php:124
+msgid "You must enter a venue (perhaps it's TBA?)"
+msgstr "Je moet een podium invullen (misschien nog niet bekend?)"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:64
+#: wp-content/plugins/gigpress/admin-handlers.php:167
+msgid "We had trouble creating your Related Post. Sorry."
+msgstr "Er ging iets fout met het aanmaken van het gerelateerde bericht, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:90
+#: wp-content/plugins/gigpress/admin-handlers.php:182
+msgid "Your show  in"
+msgstr "Jouw optreden  in"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:90
+#: wp-content/plugins/gigpress/admin-handlers.php:182
+#: wp-content/plugins/gigpress/gp-feed.php:70
+msgid "on"
+msgstr "op"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:90
+msgid "was successfully added."
+msgstr "was succesvol toegevoegd."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:98
+#: wp-content/plugins/gigpress/admin-handlers.php:188
+#: wp-content/plugins/gigpress/admin-handlers.php:261
+#: wp-content/plugins/gigpress/admin-handlers.php:298
+#: wp-content/plugins/gigpress/admin-handlers.php:427
+msgid "Something ain't right - try again?"
+msgstr "Er is iets foutgegaan, probeer het a.u.b. nog een keer."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:182
+msgid "was successfully updated."
+msgstr "is succesvol geupdate."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:220
+msgid "Show successfully deleted."
+msgstr "Optreden succesvol verwijderd."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:220
+#: wp-content/plugins/gigpress/admin-handlers.php:337
+msgid "Undo"
+msgstr "Ongedaan maken"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:224
+msgid "We ran into some trouble deleting the show. Sorry."
+msgstr "Er is iets fout gegaan met het verwijderen van dit optreden, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:247
+msgid "You need to enter a name for the tour. It's the only field for crying out loud!"
+msgstr "Je moet een naam invullen voor de tour. Was het nou zo moeilijk om dat ene veldje in te vullen?"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:259
+msgid "was successfully added to the database."
+msgstr "is succesvol toegevoegd aan de database."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:285
+msgid "You need to enter a name for the tour!"
+msgstr "Je moet een naam invullen voor de tour!"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:296
+msgid "Tour name successfully changed to"
+msgstr "De naam van de tour is succesvol veranderd in"
+
+#: wp-content/plugins/gigpress/admin-handlers.php:337
+msgid "Tour successfully deleted."
+msgstr "De tour is succesvol verwijderd."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:341
+msgid "We ran into some trouble deleting the tour. Sorry."
+msgstr "Er is iets fout gegaan met het verwijderen van de tour, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:365
+msgid "Show successfully restored."
+msgstr "Optreden succesvol hersteld."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:367
+msgid "We ran into some trouble restoring that show. Sorry."
+msgstr "Er is iets fout gegaan met het herstellen van de show, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:384
+msgid "Tour successfully restored from the database."
+msgstr "De tour is succesvol hersteld vanaf de database."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:386
+msgid "We ran into some trouble restoring the tour. Sorry."
+msgstr "Er is iets fout gegaan met het herstellen van de tour, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:425
+msgid "Tours successfully reordered."
+msgstr "De tours zijn succesvol herschikt."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:452
+msgid "All shows in the trash have been permanently deleted."
+msgstr "Alle optredens in de prullenbak zijn permanent verwijderd."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:454
+msgid "We ran into some trouble deleting shows from the trash. Sorry."
+msgstr "Er is iets fout gegaan met het legen van de prullenbak, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:462
+msgid "All tours in the trash have been permanently deleted."
+msgstr "Alle tours in de prullenbak zijn permanent verwijderd."
+
+#: wp-content/plugins/gigpress/admin-handlers.php:464
+msgid "We ran into some trouble deleting tours from the trash. Sorry."
+msgstr "Er is iets fout gegaan met het legen van de prullenbak, onze excuses hiervoor."
+
+#: wp-content/plugins/gigpress/admin-options.php:22
+#: wp-content/plugins/gigpress/gigpress.php:134
+msgid "Settings"
+msgstr "Instellingen"
+
+#: wp-content/plugins/gigpress/admin-options.php:29
+msgid "Name of your band"
+msgstr "Naam van de band"
+
+#: wp-content/plugins/gigpress/admin-options.php:33
+msgid "This is used in your RSS feed and hCalendar data."
+msgstr "Dit wordt gebruik in de RSS feed en de hCalendar data."
+
+#: wp-content/plugins/gigpress/admin-options.php:38
+msgid "Full URL to your 'Upcoming Shows' page"
+msgstr "Volledige URL naar de 'aanstaande optredens' pagina"
+
+#: wp-content/plugins/gigpress/admin-options.php:42
+msgid "Show a link to this page below my sidebar listing."
+msgstr "Laat een link zien naar deze pagina onderaan in het zijmenu."
+
+#: wp-content/plugins/gigpress/admin-options.php:46
+msgid "Upcoming Shows link phrase"
+msgstr "Tekst voor de link naar de aanstaande optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:52
+msgid "No upcoming shows message"
+msgstr "Bericht bij geen aanstaande optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:58
+msgid "No past shows message"
+msgstr "Bericht bij geen gearchiveerde optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:65
+msgid "User level required to use GigPress"
+msgstr "Gebruikersniveau vereist voor het gebruiken van GigPress"
+
+#: wp-content/plugins/gigpress/admin-options.php:68
+msgid "Administrator"
+msgstr "Beheerder"
+
+#: wp-content/plugins/gigpress/admin-options.php:69
+msgid "Editor"
+msgstr "Bewerker"
+
+#: wp-content/plugins/gigpress/admin-options.php:70
+msgid "Author"
+msgstr "Auteur"
+
+#: wp-content/plugins/gigpress/admin-options.php:71
+msgid "Contributor"
+msgstr "Bijdrager"
+
+#: wp-content/plugins/gigpress/admin-options.php:77
+msgid "Short Date Format"
+msgstr "Korte datum format"
+
+#: wp-content/plugins/gigpress/admin-options.php:80
+msgid "Used in the main show listings."
+msgstr "Wordt gebruikt in de lijst met optredens."
+
+#: wp-content/plugins/gigpress/admin-options.php:80
+#: wp-content/plugins/gigpress/admin-options.php:87
+#: wp-content/plugins/gigpress/admin-options.php:94
+msgid "Output"
+msgstr "Output"
+
+#: wp-content/plugins/gigpress/admin-options.php:84
+msgid "Long Date Format"
+msgstr "Lange datum format"
+
+#: wp-content/plugins/gigpress/admin-options.php:87
+msgid "Used in the Related Post entry."
+msgstr "Wordt gebruikt in het verwante bericht."
+
+#: wp-content/plugins/gigpress/admin-options.php:91
+msgid "Time Format"
+msgstr "Tijd format"
+
+#: wp-content/plugins/gigpress/admin-options.php:93
+msgid "I use a 24 hour clock"
+msgstr "Ik gebruik een 24 uurs klok"
+
+#: wp-content/plugins/gigpress/admin-options.php:95
+msgid "Here's some documentation on date and time formatting"
+msgstr "Hier vind je informatie over datum en tijd formatting"
+
+#: wp-content/plugins/gigpress/admin-options.php:95
+msgid "Click 'Update options' to update the sample output."
+msgstr "Klik 'Update opties' om de voorbeel output te updaten."
+
+#: wp-content/plugins/gigpress/admin-options.php:100
+msgid "Related Posts"
+msgstr "Verwant bericht"
+
+#: wp-content/plugins/gigpress/admin-options.php:102
+msgid "Display gig info in Related Post entries"
+msgstr "Laat de info zien in het verwante bericht"
+
+#: wp-content/plugins/gigpress/admin-options.php:103
+msgid "before the post content"
+msgstr "voor de inhoud van het bericht"
+
+#: wp-content/plugins/gigpress/admin-options.php:104
+msgid "after the post content"
+msgstr "na de inhoud van het bericht"
+
+#: wp-content/plugins/gigpress/admin-options.php:105
+msgid "nowhere at all"
+msgstr "helemaal nergens"
+
+#: wp-content/plugins/gigpress/admin-options.php:106
+msgid "If a gig has a Related Post, that gig's details will appear at the specified position in that post."
+msgstr "Als een optreden een verwant bericht heeft, zullen de details verschijnen op de gespecificeerde positie in dat bericht."
+
+#: wp-content/plugins/gigpress/admin-options.php:110
+msgid "Related show heading"
+msgstr "Verwant optreden titel"
+
+#: wp-content/plugins/gigpress/admin-options.php:113
+msgid "This appears before the gig details in your Related Post entry."
+msgstr "Dit verschijnt voor de info in jouw verwant bericht."
+
+#: wp-content/plugins/gigpress/admin-options.php:117
+msgid "Related Posts Category"
+msgstr "Verwante berichten categorie"
+
+#: wp-content/plugins/gigpress/admin-options.php:119
+msgid "Automatically create a Related Post for every new show I enter."
+msgstr "Automatisch een verwant bericht aanmaken voor elk nieuw optreden."
+
+#: wp-content/plugins/gigpress/admin-options.php:120
+msgid "When creating Related Posts, put them in this category"
+msgstr "Als er een verwant bericht gemaakt wordt, stop hem in deze categorie"
+
+#: wp-content/plugins/gigpress/admin-options.php:128
+msgid "Exclude this category from my normal post listings."
+msgstr "Haal deze categorie uit mijn normale berichten lijst."
+
+#: wp-content/plugins/gigpress/admin-options.php:133
+msgid "Related Posts Linking"
+msgstr "Verwant bericht linking"
+
+#: wp-content/plugins/gigpress/admin-options.php:135
+msgid "Place a link to each show's Related Post in the following fields"
+msgstr "Plaats een link naar het verwante bericht van elk optreden in de volgende velden"
+
+#: wp-content/plugins/gigpress/admin-options.php:142
+msgid "Related post phrase"
+msgstr "Tekst voor link naar het verwante bericht"
+
+#: wp-content/plugins/gigpress/admin-options.php:145
+msgid "This appears in your shows listing."
+msgstr "Dit verschijnt in jouw lijst met optredens."
+
+#: wp-content/plugins/gigpress/admin-options.php:149
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: wp-content/plugins/gigpress/admin-options.php:151
+msgid "Please include a link to my upcoming shows RSS feed"
+msgstr "Plaats een link naar mijn aanstaande optredens in de RSS feed"
+
+#: wp-content/plugins/gigpress/admin-options.php:152
+msgid "below my upcoming shows table"
+msgstr "onder de tabel met aanstaan de shows"
+
+#: wp-content/plugins/gigpress/admin-options.php:153
+msgid "below my sidebar listing"
+msgstr "onder mijn zijbalk"
+
+#: wp-content/plugins/gigpress/admin-options.php:154
+msgid "in the <code>head</code> portion of my page"
+msgstr "in het <code>head</code> gedeelte van mijn pagina"
+
+#: wp-content/plugins/gigpress/admin-options.php:155
+msgid "Your RSS feed for upcoming shows is"
+msgstr "Jouw RSS feed voor aanstaande optredens is"
+
+#: wp-content/plugins/gigpress/admin-options.php:155
+msgid "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
+msgstr "Let wel: de FeedBurner FeedSmith plugin werkt niet met GigPress."
+
+#: wp-content/plugins/gigpress/admin-options.php:159
+msgid "RSS Feed title"
+msgstr "RSS Feed titel"
+
+#: wp-content/plugins/gigpress/admin-options.php:165
+msgid "Tour grouping"
+msgstr "Tour groepen"
+
+#: wp-content/plugins/gigpress/admin-options.php:167
+msgid "Group shows into tours"
+msgstr "Maak een tour van een groep optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:169
+msgid "display tours <b>before</b> non-tour shows"
+msgstr "laat de tours zien <b>voor</b> niet-tour optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:170
+msgid "display tours <b>after</b> non-tour shows"
+msgstr "laat de tours zien <b>na</b> de niet-tour optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:174
+msgid "Tour label"
+msgstr "Tour label"
+
+#: wp-content/plugins/gigpress/admin-options.php:180
+msgid "Individual Shows heading"
+msgstr "Individuele optredens titel"
+
+#: wp-content/plugins/gigpress/admin-options.php:186
+msgid "Heading level of tour names"
+msgstr "Heading level van tour namen"
+
+#: wp-content/plugins/gigpress/admin-options.php:196
+msgid "Depending on the semantic structure of your page template, you may want the headings which display the name of your tour(s) to be a different level."
+msgstr "Afhankelijk van de structuur van jouw template, zou het kunnen dat je de titels van de tours in een ander heading level wilt laten zien."
+
+#: wp-content/plugins/gigpress/admin-options.php:196
+msgid "More on HTML headings."
+msgstr "Meer over HTML headings."
+
+#: wp-content/plugins/gigpress/admin-options.php:200
+msgid "Country display"
+msgstr "Land gegevens"
+
+#: wp-content/plugins/gigpress/admin-options.php:202
+msgid "Display 'Country' column."
+msgstr "Laat de kolom met het land zien."
+
+#: wp-content/plugins/gigpress/admin-options.php:206
+msgid "Link behaviour"
+msgstr "Gedrag links"
+
+#: wp-content/plugins/gigpress/admin-options.php:207
+msgid "Open external links in new windows."
+msgstr "Open externe links in een nieuw venster."
+
+#: wp-content/plugins/gigpress/admin-options.php:208
+msgid "This will add the"
+msgstr "dit zal het"
+
+#: wp-content/plugins/gigpress/admin-options.php:208
+msgid "attribute to all venue, ticket and Google Maps links. Keep in mind that this behaviour can be annoying to users who like to control their own web browser, and that this attribute does not validate under strict HTML doctypes."
+msgstr "attribuut toevoegen aan alle links. Houd er rekening mee dat er gebruikers zijn die graag controle behouden over hun web browser, en dat dit attribuut niet valt onder strikte HTML doctypes."
+
+#: wp-content/plugins/gigpress/admin-options.php:214
+msgid "Save Changes"
+msgstr "Veranderingen opslaan"
+
+#: wp-content/plugins/gigpress/admin-options.php:255
+msgid "You currently have"
+msgstr "Je hebt momenteel"
+
+#: wp-content/plugins/gigpress/admin-options.php:255
+msgid "shows"
+msgstr "optredens"
+
+#: wp-content/plugins/gigpress/admin-options.php:255
+msgid "tours"
+msgstr "tours"
+
+#: wp-content/plugins/gigpress/admin-options.php:255
+msgid "in your trash"
+msgstr "in de prullenbak"
+
+#: wp-content/plugins/gigpress/admin-options.php:257
+msgid "Take out the trash now"
+msgstr "Gooi de prullenbak leeg"
+
+#: wp-content/plugins/gigpress/admin-past.php:30
+#: wp-content/plugins/gigpress/gigpress.php:133
+msgid "Past shows"
+msgstr "Optredens die al geweest zijn"
+
+#: wp-content/plugins/gigpress/admin-past.php:40
+#: wp-content/plugins/gigpress/admin-past.php:108
+#: wp-content/plugins/gigpress/admin-upcoming.php:40
+#: wp-content/plugins/gigpress/admin-upcoming.php:107
+msgid "Buy link"
+msgstr ""
+
+#: wp-content/plugins/gigpress/admin-past.php:41
+#: wp-content/plugins/gigpress/admin-past.php:109
+#: wp-content/plugins/gigpress/admin-tours.php:134
+#: wp-content/plugins/gigpress/admin-tours.php:192
+#: wp-content/plugins/gigpress/admin-tours.php:218
+#: wp-content/plugins/gigpress/admin-tours.php:270
+#: wp-content/plugins/gigpress/admin-upcoming.php:41
+#: wp-content/plugins/gigpress/admin-upcoming.php:108
+msgid "Actions"
+msgstr "Acties"
+
+#: wp-content/plugins/gigpress/admin-tables.php:31
+#: wp-content/plugins/gigpress/admin-tables.php:45
+#: wp-content/plugins/gigpress/gigpress.php:239
+#: wp-content/plugins/gigpress/gp-feed.php:56
+#: wp-content/plugins/gigpress/gp-related.php:45
+#: wp-content/plugins/gigpress/gp-related.php:59
+#: wp-content/plugins/gigpress/gp-sidebar.php:125
+msgid "opens in a new window"
+msgstr "opent in een nieuw venster"
+
+#: wp-content/plugins/gigpress/admin-tables.php:45
+#: wp-content/plugins/gigpress/admin-tables.php:47
+#: wp-content/plugins/gigpress/gp-export.php:31
+msgid "Link"
+msgstr "Link"
+
+#: wp-content/plugins/gigpress/admin-tables.php:85
+#: wp-content/plugins/gigpress/admin-tours.php:174
+#: wp-content/plugins/gigpress/admin-tours.php:254
+msgid "Edit"
+msgstr "Bewerken"
+
+#: wp-content/plugins/gigpress/admin-tables.php:85
+msgid "Copy"
+msgstr "Kopieren"
+
+#: wp-content/plugins/gigpress/admin-tables.php:85
+#: wp-content/plugins/gigpress/admin-tours.php:174
+#: wp-content/plugins/gigpress/admin-tours.php:254
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: wp-content/plugins/gigpress/admin-tours.php:37
+#: wp-content/plugins/gigpress/gigpress.php:132
+msgid "Tours"
+msgstr ""
+
+#: wp-content/plugins/gigpress/admin-tours.php:39
+msgid "A tour is simply a collection of shows that you want to group together."
+msgstr "Een tour is simpelweg een verzameling van optredens die je samen wilt vegen."
+
+#: wp-content/plugins/gigpress/admin-tours.php:58
+msgid "Edit this tour"
+msgstr "Bewerk deze tour"
+
+#: wp-content/plugins/gigpress/admin-tours.php:67
+#: wp-content/plugins/gigpress/admin-tours.php:106
+#: wp-content/plugins/gigpress/admin-tours.php:131
+#: wp-content/plugins/gigpress/admin-tours.php:189
+#: wp-content/plugins/gigpress/admin-tours.php:215
+#: wp-content/plugins/gigpress/admin-tours.php:267
+msgid "Tour name"
+msgstr "Naam van de tour"
+
+#: wp-content/plugins/gigpress/admin-tours.php:72
+msgid "Update tour"
+msgstr "Update deze tour"
+
+#: wp-content/plugins/gigpress/admin-tours.php:83
+msgid "Sorry, but we had trouble loading that tour for editing."
+msgstr "Sorry, er is iets mis gegaan met het laden van deze tour."
+
+#: wp-content/plugins/gigpress/admin-tours.php:90
+msgid "Add a tour"
+msgstr "Voeg een tour toe"
+
+#: wp-content/plugins/gigpress/admin-tours.php:112
+msgid "Add tour"
+msgstr "Voeg tour toe"
+
+#: wp-content/plugins/gigpress/admin-tours.php:121
+msgid "Reorder tours"
+msgstr "Herschik tours"
+
+#: wp-content/plugins/gigpress/admin-tours.php:130
+#: wp-content/plugins/gigpress/admin-tours.php:188
+#: wp-content/plugins/gigpress/admin-tours.php:214
+#: wp-content/plugins/gigpress/admin-tours.php:266
+msgid "Display order"
+msgstr "Verschijningsvolgorde"
+
+#: wp-content/plugins/gigpress/admin-tours.php:132
+#: wp-content/plugins/gigpress/admin-tours.php:190
+#: wp-content/plugins/gigpress/admin-tours.php:216
+#: wp-content/plugins/gigpress/admin-tours.php:268
+msgid "Tour ID"
+msgstr ""
+
+#: wp-content/plugins/gigpress/admin-tours.php:133
+#: wp-content/plugins/gigpress/admin-tours.php:191
+#: wp-content/plugins/gigpress/admin-tours.php:217
+#: wp-content/plugins/gigpress/admin-tours.php:269
+msgid "Number of shows"
+msgstr "Aantal optredens"
+
+#: wp-content/plugins/gigpress/admin-tours.php:183
+#: wp-content/plugins/gigpress/admin-tours.php:261
+msgid "No tours in the database!"
+msgstr "Geen tours in de database!"
+
+#: wp-content/plugins/gigpress/admin-tours.php:196
+msgid "Save order"
+msgstr "Volgorde opslaan"
+
+#: wp-content/plugins/gigpress/admin-tours.php:203
+msgid "All tours"
+msgstr "Alle tours"
+
+#: wp-content/plugins/gigpress/admin-tours.php:205
+msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
+msgstr "Merk op dat het verwijderen van de tour er <strong>NIET</strong. voor zorgt dat de optredens ook verwijderd worden."
+
+#: wp-content/plugins/gigpress/admin-tours.php:214
+#: wp-content/plugins/gigpress/admin-tours.php:266
+msgid "edit"
+msgstr "bewerken"
+
+#: wp-content/plugins/gigpress/admin-upcoming.php:30
+#: wp-content/plugins/gigpress/gigpress.php:131
+msgid "Upcoming shows"
+msgstr "Aanstaande optredens"
+
+#: wp-content/plugins/gigpress/gigpress.php:181
+msgid "You're using"
+msgstr "Je gebruikt"
+
+#: wp-content/plugins/gigpress/gigpress.php:239
+#: wp-content/plugins/gigpress/gigpress.php:241
+msgid "Find this address using Google Maps."
+msgstr "Zoek dit adres met Google Maps."
+
+#: wp-content/plugins/gigpress/gp-export.php:18
+#: wp-content/plugins/gigpress/gp-feed.php:78
+#: wp-content/plugins/gigpress/gp-related.php:89
+msgid "Time"
+msgstr "Tijd"
+
+#: wp-content/plugins/gigpress/gp-export.php:32
+#: wp-content/plugins/gigpress/gp-related.php:81
+msgid "Tour"
+msgstr "Tour"
+
+#: wp-content/plugins/gigpress/gp-feed.php:56
+#: wp-content/plugins/gigpress/gp-related.php:59
+msgid "Buy Tickets"
+msgstr "Koop je ticket"
+
+#: wp-content/plugins/gigpress/gp-feed.php:58
+#: wp-content/plugins/gigpress/gp-related.php:61
+msgid "Buy tickets"
+msgstr "Koop je ticket"
+
+#: wp-content/plugins/gigpress/gp-feed.php:70
+#: wp-content/plugins/gigpress/gp-related.php:91
+#: wp-content/plugins/gigpress/gp-sidebar.php:152
+msgid "in"
+msgstr "in"
+
+#: wp-content/plugins/gigpress/gp-feed.php:84
+#: wp-content/plugins/gigpress/gp-related.php:95
+msgid "Address"
+msgstr "Adres"
+
+#: wp-content/plugins/gigpress/gp-feed.php:91
+#: wp-content/plugins/gigpress/gp-related.php:102
+msgid "Admission"
+msgstr "Entreetarief"
+
+#: wp-content/plugins/gigpress/gp-feed.php:94
+#: wp-content/plugins/gigpress/gp-related.php:105
+msgid "Age restrictions"
+msgstr "Leeftijdsbeperkingen"
+
+#: wp-content/plugins/gigpress/gp-feed.php:97
+#: wp-content/plugins/gigpress/gp-related.php:108
+msgid "Box office"
+msgstr ""
+
+#: wp-content/plugins/gigpress/gp-widget.php:36
+msgid "Title"
+msgstr "Titel"
+
+#: wp-content/plugins/gigpress/gp-widget.php:37
+msgid "Number of shows to list"
+msgstr "Aantal optredens in de lijst"
+
+#: wp-content/plugins/gigpress/gp-widget.php:40
+msgid "Segment list into tours?"
+msgstr "Lijst splitten in tours?"
+

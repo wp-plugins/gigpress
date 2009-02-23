@@ -105,10 +105,7 @@ function gigpress_upcoming_wrapper($content) {
 		return $content;
 	}
 	
-	ob_start();
-		gigpress_upcoming();
-		$output = ob_get_contents();
-	ob_end_clean();
+	$output	= gigpress_upcoming();
 
     return str_replace('[gigpress_upcoming]', $output, $content);
 				

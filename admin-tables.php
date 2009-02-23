@@ -39,7 +39,7 @@ function gigpress_admin_table($shows, $type, $scope) {
 
 		// See if there's a buy link
 		// if so, make magic happen with the clicking and such
-		if(!empty($show->show_tix_url) && $show->show_status = 'active') {
+		if(!empty($show->show_tix_url) && $show->show_status == 'active') {
 		
 			if($gpo['target_blank'] == 1) {
 				$buy = "<a href=\"$tix_url\" target=\"_blank\" title=\"(".__("opens in a new window", "gigpress").")\">".__("Link", "gigpress")."</a>";

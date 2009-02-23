@@ -97,10 +97,7 @@ function gigpress_archive_wrapper($content) {
 		return $content;
 	}
 
-	ob_start();
-		gigpress_archive();
-		$output = ob_get_contents();
-	ob_end_clean();
+	$output = gigpress_archive();
 
     return str_replace('[gigpress_archive]', $output, $content);
 }
