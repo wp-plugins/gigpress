@@ -32,7 +32,7 @@ function gigpress_archive($filter = null, $content = null) {
 	ob_start();
 	
 	?>
-	<table class="gigpress-table hcalendar" cellspacing="0">
+	<table class="gigpress-table archive hcalendar" cellspacing="0">
 		<tbody>
 			<tr class="gigpress-header">
 				<th scope="col" class="gigpress-date"><?php _e("Date", "gigpress"); ?></th>

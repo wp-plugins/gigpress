@@ -28,7 +28,7 @@ function gigpress_feed() {
 			$expire = mysql2date($gpo['date_format_long'], $show->show_expire);
 			$time = gigpress_timefy($show->show_time);
 			$secs = $show->show_time{7};
-			$rssdate = mysql2date('D, d M Y', $show->show_date). " ". $show->show_time." GMT";
+			$rssdate = mysql2date('D, d M Y', $show->show_date, false). " ". $show->show_time." GMT";
 			// Make the address Googley
 			$address = gigpress_mapit(stripslashes($show->show_address), stripslashes($show->show_locale), $show->show_country);
 

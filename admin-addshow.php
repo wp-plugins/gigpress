@@ -4,18 +4,20 @@ function gigpress_add() {
 
 	global $wpdb;
 	global $gigpress;
-	$gpo = get_option('gigpress_settings');
 		
 	if(isset($_POST['gpaction']) && $_POST['gpaction'] == "add") {
-			// This is for when we've just POST-ed a new show ...
-			require_once('admin-handlers.php');
-			gigpress_add_show();
-		}
+		// This is for when we've just POST-ed a new show ...
+		require_once('admin-handlers.php');
+		gigpress_add_show();
+	}
+
+	$gpo = get_option('gigpress_settings');
 		
 	// If they're done with the welcome message, kill it
 	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "killwelcome") {
-			$gpo['welcome'] = "no";
-			update_option('gigpress_settings', $gpo);
+		$gpo['welcome'] = "no";
+		update_option('gigpress_settings', $gpo);
+		$gpo = get_option('gigpress_settings');
 	}
 	
 	// If the welcome message is to be displayed, then do so

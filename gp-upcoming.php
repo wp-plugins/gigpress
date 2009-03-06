@@ -31,7 +31,7 @@ function gigpress_upcoming($filter = null, $content = null) {
 	
 	?>
 	
-	<table class="gigpress-table hcalendar" cellspacing="0">
+	<table class="gigpress-table upcoming hcalendar" cellspacing="0">
 		<tbody>
 			<tr class="gigpress-header">
 				<th scope="col" class="gigpress-date"><?php _e("Date", "gigpress"); ?></th>
