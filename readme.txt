@@ -25,7 +25,7 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 * User-level access restrictions for use
 * hCalendar markup for each show
 * Outputs XHTML-compliant, semantic markup
-* Fully internationalized - comes with Brazilian Portuguese, Bulgarian, Danish, Dutch, French, Italian, "Book" Norwegian, "New" Norwegian, Spanish and Swedish language files
+* Fully internationalized - comes with Brazilian Portuguese, Bulgarian, Danish, Dutch, French, Italian, "Book" Norwegian, "New" Norwegian, Russian, Spanish and Swedish language files
 
 == Installation ==
 
