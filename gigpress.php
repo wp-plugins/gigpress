@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: An easy way for bands to list and manage tour dates on their WordPress-powered website.
-Version: 1.4.6
+Version: 1.4.7
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -43,7 +43,7 @@ global $now; $now = mysql2date('Y-m-d', current_time('mysql'));
 global $gigpress; $gigpress = array();
 	$gigpress['gigs_table'] = $wpdb->prefix . "gigpress_shows";
 	$gigpress['tours_table'] = $wpdb->prefix . "gigpress_tours";
-	$gigpress['version'] = "1.4.6";
+	$gigpress['version'] = "1.4.7";
 	$gigpress['db_version'] = "1.3";
 	$gigpress['rss'] = get_bloginfo('home') . "/?feed=gigpress";
 	
@@ -195,8 +195,8 @@ function gigpress_styles() {
 	<link rel="stylesheet" type="text/css" href="'. WP_PLUGIN_URL .'/gigpress/css/gigpress.css" />
 	');
 	// If there's a custom stylesheet, load it too ...
-	if (file_exists(get_template_directory()."/gigpress.css")) {
-		echo('<link rel="stylesheet" type="text/css" href="'. get_bloginfo('template_directory').'/gigpress.css" />
+	if (file_exists(get_stylesheet_directory()."/gigpress.css")) {
+		echo('<link rel="stylesheet" type="text/css" href="'. get_bloginfo('stylesheet_directory').'/gigpress.css" />
 		');
 	}
 }

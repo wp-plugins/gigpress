@@ -162,95 +162,24 @@ function gigpress_add() {
 				  <option value="12"<?php if($mm == "12") echo(' selected="selected"'); ?>><?php _e("December"); ?></option>
 				</select>
 				  <select name="gp_dd" id="gp_dd">
-					<option value="01"<?php if($dd == "01") echo(' selected="selected"'); ?>>01</option>
-					<option value="02"<?php if($dd == "02") echo(' selected="selected"'); ?>>02</option>
-					<option value="03"<?php if($dd == "03") echo(' selected="selected"'); ?>>03</option>
-					<option value="04"<?php if($dd == "04") echo(' selected="selected"'); ?>>04</option>
-					<option value="05"<?php if($dd == "05") echo(' selected="selected"'); ?>>05</option>
-					<option value="06"<?php if($dd == "06") echo(' selected="selected"'); ?>>06</option>
-					<option value="07"<?php if($dd == "07") echo(' selected="selected"'); ?>>07</option>
-					<option value="08"<?php if($dd == "08") echo(' selected="selected"'); ?>>08</option>
-					<option value="09"<?php if($dd == "09") echo(' selected="selected"'); ?>>09</option>
-					<option value="10"<?php if($dd == "10") echo(' selected="selected"'); ?>>10</option>
-					<option value="11"<?php if($dd == "11") echo(' selected="selected"'); ?>>11</option>
-					<option value="12"<?php if($dd == "12") echo(' selected="selected"'); ?>>12</option>
-					<option value="13"<?php if($dd == "13") echo(' selected="selected"'); ?>>13</option>
-					<option value="14"<?php if($dd == "14") echo(' selected="selected"'); ?>>14</option>
-					<option value="15"<?php if($dd == "15") echo(' selected="selected"'); ?>>15</option>
-					<option value="16"<?php if($dd == "16") echo(' selected="selected"'); ?>>16</option>
-					<option value="17"<?php if($dd == "17") echo(' selected="selected"'); ?>>17</option>
-					<option value="18"<?php if($dd == "18") echo(' selected="selected"'); ?>>18</option>
-					<option value="19"<?php if($dd == "19") echo(' selected="selected"'); ?>>19</option>
-					<option value="20"<?php if($dd == "20") echo(' selected="selected"'); ?>>20</option>
-					<option value="21"<?php if($dd == "21") echo(' selected="selected"'); ?>>21</option>
-					<option value="22"<?php if($dd == "22") echo(' selected="selected"'); ?>>22</option>
-					<option value="23"<?php if($dd == "23") echo(' selected="selected"'); ?>>23</option>
-					<option value="24"<?php if($dd == "24") echo(' selected="selected"'); ?>>24</option>
-					<option value="25"<?php if($dd == "25") echo(' selected="selected"'); ?>>25</option>
-					<option value="26"<?php if($dd == "26") echo(' selected="selected"'); ?>>26</option>
-					<option value="27"<?php if($dd == "27") echo(' selected="selected"'); ?>>27</option>
-					<option value="28"<?php if($dd == "28") echo(' selected="selected"'); ?>>28</option>
-					<option value="29"<?php if($dd == "29") echo(' selected="selected"'); ?>>29</option>
-					<option value="30"<?php if($dd == "30") echo(' selected="selected"'); ?>>30</option>
-					<option value="31"<?php if($dd == "31") echo(' selected="selected"'); ?>>31</option>
+				  	<?php for($i = 1; $i <= 31; $i++) {
+				  	$i = ($i < 10) ? '0' . $i : $i;
+				  	echo('<option value="' . $i . '"');
+				  	if($dd == $i) echo(' selected="selected"');
+				  	echo('>' . $i . '</option>');
+				  	} ?>
 				  </select>
+				  
 				  <select name="gp_yy" id="gp_yy">
-						<option value="1960"<?php if($yy == "1960") echo(' selected="selected"'); ?>>1960</option>
-						<option value="1961"<?php if($yy == "1961") echo(' selected="selected"'); ?>>1961</option>
-						<option value="1962"<?php if($yy == "1962") echo(' selected="selected"'); ?>>1962</option>
-						<option value="1963"<?php if($yy == "1963") echo(' selected="selected"'); ?>>1963</option>
-						<option value="1964"<?php if($yy == "1964") echo(' selected="selected"'); ?>>1964</option>
-						<option value="1965"<?php if($yy == "1965") echo(' selected="selected"'); ?>>1965</option>
-						<option value="1966"<?php if($yy == "1966") echo(' selected="selected"'); ?>>1966</option>
-						<option value="1967"<?php if($yy == "1967") echo(' selected="selected"'); ?>>1967</option>
-						<option value="1968"<?php if($yy == "1968") echo(' selected="selected"'); ?>>1968</option>
-						<option value="1969"<?php if($yy == "1969") echo(' selected="selected"'); ?>>1969</option>
-						<option value="1970"<?php if($yy == "1970") echo(' selected="selected"'); ?>>1970</option>
-						<option value="1971"<?php if($yy == "1971") echo(' selected="selected"'); ?>>1971</option>
-						<option value="1972"<?php if($yy == "1972") echo(' selected="selected"'); ?>>1972</option>
-						<option value="1973"<?php if($yy == "1973") echo(' selected="selected"'); ?>>1973</option>
-						<option value="1974"<?php if($yy == "1974") echo(' selected="selected"'); ?>>1974</option>
-						<option value="1975"<?php if($yy == "1975") echo(' selected="selected"'); ?>>1975</option>
-						<option value="1976"<?php if($yy == "1976") echo(' selected="selected"'); ?>>1976</option>
-						<option value="1977"<?php if($yy == "1977") echo(' selected="selected"'); ?>>1977</option>
-						<option value="1978"<?php if($yy == "1978") echo(' selected="selected"'); ?>>1978</option>
-						<option value="1979"<?php if($yy == "1979") echo(' selected="selected"'); ?>>1979</option>
-						<option value="1980"<?php if($yy == "1980") echo(' selected="selected"'); ?>>1980</option>
-						<option value="1981"<?php if($yy == "1981") echo(' selected="selected"'); ?>>1981</option>
-						<option value="1982"<?php if($yy == "1982") echo(' selected="selected"'); ?>>1982</option>
-						<option value="1983"<?php if($yy == "1983") echo(' selected="selected"'); ?>>1983</option>
-						<option value="1984"<?php if($yy == "1984") echo(' selected="selected"'); ?>>1984</option>
-						<option value="1985"<?php if($yy == "1985") echo(' selected="selected"'); ?>>1985</option>
-						<option value="1986"<?php if($yy == "1986") echo(' selected="selected"'); ?>>1986</option>
-						<option value="1987"<?php if($yy == "1987") echo(' selected="selected"'); ?>>1987</option>
-						<option value="1988"<?php if($yy == "1988") echo(' selected="selected"'); ?>>1988</option>
-						<option value="1989"<?php if($yy == "1989") echo(' selected="selected"'); ?>>1989</option>
-						<option value="1990"<?php if($yy == "1990") echo(' selected="selected"'); ?>>1990</option>
-						<option value="1991"<?php if($yy == "1991") echo(' selected="selected"'); ?>>1991</option>
-						<option value="1992"<?php if($yy == "1992") echo(' selected="selected"'); ?>>1992</option>
-						<option value="1993"<?php if($yy == "1993") echo(' selected="selected"'); ?>>1993</option>
-						<option value="1994"<?php if($yy == "1994") echo(' selected="selected"'); ?>>1994</option>
-						<option value="1995"<?php if($yy == "1995") echo(' selected="selected"'); ?>>1995</option>
-						<option value="1996"<?php if($yy == "1996") echo(' selected="selected"'); ?>>1996</option>
-						<option value="1997"<?php if($yy == "1997") echo(' selected="selected"'); ?>>1997</option>
-						<option value="1998"<?php if($yy == "1998") echo(' selected="selected"'); ?>>1998</option>
-						<option value="1999"<?php if($yy == "1999") echo(' selected="selected"'); ?>>1999</option>
-						<option value="2000"<?php if($yy == "2000") echo(' selected="selected"'); ?>>2000</option>
-						<option value="2001"<?php if($yy == "2001") echo(' selected="selected"'); ?>>2001</option>
-						<option value="2002"<?php if($yy == "2002") echo(' selected="selected"'); ?>>2002</option>
-						<option value="2003"<?php if($yy == "2003") echo(' selected="selected"'); ?>>2003</option>
-						<option value="2004"<?php if($yy == "2004") echo(' selected="selected"'); ?>>2004</option>
-						<option value="2005"<?php if($yy == "2005") echo(' selected="selected"'); ?>>2005</option>
-						<option value="2006"<?php if($yy == "2006") echo(' selected="selected"'); ?>>2006</option>
-						<option value="2007"<?php if($yy == "2007") echo(' selected="selected"'); ?>>2007</option>
-						<option value="2008"<?php if($yy == "2008") echo(' selected="selected"'); ?>>2008</option>
-						<option value="2009"<?php if($yy == "2009") echo(' selected="selected"'); ?>>2009</option>
-						<option value="2010"<?php if($yy == "2010") echo(' selected="selected"'); ?>>2010</option>
-						<option value="2011"<?php if($yy == "2011") echo(' selected="selected"'); ?>>2011</option>
-						<option value="2012"<?php if($yy == "2012") echo(' selected="selected"'); ?>>2012</option>
-
-				  </select>
+				  	<?php for($i = 1900; $i <= 2050; $i++) {
+				  	echo('<option value="' . $i . '"');
+				  	if($yy == $i) echo(' selected="selected"');
+				  	echo('>' . $i . '</option>');
+				  	} ?>
+				</select>
+				
 				&nbsp; <?php _e("at", "gigpress"); ?> &nbsp; 
+				
 				<?php if ( $gpo['alternate_clock'] == 1 ) { ?>
 				<select name="gp_hh" id="gp_hh" class="twentyfour">
 					<option value="na"<?php if($hh == "na") echo(' selected="selected"'); ?>>--</option>
@@ -351,94 +280,24 @@ function gigpress_add() {
 						  <option value="11"<?php if($exp_mm == "11") echo(' selected="selected"'); ?>><?php _e("November"); ?></option>
 						  <option value="12"<?php if($exp_mm == "12") echo(' selected="selected"'); ?>><?php _e("December"); ?></option>
 					</select>
+					
 					  <select name="exp_dd" id="exp_dd">
-						<option value="01"<?php if($exp_dd == "01") echo(' selected="selected"'); ?>>01</option>
-						<option value="02"<?php if($exp_dd == "02") echo(' selected="selected"'); ?>>02</option>
-						<option value="03"<?php if($exp_dd == "03") echo(' selected="selected"'); ?>>03</option>
-						<option value="04"<?php if($exp_dd == "04") echo(' selected="selected"'); ?>>04</option>
-						<option value="05"<?php if($exp_dd == "05") echo(' selected="selected"'); ?>>05</option>
-						<option value="06"<?php if($exp_dd == "06") echo(' selected="selected"'); ?>>06</option>
-						<option value="07"<?php if($exp_dd == "07") echo(' selected="selected"'); ?>>07</option>
-						<option value="08"<?php if($exp_dd == "08") echo(' selected="selected"'); ?>>08</option>
-						<option value="09"<?php if($exp_dd == "09") echo(' selected="selected"'); ?>>09</option>
-						<option value="10"<?php if($exp_dd == "10") echo(' selected="selected"'); ?>>10</option>
-						<option value="11"<?php if($exp_dd == "11") echo(' selected="selected"'); ?>>11</option>
-						<option value="12"<?php if($exp_dd == "12") echo(' selected="selected"'); ?>>12</option>
-						<option value="13"<?php if($exp_dd == "13") echo(' selected="selected"'); ?>>13</option>
-						<option value="14"<?php if($exp_dd == "14") echo(' selected="selected"'); ?>>14</option>
-						<option value="15"<?php if($exp_dd == "15") echo(' selected="selected"'); ?>>15</option>
-						<option value="16"<?php if($exp_dd == "16") echo(' selected="selected"'); ?>>16</option>
-						<option value="17"<?php if($exp_dd == "17") echo(' selected="selected"'); ?>>17</option>
-						<option value="18"<?php if($exp_dd == "18") echo(' selected="selected"'); ?>>18</option>
-						<option value="19"<?php if($exp_dd == "19") echo(' selected="selected"'); ?>>19</option>
-						<option value="20"<?php if($exp_dd == "20") echo(' selected="selected"'); ?>>20</option>
-						<option value="21"<?php if($exp_dd == "21") echo(' selected="selected"'); ?>>21</option>
-						<option value="22"<?php if($exp_dd == "22") echo(' selected="selected"'); ?>>22</option>
-						<option value="23"<?php if($exp_dd == "23") echo(' selected="selected"'); ?>>23</option>
-						<option value="24"<?php if($exp_dd == "24") echo(' selected="selected"'); ?>>24</option>
-						<option value="25"<?php if($exp_dd == "25") echo(' selected="selected"'); ?>>25</option>
-						<option value="26"<?php if($exp_dd == "26") echo(' selected="selected"'); ?>>26</option>
-						<option value="27"<?php if($exp_dd == "27") echo(' selected="selected"'); ?>>27</option>
-						<option value="28"<?php if($exp_dd == "28") echo(' selected="selected"'); ?>>28</option>
-						<option value="29"<?php if($exp_dd == "29") echo(' selected="selected"'); ?>>29</option>
-						<option value="30"<?php if($exp_dd == "30") echo(' selected="selected"'); ?>>30</option>
-						<option value="31"<?php if($exp_dd == "31") echo(' selected="selected"'); ?>>31</option>
+					  	<?php for($i = 1; $i <= 31; $i++) {
+					  	$i = ($i < 10) ? '0' . $i : $i;
+					  	echo('<option value="' . $i . '"');
+					  	if($exp_dd == $i) echo(' selected="selected"');
+					  	echo('>' . $i . '</option>');
+					  	} ?>
 					  </select>
+					  
 					  <select name="exp_yy" id="exp_yy">
-						<option value="1960"<?php if($exp_yy == "1960") echo(' selected="selected"'); ?>>1960</option>
-						<option value="1961"<?php if($exp_yy == "1961") echo(' selected="selected"'); ?>>1961</option>
-						<option value="1962"<?php if($exp_yy == "1962") echo(' selected="selected"'); ?>>1962</option>
-						<option value="1963"<?php if($exp_yy == "1963") echo(' selected="selected"'); ?>>1963</option>
-						<option value="1964"<?php if($exp_yy == "1964") echo(' selected="selected"'); ?>>1964</option>
-						<option value="1965"<?php if($exp_yy == "1965") echo(' selected="selected"'); ?>>1965</option>
-						<option value="1966"<?php if($exp_yy == "1966") echo(' selected="selected"'); ?>>1966</option>
-						<option value="1967"<?php if($exp_yy == "1967") echo(' selected="selected"'); ?>>1967</option>
-						<option value="1968"<?php if($exp_yy == "1968") echo(' selected="selected"'); ?>>1968</option>
-						<option value="1969"<?php if($exp_yy == "1969") echo(' selected="selected"'); ?>>1969</option>
-						<option value="1970"<?php if($exp_yy == "1970") echo(' selected="selected"'); ?>>1970</option>
-						<option value="1971"<?php if($exp_yy == "1971") echo(' selected="selected"'); ?>>1971</option>
-						<option value="1972"<?php if($exp_yy == "1972") echo(' selected="selected"'); ?>>1972</option>
-						<option value="1973"<?php if($exp_yy == "1973") echo(' selected="selected"'); ?>>1973</option>
-						<option value="1974"<?php if($exp_yy == "1974") echo(' selected="selected"'); ?>>1974</option>
-						<option value="1975"<?php if($exp_yy == "1975") echo(' selected="selected"'); ?>>1975</option>
-						<option value="1976"<?php if($exp_yy == "1976") echo(' selected="selected"'); ?>>1976</option>
-						<option value="1977"<?php if($exp_yy == "1977") echo(' selected="selected"'); ?>>1977</option>
-						<option value="1978"<?php if($exp_yy == "1978") echo(' selected="selected"'); ?>>1978</option>
-						<option value="1979"<?php if($exp_yy == "1979") echo(' selected="selected"'); ?>>1979</option>
-						<option value="1980"<?php if($exp_yy == "1980") echo(' selected="selected"'); ?>>1980</option>
-						<option value="1981"<?php if($exp_yy == "1981") echo(' selected="selected"'); ?>>1981</option>
-						<option value="1982"<?php if($exp_yy == "1982") echo(' selected="selected"'); ?>>1982</option>
-						<option value="1983"<?php if($exp_yy == "1983") echo(' selected="selected"'); ?>>1983</option>
-						<option value="1984"<?php if($exp_yy == "1984") echo(' selected="selected"'); ?>>1984</option>
-						<option value="1985"<?php if($exp_yy == "1985") echo(' selected="selected"'); ?>>1985</option>
-						<option value="1986"<?php if($exp_yy == "1986") echo(' selected="selected"'); ?>>1986</option>
-						<option value="1987"<?php if($exp_yy == "1987") echo(' selected="selected"'); ?>>1987</option>
-						<option value="1988"<?php if($exp_yy == "1988") echo(' selected="selected"'); ?>>1988</option>
-						<option value="1989"<?php if($exp_yy == "1989") echo(' selected="selected"'); ?>>1989</option>
-						<option value="1990"<?php if($exp_yy == "1990") echo(' selected="selected"'); ?>>1990</option>
-						<option value="1991"<?php if($exp_yy == "1991") echo(' selected="selected"'); ?>>1991</option>
-						<option value="1992"<?php if($exp_yy == "1992") echo(' selected="selected"'); ?>>1992</option>
-						<option value="1993"<?php if($exp_yy == "1993") echo(' selected="selected"'); ?>>1993</option>
-						<option value="1994"<?php if($exp_yy == "1994") echo(' selected="selected"'); ?>>1994</option>
-						<option value="1995"<?php if($exp_yy == "1995") echo(' selected="selected"'); ?>>1995</option>
-						<option value="1996"<?php if($exp_yy == "1996") echo(' selected="selected"'); ?>>1996</option>
-						<option value="1997"<?php if($exp_yy == "1997") echo(' selected="selected"'); ?>>1997</option>
-						<option value="1998"<?php if($exp_yy == "1998") echo(' selected="selected"'); ?>>1998</option>
-						<option value="1999"<?php if($exp_yy == "1999") echo(' selected="selected"'); ?>>1999</option>
-						<option value="2000"<?php if($exp_yy == "2000") echo(' selected="selected"'); ?>>2000</option>
-						<option value="2001"<?php if($exp_yy == "2001") echo(' selected="selected"'); ?>>2001</option>
-						<option value="2002"<?php if($exp_yy == "2002") echo(' selected="selected"'); ?>>2002</option>
-						<option value="2003"<?php if($exp_yy == "2003") echo(' selected="selected"'); ?>>2003</option>
-						<option value="2004"<?php if($exp_yy == "2004") echo(' selected="selected"'); ?>>2004</option>
-						<option value="2005"<?php if($exp_yy == "2005") echo(' selected="selected"'); ?>>2005</option>
-						<option value="2006"<?php if($exp_yy == "2006") echo(' selected="selected"'); ?>>2006</option>
-						<option value="2007"<?php if($exp_yy == "2007") echo(' selected="selected"'); ?>>2007</option>
-						<option value="2008"<?php if($exp_yy == "2008") echo(' selected="selected"'); ?>>2008</option>
-						<option value="2009"<?php if($exp_yy == "2009") echo(' selected="selected"'); ?>>2009</option>
-						<option value="2010"<?php if($exp_yy == "2010") echo(' selected="selected"'); ?>>2010</option>
-						<option value="2011"<?php if($exp_yy == "2011") echo(' selected="selected"'); ?>>2011</option>
-						<option value="2012"<?php if($exp_yy == "2012") echo(' selected="selected"'); ?>>2012</option>
-					  </select>
+					  	<?php for($i = 1900; $i <= 2050; $i++) {
+					  	echo('<option value="' . $i . '"');
+					  	if($exp_yy == $i) echo(' selected="selected"');
+					  	echo('>' . $i . '</option>');
+					  	} ?>
+				  	</select>
+				  	
 					</td>
 				</tr>
 			<tr>
@@ -489,173 +348,14 @@ function gigpress_add() {
 			<tbody>
 			 <tr>
 				<th scope="row"><label for="show_country"><?php _e("Country", "gigpress") ?>:</label></th>
-				<td><select name="show_country" id="show_country">
-						<option value="AU"<?php if($country == "AU") echo(' selected="selected"'); ?>>Australia</option>
-						<option value="AT"<?php if($country == "AT") echo(' selected="selected"'); ?>>Austria</option>
-						<option value="BR"<?php if($country == "BR") echo(' selected="selected"'); ?>>Brazil</option>
-						<option value="CA"<?php if($country == "CA") echo(' selected="selected"'); ?>>Canada</option>
-						<option value="DK"<?php if($country == "DK") echo(' selected="selected"'); ?>>Denmark</option>
-						<option value="FR"<?php if($country == "FR") echo(' selected="selected"'); ?>>France</option>
-						<option value="DE"<?php if($country == "DE") echo(' selected="selected"'); ?>>Germany</option>
-						<option value="IT"<?php if($country == "IT") echo(' selected="selected"'); ?>>Italy</option>
-						<option value="JP"<?php if($country == "JP") echo(' selected="selected"'); ?>>Japan</option>
-						<option value="MX"<?php if($country == "MX") echo(' selected="selected"'); ?>>Mexico</option>
-						<option value="ES"<?php if($country == "ES") echo(' selected="selected"'); ?>>Spain</option>
-						<option value="SE"<?php if($country == "SE") echo(' selected="selected"'); ?>>Sweden</option>
-						<option value="CH"<?php if($country == "CH") echo(' selected="selected"'); ?>>Switzerland</option>
-						<option value="US"<?php if($country == "US") echo(' selected="selected"'); ?>>United States</option>
-						<option value="GB"<?php if($country == "GB") echo(' selected="selected"'); ?>>United Kingdom</option>
-						<option value="">-------------</option>
-						<option value="AF"<?php if($country == "AF") echo(' selected="selected"'); ?>>Afghanistan</option>
-						<option value="AG"<?php if($country == "AG") echo(' selected="selected"'); ?>>Antigua and Barbuda</option>
-						<option value="AI"<?php if($country == "AI") echo(' selected="selected"'); ?>>Anguilla</option>
-						<option value="AL"<?php if($country == "AL") echo(' selected="selected"'); ?>>Albania</option>
-						<option value="AM"<?php if($country == "AM") echo(' selected="selected"'); ?>>Armenia</option>
-						<option value="DZ"<?php if($country == "DZ") echo(' selected="selected"'); ?>>Algeria</option>
-						<option value="AD"<?php if($country == "AD") echo(' selected="selected"'); ?>>Andorra</option>
-						<option value="AO"<?php if($country == "AO") echo(' selected="selected"'); ?>>Angola</option>
-						<option value="AR"<?php if($country == "AR") echo(' selected="selected"'); ?>>Argentina</option>
-						<option value="AW"<?php if($country == "AW") echo(' selected="selected"'); ?>>Aruba</option>
-						<option value="BS"<?php if($country == "BS") echo(' selected="selected"'); ?>>Bahamas</option>
-						<option value="BH"<?php if($country == "BH") echo(' selected="selected"'); ?>>Bahrain</option>
-						<option value="BD"<?php if($country == "BD") echo(' selected="selected"'); ?>>Bangladesh</option>
-						<option value="BB"<?php if($country == "BB") echo(' selected="selected"'); ?>>Barbados</option>
-						<option value="BY"<?php if($country == "BY") echo(' selected="selected"'); ?>>Belarus</option>
-						<option value="BE"<?php if($country == "BE") echo(' selected="selected"'); ?>>Belgium</option>
-						<option value="BZ"<?php if($country == "BZ") echo(' selected="selected"'); ?>>Belize</option>
-						<option value="BM"<?php if($country == "BM") echo(' selected="selected"'); ?>>Bermuda</option>
-						<option value="BT"<?php if($country == "BT") echo(' selected="selected"'); ?>>Bhutan</option>
-						<option value="BO"<?php if($country == "BO") echo(' selected="selected"'); ?>>Bolivia</option>
-						<option value="BA"<?php if($country == "BA") echo(' selected="selected"'); ?>>Bosnia and Herzegovina</option>
-						<option value="BW"<?php if($country == "BW") echo(' selected="selected"'); ?>>Botswana</option>
-						<option value="BN"<?php if($country == "BN") echo(' selected="selected"'); ?>>Brunei</option>
-						<option value="BG"<?php if($country == "BG") echo(' selected="selected"'); ?>>Bulgaria</option>
-						<option value="BI"<?php if($country == "BI") echo(' selected="selected"'); ?>>Burundi</option>
-						<option value="KH"<?php if($country == "KH") echo(' selected="selected"'); ?>>Cambodia</option>
-						<option value="CV"<?php if($country == "CV") echo(' selected="selected"'); ?>>Cape Verde</option>
-						<option value="KY"<?php if($country == "KY") echo(' selected="selected"'); ?>>Cayman Islands</option>
-						<option value="CF"<?php if($country == "CF") echo(' selected="selected"'); ?>>Central African Republic</option>
-						<option value="CL"<?php if($country == "CL") echo(' selected="selected"'); ?>>Chile</option>
-						<option value="CN"<?php if($country == "CN") echo(' selected="selected"'); ?>>China</option>
-						<option value="CO"<?php if($country == "CO") echo(' selected="selected"'); ?>>Colombia</option>
-						<option value="KM"<?php if($country == "KM") echo(' selected="selected"'); ?>>Comoros</option>
-						<option value="CR"<?php if($country == "CR") echo(' selected="selected"'); ?>>Costa Rica</option>
-						<option value="HR"<?php if($country == "HR") echo(' selected="selected"'); ?>>Croatia</option>
-						<option value="CU"<?php if($country == "CU") echo(' selected="selected"'); ?>>Cuba</option>
-						<option value="CY"<?php if($country == "CY") echo(' selected="selected"'); ?>>Cyprus</option>
-						<option value="CZ"<?php if($country == "CZ") echo(' selected="selected"'); ?>>Czech Republic</option>
-						<option value="DJ"<?php if($country == "DJ") echo(' selected="selected"'); ?>>Djibouti</option>
-						<option value="DO"<?php if($country == "DO") echo(' selected="selected"'); ?>>Dominican Republic</option>
-						<option value="EC"<?php if($country == "EC") echo(' selected="selected"'); ?>>Ecuador</option>
-						<option value="EG"<?php if($country == "EG") echo(' selected="selected"'); ?>>Egypt</option>
-						<option value="SV"<?php if($country == "SV") echo(' selected="selected"'); ?>>El Salvador</option>
-						<option value="EE"<?php if($country == "EE") echo(' selected="selected"'); ?>>Estonia</option>
-						<option value="ET"<?php if($country == "ET") echo(' selected="selected"'); ?>>Ethiopia</option>
-						<option value="FK"<?php if($country == "FK") echo(' selected="selected"'); ?>>Falkland Islands</option>
-						<option value="FJ"<?php if($country == "FJ") echo(' selected="selected"'); ?>>Fiji</option>
-						<option value="FI"<?php if($country == "FI") echo(' selected="selected"'); ?>>Finland</option>
-						<option value="GM"<?php if($country == "GM") echo(' selected="selected"'); ?>>Gambia</option>
-						<option value="GH"<?php if($country == "GH") echo(' selected="selected"'); ?>>Ghana</option>
-						<option value="GI"<?php if($country == "GI") echo(' selected="selected"'); ?>>Gibraltar</option>
-						<option value="GR"<?php if($country == "GR") echo(' selected="selected"'); ?>>Greece</option>
-						<option value="GT"<?php if($country == "GT") echo(' selected="selected"'); ?>>Guatemala</option>
-						<option value="GN"<?php if($country == "GN") echo(' selected="selected"'); ?>>Guinea</option>
-						<option value="GY"<?php if($country == "GY") echo(' selected="selected"'); ?>>Guyana</option>
-						<option value="HT"<?php if($country == "HT") echo(' selected="selected"'); ?>>Haiti</option>
-						<option value="HN"<?php if($country == "HN") echo(' selected="selected"'); ?>>Honduras</option>
-						<option value="HK"<?php if($country == "HK") echo(' selected="selected"'); ?>>Hong Kong</option>
-						<option value="HU"<?php if($country == "HU") echo(' selected="selected"'); ?>>Hungary</option>
-						<option value="IS"<?php if($country == "IS") echo(' selected="selected"'); ?>>Iceland</option>
-						<option value="IN"<?php if($country == "IN") echo(' selected="selected"'); ?>>India</option>
-						<option value="ID"<?php if($country == "ID") echo(' selected="selected"'); ?>>Indonesia</option>
-						<option value="IR"<?php if($country == "IR") echo(' selected="selected"'); ?>>Iran</option>
-						<option value="IQ"<?php if($country == "IQ") echo(' selected="selected"'); ?>>Iraq</option>
-						<option value="IE"<?php if($country == "IE") echo(' selected="selected"'); ?>>Ireland</option>
-						<option value="IL"<?php if($country == "IL") echo(' selected="selected"'); ?>>Israel</option>
-						<option value="JM"<?php if($country == "JM") echo(' selected="selected"'); ?>>Jamaica</option>
-						<option value="JO"<?php if($country == "JO") echo(' selected="selected"'); ?>>Jordan</option>
-						<option value="KZ"<?php if($country == "KZ") echo(' selected="selected"'); ?>>Kazakhstan</option>
-						<option value="KE"<?php if($country == "KE") echo(' selected="selected"'); ?>>Kenya</option>
-						<option value="KW"<?php if($country == "KW") echo(' selected="selected"'); ?>>Kuwait</option>
-						<option value="LA"<?php if($country == "LA") echo(' selected="selected"'); ?>>Laos</option>
-						<option value="LV"<?php if($country == "LV") echo(' selected="selected"'); ?>>Latvia</option>
-						<option value="LB"<?php if($country == "LB") echo(' selected="selected"'); ?>>Lebanon</option>
-						<option value="LS"<?php if($country == "LS") echo(' selected="selected"'); ?>>Lesotho</option>
-						<option value="LR"<?php if($country == "LR") echo(' selected="selected"'); ?>>Liberia</option>
-						<option value="LY"<?php if($country == "LY") echo(' selected="selected"'); ?>>Libya</option>
-						<option value="LT"<?php if($country == "LT") echo(' selected="selected"'); ?>>Lithuania</option>
-						<option value="LU"<?php if($country == "LU") echo(' selected="selected"'); ?>>Luxembourg</option>
-						<option value="MO"<?php if($country == "MO") echo(' selected="selected"'); ?>>Macao</option>
-						<option value="MG"<?php if($country == "MG") echo(' selected="selected"'); ?>>Madagascar</option>
-						<option value="MW"<?php if($country == "MW") echo(' selected="selected"'); ?>>Malawi</option>
-						<option value="MY"<?php if($country == "MY") echo(' selected="selected"'); ?>>Malaysia</option>
-						<option value="MV"<?php if($country == "MV") echo(' selected="selected"'); ?>>Maldives</option>
-						<option value="MT"<?php if($country == "MT") echo(' selected="selected"'); ?>>Malta</option>
-						<option value="MR"<?php if($country == "MR") echo(' selected="selected"'); ?>>Mauritania</option>
-						<option value="MU"<?php if($country == "MU") echo(' selected="selected"'); ?>>Mauritius</option>
-						<option value="MN"<?php if($country == "MN") echo(' selected="selected"'); ?>>Mongolia</option>
-						<option value="MC"<?php if($country == "MC") echo(' selected="selected"'); ?>>Monaco</option>
-						<option value="ME"<?php if($country == "ME") echo(' selected="selected"'); ?>>Montenegro</option>
-						<option value="MA"<?php if($country == "MA") echo(' selected="selected"'); ?>>Morocco</option>
-						<option value="MZ"<?php if($country == "MZ") echo(' selected="selected"'); ?>>Mozambique</option>
-						<option value="MM"<?php if($country == "MM") echo(' selected="selected"'); ?>>Myanmar</option>
-						<option value="NA"<?php if($country == "NA") echo(' selected="selected"'); ?>>Namibia</option>
-						<option value="NP"<?php if($country == "NP") echo(' selected="selected"'); ?>>Nepal</option>
-						<option value="NL"<?php if($country == "NL") echo(' selected="selected"'); ?>>Netherlands</option>
-						<option value="AN"<?php if($country == "AN") echo(' selected="selected"'); ?>>Netherlands Antilles</option>
-						<option value="NZ"<?php if($country == "NZ") echo(' selected="selected"'); ?>>New Zealand</option>
-						<option value="NI"<?php if($country == "NI") echo(' selected="selected"'); ?>>Nicaragua</option>
-						<option value="NG"<?php if($country == "NG") echo(' selected="selected"'); ?>>Nigeria</option>
-						<option value="KP"<?php if($country == "KP") echo(' selected="selected"'); ?>>North Korea</option>
-						<option value="NO"<?php if($country == "NO") echo(' selected="selected"'); ?>>Norway</option>
-						<option value="OM"<?php if($country == "OM") echo(' selected="selected"'); ?>>Oman</option>
-						<option value="PK"<?php if($country == "PK") echo(' selected="selected"'); ?>>Pakistan</option>
-						<option value="PA"<?php if($country == "PA") echo(' selected="selected"'); ?>>Panama</option>
-						<option value="PG"<?php if($country == "PG") echo(' selected="selected"'); ?>>Papua New Guinea</option>
-						<option value="PY"<?php if($country == "PY") echo(' selected="selected"'); ?>>Paraguay</option>
-						<option value="PE"<?php if($country == "PE") echo(' selected="selected"'); ?>>Peru</option>
-						<option value="PH"<?php if($country == "PH") echo(' selected="selected"'); ?>>Philippines</option>
-						<option value="PL"<?php if($country == "PL") echo(' selected="selected"'); ?>>Poland</option>
-						<option value="PT"<?php if($country == "PT") echo(' selected="selected"'); ?>>Portugal</option>
-						<option value="QA"<?php if($country == "QA") echo(' selected="selected"'); ?>>Qatar</option>
-						<option value="RO"<?php if($country == "RO") echo(' selected="selected"'); ?>>Romania</option>
-						<option value="RU"<?php if($country == "RU") echo(' selected="selected"'); ?>>Russia</option>
-						<option value="WS"<?php if($country == "WS") echo(' selected="selected"'); ?>>Samoa</option>
-						<option value="ST"<?php if($country == "ST") echo(' selected="selected"'); ?>>Sao Tome/Principe</option>
-						<option value="SA"<?php if($country == "SA") echo(' selected="selected"'); ?>>Saudi Arabia</option>
-						<option value="RS"<?php if($country == "RS") echo(' selected="selected"'); ?>>Serbia</option>
-						<option value="SC"<?php if($country == "SC") echo(' selected="selected"'); ?>>Seychelles</option>
-						<option value="SL"<?php if($country == "SL") echo(' selected="selected"'); ?>>Sierra Leone</option>
-						<option value="SG"<?php if($country == "SG") echo(' selected="selected"'); ?>>Singapore</option>
-						<option value="SK"<?php if($country == "SK") echo(' selected="selected"'); ?>>Slovakia</option>
-						<option value="SI"<?php if($country == "SI") echo(' selected="selected"'); ?>>Slovenia</option>
-						<option value="SB"<?php if($country == "SB") echo(' selected="selected"'); ?>>Solomon Islands</option>
-						<option value="SO"<?php if($country == "SO") echo(' selected="selected"'); ?>>Somalia</option>
-						<option value="ZA"<?php if($country == "ZA") echo(' selected="selected"'); ?>>South Africa</option>
-						<option value="KR"<?php if($country == "KR") echo(' selected="selected"'); ?>>South Korea</option>
-						<option value="LK"<?php if($country == "LK") echo(' selected="selected"'); ?>>Sri Lanka</option>
-						<option value="SH"<?php if($country == "SH") echo(' selected="selected"'); ?>>Saint Helena</option>
-						<option value="SD"<?php if($country == "SD") echo(' selected="selected"'); ?>>Sudan</option>
-						<option value="SR"<?php if($country == "SR") echo(' selected="selected"'); ?>>Suriname</option>
-						<option value="SZ"<?php if($country == "SZ") echo(' selected="selected"'); ?>>Swaziland</option>
-						<option value="SY"<?php if($country == "SY") echo(' selected="selected"'); ?>>Syria</option>
-						<option value="TW"<?php if($country == "TW") echo(' selected="selected"'); ?>>Taiwan</option>
-						<option value="TZ"<?php if($country == "TZ") echo(' selected="selected"'); ?>>Tanzania</option>
-						<option value="TH"<?php if($country == "TH") echo(' selected="selected"'); ?>>Thailand</option>
-						<option value="TO"<?php if($country == "TO") echo(' selected="selected"'); ?>>Tonga</option>
-						<option value="TT"<?php if($country == "TT") echo(' selected="selected"'); ?>>Trinidad/Tobago</option>
-						<option value="TN"<?php if($country == "TN") echo(' selected="selected"'); ?>>Tunisia</option>
-						<option value="TR"<?php if($country == "TR") echo(' selected="selected"'); ?>>Turkey</option>
-						<option value="UG"<?php if($country == "UG") echo(' selected="selected"'); ?>>Uganda</option>
-						<option value="UA"<?php if($country == "UA") echo(' selected="selected"'); ?>>Ukraine</option>
-						<option value="UY"<?php if($country == "UY") echo(' selected="selected"'); ?>>Uruguay</option>
-						<option value="AE"<?php if($country == "AE") echo(' selected="selected"'); ?>>United Arab Emirates</option>
-						<option value="VU"<?php if($country == "VU") echo(' selected="selected"'); ?>>Vanuatu</option>
-						<option value="VE"<?php if($country == "VE") echo(' selected="selected"'); ?>>Venezuela</option>
-						<option value="VN"<?php if($country == "VN") echo(' selected="selected"'); ?>>Vietnam</option>
-						<option value="ZM"<?php if($country == "ZM") echo(' selected="selected"'); ?>>Zambia</option>
-						<option value="ZW"<?php if($country == "ZW") echo(' selected="selected"'); ?>>Zimbabwe</option>
-					</select>
+				<td>
+					<select name="show_country" id="show_country">
+					<?php $gp_countries = array("US" => "United States", "CA" => "Canada", "AF" => "Afghanistan", "AX" => "Aland Islands", "AL" => "Albania", "DZ" => "Algeria", "AS" => "American Samoa", "AD" => "Andorra", "AO" => "Angola", "AI" => "Anguilla", "AQ" => "Antarctica", "AG" => "Antigua and Barbuda", "AR" => "Argentina", "AM" => "Armenia", "AW" => "Aruba", "AU" => "Australia", "AT" => "Austria", "AZ" => "Azerbaijan", "BS" => "Bahamas", "BH" => "Bahrain", "BD" => "Bangladesh", "BB" => "Barbados", "BY" => "Belarus", "BE" => "Belgium", "BZ" => "Belize", "BJ" => "Benin", "BM" => "Bermuda", "BT" => "Bhutan", "BO" => "Bolivia", "BA" => "Bosnia and Herzegovina", "BW" => "Botswana", "BV" => "Bouvet Island", "BR" => "Brazil", "IO" => "British Indian Ocean Territory", "BN" => "Brunei Darussalam", "BG" => "Bulgaria", "BF" => "Burkina Faso", "BI" => "Burundi", "KH" => "Cambodia", "CM" => "Cameroon", "CV" => "Cape Verde", "KY" => "Cayman Islands", "CF" => "Central African Republic", "TD" => "Chad", "CL" => "Chile", "CN" => "China", "CX" => "Christmas Island", "CC" => "Cocos (Keeling) Islands", "CO" => "Colombia", "KM" => "Comoros", "CG" => "Congo", "CD" => "Congo (DR)", "CK" => "Cook Islands", "CR" => "Costa Rica", "CI" => "Cote D'Ivoire", "HR" => "Croatia", "CU" => "Cuba", "CY" => "Cyprus", "CZ" => "Czech Republic", "DK" => "Denmark", "DJ" => "Djibouti", "DM" => "Dominica", "DO" => "Dominican Republic", "EC" => "Ecuador", "EG" => "Egypt", "SV" => "El Salvador", "GQ" => "Equatorial Guinea", "ER" => "Eritrea", "EE" => "Estonia", "ET" => "Ethiopia", "FK" => "Falkland Islands (Malvinas)", "FO" => "Faroe Islands", "FJ" => "Fiji", "FI" => "Finland", "FR" => "France", "GF" => "French Guiana", "PF" => "French Polynesia", "TF" => "French Southern Territories", "GA" => "Gabon", "GM" => "Gambia", "GE" => "Georgia", "DE" => "Germany", "GH" => "Ghana", "GI" => "Gibraltar", "GR" => "Greece", "GL" => "Greenland", "GD" => "Grenada", "GP" => "Guadeloupe", "GU" => "Guam", "GT" => "Guatemala", "GG" => "Guernsey", "GN" => "Guinea", "GW" => "Guinea-Bissau", "GY" => "Guyana", "HT" => "Haiti", "HM" => "Heard and McDonald Islands", "VA" => "Holy See (Vatican City State)", "HN" => "Honduras", "HK" => "Hong Kong", "HU" => "Hungary", "IS" => "Iceland", "IN" => "India", "ID" => "Indonesia", "IR" => "Iran", "IQ" => "Iraq", "IE" => "Ireland", "IM" => "Isle of Man", "IL" => "Israel", "IT" => "Italy", "JM" => "Jamaica", "JP" => "Japan", "JE" => "Jersey", "JO" => "Jordan", "KZ" => "Kazakhstan", "KE" => "Kenya", "KI" => "Kiribati", "KP" => "Korea (North)", "KR" => "Korea (South)", "KW" => "Kuwait", "KG" => "Kyrgyzstan", "LA" => "Laos", "LV" => "Latvia", "LB" => "Lebanon", "LS" => "Lesotho", "LR" => "Liberia", "LY" => "Libya", "LI" => "Liechtenstein", "LT" => "Lithuania", "LU" => "Luxembourg", "MO" => "Macau", "MK" => "Macedonia", "MG" => "Madagascar", "MW" => "Malawi", "MY" => "Malaysia", "MV" => "Maldives", "ML" => "Mali", "MT" => "Malta", "MH" => "Marshall Islands", "MQ" => "Martinique", "MR" => "Mauritania", "MU" => "Mauritius", "YT" => "Mayotte", "MX" => "Mexico", "FM" => "Micronesia", "MD" => "Moldova", "MC" => "Monaco", "MN" => "Mongolia", "ME" => "Montenegro", "MS" => "Montserrat", "MA" => "Morocco", "MZ" => "Mozambique", "MM" => "Myanmar", "NA" => "Namibia", "NR" => "Nauru", "NP" => "Nepal", "NL" => "Netherlands", "AN" => "Netherlands Antilles", "NC" => "New Caledonia", "NZ" => "New Zealand", "NI" => "Nicaragua", "NE" => "Niger", "NG" => "Nigeria", "NU" => "Niue", "NF" => "Norfolk Island", "MP" => "Northern Mariana Islands", "NO" => "Norway", "OM" => "Oman", "PK" => "Pakistan", "PW" => "Palau", "PS" => "Palestinian Territory (Occupied)", "PA" => "Panama", "PG" => "Papua New Guinea", "PY" => "Paraguay", "PE" => "Peru", "PH" => "Philippines", "PN" => "Pitcairn", "PL" => "Poland", "PT" => "Portugal", "PR" => "Puerto Rico", "QA" => "Qatar", "RE" => "Reunion", "RO" => "Romania", "RU" => "Russian Federation", "RW" => "Rwanda", "BL" => "Saint Barthelemy", "SH" => "Saint Helena", "KN" => "Saint Kitts and Nevis", "LC" => "Saint Lucia", "MF" => "Saint Martin (French)", "PM" => "Saint Pierre and Miquelon", "VC" => "Saint Vincent and the Grenadines", "WS" => "Samoa", "SM" => "San Marino", "ST" => "Sao Tome and Principe", "SA" => "Saudi Arabia", "SN" => "Senegal", "RS" => "Serbia", "SC" => "Seychelles", "SL" => "Sierra Leone", "SG" => "Singapore", "SK" => "Slovakia", "SI" => "Slovenia", "SB" => "Solomon Islands", "SO" => "Somalia", "ZA" => "South Africa", "GS" => "South Georgia and South Sandwich Islands", "ES" => "Spain", "LK" => "Sri Lanka", "SD" => "Sudan", "SR" => "Suriname", "SJ" => "Svalbard and Jan Mayen", "SZ" => "Swaziland", "SE" => "Sweden", "CH" => "Switzerland", "SY" => "Syria", "TW" => "Taiwan", "TJ" => "Tajikistan", "TZ" => "Tanzania", "TH" => "Thailand", "TL" => "Timor-Leste", "TG" => "Togo", "TK" => "Tokelau", "TO" => "Tonga", "TT" => "Trinidad and Tobago", "TN" => "Tunisia", "TR" => "Turkey", "TM" => "Turkmenistan", "TC" => "Turks and Caicos Islands", "TV" => "Tuvalu", "UG" => "Uganda", "UA" => "Ukraine", "AE" => "United Arab Emirates", "UK" => "United Kingdom", "UM" => "United States Minor Outlying Islands", "UY" => "Uruguay", "UZ" => "Uzbekistan", "VU" => "Vanuatu", "VE" => "Venezuela", "VN" => "Vietnam", "VG" => "Virgin Islands (British)", "VI" => "Virgin Islands (US)", "WF" => "Wallis and Futuna", "EH" => "Western Sahara", "YE" => "Yemen", "ZM" => "Zambia", "ZW" => "Zimbabwe");
+				foreach ($gp_countries as $code => $name) {
+					$sel = ($code == $country) ? ' selected="selected"' : '';
+					echo('<option value="' . $code . '"' . $sel . '>' . $name . '</option>');
+				} ?>
+				</select>
 			</td>
 			  </tr>
 			  <tr>

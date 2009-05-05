@@ -86,7 +86,7 @@ function gigpress_show_related($content) {
 					<?php } ?>
 					</span></li>
 					<?php if($secs != "1") { ?>
-						<li><span class="gigpress-related-label"><?php _e("Time", "gigpress"); ?>:</span> <span class="gigpress-related-item"><?php echo $time; ?></span>
+						<li><span class="gigpress-related-label"><?php _e("Time", "gigpress"); ?>:</span> <span class="gigpress-related-item"><?php echo $time; ?></span></li>
 					<?php } ?>
 					<li><span class="gigpress-related-label"><?php _e("City", "gigpress"); ?>:</span> <span class="gigpress-related-item summary"><span class="hide"><?php echo gigpress_sanitize($gpo['band']); _e("in", "gigpress"); ?> </span><?php echo gigpress_sanitize($show->show_locale); ?></span></li>
 					<li><span class="gigpress-related-label"><?php _e("Venue", "gigpress"); ?>:</span> <span class="gigpress-show-related location"><?php echo $venue; ?></span></li>
