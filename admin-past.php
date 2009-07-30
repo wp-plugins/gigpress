@@ -75,7 +75,7 @@ function gigpress_admin_past() {
 		// Get all upcoming dates from the DB that are NOT part of a tour
 		
 		$past = $wpdb->get_results("
-			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id = 0 AND show_status = 'active' ORDER BY show_date DESC");
+			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id = 0 AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date DESC");
 		
 		// Do we have dates?
 		if($past != FALSE) { ?>

@@ -1,0 +1,989 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GigPress 1.2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-03 12:16-0400\n"
+"PO-Revision-Date: 2009-07-28 06:42+0100\n"
+"Last-Translator: Derek Hogue <derek@gigpress.com>\n"
+"Language-Team: Igor Rjabinin <igorko@k6.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Slovak\n"
+"X-Poedit-Country: SLOVAKIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "<strong>Welcome to GigPress!</strong> You should first"
+msgstr "<strong>Vitajte v GigPress!</strong> Mali by ste najskôr "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "customize some of the options"
+msgstr "upraviť nejaké nastavenia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "then get right into adding shows below. Questions?  Please check out the"
+msgstr "a potom začať pridávať akcie. Otázky? Prosím pozrite"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "documentation"
+msgstr "dokumentáciu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "and"
+msgstr "a"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "FAQ"
+msgstr "FAQ"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "on the GigPress website. Enjoy!"
+msgstr "na stránke GigPress. Enjoy!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:25
+msgid "Don't show this again"
+msgstr "Viac nezobrazovať"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:89
+msgid "Sorry, but we had trouble loading that show for editing."
+msgstr "Prepáčte, ale mali sme problém načítať túto akciu pre úpravu."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:97
+msgid "Edit this show"
+msgstr "Upraviť akciu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:137
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:130
+msgid "Add a show"
+msgstr "Pridať akciu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:147
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:136
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:35
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:103
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:35
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:102
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:32
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:17
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:76
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:83
+msgid "Date"
+msgstr "Dátum"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:149
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:339
+msgid "January"
+msgstr "Január"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:150
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:340
+msgid "February"
+msgstr "Február"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:151
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:341
+msgid "March"
+msgstr "Marec"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:152
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:342
+msgid "April"
+msgstr "Apríl"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:153
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:343
+msgid "May"
+msgstr "Máj"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:154
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:344
+msgid "June"
+msgstr "Jún"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:155
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:345
+msgid "July"
+msgstr "Júl"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:156
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:346
+msgid "August"
+msgstr "August"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:157
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:347
+msgid "September"
+msgstr "September"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:158
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:348
+msgid "October"
+msgstr "Október"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:159
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:349
+msgid "November"
+msgstr "November"
+
+# Doesn't need to be translated, as months are included in the core WordPress language files.
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:160
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:350
+msgid "December"
+msgstr "December"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:251
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:160
+msgid "at"
+msgstr "o"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:282
+msgid "N/A"
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:332
+msgid "This is a multi-day event"
+msgstr "Táto akcia trvá niekoľko dní"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:337
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:19
+msgid "End date"
+msgstr "Dátum ukončenia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:443
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:137
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:104
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:103
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:33
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:20
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:80
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:91
+msgid "City"
+msgstr "Mesto"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:445
+msgid "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
+msgstr "Odporúčam vypísať v štýle: <strong>Nitra</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:451
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:33
+msgid "Status"
+msgstr "Stav"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:453
+msgid "Active"
+msgstr "Aktívny"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:454
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:53
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:64
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:67
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:161
+msgid "Sold Out"
+msgstr "Vypredaný"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:455
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:51
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:62
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:65
+msgid "Cancelled"
+msgstr "Zrušený"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:462
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:105
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:104
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:34
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:22
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:81
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:92
+msgid "Venue"
+msgstr "Miesto"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:463
+msgid "toggle venue info"
+msgstr "prepnúť informácie o mieste"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:466
+msgid "This is a required field, so if you don't know, just put <strong>TBA</strong>."
+msgstr "Toto je potrebné vyplniť, takže ak neviete, zadajte <strong>TBA</strong>."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:472
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:23
+msgid "Venue address"
+msgstr "Adresa miesta"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:474
+msgid "If you enter a street address, it will enable auto-linkage to Google Maps.  True that, double true."
+msgstr "Ak zadáte adresu, aktivuje sa automatický odkaz na mapku v Google Maps. "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:477
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:25
+msgid "Venue website"
+msgstr "Webstránka miesta"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:479
+msgid "Any value entered here will be added as a hyperlink attached to the name of the venue."
+msgstr "Čokolvek sem zadáte bude hyperlink pripojený k názvu miesta."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:482
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:24
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:87
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:98
+msgid "Venue phone"
+msgstr "Telefón miesta"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:489
+#: /Clients/GigPress/Plugin/svn/trunk/gp-archive.php:36
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:21
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:89
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:100
+msgid "Country"
+msgstr "Krajina"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:659
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:38
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:38
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:105
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:26
+msgid "Admittance"
+msgstr "Prístup"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:661
+msgid "Not sure"
+msgstr "Nezadávať"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:662
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:261
+msgid "No minors"
+msgstr "Nie pre maloletých"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:663
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:260
+msgid "All Ages/Licensed"
+msgstr "Všetky vekové skupiny/s licenciou"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:664
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:259
+msgid "All Ages"
+msgstr "Všetky vekové skupiny"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:669
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:39
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:107
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:39
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:27
+msgid "Price"
+msgstr "Cena"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:671
+msgid "To accomodate various currency display formats, no auto-formatting will be applied to what you enter here. Keep that in mind!"
+msgstr "Treba vyplniť aj s menou (kvôli rôznym menám v rôznych krajinách v rôznych časoch)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:674
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:28
+msgid "Ticket URL"
+msgstr "URL pre lístky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:676
+msgid "This will enable the purchase link when displaying your tour dates."
+msgstr "na tomto linku sa budú dať kúpiť lístky."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:679
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:29
+msgid "Ticket phone"
+msgstr "Telefón pre lístky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:683
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:138
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:30
+msgid "Notes"
+msgstr "Poznámky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:686
+msgid "Use this space to list opening (or headlining) bands, 'presented by' info, or whatever other info you like."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:689
+msgid "Part of a tour?"
+msgstr "Je súčasťou turné?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:704
+msgid "No tours in the database"
+msgstr "Žiadne turné v databáze"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:709
+msgid "If this show is part of a tour you've already entered into GigPress, select it here.<br />No tours yet?"
+msgstr "Ak je akcia súčasťou truné, ktoré ste zadali do GigPress, zvoľte ho tu. <br />Ešte žiadne turné?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:709
+msgid "Create them here."
+msgstr "Vytvorte ho tu."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:713
+msgid "Related post"
+msgstr "Príbuzné články"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:716
+msgid "None"
+msgstr "Žiadne"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:717
+msgid "Create a new post"
+msgstr "Vytvoriť nový článok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:729
+msgid "You can link any show to a WordPress post, useful for show recaps, tour journals, uploading pictures, and allowing user comments."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+msgid "Update show"
+msgstr "Upraviť akciu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "or"
+msgstr "alebo"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:735
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "cancel"
+msgstr "zrušiť"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-addshow.php:737
+msgid "Add show"
+msgstr "Pridať akciu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:14
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:135
+msgid "Export"
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:16
+msgid "Download your complete show database as a tab-separated CSV file (compatible with programs such as Microsoft Excel.)"
+msgstr "Stiahne vašu celú databázu ako CSV súbor (kompatibilný s Microsoft Excel.)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-export.php:21
+msgid "Download file."
+msgstr "Stiahnuť súbor."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:20
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:123
+msgid "You must enter a city."
+msgstr "Musíte zadať mesto."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:21
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:124
+msgid "You must enter a venue (perhaps it's TBA?)"
+msgstr "Musíte zadať miesto konania (možno je to TBA?)"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:64
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:167
+msgid "We had trouble creating your Related Post. Sorry."
+msgstr "Mali sme problém vytvoriť váš príbuzný článok. Pardon."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+msgid "Your show  in"
+msgstr "Vaša akcia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:70
+msgid "on"
+msgstr "v"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:90
+msgid "was successfully added."
+msgstr "bola úspešne pridaná."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:98
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:188
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:261
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:298
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:427
+msgid "Something ain't right - try again?"
+msgstr "Niečo niejde v poriadku - skúste znova?"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:182
+msgid "was successfully updated."
+msgstr "bola úspešne upravená."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:220
+msgid "Show successfully deleted."
+msgstr "Akcia úspešne vymazaná."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:220
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:337
+msgid "Undo"
+msgstr "Krok späť"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:224
+msgid "We ran into some trouble deleting the show. Sorry."
+msgstr "Nastal problém so zmazaním akcie. Pardon."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:247
+msgid "You need to enter a name for the tour. It's the only field for crying out loud!"
+msgstr "Musíte zadať názov turné - je to jediná vec, ktorú treba zobraziť!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:259
+msgid "was successfully added to the database."
+msgstr "bolo úspešne pridané do databázy."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:285
+msgid "You need to enter a name for the tour!"
+msgstr "Musíte zadať názov turné!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:296
+msgid "Tour name successfully changed to"
+msgstr "Názov turné bol úspešne zmenený na"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:337
+msgid "Tour successfully deleted."
+msgstr "Truné bolo vymazané."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:341
+msgid "We ran into some trouble deleting the tour. Sorry."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:365
+msgid "Show successfully restored."
+msgstr "Akcia úspešne obnovená."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:367
+msgid "We ran into some trouble restoring that show. Sorry."
+msgstr "Akciu sa nepodarilo obnoviť. Pardon."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:384
+msgid "Tour successfully restored from the database."
+msgstr "Turné bolo obnovené z databázy."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:386
+msgid "We ran into some trouble restoring the tour. Sorry."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:425
+msgid "Tours successfully reordered."
+msgstr "Trurné úspešne preusporiadané."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:452
+msgid "All shows in the trash have been permanently deleted."
+msgstr "Všetky akcie v koši boli definitívne zmazan=e."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:454
+msgid "We ran into some trouble deleting shows from the trash. Sorry."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:462
+msgid "All tours in the trash have been permanently deleted."
+msgstr "Všetky turné v koši boli definitívne zmazan=e."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-handlers.php:464
+msgid "We ran into some trouble deleting tours from the trash. Sorry."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:22
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:134
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:29
+msgid "Name of your band"
+msgstr "Názov kapely"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:33
+msgid "This is used in your RSS feed and hCalendar data."
+msgstr "Toto je použité v RSS."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:38
+msgid "Full URL to your 'Upcoming Shows' page"
+msgstr "Celá URL na stránku 'aktuálne akcie' "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:42
+msgid "Show a link to this page below my sidebar listing."
+msgstr "Zobraziť odkaz na túto stránku pod sidebar-om."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:46
+msgid "Upcoming Shows link phrase"
+msgstr "Text odkazu na 'aktuálne akcie' "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:52
+msgid "No upcoming shows message"
+msgstr "Správa pre žiadne aktuálne akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:58
+msgid "No past shows message"
+msgstr "Správa pre žiadne akcie v archíve"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:65
+msgid "User level required to use GigPress"
+msgstr "Rola užívateľa potrebná pre použitie GigPress"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:68
+msgid "Administrator"
+msgstr "Administrator"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:69
+msgid "Editor"
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:70
+msgid "Author"
+msgstr "Author"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:71
+msgid "Contributor"
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:77
+msgid "Short Date Format"
+msgstr "Formát dátumu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:80
+msgid "Used in the main show listings."
+msgstr "Použitý v hlavnom zozname akcií."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:80
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:87
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:94
+msgid "Output"
+msgstr "Výstup"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:84
+msgid "Long Date Format"
+msgstr "Dlhý formát dátumu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:87
+msgid "Used in the Related Post entry."
+msgstr "Použitý v príbuznom článku."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:91
+msgid "Time Format"
+msgstr "Formát času"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:93
+msgid "I use a 24 hour clock"
+msgstr "Použiť 24 hodinový formát"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:95
+msgid "Here's some documentation on date and time formatting"
+msgstr "Tu nájdete nejakú dokumentáciu k formátovaniu času a dátumu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:95
+msgid "Click 'Update options' to update the sample output."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:100
+msgid "Related Posts"
+msgstr "Príbuzné články"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:102
+msgid "Display gig info in Related Post entries"
+msgstr "Zobraziť info o koncerte v príbuzných článkoch"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:103
+msgid "before the post content"
+msgstr "pred obsahom článku"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:104
+msgid "after the post content"
+msgstr "pod obsahom článku"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:105
+msgid "nowhere at all"
+msgstr "vôbec nikde"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:106
+msgid "If a gig has a Related Post, that gig's details will appear at the specified position in that post."
+msgstr "Ak má koncert príbuzný článok, tak detail koncertu sa zobrazí na zadanej pozícií v tom článku."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:110
+msgid "Related show heading"
+msgstr "Hlavička príbuznej akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:113
+msgid "This appears before the gig details in your Related Post entry."
+msgstr "Toto sa zobrazí pred detailom koncertu vo vašom príbuznom článku."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:117
+msgid "Related Posts Category"
+msgstr "Kategória príbuzných článkov"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:119
+msgid "Automatically create a Related Post for every new show I enter."
+msgstr "Automaticky vytvoriť  príbuzný článok pre každú akciu, ktorú zadám."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:120
+msgid "When creating Related Posts, put them in this category"
+msgstr "Keď sa vytvorí príbuzný článok, pridať ho do kategórie "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:128
+msgid "Exclude this category from my normal post listings."
+msgstr "Odobrať túto kaegóriu z mojich bežných príspevkov."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:133
+msgid "Related Posts Linking"
+msgstr "Odkazovanie príbuzných článkov"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:135
+msgid "Place a link to each show's Related Post in the following fields"
+msgstr "Zadajte adresu pre každý príbuzný článok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:142
+msgid "Related post phrase"
+msgstr "Text pre príbuzný článok"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:145
+msgid "This appears in your shows listing."
+msgstr "Toto sa zobrazí v zozname akcií"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:149
+msgid "RSS Feed"
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:151
+msgid "Please include a link to my upcoming shows RSS feed"
+msgstr "Prosím pridaj link na RSS pre aktuálne akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:152
+msgid "below my upcoming shows table"
+msgstr "pod tabulku s ich zoznamom"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:153
+msgid "below my sidebar listing"
+msgstr "pod sidebar"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:154
+msgid "in the <code>head</code> portion of my page"
+msgstr "v časti <code>hlavičky</code> mojej stránky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:155
+msgid "Your RSS feed for upcoming shows is"
+msgstr "Vaše RSS pre atuáne akcie je"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:155
+msgid "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:159
+msgid "RSS Feed title"
+msgstr "Nápis pre RSS Feed"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:165
+msgid "Tour grouping"
+msgstr "Zoskupovanie turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:167
+msgid "Group shows into tours"
+msgstr "Zoskupovať akcie do turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:169
+msgid "display tours <b>before</b> non-tour shows"
+msgstr "zobraziť turné <b>pred</b> akciami mimo turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:170
+msgid "display tours <b>after</b> non-tour shows"
+msgstr "zobraziť turné <b>pod</b> akciami mimo turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:174
+msgid "Tour label"
+msgstr "Nápis turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:180
+msgid "Individual Shows heading"
+msgstr "Nadpis akcií mimo turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:186
+msgid "Heading level of tour names"
+msgstr "Úroveň nadpisov názvov turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:196
+msgid "Depending on the semantic structure of your page template, you may want the headings which display the name of your tour(s) to be a different level."
+msgstr "Záleží od semantickej štruktúry šablóny vašej stránky, možnože chcete aby nadpisy, ktoré zobrazia vaše turné, boli inej úrovňe."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:196
+msgid "More on HTML headings."
+msgstr "Viac o HTML nadpisoch."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:200
+msgid "Country display"
+msgstr "Zobraziť krajinu"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:202
+msgid "Display 'Country' column."
+msgstr "Zobraziť stĺpec 'krajina'."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:206
+msgid "Link behaviour"
+msgstr "Správanie sa odkazov"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:207
+msgid "Open external links in new windows."
+msgstr "Otvoriť externé odkazy do nových okien"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:208
+msgid "This will add the"
+msgstr "Toto pridá"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:208
+msgid "attribute to all venue, ticket and Google Maps links. Keep in mind that this behaviour can be annoying to users who like to control their own web browser, and that this attribute does not validate under strict HTML doctypes."
+msgstr "správanie pre všetky odkazy na miesta konania a mapy v Google Maps. "
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:214
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "You currently have"
+msgstr "Aktuálne máte"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "shows"
+msgstr "akcií"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "tours"
+msgstr "turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:255
+msgid "in your trash"
+msgstr "v koši"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-options.php:257
+msgid "Take out the trash now"
+msgstr "Vysipať kôš"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:30
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:133
+msgid "Past shows"
+msgstr "Minulé akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:40
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:108
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:40
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:107
+msgid "Buy link"
+msgstr "Odkaz na nákup"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:41
+#: /Clients/GigPress/Plugin/svn/trunk/admin-past.php:109
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:134
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:192
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:218
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:270
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:41
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:108
+msgid "Actions"
+msgstr "Akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:31
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:239
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:56
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:59
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:125
+msgid "opens in a new window"
+msgstr "otvorí sa v novom okne"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:45
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:47
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:31
+msgid "Link"
+msgstr "Odkaz"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:174
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:254
+msgid "Edit"
+msgstr "Upraviť"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+msgid "Copy"
+msgstr "Kopírovať"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tables.php:85
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:174
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:254
+msgid "Delete"
+msgstr "Zmazať"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:37
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:132
+msgid "Tours"
+msgstr "Turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:39
+msgid "A tour is simply a collection of shows that you want to group together."
+msgstr "Turné zhlukuje koncerty dokopy."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:58
+msgid "Edit this tour"
+msgstr "Upraviť turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:67
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:106
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:131
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:189
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:215
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:267
+msgid "Tour name"
+msgstr "Názov turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:72
+msgid "Update tour"
+msgstr "Upraviť turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:83
+msgid "Sorry, but we had trouble loading that tour for editing."
+msgstr ""
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:90
+msgid "Add a tour"
+msgstr "Pridať turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:112
+msgid "Add tour"
+msgstr "Pridať turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:121
+msgid "Reorder tours"
+msgstr "Preusporiadať turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:130
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:188
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:214
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:266
+msgid "Display order"
+msgstr "Zobraziť poradie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:132
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:190
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:216
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:268
+msgid "Tour ID"
+msgstr "ID turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:133
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:191
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:217
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:269
+msgid "Number of shows"
+msgstr "Počet akcií"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:183
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:261
+msgid "No tours in the database!"
+msgstr "Žiadne turné v databáze!"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:196
+msgid "Save order"
+msgstr "Uložiť poradie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:203
+msgid "All tours"
+msgstr "Všetky turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:205
+msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
+msgstr "Zmazanie turné <strong>nezmaže</strong> akcie s ním asociované."
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:214
+#: /Clients/GigPress/Plugin/svn/trunk/admin-tours.php:266
+msgid "edit"
+msgstr "upraviť"
+
+#: /Clients/GigPress/Plugin/svn/trunk/admin-upcoming.php:30
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:131
+msgid "Upcoming shows"
+msgstr "Aktuálne akcie"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:181
+msgid "You're using"
+msgstr "Používate"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:239
+#: /Clients/GigPress/Plugin/svn/trunk/gigpress.php:241
+msgid "Find this address using Google Maps."
+msgstr "Nájsť adresu pomocou Google Maps,"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:18
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:78
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:89
+msgid "Time"
+msgstr "Čas"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-export.php:32
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:81
+msgid "Tour"
+msgstr "Turné"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:56
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:59
+msgid "Buy Tickets"
+msgstr "Kúpiť lístky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:58
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:61
+msgid "Buy tickets"
+msgstr "Kúpiť lístky"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:70
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:91
+#: /Clients/GigPress/Plugin/svn/trunk/gp-sidebar.php:152
+msgid "in"
+msgstr "v"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:84
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:95
+msgid "Address"
+msgstr "Adresa"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:91
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:102
+msgid "Admission"
+msgstr "Obmedzenia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:94
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:105
+msgid "Age restrictions"
+msgstr "Vekové obmedzenia"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-feed.php:97
+#: /Clients/GigPress/Plugin/svn/trunk/gp-related.php:108
+msgid "Box office"
+msgstr "Pokladňa"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:36
+msgid "Title"
+msgstr "Názov"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:37
+msgid "Number of shows to list"
+msgstr "Počet akcí v zozname"
+
+#: /Clients/GigPress/Plugin/svn/trunk/gp-widget.php:40
+msgid "Segment list into tours?"
+msgstr "Rozdeliť zoznam podľa turné?"
+
