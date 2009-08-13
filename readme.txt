@@ -29,6 +29,12 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 
 == Changelog ==
 
+= 1.4.9 =
+
+* Added Belarusian localization (thanks to M.Comfi)
+* Shows on the same day are now further ordered by show time
+* Fixed venue information toggle under IE 7
+
 = 1.4.8 =
 
 * Added German (thanks to David Scott), Slovak (thanks to Igor Rjabinin) and Ukranian (thanks to Vladimir Agafonkin) localization

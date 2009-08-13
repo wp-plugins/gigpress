@@ -27,9 +27,9 @@ function gigpress_tours_lister($dates) {
 		
 			$query = "SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = '". $tour->tour_id ."' 	AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') AND ";
 			if($dates == "upcoming") {
-				$query .= "show_expire >= '$now' ORDER BY show_date ASC";
+				$query .= "show_expire >= '$now' ORDER BY show_date ASC,show_time ASC";
 			} else {
-				$query .= "show_expire < '$now' ORDER BY show_date DESC";
+				$query .= "show_expire < '$now' ORDER BY show_date DESC,show_time DESC";
 			}		
 
 			// See if each tour actually has any shows assigned to it
@@ -77,9 +77,9 @@ function gigpress_shows_lister($dates) {
 
 	$query = "SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = '0' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') AND ";
 	if($dates == "upcoming") {
-		$query .= "show_expire >= '$now' ORDER BY show_date ASC";
+		$query .= "show_expire >= '$now' ORDER BY show_date ASC,show_time ASC";
 	} else {
-		$query .= "show_expire < '$now' ORDER BY show_date DESC";
+		$query .= "show_expire < '$now' ORDER BY show_date DESC,show_time DESC";
 	}
 
 	// Get all upcoming dates from the DB that are NOT part of a tour
@@ -126,9 +126,9 @@ function gigpress_allshows_lister($dates, $tour = FALSE, $limit = FALSE) {
 	}
 	
 	if($dates == "upcoming") {
-		$query .= "show_expire >= '$now' ORDER BY show_date ASC";
+		$query .= "show_expire >= '$now' ORDER BY show_date ASC,show_time ASC";
 	} else {
-		$query .= "show_expire < '$now' ORDER BY show_date DESC";
+		$query .= "show_expire < '$now' ORDER BY show_date DESC,show_time DESC";
 	}
 	
 	if( is_numeric($limit) ) {

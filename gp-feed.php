@@ -17,7 +17,7 @@ function gigpress_feed() {
 			echo('</link>');
 
 	$shows = $wpdb->get_results("
-		SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC
+		SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC,show_time ASC
 	");
 
 	if($shows != FALSE) {

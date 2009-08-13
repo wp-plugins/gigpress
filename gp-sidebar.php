@@ -24,7 +24,7 @@ function gigpress_sidebar($number = 3,$segment = 1) {
 			
 				// See if each tour actually has any shows assigned to it
 				$shows = $wpdb->get_results("
-					SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = ". $tour->tour_id ." AND show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC LIMIT ".$number."
+					SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = ". $tour->tour_id ." AND show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC,show_time ASC LIMIT ".$number."
 				");
 				
 				// If there are shows for the tour, display that shiznatt
@@ -44,7 +44,7 @@ function gigpress_sidebar($number = 3,$segment = 1) {
 		// Now we list any shows that are not part of a tour
 	
 		$list = $wpdb->get_results("
-			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND show_tour_id = 0 AND show_status = 'active' ORDER BY show_date ASC LIMIT ". $number ."
+			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND show_tour_id = 0 AND show_status = 'active' ORDER BY show_date ASC,show_time ASC LIMIT ". $number ."
 		");
 	
 		if($list != FALSE) {
@@ -69,7 +69,7 @@ function gigpress_sidebar($number = 3,$segment = 1) {
 	} else { // if we're not segmenting by tour
 
 		$list = $wpdb->get_results("
-			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC LIMIT ". $number ."
+			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire >= '". $now ."' AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date ASC,show_time ASC LIMIT ". $number ."
 		");
 		
 		if($list != FALSE) {

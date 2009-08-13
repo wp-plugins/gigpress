@@ -24,15 +24,19 @@ $gp(document).ready(function()
 			}
 		);
 		
-		$gp('tr span.moreVenue').show();
-		$gp('tbody#venueInfo').hide();
-		
-		$gp('tr span.moreVenue a').click(function()
-			{
-				$gp('tbody#venueInfo').toggle();
-				return false;
-			}
-		);
+		if(!jQuery.browser.msie || (jQuery.browser.msie && jQuery.browser.version >= 8.0)) {
+			// IE 7 chokes on this for some reason
+			$gp('tr span.moreVenue').show();
+			$gp('tbody#venueInfo').hide();
+			
+			$gp('tr span.moreVenue a').click(function()
+				{
+					$gp('tbody#venueInfo').toggle();
+					return false;
+				}
+			);
+		}			
+
 		
 		$gp('input.required').each(function(){
 		

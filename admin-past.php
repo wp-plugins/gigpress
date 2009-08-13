@@ -54,7 +54,7 @@ function gigpress_admin_past() {
 			
 				// See if each tour actually has any shows assigned to it
 				$shows = $wpdb->get_results("
-					SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = ". $tour->tour_id ." AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') AND show_expire < '". $now ."' ORDER BY show_date DESC
+					SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_tour_id = ". $tour->tour_id ." AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') AND show_expire < '". $now ."' ORDER BY show_date DESC, show_time DESC
 				");
 				
 				// If there are shows for the tour, display that shiznatt
@@ -75,7 +75,7 @@ function gigpress_admin_past() {
 		// Get all upcoming dates from the DB that are NOT part of a tour
 		
 		$past = $wpdb->get_results("
-			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id = 0 AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date DESC");
+			SELECT * FROM ". $gigpress['gigs_table'] ." WHERE show_expire < '". $now ."' AND show_tour_id = 0 AND (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date DESC,show_time DESC");
 		
 		// Do we have dates?
 		if($past != FALSE) { ?>

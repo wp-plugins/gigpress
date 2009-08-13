@@ -32,7 +32,7 @@
 	_e("Tour", "gigpress"); echo("\t");
 	_e("Status", "gigpress"); echo("\n");
 	
-	$shows = $wpdb->get_results("SELECT * FROM ". $gigpress['gigs_table'] ." WHERE (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date DESC");
+	$shows = $wpdb->get_results("SELECT * FROM ". $gigpress['gigs_table'] ." WHERE (show_status = 'active' OR show_status = 'soldout' OR show_status = 'cancelled') ORDER BY show_date DESC,show_time DESC");
 	
 	if($shows) {
 	
