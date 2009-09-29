@@ -2,12 +2,12 @@
 /*
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
-Description: An easy way for bands to list and manage tour dates on their WordPress-powered website.
-Version: 1.4.9
+Description: GigPress is a live performance listing and management plugin built for musicians and performers.
+Version: 2.0 
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
-Copyright 2008 DEREK HOGUE
+Copyright 2007-2009 DEREK HOGUE
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -24,181 +24,311 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
-// Pre-2.6 compatibility
-if ( !defined('WP_CONTENT_URL') ) {
-	define( 'WP_CONTENT_URL', get_bloginfo('wpurl') . '/wp-content');
-}
-if ( !defined('WP_CONTENT_DIR') ) {
-	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
-}
-if ( !defined('WP_PLUGIN_URL') ) {
-	define( 'WP_PLUGIN_URL', WP_CONTENT_URL. '/plugins' );
-}
-
-global $wpdb;
-
-global $now; $now = mysql2date('Y-m-d', current_time('mysql'));
-
-global $gigpress; $gigpress = array();
-	$gigpress['gigs_table'] = $wpdb->prefix . "gigpress_shows";
-	$gigpress['tours_table'] = $wpdb->prefix . "gigpress_tours";
-	$gigpress['version'] = "1.4.9";
-	$gigpress['db_version'] = "1.3";
-	$gigpress['rss'] = get_bloginfo('url') . "/?feed=gigpress";
-	
-if ($GLOBALS['wp_version'] < "2.5") {
-	$gigpress['admin_class'] = "v23";
-} elseif ($GLOBALS['wp_version'] < "2.7") {
-	$gigpress['admin_class'] = "v25";
-} else {
-	$gigpress['admin_class'] = "v25";
-}
-	
-global $default_options; $default_options = array(
-	"alternate_clock" => 0,
-	"autocreate_post" => 0,
-	"band" => "",		
-	"category_exclude" => 0,
-	"date_format_long" => "l, F jS Y",
-	"date_format" => "m/d/y",
-	"db_version" => $gigpress['db_version'],
-	"default_country" => "US",
-	"default_date" => $now,
-	"default_time" => "00:01",
-	"default_tour" => 0,
-	"display_country" => 1,
-	"individual_heading" => "Individual shows",
-	"nopast" => "No shows in the archive yet.",
-	"noupcoming" => "No shows booked at the moment.",
-	"related_category" => 1,
-	"related_heading" => "Related show",
-	"related_position" => "nowhere",
-	"related" => "Related post.",
-	"relatedlink_city" => 0,
-	"relatedlink_date" => 0,
-	"relatedlink_notes" => 1,			
-	"rss_head" => 1,
-	"rss_list" => 1,
-	"rss_title" => "Upcoming shows",
-	"rss_upcoming" => 1,
-	"shows_page" => "",
-	"sidebar_link" => 0,
-	"target_blank" => 0,
-	"time_format" => "g:ia",
-	"tour_heading" => "h3",
-	"tour_label" => "Tour",
-	"tour_location" => "before",
-	"tour_segment" => 1,
-	"upcoming_phrase" => "View all shows",
-	"user_level" => 2,
-	"welcome" => "yes",
-	"widget_heading" => "Upcoming shows",
-	"widget_number" => 3,
-	"widget_segment" => 1
-);
-
+global $wpdb, $gpo;
 $gpo = get_option('gigpress_settings');
 
-require('admin-upgrade.php');
-require('admin-install.php');
-
-require('admin-addshow.php');
-require('admin-upcoming.php');
-require('admin-past.php');
-require('admin-tables.php');
-require('admin-tours.php');
-require('admin-options.php');
-require('admin-export.php');
-
-require('gp-tables.php');
-require('gp-upcoming.php');
-require('gp-archive.php');
-require('gp-related.php');
-require('gp-sidebar.php');
-require('gp-widget.php');
-require('gp-feed.php');
+// Define useful constants
+define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
+define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
+define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
+define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
+define('GIGPRESS_VERSION', '2.0');
+define('GIGPRESS_DB_VERSION', '1.4');
+define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
+define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
+define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', get_bloginfo('url')) . '/?feed=gigpress-ical');
+define('GIGPRESS_URL', ($gpo['shows_page']) ? gigpress_check_url($gpo['shows_page']) : get_bloginfo('url'));
+define('GIGPRESS_NOW', mysql2date('Y-m-d', current_time('mysql')));
+define('GIGPRESS_DEBUG', '');
 
 
-function gigpress_admin() {
-	// Add our WordPress admin pages, top-level-like. "Ill-advised," 
-	// sure, but methinks bands need will be on this page aplenty,
-	// so I wish not to bury it.
+require('admin/db.php');
+require('admin/new.php');
+require('admin/shows.php');
+require('admin/artists.php');
+require('admin/venues.php');
+require('admin/tours.php');
+require('admin/settings.php');
+require('admin/import-export.php');
+
+require('output/gigpress_shows.php');
+require('output/gigpress_related.php');
+require('output/gigpress_sidebar.php');
+require('output/feed.php');
+require('output/ical.php');
+
+
+global $gp_countries;
+$gp_countries = array("US" => "United States", "CA" => "Canada", "AF" => "Afghanistan", "AX" => "Aland Islands", "AL" => "Albania", "DZ" => "Algeria", "AS" => "American Samoa", "AD" => "Andorra", "AO" => "Angola", "AI" => "Anguilla", "AQ" => "Antarctica", "AG" => "Antigua and Barbuda", "AR" => "Argentina", "AM" => "Armenia", "AW" => "Aruba", "AU" => "Australia", "AT" => "Austria", "AZ" => "Azerbaijan", "BS" => "Bahamas", "BH" => "Bahrain", "BD" => "Bangladesh", "BB" => "Barbados", "BY" => "Belarus", "BE" => "Belgium", "BZ" => "Belize", "BJ" => "Benin", "BM" => "Bermuda", "BT" => "Bhutan", "BO" => "Bolivia", "BA" => "Bosnia and Herzegovina", "BW" => "Botswana", "BV" => "Bouvet Island", "BR" => "Brazil", "IO" => "British Indian Ocean Territory", "BN" => "Brunei Darussalam", "BG" => "Bulgaria", "BF" => "Burkina Faso", "BI" => "Burundi", "KH" => "Cambodia", "CM" => "Cameroon", "CV" => "Cape Verde", "KY" => "Cayman Islands", "CF" => "Central African Republic", "TD" => "Chad", "CL" => "Chile", "CN" => "China", "CX" => "Christmas Island", "CC" => "Cocos (Keeling) Islands", "CO" => "Colombia", "KM" => "Comoros", "CG" => "Congo", "CD" => "Congo (DR)", "CK" => "Cook Islands", "CR" => "Costa Rica", "CI" => "Cote D'Ivoire", "HR" => "Croatia", "CU" => "Cuba", "CY" => "Cyprus", "CZ" => "Czech Republic", "DK" => "Denmark", "DJ" => "Djibouti", "DM" => "Dominica", "DO" => "Dominican Republic", "EC" => "Ecuador", "EG" => "Egypt", "SV" => "El Salvador", "GQ" => "Equatorial Guinea", "ER" => "Eritrea", "EE" => "Estonia", "ET" => "Ethiopia", "FK" => "Falkland Islands (Malvinas)", "FO" => "Faroe Islands", "FJ" => "Fiji", "FI" => "Finland", "FR" => "France", "GF" => "French Guiana", "PF" => "French Polynesia", "TF" => "French Southern Territories", "GA" => "Gabon", "GM" => "Gambia", "GE" => "Georgia", "DE" => "Germany", "GH" => "Ghana", "GI" => "Gibraltar", "GR" => "Greece", "GL" => "Greenland", "GD" => "Grenada", "GP" => "Guadeloupe", "GU" => "Guam", "GT" => "Guatemala", "GG" => "Guernsey", "GN" => "Guinea", "GW" => "Guinea-Bissau", "GY" => "Guyana", "HT" => "Haiti", "HM" => "Heard and McDonald Islands", "VA" => "Holy See (Vatican City State)", "HN" => "Honduras", "HK" => "Hong Kong", "HU" => "Hungary", "IS" => "Iceland", "IN" => "India", "ID" => "Indonesia", "IR" => "Iran", "IQ" => "Iraq", "IE" => "Ireland", "IM" => "Isle of Man", "IL" => "Israel", "IT" => "Italy", "JM" => "Jamaica", "JP" => "Japan", "JE" => "Jersey", "JO" => "Jordan", "KZ" => "Kazakhstan", "KE" => "Kenya", "KI" => "Kiribati", "KP" => "Korea (North)", "KR" => "Korea (South)", "KW" => "Kuwait", "KG" => "Kyrgyzstan", "LA" => "Laos", "LV" => "Latvia", "LB" => "Lebanon", "LS" => "Lesotho", "LR" => "Liberia", "LY" => "Libya", "LI" => "Liechtenstein", "LT" => "Lithuania", "LU" => "Luxembourg", "MO" => "Macau", "MK" => "Macedonia", "MG" => "Madagascar", "MW" => "Malawi", "MY" => "Malaysia", "MV" => "Maldives", "ML" => "Mali", "MT" => "Malta", "MH" => "Marshall Islands", "MQ" => "Martinique", "MR" => "Mauritania", "MU" => "Mauritius", "YT" => "Mayotte", "MX" => "Mexico", "FM" => "Micronesia", "MD" => "Moldova", "MC" => "Monaco", "MN" => "Mongolia", "ME" => "Montenegro", "MS" => "Montserrat", "MA" => "Morocco", "MZ" => "Mozambique", "MM" => "Myanmar", "NA" => "Namibia", "NR" => "Nauru", "NP" => "Nepal", "NL" => "Netherlands", "AN" => "Netherlands Antilles", "NC" => "New Caledonia", "NZ" => "New Zealand", "NI" => "Nicaragua", "NE" => "Niger", "NG" => "Nigeria", "NU" => "Niue", "NF" => "Norfolk Island", "MP" => "Northern Mariana Islands", "NO" => "Norway", "OM" => "Oman", "PK" => "Pakistan", "PW" => "Palau", "PS" => "Palestinian Territory (Occupied)", "PA" => "Panama", "PG" => "Papua New Guinea", "PY" => "Paraguay", "PE" => "Peru", "PH" => "Philippines", "PN" => "Pitcairn", "PL" => "Poland", "PT" => "Portugal", "PR" => "Puerto Rico", "QA" => "Qatar", "RE" => "Reunion", "RO" => "Romania", "RU" => "Russian Federation", "RW" => "Rwanda", "BL" => "Saint Barthelemy", "SH" => "Saint Helena", "KN" => "Saint Kitts and Nevis", "LC" => "Saint Lucia", "MF" => "Saint Martin (French)", "PM" => "Saint Pierre and Miquelon", "VC" => "Saint Vincent and the Grenadines", "WS" => "Samoa", "SM" => "San Marino", "ST" => "Sao Tome and Principe", "SA" => "Saudi Arabia", "SN" => "Senegal", "RS" => "Serbia", "SC" => "Seychelles", "SL" => "Sierra Leone", "SG" => "Singapore", "SK" => "Slovakia", "SI" => "Slovenia", "SB" => "Solomon Islands", "SO" => "Somalia", "ZA" => "South Africa", "GS" => "South Georgia and South Sandwich Islands", "ES" => "Spain", "LK" => "Sri Lanka", "SD" => "Sudan", "SR" => "Suriname", "SJ" => "Svalbard and Jan Mayen", "SZ" => "Swaziland", "SE" => "Sweden", "CH" => "Switzerland", "SY" => "Syria", "TW" => "Taiwan", "TJ" => "Tajikistan", "TZ" => "Tanzania", "TH" => "Thailand", "TL" => "Timor-Leste", "TG" => "Togo", "TK" => "Tokelau", "TO" => "Tonga", "TT" => "Trinidad and Tobago", "TN" => "Tunisia", "TR" => "Turkey", "TM" => "Turkmenistan", "TC" => "Turks and Caicos Islands", "TV" => "Tuvalu", "UG" => "Uganda", "UA" => "Ukraine", "AE" => "United Arab Emirates", "UK" => "United Kingdom", "UM" => "United States Minor Outlying Islands", "UY" => "Uruguay", "UZ" => "Uzbekistan", "VU" => "Vanuatu", "VE" => "Venezuela", "VN" => "Vietnam", "VG" => "Virgin Islands (British)", "VI" => "Virgin Islands (US)", "WF" => "Wallis and Futuna", "EH" => "Western Sahara", "YE" => "Yemen", "ZM" => "Zambia", "ZW" => "Zimbabwe");
+
+
+function gigpress_admin_menu() {
 	
-	$gpo = get_option('gigpress_settings');
+	global $gpo;
 	
 	$add = __("Add a show", "gigpress");
-	$upcoming = __("Upcoming shows", "gigpress");
+	$shows = __("Shows", "gigpress");
+	$artists = __("Artists", "gigpress");
+	$venues = __("Venues", "gigpress");
 	$tours = __("Tours", "gigpress");
-	$past = __("Past shows", "gigpress");
-	$options = __("Settings", "gigpress");
-	$export = __("Export", "gigpress");
+	$settings = __("Settings", "gigpress");
+	$export = __("Import/Export", "gigpress");
 	
 	add_menu_page("GigPress &rsaquo; $add", "GigPress", $gpo['user_level'], __FILE__, "gigpress_add", WP_PLUGIN_URL . "/gigpress/images/gigpress-icon-16.png");
 	// By setting the unique identifier of the submenu page to be __FILE__,
-	// we let it be the first page to load when the top-level menu
-	// item is clicked
+	// we let it be the first page to load when the top-level menu item is clicked
 	add_submenu_page(__FILE__, "GigPress &rsaquo; $add", $add, $gpo['user_level'], __FILE__, "gigpress_add");
-	add_submenu_page(__FILE__, "GigPress &rsaquo; $upcoming", $upcoming, $gpo['user_level'], "gigpress-upcoming", "gigpress_admin_upcoming");
+	add_submenu_page(__FILE__, "GigPress &rsaquo; $shows", $shows, $gpo['user_level'], "gigpress-shows", "gigpress_admin_shows");
+	add_submenu_page(__FILE__, "GigPress &rsaquo; $artists", $artists, $gpo['user_level'], "gigpress-artists", "gigpress_artists");
+	add_submenu_page(__FILE__, "GigPress &rsaquo; $venues", $venues, $gpo['user_level'], "gigpress-venues", "gigpress_venues");
 	add_submenu_page(__FILE__, "GigPress &rsaquo; $tours", $tours, $gpo['user_level'], "gigpress-tours", "gigpress_tours");
-	add_submenu_page(__FILE__, "GigPress &rsaquo; $past", $past, $gpo['user_level'], "gigpress-past", "gigpress_admin_past");
-	add_submenu_page(__FILE__, "GigPress &rsaquo; $options", $options, $gpo['user_level'], "gigpress-options", "gigpress_options");
-	add_submenu_page(__FILE__, "GigPress &rsaquo; $export", $export, $gpo['user_level'], "gigpress-export", "gigpress_export");
+	add_submenu_page(__FILE__, "GigPress &rsaquo; $settings", $settings, 'manage_options', "gigpress-settings", "gigpress_settings");
+	add_submenu_page(__FILE__, "GigPress &rsaquo; $export", $export, $gpo['user_level'], "gigpress-import-export", "gigpress_import_export");
+	
+	if(GIGPRESS_DEBUG) {
+		require('admin/debug.php');
+		add_submenu_page(__FILE__, "GigPress &rsaquo; Debug", 'Debug', 'manage_options', "gigpress-debug", "gigpress_debug");
+	}	
+
 }
 
 
-// MISCELLANEOUS FUNCTIONS
-
-function gigpress_load_jquery()	{
-	// If we're in the admin, and on a GigPress page, load up jQuery
-	if ( is_admin() && strpos($_SERVER['QUERY_STRING'], 'gigpress') !== false ) {
-		wp_enqueue_script('jquery');
-	}
+function gigpress_admin_head()	{
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('gigpress-admin-js', WP_PLUGIN_URL . '/gigpress/scripts/gigpress-admin.js', 'jquery');
+	wp_enqueue_style('gigpress-admin-css', WP_PLUGIN_URL . '/gigpress/css/gigpress-admin.css');
 }
-
-
-function gigpress_admin_head() {
-	// Helps some formatting on our admin pages ...
-	echo('
-	<link rel="stylesheet" type="text/css" href="'. WP_PLUGIN_URL .'/gigpress/css/gigpress-admin.css" />
-	');
-	// Load our JS if we're on a GigPress page
-	if(strpos($_SERVER['QUERY_STRING'], 'gigpress') !== false ) {
-		echo('<script type="text/javascript" src="'. WP_PLUGIN_URL .'/gigpress/scripts/gigpress.js"></script>
-		');
-	}
-}
-
 
 
 function gigpress_admin_footer() {
-	global $gigpress;
-	echo(__("You're using", "gigpress").' <a href="http://gigpress.com">GigPress '.$gigpress['version'].'</a>. ');
+	
+	echo(__("You're using", "gigpress").' <a href="http://gigpress.com">GigPress '.GIGPRESS_VERSION.'</a>. '. __("Like it?", "gigpress") . ' <a href="http://gigpress.com/donate">' . __("Make a donation", "gigpress") . '</a>. | ');
 }
 
 
-function gigpress_flush_rules(){
-	global $wp_rewrite;
-	$wp_rewrite->flush_rules();
+function gigpress_js() {
+	global $gpo;
+	if ( $gpo['load_jquery'] == 1) {
+		wp_enqueue_script('jquery');
+	}
+		wp_enqueue_script('gigpress-js', WP_PLUGIN_URL . '/gigpress/scripts/gigpress.js', 'jquery');
+}
+
+
+function gigpress_head() {
+	
+	global $gpo;
+	
+	// Default stylesheet
+	echo('<link type="text/css" rel="stylesheet" href="' . WP_PLUGIN_URL . '/gigpress/css/gigpress.css" media="all" />
+');
+	
+	// If there's a custom stylesheet, load it too ...
+	if (file_exists(get_stylesheet_directory()."/gigpress.css")) {
+	echo('<link type="text/css" rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/gigpress.css" media="all" />
+');
+	}
+	
+	if ( $gpo['rss_head'] == 1 ) {
+	// Adds auto-discovery of our RSS feed
+	echo('<link href="'.GIGPRESS_RSS.'" rel="alternate" type="application/rss+xml" title="'.$gpo['rss_title'].'" />
+');
+	}
+}
+
+
+function gigpress_template($path) {
+	return (file_exists(WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php')) ? WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php' : WP_PLUGIN_DIR . '/gigpress/templates/'  . $path . '.php';
+}
+
+
+function gigpress_prepare($show, $scope = 'public') {
+	
+	// This function takes an array for one show ($show)
+	// and returns a new array containing the show data
+	// prepared for various outputs based on context and GigPress settings
+	
+	global $wpdb, $gp_countries, $gpo;
+	$target = ($gpo['target_blank'] == 1) ? ' target="_blank" title="(' . __("opens in a new window", "gigpress") . ')"' : '';	
+
+	$showdata = array();
+	
+	$showdata['address'] = ($show->venue_address) ? '<a href="http://maps.google.com/maps?&amp;q='. urlencode($show->venue_address). ',' . urlencode($show->venue_city) . ',' . urlencode($show->venue_country) . '" class="gigpress-address"' . $target . '>' . wptexturize($show->venue_address) . '</a>' : '';
+	$showdata['city'] = ($show->show_related && $gpo['relatedlink_city'] == 1 && $scope == 'public') ? '<a href="' . gigpress_related_link($show->show_related, "url") . '">' . wptexturize($show->venue_city) . '</a>' : wptexturize($show->venue_city);	
+	$showdata['country'] = ($gpo['country_view'] == 'long') ? wptexturize($gp_countries[$show->venue_country]) : $show->venue_country;
+	$showdata['venue'] = ($show->venue_url) ? '<a href="' . gigpress_check_url($show->venue_url) . '"' . $target . '>' . wptexturize($show->venue_name) . '</a>' : wptexturize($show->venue_name);
+	$showdata['venue_phone'] = wptexturize($show->venue_phone);	
+
+	// Shield these fields when we're calling this fucntion from the venues admin screen
+	if($scope != 'venue') {
+		$timeparts = explode(':', $show->show_time);
+		$showdata['admittance'] = (!empty($show->show_ages) && $show->show_ages != 'Not sure') ? wptexturize($show->show_ages) : '';
+		$showdata['artist'] = wptexturize($show->artist_name);
+		$showdata['artist_id'] = $show->artist_id;
+		$showdata['calendar_summary'] = $show->artist_name . ' ' . __("at", "gigpress") . ' ' . $show->venue_name;
+		$showdata['calendar_details'] = '';
+			if($show->tour_name) $showdata['calendar_details'] .= $gpo['tour_label'] . ': ' . $show->tour_name . '. ';
+			if($show->show_price) $showdata['calendar_details'] .= __("Price", "gigpress") . ': ' . $show->show_price . '. ';
+			if($show->show_tix_phone) $showdata['calendar_details'] .= __("Box office", "gigpress") . ': ' . $show->show_tix_phone . '. ';
+			if($show->show_venue_phone) $showdata['calendar_details'] .= __("Venue phone", "gigpress") . ': ' . $show->venue_phone . '. ';
+			if($show->show_notes) $showdata['calendar_details'] .= __("Notes", "gigpress") . ': ' . $show->show_notes . ' ';
+			$showdata['calendar_details'] .= $showdata['admittance'];	
+		$showdata['calendar_location'] = $show->venue_name . ', ' . $show->venue_address . ', ' . $show->venue_city . ', ' . $show->venue_country;
+		$showdata['calendar_start'] = ($timeparts[2] == '01') ? str_replace('-', '', $show->show_date) : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_date . ' ' . $show->show_time)) . 'Z';
+		$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_expire . ' ' . $show->show_time)) . 'Z';	
+		$showdata['date'] = ($show->show_related && $gpo['relatedlink_date'] == 1 && $scope == 'public') ? '<a href="' . gigpress_related_link($show->show_related, "url") . '">' . mysql2date($gpo['date_format'], $show->show_date) . '</a>' : mysql2date($gpo['date_format'], $show->show_date);
+		$showdata['date_long'] = mysql2date($gpo['date_format_long'], $show->show_date);		
+		$showdata['end_date'] = ($show->show_date != $show->show_expire) ? mysql2date($gpo['date_format'], $show->show_expire) : '';
+		$showdata['end_date_long'] = ($show->show_date != $show->show_expire) ? mysql2date($gpo['date_format_long'], $show->show_expire) : '';
+		$showdata['ical'] = '<a href="' . GIGPRESS_ICAL . '&amp;show_id=' . $show->show_id . '">' . __("Download iCal", "gigpress") . '</a>';
+		$showdata['id'] = $show->show_id;
+		$showdata['iso_date'] = $show->show_date." ".$show->show_time;
+		$showdata['iso_end_date'] = $show->show_expire." ".$show->show_time;
+		$showdata['notes'] = wptexturize($show->show_notes);
+		$showdata['price'] = wptexturize($show->show_price);
+		$showdata['related_url'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'url') : '';
+		$showdata['related_edit'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'edit') : '';
+		$showdata['related_link'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'view') : '';
+		$showdata['rss_date'] = mysql2date('D, d M Y', $show->show_date, false). " ". $show->show_time." " . date('O');
+		$showdata['status'] = $show->show_status;
+		switch($showdata['status']) {
+			case 'active': $showdata['ticket_link'] = ($show->show_tix_url && $show->show_expire >= GIGPRESS_NOW) ? '<a href="' . gigpress_check_url($show->show_tix_url)  . '"' . $target . ' class="gigpress-tickets-link">' . __("Buy tickets", "gigpress") . '</a>' : '';
+			break;
+			case 'soldout' : $showdata['ticket_link'] = '<strong class="gigpress-soldout">' . __("Sold Out", "gigpress") . '</strong>';
+			break;
+			case 'cancelled' : $showdata['ticket_link'] = '<strong class="gigpress-cancelled">' . __("Cancelled", "gigpress") . '</strong>';
+			break;
+		}
+		$showdata['ticket_phone'] = wptexturize($show->show_tix_phone);
+		$showdata['time'] = ($timeparts[2] == '01') ? '' : date($gpo['time_format'], mktime($timeparts[0], $timeparts[1]));
+		$showdata['tour'] = wptexturize($show->tour_name);
+		$showdata['tour_id'] = $show->tour_id;
+		if($showdata['related_url']) { $showdata['permalink'] = $showdata['related_url']; }
+			elseif($gpo['shows_page']) { $showdata['permalink'] = gigpress_check_url($gpo['shows_page']); }
+			else { $showdata['permalink'] = get_bloginfo('home'); }
+		
+		// Google Calendar
+		$showdata['gcal'] = '<a href="http://www.google.com/calendar/event?action=TEMPLATE'
+			. '&amp;text=' . urlencode($showdata['calendar_summary'])
+			. '&amp;dates=' . $showdata['calendar_start'] . '/' . $showdata['calendar_end']
+			. '&amp;sprop=website:' . urlencode(GIGPRESS_URL)
+			. '&amp;sprop=name:' . urlencode($show->artist_name)
+			. '&amp;location=' . urlencode($showdata['calendar_location'])
+			. '&amp;details=' . urlencode($showdata['calendar_details'])
+			. '&amp;trp=true;'
+			. '"' . $target . '>' . __("Add to Google Calendar", "gigpress") . '</a>';	
+	}
+		
+	return $showdata;
+}
+
+
+function gigpress_related_link($postid, $format) {
+
+	if($postid == 0) return;
+	
+	global $gpo;
+	
+	switch($format) {
+		case 'url':
+			$link = get_permalink($postid);
+			$output = $link;
+			break;
+		case 'edit':
+			$link = get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $postid;
+			$output = '<a href="' . $link . '">' . $gpo['related'] . '</a>';
+			break;
+		case 'view':
+			$link = get_permalink($postid);
+			$output = '<a href="' . $link . '">' . $gpo['related'] . '</a>';
+			break;
+	}
+		
+	return $output;
+}
+
+
+function gigpress_exclude_shows($query) {
+	// Excludes the Related Post category from normal listings
+	global $wp_query, $gpo;
+	
+	$categories = array($gpo['related_category']);
+	
+	if( !is_category() && !is_single() && !is_tag() && !is_admin() ) { 
+		$wp_query->set('category__not_in', $categories); 
+	}
 }
 
 
 function gigpress_check_excerpt($excerpt) {
+	// This let's us skip adding Related Show info to the_content()
+	// when displayed as an excerpt
 	global $is_excerpt; $is_excerpt = TRUE;
 	return $excerpt;
 }
 
 
-function gigpress_styles() {
-	// Default style sheet
-	echo('
-	<link rel="stylesheet" type="text/css" href="'. WP_PLUGIN_URL .'/gigpress/css/gigpress.css" />
-	');
-	// If there's a custom stylesheet, load it too ...
-	if (file_exists(get_stylesheet_directory()."/gigpress.css")) {
-		echo('<link rel="stylesheet" type="text/css" href="'. get_bloginfo('stylesheet_directory').'/gigpress.css" />
-		');
+function gigpress_remove_related($postID) {
+	// Remove the post relation if it's deleted in WP
+	global $wpdb;
+	$cleanup = $wpdb->update(GIGPRESS_SHOWS, array('show_related' => 0), array('show_related' => $postID), array('%d', '%d'));
+	return $postID;
+	
+}
+
+
+function add_gigpress_feeds() {
+	
+	// Tell WP about the shows feed
+	add_feed('gigpress','gigpress_feed');
+	
+	// Add the iCal export as a feed as well, even though it's not technically a feed
+	add_feed('gigpress-ical','gigpress_ical');
+
+}
+
+
+function gigpress_admin_pagination($total_records, $records_per_page, $args) {
+	
+	$total_pages = ceil($total_records / $records_per_page);
+	$current_page = (isset($_GET['gp-page'])) ? $_GET['gp-page'] : 1;
+	$r = array();
+	
+	if($total_pages > 1) {
+		$r['output'] = '<div class="tablenav-pages">';
+		$page_links = paginate_links( array(
+			'total' => $total_pages,
+			'current' => $current_page,
+			'base' => 'admin.php?%_%',
+			'prev_text' => '&laquo;',
+			'next_text' => '&raquo;',					
+			'format' => 'gp-page=%#%',
+			'add_args' => $args
+		) );
+		// Lifted from edit.php!
+		$r['output'] .= sprintf( '<span class="displaying-num">' . __( 'Displaying %s&#8211;%s of %s' ) . '</span>%s',
+		number_format_i18n( ( $current_page - 1 ) * $records_per_page + 1 ),
+		number_format_i18n( min( $current_page * $records_per_page, $total_records ) ),
+		number_format_i18n( $total_records ),
+		$page_links);
+		$r['output'] .= '</div>';
+		$r['offset'] = ($current_page - 1) * $records_per_page;
+		$r['records_per_page'] = $records_per_page;		
+		return $r;
 	}
+}
+
+
+function gigpress_db_in($value, $strip_tags = TRUE) {
+	$value = stripslashes(trim($value));
+	if($strip_tags == TRUE)
+		$value = strip_tags($value);	
+	return $value;
+}
+
+
+function gigpress_db_out($value) {
+	return htmlspecialchars(stripslashes(trim($value)), ENT_QUOTES);
 }
 
 
@@ -214,54 +344,10 @@ function gigpress_check_url($url) {
 }
 
 
-function gigpress_timefy($time) {
-	// Format our show time as we like
-	$gpo = get_option('gigpress_settings');
-	$timeparts = explode(':', $time);
-	$fulltime = mktime($timeparts[0], $timeparts[1]);
-	$formattedtime = date($gpo['time_format'], $fulltime);
-	return $formattedtime;
-}
-
-
-function gigpress_mapit($address, $locale, $country) {
-	// This makes our street address linked up to Google Maps
-	global $gigpress;
-	$gpo = get_option('gigpress_settings');
-	if($address) {
-		$url = 'http://maps.google.com/maps?&amp;q='. urlencode($address). ','. urlencode($locale) .','. urlencode($country);
-		if($gpo['target_blank'] == 1) {
-			$url = '<a href="'. $url .'" title="'.__("Find this address using Google Maps.", "gigpress"). ' (' .__("opens in a new window", "gigpress"). ')" class="gigpress-address" target="_blank">'.$address.'</a>';
-		} else {
-			$url = '<a href="'. $url .'" title="'.__("Find this address using Google Maps.", "gigpress"). '" class="gigpress-address">'.$address.'</a>';
-		}	
-			
-		return $url;
-	}
-}
-
-
-function gigpress_sanitize($input) {
-	// Make sure our DB output is kosher
-	$input = stripslashes($input);
-	$input = wptexturize($input);
-	return $input;
-}
-
-
-function gigpress_admittance($admittance) {
-	// Strings for our admittance field
-	if($admittance == "All Ages") { $admittance = __("All Ages", "gigpress"); }
-	if($admittance == "All Ages/Licensed") { $admittance = __("All Ages/Licensed", "gigpress"); }
-	if($admittance == "No minors") { $admittance = __("No minors", "gigpress"); }
-	return $admittance;
-}
-
-
 function gigpress_intl() {
-	// Internationalize
-	load_plugin_textdomain('gigpress', PLUGINDIR.'/gigpress/langs/');
+	load_plugin_textdomain('gigpress', NULL, '/gigpress/langs/');
 }
+
 
 function register_gigpress_settings() {
 	if ( function_exists('register_setting') ) {
@@ -269,55 +355,120 @@ function register_gigpress_settings() {
 	}
 }
 
+
 function gigpress_favorites($actions) {
-	$gpo = get_option('gigpress_settings');
+	global $gpo;
 	$level = "level_" . $gpo['user_level']; 
 	$actions['admin.php?page=gigpress/gigpress.php'] = array('Add a show', $level);
     return $actions;
 }
 
 
-// HOOKS, ACTIONS, DESCENT INTO THE ABYSS
+function enable_custom_menu_order($flag) {
+	return true;
+}
+
+function custom_menu_order($menu_ord) {
+	global $menu; $menu[35] = array( '', 'read', 'separator3', '', 'wp-menu-separator' );
+	return array('index.php', 'separator1', 'edit.php', 'upload.php', 'link-manager.php', 'edit-pages.php', 'edit-comments.php', 'separator2', 'gigpress/gigpress.php', 'separator3');
+}
+
+
+function add_upload_ext($mimes='') {
+	$mimes['csv']='text/csv';
+	return $mimes;
+}
+
+
+function gigpress_export() {
+
+	check_admin_referer('gigpress-action');
+	global $wpdb;
+	require_once(WP_PLUGIN_DIR . '/gigpress/lib/parsecsv.lib.php');
+
+	$further_where = '';
+	switch($_POST['scope']) {
+		case 'upcoming':
+			$further_where = " AND show_expire >= '" . GIGPRESS_NOW . "'";
+			break;
+		case 'past':
+			$further_where = " AND show_expire < '" . GIGPRESS_NOW . "'";
+			break;
+	}
+	if(isset($_POST['artist_id']) && $_POST['artist_id'] != '-1') {
+		$further_where .= ' AND s.show_artist_id = ' . $wpdb->prepare('%d', $_POST['artist_id']) . ' ';
+	}
+	if(isset($_POST['tour_id']) && $_POST['tour_id'] != '-1') {
+		$further_where .= ' AND s.show_tour_id = ' . $wpdb->prepare('%d', $_POST['tour_id']) . ' ';
+	}
+	
+	$name = 'gigpress-export-' . date('Y-m-d') . '.csv';
+	
+	$fields = array(
+		"Date", "Time", "End date", "Artist", "Venue", "Address", "City", "Country", "Venue phone", "Venue URL", "Admittance", "Price", "Ticket URL", "Ticket phone", "Notes", "Related", "Tour", "Status" 
+	);
+	
+	$shows = $wpdb->get_results("
+		SELECT show_date, show_time, show_expire, artist_name, venue_name, venue_address, venue_city, venue_country, venue_phone, venue_url, show_ages, show_price, show_tix_url, show_tix_phone, show_notes, show_related, tour_name, show_status FROM ". GIGPRESS_VENUES ." as v, " . GIGPRESS_ARTISTS . " as a, " . GIGPRESS_SHOWS . " as s LEFT JOIN " . GIGPRESS_TOURS . " as t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where . " ORDER BY show_date DESC,show_time DESC
+		", ARRAY_A);
+	
+	if($shows) {
+		$export_shows = array();
+		foreach ( $shows as $show ) {
+			$show['show_time'] = ( $show['show_time']{7} == 1 ) ? '' : $show['show_time'];
+			$show['show_expire'] = ( $show['show_date'] == $show['show_expire'] ) ? '' : $show['show_expire'];
+			$show['show_related'] = ( $show['show_related'] ) ? gigpress_related_link($show['show_related'], 'url') : '';
+			$export_shows[] = $show;
+		}
+	
+		$export = new parseCSV();
+		$export->output($name, stripslashes_deep($export_shows), $fields, ',');
+	} else {
+		echo('<p>' . __('Nothing to export.', 'gigpress') . '</p>');
+	}
+	
+}
+
+
+function gigpress_export_nopriv() {
+	echo('<p>' . __('You are not authorized to do that. Try logging-in first.', 'gigpress') . '</p>');
+}
+
 
 register_activation_hook(__FILE__,'gigpress_install');
-register_activation_hook(__FILE__,'gigpress_flush_rules');
+if ( function_exists('register_uninstall_hook') )
+	register_uninstall_hook(__FILE__, 'gigpress_uninstall');
 
-add_action(init,'add_gigpress_feed');
+add_action(init,'add_gigpress_feeds');
 add_action(init,'gigpress_intl');
-
-add_action('admin_init','gigpress_load_jquery');
 add_action('admin_init', 'register_gigpress_settings'); 
-add_action('admin_head', 'gigpress_admin_head');
-add_action('admin_menu', 'gigpress_admin');
-add_filter('favorite_actions', 'gigpress_favorites');
-if ( strpos($_SERVER['QUERY_STRING'], 'gigpress') !== FALSE ) {
-	add_action('in_admin_footer', 'gigpress_admin_footer', 9);
-}
+add_action('admin_menu', 'gigpress_admin_menu');
 add_action('widgets_init', 'gigpress_widget_init');
-
-add_action('wp_head', 'gigpress_styles');
-if ( $gpo['rss_head'] == 1 ) {
-	add_action('wp_head', 'gigpress_head_feed');
+add_action('delete_post', 'gigpress_remove_related');
+if(strpos($_SERVER['QUERY_STRING'], 'gigpress') !== FALSE) {
+	add_action('admin_init','gigpress_admin_head');
+	add_action('in_admin_footer', 'gigpress_admin_footer');
 }
-
-if ( function_exists('add_shortcode') ) {
-	add_shortcode('gigpress_upcoming','gigpress_upcoming');
-	add_shortcode('gigpress_archive','gigpress_archive');
-} else {
-	add_filter('the_content', 'gigpress_upcoming_wrapper');
-	add_filter('the_content', 'gigpress_archive_wrapper');
-}
-
-if ( $gpo['category_exclude'] == 1) {
+if($gpo['category_exclude'] == 1) {
 	add_action('pre_get_posts','gigpress_exclude_shows');
 }
-if ( $gpo['related_position'] != "nowhere" ) {
+add_action('template_redirect', 'gigpress_js');
+add_action('wp_head', 'gigpress_head');
+add_action('admin_post_gigpress_export', 'gigpress_export');
+add_action('admin_post_nopriv_gigpress_export', 'gigpress_export_nopriv');
+
+add_filter('custom_menu_order', 'enable_custom_menu_order');
+add_filter('menu_order', 'custom_menu_order');
+add_filter('upload_mimes','add_upload_ext');
+add_filter('favorite_actions', 'gigpress_favorites');
+if($gpo['related_position'] != "nowhere") {
 	add_filter('get_the_excerpt', 'gigpress_check_excerpt', 1);
 	add_filter('the_content', 'gigpress_show_related');
 }
-add_action('delete_post', 'gigpress_remove_related');
 
-
+add_shortcode('gigpress_shows','gigpress_shows');
+add_shortcode('gigpress_upcoming','gigpress_upcoming');
+add_shortcode('gigpress_archive','gigpress_archive');
 
 // We're forced to bed, but we're free to dream.
 

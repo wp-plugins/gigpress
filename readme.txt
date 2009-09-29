@@ -1,33 +1,54 @@
 === GigPress ===
 Contributors: mrherbivore
 Donate link: http://gigpress.com/donate
-Tags: concerts, bands, tours
-Requires at least: 2.3.3
-Tested up to: 2.8.2
+Tags: concerts, bands, tours, shows, record labels, music
+Requires at least: 2.6.5
+Tested up to: 2.8.4
 
-GigPress provides an easy way for bands to list and manage their concerts and tours on their WordPress-powered website.
+GigPress is a live performance listing and management plugin built for musicians and performers.
 
 == Description ==
 
-**GigPress is a WordPress plugin built specifically with musicians and performers in mind.**  Manage all of your upcoming and past performances or events right from within WordPress, and display them using simple shortcodes or template tags on your WordPress-powered website. You can optionally link each show or performance to a post, or automatically create a new post each time you add a new show.  Other features include:
+GigPress is a powerful live performance listing and management plugin designed for musicians and other performers. Manage all of your upcoming and past performances right from within the WordPress admin, and display them on your site using simple shortcodes, PHP template tags, or the GigPress widget on your WordPress-powered website.
 
-* Ability to list both upcoming shows and past shows, chronologically rolled-over as tour dates pass
-* Grouping of shows into tours
-* Multiple-day shows
-* Mark shows as Cancelled or Sold Out
-* Auto-linking to Google Maps for venues with a street address
-* Fields for show times, venue and ticket-buy URLs and phone numbers, age restrictions, ticket price, and notes
-* An upcoming shows RSS feed
-* Widget support
-* Speedy data entry with menus that default to most recent-used positions, and the ability to duplicate shows
-* Full Undo support for accidental deletions
-* Export your data in CSV format at any time
-* User-level access restrictions for use
-* hCalendar markup for each show
-* Outputs XHTML-compliant, semantic markup
-* Fully internationalized - comes with Brazilian Portuguese, Bulgarian, Danish, Dutch, French, German, Italian, "Book" Norwegian, "New" Norwegian, Russian, Slovak, Spanish, Swedish and Ukranian language files
+* GigPress is well-designed and easy-to-use. Add artists, venues, tours, and related posts on-the-fly, all saved in your database for re-use, all seamlessly within the WordPress admin.
+* Manage multiple artists within GigPress, and display them either as a combined listing, or grouped by artist. Add an artist parameter to the shortcode and list only shows from a particular artist.
+* GigPress features RSS and iCalendar feeds for your upcoming shows and for individual artists and tours, plus Google Calendar and iCal download links for each individual show. Also: hCalendar markup!
+* Advanced users can fully-customize the HTML and CSS used by GigPress to display your shows without altering any plugin files, making all changes upgrade-safe.
+* Link up a related post for each show and your show's full details will appear within your post. Automatically create new related posts with customizable titles when entering new shows.
+* No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV -- filtered by artist, tour, and date.
 
 == Changelog ==
+
+= 2.0 =
+
+* Lost several translations due to the massive plugin overhaul and consequent deluge of new language. For now, 2.0 only includes Bulgarian, Dutch, French, German, Norwegian, Russian, and Swedish translations.
+* WordPress 2.6.5 is now required
+* GigPress now supports multiple artists - yay!
+* Venues are now stored in the database for future editing and re-use
+* Added Google Calendar and iCal download links for each show
+* Added an iCalendar feed for all shows, and for individual artists and tours
+* Added an RSS feed for individual artists and tours
+* You can now add new artists, venues, and tours while entering a new show
+* The title of newly-created related posts can now be customized using %placeholders% for your show data
+* Newly-created related posts can optionally be future-published on the date of the show
+* Changed the behaviour of tours, which are now grouped (with a heading) inline, within the chronological shows list
+* As a result of the above, removed the "tour order" option on the Tour admin screen
+* Changed the shortcode to `[gigpress_shows]` and added some new parameters - see docs for details (old shortcodes will still work!)
+* Added new options to the widget
+* Removed several and added a few options to the Settings screen
+* All HTML output is now contained in modular templates, which can be customized without being overwritten during subsequent plugin updates - see the docs for the lowdown
+* You can now import shows from a CSV file - see docs for specifications please
+* CSV export has been improved, and is compatible with the new import routine
+* The Age Restrictions field is now customizable
+* You can now optionally display full country names instead of country codes
+* Better error-checking for required fields, and better visual feedback
+* You can no longer enter a date which doesn't exist (i.e. February 30th)
+* Only administrators can see the GigPress Settings page now
+* Added pagination to GigPress admin screens, and redesigned the Shows management screen
+* Moved the GigPress plugin menu up between Comments and Appearance - it's better up there
+* Rewrote most of the code, optimized queries, added `$wpdb->prepare` everywhere for improved security
+* There's more I'm sure
 
 = 1.4.9 =
 
@@ -70,7 +91,7 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 
 = 1.4.2 =
 
-* Fixed a couple of bugs when using the gigpress_upcoming() and gigpress_archive() template tags - these functions now need to be echoed, e.g. <?php echo gigpress_upcoming(); ?>
+* Fixed a couple of bugs when using the gigpress_upcoming() and gigpress_archive() template tags - these functions now need to be echoed, e.g. `<?php echo gigpress_upcoming(); ?>`
 * Removed vestigial hard-coded "Tour" label on Related Post entries
 * Fixed minor character entity issue when loading/updating settings
 
@@ -98,7 +119,7 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 = 1.3.4 =
 
 * Fixed a bug that prevented language files from being loaded under WordPress 2.6
-* Fixed an <abbr title="eXtensible HyperText Markup Language"><span class="abbr" title="eXtensible HyperText Markup Language">XHTML validation error in the upcoming/past shows table output
+* Fixed an XHTML validation error in the upcoming/past shows table output
 
 = 1.3.3 =
 
@@ -172,7 +193,7 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 * Display of the Country column can now be disabled
 * Added element IDs to the header row of each tour in shows table (eg. #tour-2)
 * Updated Options page to refelect new features
-* Added a <link> element to each item in the RSS feed, linked to the page set on the options page
+* Added a `<link>` element to each item in the RSS feed, linked to the page set on the options page
 
 = 1.1.1 =
 
@@ -191,30 +212,14 @@ GigPress provides an easy way for bands to list and manage their concerts and to
 == Installation ==
 
 1. Upload the `gigpress` folder to the `/wp-content/plugins/` directory on your web server
-2. Activate the plugin through the 'Plugins' admin menu in WordPress
-3. To list upcoming shows, simply create a new page and put `[gigpress_upcoming]` in the page content.
-4. To list past shows, create a new page and put `[gigpress_archive]` in the page content.
-5. To use the GigPress sidebar widget, simply activate it from your Widget configuration screen, set your options, and save.
-6. For detailed instructions, including using template tags in your theme templates, see the documentation: <http://gigpress.com/docs>
+2. Activate the plugin through the 'Plugins' admin menu in WordPress. This will create a new top-level menu called "GigPress".
+3. To list upcoming shows, simply create a new page and put `[gigpress_shows]` in the page content. This shortcode accepts several parameters - [please refer to the documentaion for details](http://gigpress.com/docs/).
+4. GigPress also comes with a sidebar widget - simply drag the widget into your sidebar, set your ptions, and save.
 
-== UPGRADING ==
+== Frequently Asked Questions ==
 
-1. Deactivate GigPress on the Plugins page of your Wordpress administration panel.
+Please check the [FAQ on the GigPress website](http://gigpress.com/faq/)
 
-2. Delete the `gigpress` folder from your `/wp-content/plugins/` directory.
+== For more info... ==
 
-3. Upload the new `gigpress` folder to your`/wp-content/plugins` directory.
-
-4. Activate GigPress on the Plugins page of your Wordpress administration panel.
-
-== FOR MORE INFO ==
-
-Visit the plugin website at <http://gigpress.com> for the latest updates, or to report bugs, suggest features, etc.
-
-== Screenshots ==
-
-1. GigPress admin: "Add a show" page (WP 2.7)
-2. GigPress admin: "Add a show" page (WP 2.6)
-3. GigPress admin: "Upcoming shows" page (WP 2.7)
-4. GigPress admin: "Upcoming shows" page (WP 2.6)
-5. GigPress admin: "Manage tours" page (WP 2.7)
+[Please visit the GigPress website](http://gigpress.com/) for screenshots, full documentation, and the latest news about plugin updates, or to report bugs, suggest features, and the like.
