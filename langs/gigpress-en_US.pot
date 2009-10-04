@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GigPress 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 21:02-0400\n"
+"POT-Creation-Date: 2009-10-04 12:56-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Derek Hogue <derek@amphibian.info>\n"
 "Language-Team:  <derek@gigpress.com>\n"
@@ -16,123 +16,123 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../gigpress.php:66
+#: ../gigpress.php:69
 #: ../admin/new.php:189
 msgid "Add a show"
 msgstr ""
 
-#: ../gigpress.php:67
-#: ../admin/shows.php:97
+#: ../gigpress.php:70
+#: ../admin/shows.php:102
 msgid "Shows"
 msgstr ""
 
-#: ../gigpress.php:68
+#: ../gigpress.php:71
 #: ../admin/artists.php:34
 msgid "Artists"
 msgstr ""
 
-#: ../gigpress.php:69
+#: ../gigpress.php:72
 #: ../admin/venues.php:31
 msgid "Venues"
 msgstr ""
 
-#: ../gigpress.php:70
+#: ../gigpress.php:73
 #: ../admin/tours.php:34
 msgid "Tours"
 msgstr ""
 
-#: ../gigpress.php:71
-#: ../admin/settings.php:17
+#: ../gigpress.php:74
+#: ../admin/settings.php:15
 msgid "Settings"
 msgstr ""
 
-#: ../gigpress.php:72
-#: ../admin/import-export.php:13
+#: ../gigpress.php:75
+#: ../admin/import-export.php:12
 msgid "Import/Export"
 msgstr ""
 
-#: ../gigpress.php:96
+#: ../gigpress.php:105
 msgid "You're using"
 msgstr ""
 
-#: ../gigpress.php:96
+#: ../gigpress.php:105
 msgid "Like it?"
 msgstr ""
 
-#: ../gigpress.php:96
+#: ../gigpress.php:105
 msgid "Make a donation"
 msgstr ""
 
-#: ../gigpress.php:144
+#: ../gigpress.php:177
 msgid "opens in a new window"
 msgstr ""
 
-#: ../gigpress.php:160
-#: ../admin/handlers.php:819
-#: ../admin/handlers.php:828
-#: ../admin/handlers.php:837
+#: ../gigpress.php:197
+#: ../admin/handlers.php:815
+#: ../admin/handlers.php:824
+#: ../admin/handlers.php:833
 #: ../admin/new.php:238
 msgid "at"
 msgstr ""
 
-#: ../gigpress.php:163
+#: ../gigpress.php:200
 #: ../admin/new.php:489
-#: ../admin/shows.php:224
+#: ../admin/shows.php:229
 msgid "Price"
 msgstr ""
 
-#: ../gigpress.php:164
-#: ../admin/shows.php:227
-#: ../output/feed.php:74
+#: ../gigpress.php:201
+#: ../admin/shows.php:232
+#: ../output/feed.php:73
 msgid "Box office"
 msgstr ""
 
-#: ../gigpress.php:165
+#: ../gigpress.php:202
 #: ../admin/new.php:455
 #: ../admin/venues.php:132
-#: ../output/feed.php:60
+#: ../output/feed.php:59
 msgid "Venue phone"
 msgstr ""
 
-#: ../gigpress.php:166
+#: ../gigpress.php:203
 #: ../admin/new.php:501
-#: ../admin/settings.php:132
-#: ../output/feed.php:81
+#: ../admin/settings.php:130
+#: ../output/feed.php:80
 msgid "Notes"
 msgstr ""
 
-#: ../gigpress.php:175
+#: ../gigpress.php:212
 msgid "Download iCal"
 msgstr ""
 
-#: ../gigpress.php:187
+#: ../gigpress.php:224
 msgid "Buy tickets"
 msgstr ""
 
-#: ../gigpress.php:189
+#: ../gigpress.php:226
 #: ../admin/new.php:466
 msgid "Sold Out"
 msgstr ""
 
-#: ../gigpress.php:191
+#: ../gigpress.php:228
 #: ../admin/new.php:467
 msgid "Cancelled"
 msgstr ""
 
-#: ../gigpress.php:211
+#: ../gigpress.php:249
 msgid "Add to Google Calendar"
 msgstr ""
 
-#: ../gigpress.php:302
+#: ../gigpress.php:339
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
 msgstr ""
 
-#: ../gigpress.php:420
+#: ../gigpress.php:457
 msgid "Nothing to export."
 msgstr ""
 
-#: ../gigpress.php:427
+#: ../gigpress.php:464
 msgid "You are not authorized to do that. Try logging-in first."
 msgstr ""
 
@@ -202,8 +202,8 @@ msgstr ""
 
 #: ../admin/artists.php:112
 #: ../admin/artists.php:154
-#: ../admin/shows.php:192
-#: ../admin/shows.php:247
+#: ../admin/shows.php:197
+#: ../admin/shows.php:252
 #: ../admin/tours.php:114
 #: ../admin/tours.php:151
 #: ../admin/venues.php:182
@@ -212,23 +212,23 @@ msgid "Actions"
 msgstr ""
 
 #: ../admin/artists.php:137
-#: ../admin/shows.php:215
+#: ../admin/shows.php:220
 #: ../admin/tours.php:135
 #: ../admin/venues.php:211
 msgid "Edit"
 msgstr ""
 
 #: ../admin/artists.php:138
-#: ../admin/shows.php:217
+#: ../admin/shows.php:222
 #: ../admin/tours.php:135
 #: ../admin/venues.php:212
 msgid "Delete"
 msgstr ""
 
 #: ../admin/artists.php:146
-#: ../admin/import-export.php:62
+#: ../admin/import-export.php:61
 #: ../admin/new.php:378
-#: ../admin/shows.php:133
+#: ../admin/shows.php:138
 msgid "No artists in the database"
 msgstr ""
 
@@ -280,193 +280,193 @@ msgstr ""
 msgid "That's not a valid end date."
 msgstr ""
 
-#: ../admin/handlers.php:223
-#: ../admin/handlers.php:279
+#: ../admin/handlers.php:222
+#: ../admin/handlers.php:277
 msgid "Your show  on"
 msgstr ""
 
-#: ../admin/handlers.php:223
+#: ../admin/handlers.php:222
 msgid "was successfully added."
 msgstr ""
 
-#: ../admin/handlers.php:223
-#: ../admin/handlers.php:279
+#: ../admin/handlers.php:222
+#: ../admin/handlers.php:277
 msgid "Edit the related post"
 msgstr ""
 
-#: ../admin/handlers.php:236
-#: ../admin/handlers.php:290
-#: ../admin/handlers.php:364
-#: ../admin/handlers.php:404
-#: ../admin/handlers.php:466
-#: ../admin/handlers.php:506
-#: ../admin/handlers.php:588
-#: ../admin/handlers.php:627
+#: ../admin/handlers.php:235
+#: ../admin/handlers.php:288
+#: ../admin/handlers.php:361
+#: ../admin/handlers.php:401
+#: ../admin/handlers.php:463
+#: ../admin/handlers.php:503
+#: ../admin/handlers.php:585
+#: ../admin/handlers.php:624
 msgid "Something ain't right - try again?"
 msgstr ""
 
-#: ../admin/handlers.php:279
-#: ../admin/handlers.php:402
+#: ../admin/handlers.php:277
+#: ../admin/handlers.php:399
 msgid "was successfully updated."
 msgstr ""
 
-#: ../admin/handlers.php:319
+#: ../admin/handlers.php:317
 msgid "Show successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:319
-#: ../admin/handlers.php:547
+#: ../admin/handlers.php:317
+#: ../admin/handlers.php:544
 msgid "Undo"
 msgstr ""
 
-#: ../admin/handlers.php:323
+#: ../admin/handlers.php:321
 msgid "We ran into some trouble deleting the show. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:362
-#: ../admin/handlers.php:464
-#: ../admin/handlers.php:586
+#: ../admin/handlers.php:359
+#: ../admin/handlers.php:461
+#: ../admin/handlers.php:583
 msgid "was successfully added to the database."
 msgstr ""
 
-#: ../admin/handlers.php:426
+#: ../admin/handlers.php:423
 msgid "Venue successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:428
+#: ../admin/handlers.php:425
 msgid "We ran into some trouble deleting the venue. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:504
+#: ../admin/handlers.php:501
 msgid "Tour name successfully changed to"
 msgstr ""
 
-#: ../admin/handlers.php:547
+#: ../admin/handlers.php:544
 msgid "Tour successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:551
+#: ../admin/handlers.php:548
 msgid "We ran into some trouble deleting the tour. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:625
+#: ../admin/handlers.php:622
 msgid "successfully updated."
 msgstr ""
 
-#: ../admin/handlers.php:650
+#: ../admin/handlers.php:647
 msgid "Artist successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:653
+#: ../admin/handlers.php:650
 msgid "We ran into some trouble deleting the artist. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:677
+#: ../admin/handlers.php:674
 msgid "Show successfully restored."
 msgstr ""
 
-#: ../admin/handlers.php:679
+#: ../admin/handlers.php:676
 msgid "We ran into some trouble restoring that show. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:697
+#: ../admin/handlers.php:694
 msgid "Tour successfully restored from the database."
 msgstr ""
 
-#: ../admin/handlers.php:699
+#: ../admin/handlers.php:696
 msgid "We ran into some trouble restoring the tour. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:816
+#: ../admin/handlers.php:812
 msgid "shows were skipped due to errors"
 msgstr ""
 
-#: ../admin/handlers.php:819
-#: ../admin/handlers.php:828
-#: ../admin/handlers.php:837
-#: ../output/feed.php:36
+#: ../admin/handlers.php:815
+#: ../admin/handlers.php:824
+#: ../admin/handlers.php:833
+#: ../output/feed.php:35
 msgid "in"
 msgstr ""
 
-#: ../admin/handlers.php:819
-#: ../admin/handlers.php:828
-#: ../admin/handlers.php:837
-#: ../output/feed.php:36
+#: ../admin/handlers.php:815
+#: ../admin/handlers.php:824
+#: ../admin/handlers.php:833
+#: ../output/feed.php:35
 msgid "on"
 msgstr ""
 
-#: ../admin/handlers.php:825
+#: ../admin/handlers.php:821
 msgid "shows were skipped as they were deemed duplicates"
 msgstr ""
 
-#: ../admin/handlers.php:834
+#: ../admin/handlers.php:830
 msgid "shows were successfully imported"
 msgstr ""
 
-#: ../admin/handlers.php:871
+#: ../admin/handlers.php:867
 msgid "All shows and tours in the trash have been permanently deleted."
 msgstr ""
 
-#: ../admin/handlers.php:873
+#: ../admin/handlers.php:869
 msgid "We ran into some trouble emptying the trash. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:895
+#: ../admin/handlers.php:891
 msgid "All tours have been migrated into artists."
 msgstr ""
 
-#: ../admin/handlers.php:897
+#: ../admin/handlers.php:893
 msgid "There was an error migrating tours to artists. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:901
+#: ../admin/handlers.php:897
 msgid "There were no tours to migrate."
 msgstr ""
 
-#: ../admin/import-export.php:19
+#: ../admin/import-export.php:18
 msgid "Upload a CSV (comma-separated values) file to import into your GigPress database."
 msgstr ""
 
-#: ../admin/import-export.php:19
+#: ../admin/import-export.php:18
 msgid "Please review the formatting specifications to save yourself headaches!"
 msgstr ""
 
-#: ../admin/import-export.php:27
+#: ../admin/import-export.php:26
 msgid "Upload CSV"
 msgstr ""
 
-#: ../admin/import-export.php:46
+#: ../admin/import-export.php:45
 msgid "Download your complete show database as a CSV (comma-separated values) file, compatible with programs such as Microsoft Excel. This file is also suitable to import into another GigPress installation."
 msgstr ""
 
-#: ../admin/import-export.php:55
+#: ../admin/import-export.php:54
 msgid "Export all artists"
 msgstr ""
 
-#: ../admin/import-export.php:69
+#: ../admin/import-export.php:68
 msgid "Export all tours"
 msgstr ""
 
-#: ../admin/import-export.php:76
+#: ../admin/import-export.php:75
 #: ../admin/new.php:526
-#: ../admin/shows.php:147
+#: ../admin/shows.php:152
 #: ../admin/tours.php:143
 msgid "No tours in the database"
 msgstr ""
 
-#: ../admin/import-export.php:83
+#: ../admin/import-export.php:82
 msgid "Export all dates"
 msgstr ""
 
-#: ../admin/import-export.php:84
+#: ../admin/import-export.php:83
 msgid "Export upcoming dates"
 msgstr ""
 
-#: ../admin/import-export.php:85
+#: ../admin/import-export.php:84
 msgid "Export past dates"
 msgstr ""
 
-#: ../admin/import-export.php:89
+#: ../admin/import-export.php:88
 msgid "Download CSV"
 msgstr ""
 
@@ -487,7 +487,7 @@ msgid "documentation"
 msgstr ""
 
 #: ../admin/new.php:33
-#: ../admin/shows.php:265
+#: ../admin/shows.php:270
 msgid "and"
 msgstr ""
 
@@ -512,10 +512,10 @@ msgid "Edit this show"
 msgstr ""
 
 #: ../admin/new.php:203
-#: ../admin/settings.php:130
-#: ../admin/shows.php:186
-#: ../admin/shows.php:241
-#: ../output/feed.php:43
+#: ../admin/settings.php:128
+#: ../admin/shows.php:191
+#: ../admin/shows.php:246
+#: ../output/feed.php:42
 msgid "Date"
 msgstr ""
 
@@ -593,8 +593,8 @@ msgid "End date"
 msgstr ""
 
 #: ../admin/new.php:362
-#: ../admin/shows.php:187
-#: ../admin/shows.php:242
+#: ../admin/shows.php:192
+#: ../admin/shows.php:247
 msgid "Artist"
 msgstr ""
 
@@ -603,9 +603,9 @@ msgid "Add a new artist"
 msgstr ""
 
 #: ../admin/new.php:395
-#: ../admin/shows.php:189
-#: ../admin/shows.php:244
-#: ../output/feed.php:53
+#: ../admin/shows.php:194
+#: ../admin/shows.php:249
+#: ../output/feed.php:52
 msgid "Venue"
 msgstr ""
 
@@ -618,7 +618,7 @@ msgid "Select a venue"
 msgstr ""
 
 #: ../admin/new.php:414
-#: ../admin/shows.php:161
+#: ../admin/shows.php:166
 #: ../admin/venues.php:220
 msgid "No venues in the database"
 msgstr ""
@@ -731,280 +731,292 @@ msgstr ""
 msgid "Add show"
 msgstr ""
 
-#: ../admin/settings.php:24
+#: ../admin/settings.php:22
 msgid "Full URL to your 'Upcoming Shows' page"
 msgstr ""
 
-#: ../admin/settings.php:29
+#: ../admin/settings.php:27
 msgid "No upcoming shows message"
 msgstr ""
 
-#: ../admin/settings.php:35
+#: ../admin/settings.php:33
 msgid "No past shows message"
 msgstr ""
 
-#: ../admin/settings.php:42
+#: ../admin/settings.php:40
 msgid "User level required to use GigPress"
 msgstr ""
 
-#: ../admin/settings.php:45
+#: ../admin/settings.php:43
 msgid "Administrator"
 msgstr ""
 
-#: ../admin/settings.php:46
+#: ../admin/settings.php:44
 msgid "Editor"
 msgstr ""
 
-#: ../admin/settings.php:47
+#: ../admin/settings.php:45
 msgid "Author"
 msgstr ""
 
-#: ../admin/settings.php:48
+#: ../admin/settings.php:46
 msgid "Contributor"
 msgstr ""
 
-#: ../admin/settings.php:54
+#: ../admin/settings.php:52
 msgid "Short date format"
 msgstr ""
 
-#: ../admin/settings.php:57
-#: ../admin/settings.php:64
-#: ../admin/settings.php:71
+#: ../admin/settings.php:55
+#: ../admin/settings.php:62
+#: ../admin/settings.php:69
 msgid "Output"
 msgstr ""
 
-#: ../admin/settings.php:61
+#: ../admin/settings.php:59
 msgid "Long date format"
 msgstr ""
 
-#: ../admin/settings.php:68
+#: ../admin/settings.php:66
 msgid "Time format"
 msgstr ""
 
-#: ../admin/settings.php:72
+#: ../admin/settings.php:70
 msgid "Here's some documentation on date and time formatting"
 msgstr ""
 
-#: ../admin/settings.php:73
+#: ../admin/settings.php:71
 msgid "I use a 24 hour clock"
 msgstr ""
 
-#: ../admin/settings.php:77
+#: ../admin/settings.php:75
 msgid "Artist label"
 msgstr ""
 
-#: ../admin/settings.php:83
+#: ../admin/settings.php:81
 msgid "Tour label"
 msgstr ""
 
-#: ../admin/settings.php:89
-#: ../output/feed.php:70
+#: ../admin/settings.php:87
+#: ../output/feed.php:69
 msgid "Age restrictions"
 msgstr ""
 
-#: ../admin/settings.php:91
+#: ../admin/settings.php:89
 msgid "A pipe-separated list of available age restrictions."
 msgstr ""
 
-#: ../admin/settings.php:94
+#: ../admin/settings.php:92
 msgid "Related posts"
 msgstr ""
 
-#: ../admin/settings.php:96
+#: ../admin/settings.php:94
 msgid "Display gig info in related posts"
 msgstr ""
 
-#: ../admin/settings.php:97
+#: ../admin/settings.php:95
 msgid "before the post content"
 msgstr ""
 
-#: ../admin/settings.php:98
+#: ../admin/settings.php:96
 msgid "after the post content"
 msgstr ""
 
-#: ../admin/settings.php:99
+#: ../admin/settings.php:97
 msgid "nowhere at all"
 msgstr ""
 
-#: ../admin/settings.php:100
+#: ../admin/settings.php:98
 msgid "If a gig has a related post, that gig's details will appear at the specified position in that post."
 msgstr ""
 
-#: ../admin/settings.php:104
+#: ../admin/settings.php:102
 msgid "Related show heading"
 msgstr ""
 
-#: ../admin/settings.php:107
+#: ../admin/settings.php:105
 msgid "This appears before the gig details in your related post."
 msgstr ""
 
-#: ../admin/settings.php:111
+#: ../admin/settings.php:109
 msgid "Related posts category"
 msgstr ""
 
-#: ../admin/settings.php:113
+#: ../admin/settings.php:111
 msgid "Automatically create a related post for every new show I enter."
 msgstr ""
 
-#: ../admin/settings.php:114
+#: ../admin/settings.php:112
 msgid "When creating related posts, put them in this category"
 msgstr ""
 
-#: ../admin/settings.php:122
+#: ../admin/settings.php:120
 msgid "Exclude this category from my normal post listings."
 msgstr ""
 
-#: ../admin/settings.php:127
+#: ../admin/settings.php:125
 msgid "Related posts linking"
 msgstr ""
 
-#: ../admin/settings.php:129
+#: ../admin/settings.php:127
 msgid "Place a link to each show's related post in the following fields"
 msgstr ""
 
-#: ../admin/settings.php:131
-#: ../admin/shows.php:188
-#: ../admin/shows.php:243
+#: ../admin/settings.php:129
+#: ../admin/shows.php:193
+#: ../admin/shows.php:248
 #: ../admin/venues.php:177
 #: ../admin/venues.php:226
-#: ../output/feed.php:51
+#: ../output/feed.php:50
 msgid "City"
 msgstr ""
 
-#: ../admin/settings.php:136
+#: ../admin/settings.php:134
 msgid "Related post phrase"
 msgstr ""
 
-#: ../admin/settings.php:139
+#: ../admin/settings.php:137
 msgid "This appears in your shows listing."
 msgstr ""
 
-#: ../admin/settings.php:143
+#: ../admin/settings.php:141
 msgid "RSS/iCal"
 msgstr ""
 
-#: ../admin/settings.php:145
+#: ../admin/settings.php:143
 msgid "Make the GigPress RSS feed auto-discoverable."
 msgstr ""
 
-#: ../admin/settings.php:146
+#: ../admin/settings.php:144
 msgid "Show RSS and iCal subscription links."
 msgstr ""
 
-#: ../admin/settings.php:147
+#: ../admin/settings.php:145
 msgid "Note that the FeedBurner FeedSmith plugin will kill your GigPress RSS and iCal feeds, but the FD FeedBurner plugin will not."
 msgstr ""
 
-#: ../admin/settings.php:151
+#: ../admin/settings.php:149
 msgid "RSS/iCal feed title"
 msgstr ""
 
-#: ../admin/settings.php:157
+#: ../admin/settings.php:155
 msgid "Country display"
 msgstr ""
 
-#: ../admin/settings.php:159
+#: ../admin/settings.php:157
 msgid "Display country column."
 msgstr ""
 
-#: ../admin/settings.php:159
+#: ../admin/settings.php:157
 msgid "Use full country names."
 msgstr ""
 
-#: ../admin/settings.php:163
+#: ../admin/settings.php:161
 msgid "Link behaviour"
 msgstr ""
 
-#: ../admin/settings.php:164
+#: ../admin/settings.php:162
 msgid "Open external links in new windows."
 msgstr ""
 
-#: ../admin/settings.php:168
+#: ../admin/settings.php:166
 msgid "jQuery"
 msgstr ""
 
-#: ../admin/settings.php:170
+#: ../admin/settings.php:168
 msgid "Load jQuery into my theme."
 msgstr ""
 
-#: ../admin/settings.php:171
+#: ../admin/settings.php:169
 msgid "Uncheck this if you have a hard-coded link to the jQuery library in your theme."
 msgstr ""
 
-#: ../admin/settings.php:209
+#: ../admin/settings.php:174
+msgid "Advanced"
+msgstr ""
+
+#: ../admin/settings.php:176
+msgid "Disable the default GigPress CSS."
+msgstr ""
+
+#: ../admin/settings.php:176
+msgid "Disable the default GigPress JavaScript."
+msgstr ""
+
+#: ../admin/settings.php:212
 msgid "Save Changes"
 msgstr ""
 
-#: ../admin/shows.php:106
+#: ../admin/shows.php:111
 msgid "All"
 msgstr ""
 
-#: ../admin/shows.php:109
+#: ../admin/shows.php:114
 msgid "Upcoming"
 msgstr ""
 
-#: ../admin/shows.php:112
+#: ../admin/shows.php:117
 msgid "Past"
 msgstr ""
 
-#: ../admin/shows.php:125
+#: ../admin/shows.php:130
 msgid "View all artists"
 msgstr ""
 
-#: ../admin/shows.php:139
+#: ../admin/shows.php:144
 msgid "View all tours"
 msgstr ""
 
-#: ../admin/shows.php:153
+#: ../admin/shows.php:158
 msgid "View all venues"
 msgstr ""
 
-#: ../admin/shows.php:167
+#: ../admin/shows.php:172
 msgid "Descending"
 msgstr ""
 
-#: ../admin/shows.php:168
+#: ../admin/shows.php:173
 msgid "Ascending"
 msgstr ""
 
-#: ../admin/shows.php:190
-#: ../admin/shows.php:245
+#: ../admin/shows.php:195
+#: ../admin/shows.php:250
 #: ../admin/venues.php:179
 #: ../admin/venues.php:228
-#: ../output/feed.php:63
+#: ../output/feed.php:62
 msgid "Country"
 msgstr ""
 
-#: ../admin/shows.php:191
-#: ../admin/shows.php:246
+#: ../admin/shows.php:196
+#: ../admin/shows.php:251
 msgid "Tour"
 msgstr ""
 
-#: ../admin/shows.php:216
+#: ../admin/shows.php:221
 msgid "Copy"
 msgstr ""
 
-#: ../admin/shows.php:236
+#: ../admin/shows.php:241
 msgid "Sorry, no shows to display based on your criteria."
 msgstr ""
 
-#: ../admin/shows.php:265
+#: ../admin/shows.php:270
 msgid "You have"
 msgstr ""
 
-#: ../admin/shows.php:265
+#: ../admin/shows.php:270
 msgid "shows"
 msgstr ""
 
-#: ../admin/shows.php:265
+#: ../admin/shows.php:270
 msgid "tours"
 msgstr ""
 
-#: ../admin/shows.php:265
+#: ../admin/shows.php:270
 msgid "in your trash"
 msgstr ""
 
-#: ../admin/shows.php:267
+#: ../admin/shows.php:272
 msgid "Take out the trash now"
 msgstr ""
 
@@ -1081,7 +1093,7 @@ msgstr ""
 
 #: ../admin/venues.php:178
 #: ../admin/venues.php:227
-#: ../output/feed.php:56
+#: ../output/feed.php:55
 msgid "Address"
 msgstr ""
 
@@ -1090,11 +1102,11 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: ../output/feed.php:48
+#: ../output/feed.php:47
 msgid "Time"
 msgstr ""
 
-#: ../output/feed.php:66
+#: ../output/feed.php:65
 msgid "Admission"
 msgstr ""
 

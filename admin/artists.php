@@ -106,8 +106,8 @@ function gigpress_artists() {
 	<table class="widefat">
 		<thead>
 			<tr>
+				<th scope="col" class="gp-centre">ID</th>
 				<th scope="col"><?php _e("Artist name", "gigpress"); ?></th>
-				<th scope="col" class="gp-centre"><?php _e("Artist ID", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>
@@ -130,8 +130,8 @@ function gigpress_artists() {
 				// Print out our rows.
 				?>
 				<tr<?php echo $style; ?>>
-					<td><?php echo wptexturize($artist->artist_name); ?></td>
 					<td class="gp-centre"><?php echo $artist->artist_id; ?></td>
+					<td><?php echo wptexturize($artist->artist_name); ?></td>
 					<td class="gp-centre"><?php echo $count; ?></td>
 					<td class="gp-centre">
 						<a href="<?php echo get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-artists&amp;gpaction=edit&amp;artist_id='.$artist->artist_id . $url_args; ?>" class="edit"><?php _e("Edit", "gigpress"); ?></a>
@@ -148,8 +148,8 @@ function gigpress_artists() {
 		</tbody>
 		<tfoot>
 			<tr>
+				<th scope="col" class="gp-centre">ID</th>
 				<th scope="col"><?php _e("Artist name", "gigpress"); ?></th>
-				<th scope="col" class="gp-centre"><?php _e("Artist ID", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>

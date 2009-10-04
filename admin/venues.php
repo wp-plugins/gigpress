@@ -173,6 +173,7 @@ function gigpress_venues() {
 	<table class="widefat">
 		<thead>
 			<tr>
+				<th scope="col" class="gp-centre">ID</th>
 				<th scope="col"><?php _e("Name", "gigpress"); ?></th>
 				<th scope="col"><?php _e("City", "gigpress"); ?></th>
 				<th scope="col"><?php _e("Address", "gigpress"); ?></th>
@@ -201,6 +202,7 @@ function gigpress_venues() {
 				// Print out our rows.
 				?>
 				<tr<?php echo $style; ?>>
+					<td class="gp-centre"><?php echo $venuedata['venue_id']; ?></td>
 					<td><?php echo $venuedata['venue']; ?></td>
 					<td><?php echo $venuedata['city']; ?></td>
 					<td><?php echo $venuedata['address']; ?></td>
@@ -222,6 +224,7 @@ function gigpress_venues() {
 		</tbody>
 		<tfoot>
 			<tr>
+				<th scope="col" class="gp-centre">ID</th>
 				<th scope="col"><?php _e("Name", "gigpress"); ?></th>
 				<th scope="col"><?php _e("City", "gigpress"); ?></th>
 				<th scope="col"><?php _e("Address", "gigpress"); ?></th>

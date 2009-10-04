@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	jQuery.fn.fadeToggle = function(speed, easing, callback) {
+	$.fn.fadeToggle = function(speed, easing, callback) {
 		return this.animate({opacity: "toggle"}, speed, easing, callback); 
 	}; 	
 	$("a.gigpress-links-toggle").click(function() {

@@ -14,7 +14,7 @@
 <?php if($gpo['display_subscriptions'] == 1) : ?>
 	<p class="gigpress-subscribe"><?php _e("Subscribe", "gigpress"); ?>: 
 	
-	<?php if(!$artist && !$tour) : ?>
+	<?php if(!$artist && !$tour && !$venue) : ?>
 		<a href="<?php echo GIGPRESS_RSS; ?>" title="<?php echo wptexturize($gpo['rss_title']); ?> RSS" class="gigpress-rss">RSS</a> | <a href="<?php echo GIGPRESS_WEBCAL; ?>" title="<?php echo wptexturize($gpo['rss_title']); ?> iCalendar" class="gigpress-ical">iCal</a>
 	<?php endif; ?>
 
@@ -24,6 +24,10 @@
 		
 	<?php if($tour) : ?>
 		<a href="<?php echo GIGPRESS_RSS; ?>&amp;tour=<?php echo $showdata['tour_id']; ?>" title="<?php echo $showdata['tour']; ?> RSS" class="gigpress-rss">RSS</a> | <a href="<?php echo GIGPRESS_WEBCAL . '&amp;tour=' . $showdata['tour_id']; ?>" title="<?php echo $showdata['tour']; ?> iCalendar" class="gigpress-ical">iCal</a>
+	<?php endif; ?>	
+
+	<?php if($venue) : ?>
+		<a href="<?php echo GIGPRESS_RSS; ?>&amp;venue=<?php echo $showdata['venue_id']; ?>" title="<?php echo $showdata['venue_plain']; ?> RSS" class="gigpress-rss">RSS</a> | <a href="<?php echo GIGPRESS_WEBCAL . '&amp;venue=' . $showdata['venue_id']; ?>" title="<?php echo $showdata['venue_plain']; ?> iCalendar" class="gigpress-ical">iCal</a>
 	<?php endif; ?>	
 					
 	</p>

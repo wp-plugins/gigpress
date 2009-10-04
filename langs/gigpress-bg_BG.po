@@ -21,7 +21,7 @@ msgstr "Добави участие"
 #: ../gigpress.php:67
 #: ../admin/shows.php:97
 msgid "Shows"
-msgstr "участия"
+msgstr "Участия"
 
 #: ../gigpress.php:68
 #: ../admin/artists.php:34
@@ -616,7 +616,7 @@ msgstr "Добави нов артист"
 #: ../admin/shows.php:244
 #: ../output/feed.php:53
 msgid "Venue"
-msgstr "Събитие"
+msgstr "Място"
 
 #: ../admin/new.php:398
 msgid "Add a new venue"
@@ -645,7 +645,7 @@ msgstr "Град на мястото"
 #: ../admin/new.php:433
 #: ../admin/venues.php:112
 msgid "Venue address"
-msgstr "Адрес на събитието"
+msgstr "Адрес на мястото"
 
 #: ../admin/new.php:438
 #: ../admin/venues.php:116
@@ -655,7 +655,7 @@ msgstr "Държава на мястото"
 #: ../admin/new.php:451
 #: ../admin/venues.php:128
 msgid "Venue website"
-msgstr "Страница на събитието"
+msgstr "Страница на мястото"
 
 #: ../admin/new.php:463
 msgid "Status"

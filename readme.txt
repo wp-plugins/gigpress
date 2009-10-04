@@ -1,7 +1,7 @@
 === GigPress ===
 Contributors: mrherbivore
 Donate link: http://gigpress.com/donate
-Tags: concerts, bands, tours, shows, record labels, music
+Tags: concerts, bands, tours, shows, record labels, music, musicians, performers, artists
 Requires at least: 2.6.5
 Tested up to: 2.8.4
 
@@ -19,6 +19,17 @@ GigPress is a powerful live performance listing and management plugin designed f
 * No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV -- filtered by artist, tour, and date.
 
 == Changelog ==
+
+= 2.0.1 =
+
+* Updated jQuery script for better compatibility with other JS libraries
+* Custom templates can now be stored in either `/wp-content/gigpress-templates/`, `/(active_theme_folder)/gigpress-templates/` or `/(child_theme_folder)/gigpress-templates/`
+* Added some new  variables to the `$showdata` array for use in custom templates
+* Added new `venue` shortcode parameter to display only shows from a specific venue
+* Updated default templates to customize display when filtering by venue
+* Added options to disable both the default style sheet and the default JavaScript
+* Sort order on the "manage shows" screen is now persistent per user
+* Added Spanish and Brazilian Portuguese localizations; minor updates to French, Bulgarian and Dutch
 
 = 2.0 =
 
@@ -91,7 +102,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 = 1.4.2 =
 
-* Fixed a couple of bugs when using the gigpress_upcoming() and gigpress_archive() template tags - these functions now need to be echoed, e.g. `<?php echo gigpress_upcoming(); ?>`
+* Fixed a couple of bugs when using the `gigpress_upcoming()` and `gigpress_archive()` template tags - these functions now need to be echoed, e.g. `<?php echo gigpress_upcoming(); ?>`
 * Removed vestigial hard-coded "Tour" label on Related Post entries
 * Fixed minor character entity issue when loading/updating settings
 
@@ -104,7 +115,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * Complete show info can now be displayed within a show's related post entry (before or after post content)
 * Option to automatically create a new related post when entering a new show
 * Date and City can now be optionally linked to related shows
-* Show can now be marked as CANCELLED or SOLD OUT
+* Shows can now be marked as CANCELLED or SOLD OUT
 * Added fields for venue phone and box office
 * Added ability to export all of your shows to a tab-separated CSV file
 * You can now show a single tour using its ID in the gigpress_upcoming shortcode (see docs for more info)
@@ -213,8 +224,8 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 1. Upload the `gigpress` folder to the `/wp-content/plugins/` directory on your web server
 2. Activate the plugin through the 'Plugins' admin menu in WordPress. This will create a new top-level menu called "GigPress".
-3. To list upcoming shows, simply create a new page and put `[gigpress_shows]` in the page content. This shortcode accepts several parameters - [please refer to the documentaion for details](http://gigpress.com/docs/).
-4. GigPress also comes with a sidebar widget - simply drag the widget into your sidebar, set your ptions, and save.
+3. To list upcoming shows, simply create a new page and put `[gigpress_shows]` in the page content. This shortcode accepts several parameters - [please refer to the documentation for details](http://gigpress.com/docs/).
+4. GigPress also comes with a sidebar widget - simply drag the widget into your sidebar, set your options, and save.
 
 == Frequently Asked Questions ==
 

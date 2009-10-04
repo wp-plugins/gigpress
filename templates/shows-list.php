@@ -38,7 +38,7 @@
 			<?php echo $showdata['city']; ?>
 		</td>
 		
-		<td class="gigpress-venue location"><?php echo $showdata['venue']; ?></td>
+		<td class="gigpress-venue location<?php if($venue) : ?> hide<?php endif; ?>"><?php echo $showdata['venue']; ?></td>
 		
 	<?php if($gpo['display_country'] == 1) : ?>
 		<td class="gigpress-country"><?php echo $showdata['country']; ?></td>

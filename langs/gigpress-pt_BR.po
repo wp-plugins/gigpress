@@ -3,69 +3,72 @@ msgstr ""
 "Project-Id-Version: GigPress 1.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-18 21:02-0400\n"
-"PO-Revision-Date: 2009-09-30 13:29+0100\n"
-"Last-Translator: Guido Vrouwe <guidovrouwe@gmail.com>\n"
+"PO-Revision-Date: 2009-10-01 15:04-0400\n"
+"Last-Translator: Derek Hogue <derek@amphibian.info>\n"
 "Language-Team: GigPress <derek@gigpress.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Dutch (Nederlands)\n"
-"X-Poedit-Country: The Nederlands\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Brazil\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: /Clients/GigPress/Plugin/svn/trunk\n"
 
 #: ../gigpress.php:66
 #: ../admin/new.php:189
 msgid "Add a show"
-msgstr "Optreden toevoegen"
+msgstr "Adicionar um show"
 
 #: ../gigpress.php:67
 #: ../admin/shows.php:97
+#, fuzzy
 msgid "Shows"
-msgstr "Optredens"
+msgstr "shows"
 
 #: ../gigpress.php:68
 #: ../admin/artists.php:34
 msgid "Artists"
-msgstr "Artiesten"
+msgstr "Artistas"
 
 #: ../gigpress.php:69
 #: ../admin/venues.php:31
+#, fuzzy
 msgid "Venues"
-msgstr "Podia"
+msgstr "Local"
 
 #: ../gigpress.php:70
 #: ../admin/tours.php:34
 msgid "Tours"
-msgstr "Toers"
+msgstr "Turnês"
 
 #: ../gigpress.php:71
 #: ../admin/settings.php:17
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Configurações"
 
 #: ../gigpress.php:72
 #: ../admin/import-export.php:13
+#, fuzzy
 msgid "Import/Export"
-msgstr "Importeren/Exporteren"
+msgstr "Exportar"
 
 #: ../gigpress.php:96
 msgid "You're using"
-msgstr "Je gebruikt"
+msgstr "Você está usando"
 
 #: ../gigpress.php:96
 msgid "Like it?"
-msgstr "Vind je dit leuk?"
+msgstr "Gostou?"
 
 #: ../gigpress.php:96
 msgid "Make a donation"
-msgstr "Een donatie maken"
+msgstr "Faça uma doação"
 
 #: ../gigpress.php:144
 msgid "opens in a new window"
-msgstr "opent in een nieuw venster"
+msgstr "abre em nova janela"
 
 #: ../gigpress.php:160
 #: ../admin/handlers.php:819
@@ -73,123 +76,131 @@ msgstr "opent in een nieuw venster"
 #: ../admin/handlers.php:837
 #: ../admin/new.php:238
 msgid "at"
-msgstr "in"
+msgstr "às"
 
 #: ../gigpress.php:163
 #: ../admin/new.php:489
 #: ../admin/shows.php:224
 msgid "Price"
-msgstr "Prijs"
+msgstr "Preço"
 
 #: ../gigpress.php:164
 #: ../admin/shows.php:227
 #: ../output/feed.php:74
 msgid "Box office"
-msgstr "Ticketbureau"
+msgstr "Escritório"
 
 #: ../gigpress.php:165
 #: ../admin/new.php:455
 #: ../admin/venues.php:132
 #: ../output/feed.php:60
 msgid "Venue phone"
-msgstr "Telefoon van podium"
+msgstr "Telefone do local"
 
 #: ../gigpress.php:166
 #: ../admin/new.php:501
 #: ../admin/settings.php:132
 #: ../output/feed.php:81
 msgid "Notes"
-msgstr "Overige informatie"
+msgstr "Notas"
 
 #: ../gigpress.php:175
+#, fuzzy
 msgid "Download iCal"
-msgstr "Download iCal"
+msgstr "Baixar arquivo"
 
 #: ../gigpress.php:187
 msgid "Buy tickets"
-msgstr "Koop je ticket"
+msgstr "Comprar Ingressos"
 
 #: ../gigpress.php:189
 #: ../admin/new.php:466
 msgid "Sold Out"
-msgstr "Uitverkocht"
+msgstr "Todos vendidos"
 
 #: ../gigpress.php:191
 #: ../admin/new.php:467
 msgid "Cancelled"
-msgstr "Afgelast"
+msgstr "Cancelado"
 
 #: ../gigpress.php:211
 msgid "Add to Google Calendar"
-msgstr "Aan Google kalender toevoegen"
+msgstr "Adicionar ao calendário do Google"
 
 #: ../gigpress.php:302
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
-msgstr "Toon %s&#8211;%s van %s"
+msgstr "Mostrando %s&#8211;%s of %s"
 
 #: ../gigpress.php:420
 msgid "Nothing to export."
-msgstr "Niks om te exporteren."
+msgstr "Nada pra exportar"
 
 #: ../gigpress.php:427
 msgid "You are not authorized to do that. Try logging-in first."
-msgstr "Je bent niet bevoegd om dit te doen. Probeer eerst in te loggen."
+msgstr "Você não tem autorização pra fazer isso. Tente logar antes."
 
 #: ../admin/artists.php:44
+#, fuzzy
 msgid "Update artist"
-msgstr "Artiest bijwerken"
+msgstr "Opções de Atualização"
 
 #: ../admin/artists.php:44
 #: ../admin/new.php:579
 #: ../admin/tours.php:49
 #: ../admin/venues.php:140
 msgid "or"
-msgstr "of"
+msgstr "ou"
 
 #: ../admin/artists.php:44
 #: ../admin/new.php:579
 #: ../admin/tours.php:49
 #: ../admin/venues.php:140
 msgid "cancel"
-msgstr "cancel"
+msgstr "cacelar"
 
 #: ../admin/artists.php:46
+#, fuzzy
 msgid "Edit this artist"
-msgstr "Artiest bewerken"
+msgstr "Editar este show"
 
 #: ../admin/artists.php:56
+#, fuzzy
 msgid "Sorry, but we had trouble loading that artist for editing."
-msgstr "Sorry, maar we hadden een probleem met het laden van de bewerking van deze artiest."
+msgstr "Desculpe, tivemos alguns problemas ao carregar este show para edição"
 
 #: ../admin/artists.php:58
 #: ../admin/artists.php:68
+#, fuzzy
 msgid "Add an artist"
-msgstr "voeg een artiest toe"
+msgstr "Adicionar um show"
 
 #: ../admin/artists.php:66
+#, fuzzy
 msgid "Add artist"
-msgstr "artiest toevoegen"
+msgstr "Adicionar um show"
 
 #: ../admin/artists.php:79
 #: ../admin/artists.php:109
 #: ../admin/artists.php:151
 #: ../admin/new.php:388
+#, fuzzy
 msgid "Artist name"
-msgstr "naam van artiest"
+msgstr "Nome da turnê"
 
 #: ../admin/artists.php:89
+#, fuzzy
 msgid "All artists"
-msgstr "alle artiesten"
+msgstr "Todas as turnês"
 
 #: ../admin/artists.php:92
 msgid "Note that you cannot delete an artist while they have shows in the database."
-msgstr "NB. Je kan geen artiest verwijderen als er nog optredens in de database staan."
+msgstr "Note que você não pode deletar um artista enquanto ele tem show na base da dados."
 
 #: ../admin/artists.php:110
 #: ../admin/artists.php:152
 msgid "Artist ID"
-msgstr "Artiest ID"
+msgstr "ID do Artista"
 
 #: ../admin/artists.php:111
 #: ../admin/artists.php:153
@@ -198,7 +209,7 @@ msgstr "Artiest ID"
 #: ../admin/venues.php:181
 #: ../admin/venues.php:230
 msgid "Number of shows"
-msgstr "Aantal optredens"
+msgstr "Número de shows"
 
 #: ../admin/artists.php:112
 #: ../admin/artists.php:154
@@ -209,90 +220,100 @@ msgstr "Aantal optredens"
 #: ../admin/venues.php:182
 #: ../admin/venues.php:231
 msgid "Actions"
-msgstr "Acties"
+msgstr "Ações"
 
 #: ../admin/artists.php:137
 #: ../admin/shows.php:215
 #: ../admin/tours.php:135
 #: ../admin/venues.php:211
 msgid "Edit"
-msgstr "Bewerken"
+msgstr "Editar"
 
 #: ../admin/artists.php:138
 #: ../admin/shows.php:217
 #: ../admin/tours.php:135
 #: ../admin/venues.php:212
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr "Deletar"
 
 #: ../admin/artists.php:146
 #: ../admin/import-export.php:62
 #: ../admin/new.php:378
 #: ../admin/shows.php:133
+#, fuzzy
 msgid "No artists in the database"
-msgstr "Geen artiesten in de database"
+msgstr "Nenhuma turnê no banco de dados"
 
 #: ../admin/handlers.php:45
+#, fuzzy
 msgid "We had trouble creating your new artist. Sorry."
-msgstr "We hadden een probleem bij het aanmaken van een nieuwe artiest. Sorry."
+msgstr "Tivemos alguns problemas criando os seu post relacionado. Desculpe."
 
 #: ../admin/handlers.php:60
+#, fuzzy
 msgid "We had trouble creating your new venue. Sorry."
-msgstr "We hadden een probleem bij het aanmaken van een nieuw podium. Sorry."
+msgstr "Tivemos alguns problemas criando os seu post relacionado. Desculpe."
 
 #: ../admin/handlers.php:77
+#, fuzzy
 msgid "We had trouble creating your new tour. Sorry."
-msgstr "We hadden een probleem bij het aanmaken van een nieuwe toer. Sorry."
+msgstr "Tivemos alguns problemas criando os seu post relacionado. Desculpe."
 
 #: ../admin/handlers.php:114
 msgid "We had trouble creating your Related Post. Sorry."
-msgstr "Er ging iets fout met het aanmaken van je verwante bericht. Sorry"
+msgstr "Tivemos alguns problemas criando os seu post relacionado. Desculpe."
 
 #: ../admin/handlers.php:152
+#, fuzzy
 msgid "You must select a venue."
-msgstr "Je moet een podium selecteren."
+msgstr "Você precisa indicar uma cidade"
 
 #: ../admin/handlers.php:154
 #: ../admin/handlers.php:168
+#, fuzzy
 msgid "You must enter an artist name."
-msgstr "Je moet een artiest invullen."
+msgstr "Você precisa indicar uma cidade"
 
 #: ../admin/handlers.php:156
 #: ../admin/handlers.php:176
+#, fuzzy
 msgid "You must enter a venue name."
-msgstr "Je moet de naam van een podium invullen."
+msgstr "Você precisa indicar uma cidade"
 
 #: ../admin/handlers.php:158
 #: ../admin/handlers.php:178
 msgid "You must enter a city."
-msgstr "Je moet een plaatsnaam invullen."
+msgstr "Você precisa indicar uma cidade"
 
 #: ../admin/handlers.php:160
 #: ../admin/handlers.php:172
+#, fuzzy
 msgid "You must enter a tour name."
-msgstr "Je moet de naam van een toer invullen."
+msgstr "Você precisa indicar uma cidade"
 
 #: ../admin/handlers.php:162
 msgid "That's not a valid date."
-msgstr "Dit is geen geldige datum."
+msgstr "Isto não é uma data válida."
 
 #: ../admin/handlers.php:164
 msgid "That's not a valid end date."
-msgstr "Dit is geen geldig eind datum."
+msgstr "Isto não é uma data válida."
 
 #: ../admin/handlers.php:223
 #: ../admin/handlers.php:279
+#, fuzzy
 msgid "Your show  on"
-msgstr "Jouw optreden  op"
+msgstr "O seu show em"
 
 #: ../admin/handlers.php:223
 msgid "was successfully added."
-msgstr "was succesvol toegevoegd."
+msgstr "foi adicionado."
 
 #: ../admin/handlers.php:223
 #: ../admin/handlers.php:279
+#, fuzzy
 msgid "Edit the related post"
-msgstr "bewerk verwant bericht"
+msgstr "Posts relacionados"
 
 #: ../admin/handlers.php:236
 #: ../admin/handlers.php:290
@@ -303,213 +324,226 @@ msgstr "bewerk verwant bericht"
 #: ../admin/handlers.php:588
 #: ../admin/handlers.php:627
 msgid "Something ain't right - try again?"
-msgstr "Er is iets foutgegaan, probeer het a.u.b. nog een keer."
+msgstr "Algo está errado - tentar novamente?"
 
 #: ../admin/handlers.php:279
 #: ../admin/handlers.php:402
 msgid "was successfully updated."
-msgstr "is succesvol bijgewerkt."
+msgstr "foi atualizado."
 
 #: ../admin/handlers.php:319
 msgid "Show successfully deleted."
-msgstr "Optreden succesvol verwijderd."
+msgstr "Show deletado."
 
 #: ../admin/handlers.php:319
 #: ../admin/handlers.php:547
 msgid "Undo"
-msgstr "Ongedaan maken"
+msgstr "Desfazer"
 
 #: ../admin/handlers.php:323
 msgid "We ran into some trouble deleting the show. Sorry."
-msgstr "Er is iets fout gegaan met het verwijderen van dit optreden, onze excuses hiervoor."
+msgstr "Tivemos alguns problemas deletando o show. Desculpe."
 
 #: ../admin/handlers.php:362
 #: ../admin/handlers.php:464
 #: ../admin/handlers.php:586
 msgid "was successfully added to the database."
-msgstr "is succesvol toegevoegd aan de database."
+msgstr "foi adicionado no banco de dados."
 
 #: ../admin/handlers.php:426
+#, fuzzy
 msgid "Venue successfully deleted."
-msgstr "Podium is succesvol verwijderd."
+msgstr "Turnê deletada"
 
 #: ../admin/handlers.php:428
+#, fuzzy
 msgid "We ran into some trouble deleting the venue. Sorry."
-msgstr "We hadden een probleem bij het verwijderen van een podium. Sorry"
+msgstr "Tivemos alguns problemas deletando a turnê. Desculpe."
 
 #: ../admin/handlers.php:504
 msgid "Tour name successfully changed to"
-msgstr "De naam van de toer is succesvol veranderd in"
+msgstr "A turnê teve o nome trocado para"
 
 #: ../admin/handlers.php:547
 msgid "Tour successfully deleted."
-msgstr "De toer is succesvol verwijderd."
+msgstr "Turnê deletada"
 
 #: ../admin/handlers.php:551
 msgid "We ran into some trouble deleting the tour. Sorry."
-msgstr "Er is iets foet gegaan met het verwijderen van de tour. Sorry."
+msgstr "Tivemos alguns problemas deletando a turnê. Desculpe."
 
 #: ../admin/handlers.php:625
+#, fuzzy
 msgid "successfully updated."
-msgstr "succesvol bijgewerkt"
+msgstr "foi atualizado."
 
 #: ../admin/handlers.php:650
+#, fuzzy
 msgid "Artist successfully deleted."
-msgstr "De artiest is succesvol verwijderd."
+msgstr "Turnê deletada"
 
 #: ../admin/handlers.php:653
+#, fuzzy
 msgid "We ran into some trouble deleting the artist. Sorry."
-msgstr "Er is iets fout gegaan met het verwijderen van de artiest. Sorry."
+msgstr "Tivemos alguns problemas deletando o show. Desculpe."
 
 #: ../admin/handlers.php:677
 msgid "Show successfully restored."
-msgstr "Optreden succesvol hersteld."
+msgstr "Show recuperado."
 
 #: ../admin/handlers.php:679
 msgid "We ran into some trouble restoring that show. Sorry."
-msgstr "Er is iets fout gegaan met het herstellen van de show, onze excuses hiervoor."
+msgstr "Tivemos alguns problemas ao recuperar este show. Desculpe"
 
 #: ../admin/handlers.php:697
 msgid "Tour successfully restored from the database."
-msgstr "De toer is succesvol hersteld vanaf de database."
+msgstr "Turnê recuperada do banco de dados."
 
 #: ../admin/handlers.php:699
 msgid "We ran into some trouble restoring the tour. Sorry."
-msgstr "Er is iets fout gegaan met het herstellen van de toer. Sorry."
+msgstr "Tivemos alguns problemas recuperando a turnê. Desculpe."
 
 #: ../admin/handlers.php:816
 msgid "shows were skipped due to errors"
-msgstr "optredens zijn overgeslagen vanwege fouten"
+msgstr "shows foram ignorados devido a erros"
 
 #: ../admin/handlers.php:819
 #: ../admin/handlers.php:828
 #: ../admin/handlers.php:837
 #: ../output/feed.php:36
 msgid "in"
-msgstr "in"
+msgstr "em"
 
 #: ../admin/handlers.php:819
 #: ../admin/handlers.php:828
 #: ../admin/handlers.php:837
 #: ../output/feed.php:36
 msgid "on"
-msgstr "op"
+msgstr "em"
 
 #: ../admin/handlers.php:825
 msgid "shows were skipped as they were deemed duplicates"
-msgstr "optredens zijn overgeslagen vanwege verwachte duplicaten"
+msgstr "shows foram ignorados por estarem duplicados"
 
 #: ../admin/handlers.php:834
+#, fuzzy
 msgid "shows were successfully imported"
-msgstr "optreden zijn succesvol geimporteerd."
+msgstr "Show recuperado."
 
 #: ../admin/handlers.php:871
+#, fuzzy
 msgid "All shows and tours in the trash have been permanently deleted."
-msgstr "Alle optredens en toers in de prullenbak zijn permanent verwijderd."
+msgstr "Todos os shows na lixeira foram deletados para sempre."
 
 #: ../admin/handlers.php:873
+#, fuzzy
 msgid "We ran into some trouble emptying the trash. Sorry."
-msgstr "We kwamen problemen tegen bij het legen van de prullenbak. Sorry."
+msgstr "Tivemos alguns problemas deletando o show. Desculpe."
 
 #: ../admin/handlers.php:895
 msgid "All tours have been migrated into artists."
-msgstr "Alle toers zijn gemigreerd naar artiesten."
+msgstr "Todas as turnês foram migradas para os artistas."
 
 #: ../admin/handlers.php:897
+#, fuzzy
 msgid "There was an error migrating tours to artists. Sorry."
-msgstr "Er ging iets fout bij het migreren van toers naar artiesten. Sorry."
+msgstr "Tivemos alguns problemas criando os seu post relacionado. Desculpe."
 
 #: ../admin/handlers.php:901
 msgid "There were no tours to migrate."
-msgstr "Er zijn toers om te migreren."
+msgstr "Não nenhuma turnê para migrar."
 
 #: ../admin/import-export.php:19
 msgid "Upload a CSV (comma-separated values) file to import into your GigPress database."
-msgstr "Upload een CSV (comma-separated values) bestand om in de GigPress database te importeren."
+msgstr "Enviar CSV (valores separado por vírgulas) arquivo para importar sua base de dados do GigPress."
 
 #: ../admin/import-export.php:19
 msgid "Please review the formatting specifications to save yourself headaches!"
-msgstr "Kijk alsjeblieft de specificaties voor formateren na om jezelf hoofdpijn te besparen!"
+msgstr "Por favor revise as especificações de formatação para evitar dores de cabeça!"
 
 #: ../admin/import-export.php:27
 msgid "Upload CSV"
-msgstr "Upload CSV"
+msgstr "Enviar CSV"
 
 #: ../admin/import-export.php:46
+#, fuzzy
 msgid "Download your complete show database as a CSV (comma-separated values) file, compatible with programs such as Microsoft Excel. This file is also suitable to import into another GigPress installation."
-msgstr "Download je complete database met optredens als een tab-onderscheiden CSV bestand (ondersteund door programma's als MS Excel). Dit bestand is ook voor als je het in een ander Gigpress installatie wilt importeren."
+msgstr "Baixe todo o banco de dados dos shows para um arquivo CSV com valores separados por vírgulas (compatível com programas como OpenOffice.org ou Microsoft Excel.)"
 
 #: ../admin/import-export.php:55
 msgid "Export all artists"
-msgstr "Exporteer alle artiesten"
+msgstr "Exportar todos os artistas"
 
 #: ../admin/import-export.php:69
+#, fuzzy
 msgid "Export all tours"
-msgstr "exporteer alle tours"
+msgstr "Todas as turnês"
 
 #: ../admin/import-export.php:76
 #: ../admin/new.php:526
 #: ../admin/shows.php:147
 #: ../admin/tours.php:143
 msgid "No tours in the database"
-msgstr "Geen toers in de database"
+msgstr "Nenhuma turnê no banco de dados"
 
 #: ../admin/import-export.php:83
 msgid "Export all dates"
-msgstr "Exporteer alle data"
+msgstr "Exportar todas as datas"
 
 #: ../admin/import-export.php:84
 msgid "Export upcoming dates"
-msgstr "Exporteer alle toekomstige data"
+msgstr "Exportar datas futuras"
 
 #: ../admin/import-export.php:85
 msgid "Export past dates"
-msgstr "Exporteer alle data uit het verleden"
+msgstr "Exportar datas passdas"
 
 #: ../admin/import-export.php:89
+#, fuzzy
 msgid "Download CSV"
-msgstr "Download CSV"
+msgstr "Baixar arquivo"
 
 #: ../admin/new.php:32
 msgid "<strong>Welcome to GigPress!</strong> Get started by adding your first show below. To display your shows, simply add the"
-msgstr "<strong>Welkom bij GigPress!</strong> Start door hier beneden je eerste optreden toe te voegen. Om je optredens te tonen, voeg je simpel de "
+msgstr "<stron>Bem-vindo ao GigPress!</strong> Prepare-se para adicionar o seu primeiro show. Para mostrar seus shows, simplesmente adicione o"
 
 #: ../admin/new.php:32
 msgid "shortcode to any page or post."
-msgstr "korte code toe aan een willekeurige pagina of bericht."
+msgstr "código para qualquer página ou post."
 
 #: ../admin/new.php:33
+#, fuzzy
 msgid "Questions?  Please check out the"
-msgstr "Vragen? Kijk alsjeblieft de "
+msgstr "Dúvidas? Dê uma olhada na"
 
 #: ../admin/new.php:33
 msgid "documentation"
-msgstr "documentatie"
+msgstr "documentação"
 
 #: ../admin/new.php:33
 #: ../admin/shows.php:265
 msgid "and"
-msgstr "en"
+msgstr "e"
 
 #: ../admin/new.php:33
 msgid "FAQ"
-msgstr "de FAQ"
+msgstr "FAQ"
 
 #: ../admin/new.php:33
 msgid "on the GigPress website. Enjoy!"
-msgstr "op de GigPress website. Veel plezier!"
+msgstr "no site do GigPress. Aproveite!"
 
 #: ../admin/new.php:33
 msgid "Don't show this again"
-msgstr "Laat dit niet meer zien"
+msgstr "Não me mostre isso novamente"
 
 #: ../admin/new.php:138
 msgid "Sorry, but we had trouble loading that show for editing."
-msgstr "Sorry, maar we hadden een probleem met het laden van dit optreden."
+msgstr "Desculpe, tivemos alguns problemas ao carregar este show para edição"
 
 #: ../admin/new.php:180
 msgid "Edit this show"
-msgstr "Bewerk dit optreden"
+msgstr "Editar este show"
 
 #: ../admin/new.php:203
 #: ../admin/settings.php:130
@@ -517,148 +551,153 @@ msgstr "Bewerk dit optreden"
 #: ../admin/shows.php:241
 #: ../output/feed.php:43
 msgid "Date"
-msgstr "Datum"
+msgstr "Data"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:207
 #: ../admin/new.php:328
 msgid "January"
-msgstr "januari"
+msgstr "Janeiro"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:208
 #: ../admin/new.php:329
 msgid "February"
-msgstr "februari"
+msgstr "Fevereiro"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:209
 #: ../admin/new.php:330
 msgid "March"
-msgstr "maart"
+msgstr "Março"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:210
 #: ../admin/new.php:331
 msgid "April"
-msgstr "april"
+msgstr "Abril"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:211
 #: ../admin/new.php:332
 msgid "May"
-msgstr "mei"
+msgstr "Maio"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:212
 #: ../admin/new.php:333
 msgid "June"
-msgstr "juni"
+msgstr "Junho"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:213
 #: ../admin/new.php:334
 msgid "July"
-msgstr "juli"
+msgstr "Julho"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:214
 #: ../admin/new.php:335
 msgid "August"
-msgstr "augustus"
+msgstr "Agosto"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:215
 #: ../admin/new.php:336
 msgid "September"
-msgstr "september"
+msgstr "Setembro"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:216
 #: ../admin/new.php:337
 msgid "October"
-msgstr "oktober"
+msgstr "Outubro"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:217
 #: ../admin/new.php:338
 msgid "November"
-msgstr "november"
+msgstr "Novembro"
 
 # Doesn't need to be translated, as months are included in the core WordPress language files.
 #: ../admin/new.php:218
 #: ../admin/new.php:339
 msgid "December"
-msgstr "december"
+msgstr "Dezembro"
 
 #: ../admin/new.php:270
 #: ../admin/new.php:546
 msgid "None"
-msgstr "Geen"
+msgstr "Nenhum"
 
 #: ../admin/new.php:319
 msgid "This is a multi-day event"
-msgstr "Dit is een meerdaags evenement"
+msgstr "Este é um evento de vários dias"
 
 #: ../admin/new.php:324
 msgid "End date"
-msgstr "Einddatum"
+msgstr "Término"
 
 #: ../admin/new.php:362
 #: ../admin/shows.php:187
 #: ../admin/shows.php:242
+#, fuzzy
 msgid "Artist"
-msgstr "Artiest"
+msgstr "Ações"
 
 #: ../admin/new.php:365
 msgid "Add a new artist"
-msgstr "Nieuwe artiest toevoegen"
+msgstr "Adicionar um novo artista"
 
 #: ../admin/new.php:395
 #: ../admin/shows.php:189
 #: ../admin/shows.php:244
 #: ../output/feed.php:53
 msgid "Venue"
-msgstr "Podium"
+msgstr "Local"
 
 #: ../admin/new.php:398
 msgid "Add a new venue"
-msgstr "Nieuwe podium toevoegen"
+msgstr "Adicionar local"
 
 #: ../admin/new.php:400
 msgid "Select a venue"
-msgstr "Selecteer een podium"
+msgstr "Selecione um local"
 
 #: ../admin/new.php:414
 #: ../admin/shows.php:161
 #: ../admin/venues.php:220
+#, fuzzy
 msgid "No venues in the database"
-msgstr "Geen podia in de database"
+msgstr "Nenhuma turnê no banco de dados"
 
 #: ../admin/new.php:424
 #: ../admin/venues.php:104
+#, fuzzy
 msgid "Venue name"
-msgstr "Naam van podium"
+msgstr "Telefone do local"
 
 #: ../admin/new.php:429
 #: ../admin/venues.php:108
+#, fuzzy
 msgid "Venue city"
-msgstr "Plaats van podium"
+msgstr "Site do local"
 
 #: ../admin/new.php:433
 #: ../admin/venues.php:112
 msgid "Venue address"
-msgstr "Adres van podium"
+msgstr "Endereço do local"
 
 #: ../admin/new.php:438
 #: ../admin/venues.php:116
+#, fuzzy
 msgid "Venue country"
-msgstr "Land van podium"
+msgstr "Telefone do local"
 
 #: ../admin/new.php:451
 #: ../admin/venues.php:128
 msgid "Venue website"
-msgstr "Website van podium"
+msgstr "Site do local"
 
 #: ../admin/new.php:463
 msgid "Status"
@@ -666,213 +705,231 @@ msgstr "Status"
 
 #: ../admin/new.php:465
 msgid "Active"
-msgstr "Actief"
+msgstr "Ativo"
 
 #: ../admin/new.php:473
 msgid "Admittance"
-msgstr "Toelating"
+msgstr "Entrada"
 
 #: ../admin/new.php:475
 msgid "Not sure"
-msgstr "Onzeker"
+msgstr "Incerto"
 
 #: ../admin/new.php:490
 msgid "include currency symbol"
-msgstr "voer munteenheid symbool in"
+msgstr "incluir símbolo de moeda"
 
 #: ../admin/new.php:493
 msgid "Ticket URL"
-msgstr "Ticket URL"
+msgstr "Site para comprar ingressos"
 
 #: ../admin/new.php:497
 msgid "Ticket phone"
-msgstr "Ticket telefoon"
+msgstr "Telefone para ingressos"
 
 #: ../admin/new.php:504
+#, fuzzy
 msgid "Use this space to list other bands, 'presented by' info, etc"
-msgstr "Gebruik deze ruimte om het voorprogramma, 'gepresenteerd door' info, of andere informatie weer te geven."
+msgstr "Use este espaço para o conjunto de bandas que tocarão no mesmo evento, 'apresentado por', ou qualquer outra coisa que considere relevante."
 
 #: ../admin/new.php:508
 msgid "Part of a tour?"
-msgstr "Onderdeel van een toer?"
+msgstr "Parte de uma turnê?"
 
 #: ../admin/new.php:511
+#, fuzzy
 msgid "No"
-msgstr "Nee"
+msgstr "Nenhum"
 
 #: ../admin/new.php:513
+#, fuzzy
 msgid "Add a new tour"
-msgstr "Toer toevoegen"
+msgstr "Adicionar uma turnê"
 
 #: ../admin/new.php:536
 #: ../admin/tours.php:82
 #: ../admin/tours.php:111
 #: ../admin/tours.php:148
 msgid "Tour name"
-msgstr "Naam van de toer"
+msgstr "Nome da turnê"
 
 #: ../admin/new.php:543
 msgid "Related post"
-msgstr "Verwant bericht"
+msgstr "Posts relacionados"
 
 #: ../admin/new.php:548
+#, fuzzy
 msgid "Add a new post"
-msgstr "Nieuw bericht toevoegen"
+msgstr "Criar um novo post"
 
 #: ../admin/new.php:566
+#, fuzzy
 msgid "Related post title"
-msgstr "Titel verwant bericht"
+msgstr "Posts relacionados"
 
 #: ../admin/new.php:568
 msgid "Available placeholders:"
-msgstr "Beschikbare plaatshouders:"
+msgstr "Lugares disponíveis"
 
 #: ../admin/new.php:569
 msgid "Publish now"
-msgstr "Nu publiseren"
+msgstr "Publicar agora"
 
 #: ../admin/new.php:570
 msgid "Publish on show date"
-msgstr "Publiseer op optreed datum"
+msgstr "Publicar na data do show"
 
 #: ../admin/new.php:579
 msgid "Update show"
-msgstr "Optreden bijwerken"
+msgstr "Atualizar um show"
 
 #: ../admin/new.php:583
 msgid "Add show"
-msgstr "Optreden toevoegen"
+msgstr "Adicionar show"
 
 #: ../admin/settings.php:24
 msgid "Full URL to your 'Upcoming Shows' page"
-msgstr "Volledige URL naar de 'aanstaande optredens' pagina"
+msgstr "URL completa para a página de 'Próximos Shows'"
 
 #: ../admin/settings.php:29
 msgid "No upcoming shows message"
-msgstr "Bericht bij geen aanstaande optredens"
+msgstr "Mensagem para nenhum show agendado"
 
 #: ../admin/settings.php:35
 msgid "No past shows message"
-msgstr "Bericht bij geen gearchiveerde optredens"
+msgstr "Mensagem para nenhum show passado"
 
 #: ../admin/settings.php:42
 msgid "User level required to use GigPress"
-msgstr "Gebruikersniveau vereist voor het gebruiken van GigPress"
+msgstr "Nível de usuário requerido para usar o GigPress"
 
 #: ../admin/settings.php:45
 msgid "Administrator"
-msgstr "Beheerder"
+msgstr "Administrador"
 
 #: ../admin/settings.php:46
 msgid "Editor"
-msgstr "Bewerker"
+msgstr "Editor"
 
 #: ../admin/settings.php:47
 msgid "Author"
-msgstr "Auteur"
+msgstr "Autor"
 
 #: ../admin/settings.php:48
 msgid "Contributor"
-msgstr "Bijdrager"
+msgstr "Contribuidor"
 
 #: ../admin/settings.php:54
+#, fuzzy
 msgid "Short date format"
-msgstr "Korte datum formaat"
+msgstr "Formato curto da data"
 
 #: ../admin/settings.php:57
 #: ../admin/settings.php:64
 #: ../admin/settings.php:71
 msgid "Output"
-msgstr "Output"
+msgstr "Saída"
 
 #: ../admin/settings.php:61
+#, fuzzy
 msgid "Long date format"
-msgstr "Lange datum formaat"
+msgstr "Formato longo para data."
 
 #: ../admin/settings.php:68
+#, fuzzy
 msgid "Time format"
-msgstr "Tijd formaat"
+msgstr "Formato de Hora"
 
 #: ../admin/settings.php:72
 msgid "Here's some documentation on date and time formatting"
-msgstr "Hier vind je informatie over datum en tijd formatering"
+msgstr "Aqui você encontra informações sobre formatos de data e hora"
 
 #: ../admin/settings.php:73
 msgid "I use a 24 hour clock"
-msgstr "Ik gebruik een 24 uurs klok"
+msgstr "Eu uso um relógio de 24 horas"
 
 #: ../admin/settings.php:77
+#, fuzzy
 msgid "Artist label"
-msgstr "Label artiest"
+msgstr "Etiqueta da turnê"
 
 #: ../admin/settings.php:83
 msgid "Tour label"
-msgstr "Toer label"
+msgstr "Etiqueta da turnê"
 
 #: ../admin/settings.php:89
 #: ../output/feed.php:70
 msgid "Age restrictions"
-msgstr "Leeftijdsbeperkingen"
+msgstr "Restrições"
 
 #: ../admin/settings.php:91
 msgid "A pipe-separated list of available age restrictions."
-msgstr "Een pijp-gescheiden lijst van beschikbare leeftijdsbeperkingen."
+msgstr "Uma lista separada por barras das restrições de idade disponíveis"
 
 #: ../admin/settings.php:94
+#, fuzzy
 msgid "Related posts"
-msgstr "Verwante berichten"
+msgstr "Posts relacionados"
 
 #: ../admin/settings.php:96
+#, fuzzy
 msgid "Display gig info in related posts"
-msgstr "Laat de info van optreden zien in het verwante bericht"
+msgstr "Mostrar informações do gig no Post Relacionado"
 
 #: ../admin/settings.php:97
 msgid "before the post content"
-msgstr "voor de inhoud van het bericht"
+msgstr "antes do conteúdo do post"
 
 #: ../admin/settings.php:98
 msgid "after the post content"
-msgstr "na de inhoud van het bericht"
+msgstr "depois do conteúdo do post"
 
 #: ../admin/settings.php:99
 msgid "nowhere at all"
-msgstr "helemaal nergens"
+msgstr "em lugar nenhum"
 
 #: ../admin/settings.php:100
+#, fuzzy
 msgid "If a gig has a related post, that gig's details will appear at the specified position in that post."
-msgstr "Als een optreden een verwant bericht heeft, dan zullen de details verschijnen op de gespecificeerde positie in dat bericht."
+msgstr "Se um gig tiver um post relacionado, os detalhes deste gig aparecerão na posição especificada deste post."
 
 #: ../admin/settings.php:104
 msgid "Related show heading"
-msgstr "Titel verwant optreden"
+msgstr "Cabeçalho de shows relacionados"
 
 #: ../admin/settings.php:107
+#, fuzzy
 msgid "This appears before the gig details in your related post."
-msgstr "Dit verschijnt voor de optreed info in jouw verwant bericht."
+msgstr "Isto aparecerá antes dos detalhes do gig no Post Relacionado."
 
 #: ../admin/settings.php:111
+#, fuzzy
 msgid "Related posts category"
-msgstr "categorie van verwante berichten"
+msgstr "Categoria dos posts relacionados"
 
 #: ../admin/settings.php:113
+#, fuzzy
 msgid "Automatically create a related post for every new show I enter."
-msgstr "Automatisch een verwant bericht aanmaken voor elk nieuw optreden die ik toevoeg."
+msgstr "Criar automaticamente um post relacionado para cada novo show que for criado."
 
 #: ../admin/settings.php:114
+#, fuzzy
 msgid "When creating related posts, put them in this category"
-msgstr "Als er een verwant bericht gemaakt wordt, stop hem dan in deze categorie"
+msgstr "Quando criar um post relacionado colocá-lo nesta categoria"
 
 #: ../admin/settings.php:122
 msgid "Exclude this category from my normal post listings."
-msgstr "Haal deze categorie uit mijn normale berichten lijst."
+msgstr "Excluir esta categoria das listagens normais de outros posts"
 
 #: ../admin/settings.php:127
+#, fuzzy
 msgid "Related posts linking"
-msgstr "Link voor verwant bericht"
+msgstr "Linkagem dos posts relacionados"
 
 #: ../admin/settings.php:129
+#, fuzzy
 msgid "Place a link to each show's related post in the following fields"
-msgstr "Plaats een link naar het verwante bericht van elk optreden in de volgende velden"
+msgstr "Colocar um link de cada post relacionado para cada show"
 
 #: ../admin/settings.php:131
 #: ../admin/shows.php:188
@@ -881,15 +938,15 @@ msgstr "Plaats een link naar het verwante bericht van elk optreden in de volgend
 #: ../admin/venues.php:226
 #: ../output/feed.php:51
 msgid "City"
-msgstr "Plaats"
+msgstr "Cidade"
 
 #: ../admin/settings.php:136
 msgid "Related post phrase"
-msgstr "Tekst voor link naar het verwante bericht"
+msgstr "Frase para posts relacionados"
 
 #: ../admin/settings.php:139
 msgid "This appears in your shows listing."
-msgstr "Dit verschijnt in jouw lijst met optredens."
+msgstr "Isto aparecerá nas listagens de shows."
 
 #: ../admin/settings.php:143
 msgid "RSS/iCal"
@@ -897,39 +954,41 @@ msgstr "RSS/iCal"
 
 #: ../admin/settings.php:145
 msgid "Make the GigPress RSS feed auto-discoverable."
-msgstr "Maak de GigPress RSS feeds automatisch te ontdekken."
+msgstr "Faça o RSS do GigPress auto-detectável"
 
 #: ../admin/settings.php:146
 msgid "Show RSS and iCal subscription links."
-msgstr "Toon RSS en iCal aanmeld links."
+msgstr "Mostrar links para assinatura de RSS e iCal."
 
 #: ../admin/settings.php:147
 msgid "Note that the FeedBurner FeedSmith plugin will kill your GigPress RSS and iCal feeds, but the FD FeedBurner plugin will not."
-msgstr "NB. de FeedBurner FeedSmith plugin zal je RSS en iCal feeds niet meer laten werken. De FD FeedBurner plugin doet dit niet."
+msgstr "Note que o plugion FeedBurner FeedSmith irá terminar com os seus feeds RSS, mas não os do FD FeedBurner."
 
 #: ../admin/settings.php:151
+#, fuzzy
 msgid "RSS/iCal feed title"
-msgstr "RSS/iCal Feed titel"
+msgstr "Título do feed RSS"
 
 #: ../admin/settings.php:157
 msgid "Country display"
-msgstr "Land tonen"
+msgstr "País a se mostrar"
 
 #: ../admin/settings.php:159
+#, fuzzy
 msgid "Display country column."
-msgstr "Laat de landenkolom zien."
+msgstr "Mostrar a coluna \"País\"."
 
 #: ../admin/settings.php:159
 msgid "Use full country names."
-msgstr "Gebruik volledige namen van landen."
+msgstr "Usar nomes de países por completo "
 
 #: ../admin/settings.php:163
 msgid "Link behaviour"
-msgstr "Gedrag links"
+msgstr "Comportamento do link"
 
 #: ../admin/settings.php:164
 msgid "Open external links in new windows."
-msgstr "Open externe links in een nieuw venster."
+msgstr "Abrir links externos em novas janelas"
 
 #: ../admin/settings.php:168
 msgid "jQuery"
@@ -937,47 +996,52 @@ msgstr "jQuery"
 
 #: ../admin/settings.php:170
 msgid "Load jQuery into my theme."
-msgstr "Laad jQuery in mijn thema."
+msgstr "Carregar o jQuery no meu tema."
 
 #: ../admin/settings.php:171
 msgid "Uncheck this if you have a hard-coded link to the jQuery library in your theme."
-msgstr "vinkje verwijderen als een hard gecodeerde link hebt naar je jQuery bibliotheek in je thema."
+msgstr "Desmarque isso se você escreveu manualmente um link para a biblioteca jQuery no seu tema."
 
 #: ../admin/settings.php:209
 msgid "Save Changes"
-msgstr "Veranderingen opslaan"
+msgstr "Salvar Modificações"
 
 #: ../admin/shows.php:106
 msgid "All"
-msgstr "Alle"
+msgstr "Todos"
 
 #: ../admin/shows.php:109
+#, fuzzy
 msgid "Upcoming"
-msgstr "Aanstaande"
+msgstr "Próximos shows"
 
 #: ../admin/shows.php:112
+#, fuzzy
 msgid "Past"
-msgstr "Verleden"
+msgstr "Passado"
 
 #: ../admin/shows.php:125
+#, fuzzy
 msgid "View all artists"
-msgstr "Toon alle artiesten"
+msgstr "Ver todos"
 
 #: ../admin/shows.php:139
+#, fuzzy
 msgid "View all tours"
-msgstr "Alle toers tonen"
+msgstr "Ver todos"
 
 #: ../admin/shows.php:153
+#, fuzzy
 msgid "View all venues"
-msgstr "|Toon alle podia"
+msgstr "Ver todos"
 
 #: ../admin/shows.php:167
 msgid "Descending"
-msgstr "Aflopend"
+msgstr "Decrescente"
 
 #: ../admin/shows.php:168
 msgid "Ascending"
-msgstr "Oplopend"
+msgstr "Crescente"
 
 #: ../admin/shows.php:190
 #: ../admin/shows.php:245
@@ -985,324 +1049,358 @@ msgstr "Oplopend"
 #: ../admin/venues.php:228
 #: ../output/feed.php:63
 msgid "Country"
-msgstr "Land"
+msgstr "País"
 
 #: ../admin/shows.php:191
 #: ../admin/shows.php:246
 msgid "Tour"
-msgstr "Toer"
+msgstr "Turnê"
 
 #: ../admin/shows.php:216
 msgid "Copy"
-msgstr "Kopieren"
+msgstr "Copiar"
 
 #: ../admin/shows.php:236
 msgid "Sorry, no shows to display based on your criteria."
-msgstr "Sorry, gebaseerd op jou kriteria kunnen wij geen optredens vertonen."
+msgstr "Desculpe, não há shows para serem exibidos por este critério"
 
 #: ../admin/shows.php:265
+#, fuzzy
 msgid "You have"
-msgstr "Je hebt"
+msgstr "Você tem"
 
 #: ../admin/shows.php:265
 msgid "shows"
-msgstr "optredens"
+msgstr "shows"
 
 #: ../admin/shows.php:265
 msgid "tours"
-msgstr "toers"
+msgstr "turnês"
 
 #: ../admin/shows.php:265
 msgid "in your trash"
-msgstr "in de prullenbak"
+msgstr "na sua lixeira"
 
 #: ../admin/shows.php:267
 msgid "Take out the trash now"
-msgstr "Gooi de prullenbak leeg"
+msgstr "Jogue o lixo fora agora"
 
 #: ../admin/tours.php:36
+#, fuzzy
 msgid "A tour is simply a named collection of shows that you want to group together."
-msgstr "Een toer is simpelweg een verzameling van optredens die je samen wilt voegen."
+msgstr "Uma turnê nada mais é do que uma coleção de shows que você quer agrupar."
 
 #: ../admin/tours.php:49
 msgid "Update tour"
-msgstr "Tour bijwerken"
+msgstr "Atualizar turnê"
 
 #: ../admin/tours.php:51
 msgid "Edit this tour"
-msgstr "Tour bewerken"
+msgstr "Editar esta turnê"
 
 #: ../admin/tours.php:60
 msgid "Sorry, but we had trouble loading that tour for editing."
-msgstr "Sorry, er is iets mis gegaan met het laden van deze toer."
+msgstr "Desculpe, mas tivemos alguns problemas ao carregar esta turnê para edição"
 
 #: ../admin/tours.php:62
 #: ../admin/tours.php:72
 msgid "Add a tour"
-msgstr "Een toer toevoegen"
+msgstr "Adicionar uma turnê"
 
 #: ../admin/tours.php:70
 msgid "Add tour"
-msgstr "Toer toevoegen"
+msgstr "Adicionar uma turnê"
 
 #: ../admin/tours.php:88
 msgid "All tours"
-msgstr "Alle toers"
+msgstr "Todas as turnês"
 
 #: ../admin/tours.php:92
 msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
-msgstr "Merk wel dat het verwijderen van de toer er <strong>NIET</strong. voor zorgt dat de optredens ook verwijderd worden."
+msgstr "Observe que deletar uma turnê <strong>NÃO</strong> vai deletar os shoes associados à ela."
 
 #: ../admin/tours.php:112
 #: ../admin/tours.php:149
 msgid "Tour ID"
-msgstr "Toer ID"
+msgstr "ID da turnê"
 
 #: ../admin/venues.php:70
+#, fuzzy
 msgid "Sorry, but we had trouble loading that venue for editing."
-msgstr "Sorry, maar er is iets mis gegaan met het laden om dit podium om te bewerken."
+msgstr "Desculpe, mas tivemos alguns problemas ao carregar esta turnê para edição"
 
 #: ../admin/venues.php:85
+#, fuzzy
 msgid "Edit this venue"
-msgstr "Bewerk dit podium"
+msgstr "Editar esta turnê"
 
 #: ../admin/venues.php:95
+#, fuzzy
 msgid "Add an venue"
-msgstr "Een podium toevoegen"
+msgstr "Adicionar uma turnê"
 
 #: ../admin/venues.php:140
+#, fuzzy
 msgid "Update venue"
-msgstr "Podium bijwerken"
+msgstr "Atualizar turnê"
 
 #: ../admin/venues.php:144
 msgid "Add venue"
-msgstr "Podium toevoegen"
+msgstr "Adicionar local"
 
 #: ../admin/venues.php:153
+#, fuzzy
 msgid "All venues"
-msgstr "Alle podia"
+msgstr "Livre"
 
 #: ../admin/venues.php:157
 msgid "Note that you cannot delete a venue while it has shows in the database."
-msgstr "NB. Je kan geen podium verwijderen als er nog optredens in de database staan."
+msgstr "Note que você não pode deletar um local enquanto ele está sendo mostrado na base de dados."
 
 #: ../admin/venues.php:176
 #: ../admin/venues.php:225
 msgid "Name"
-msgstr "Naam"
+msgstr "Nome"
 
 #: ../admin/venues.php:178
 #: ../admin/venues.php:227
 #: ../output/feed.php:56
 msgid "Address"
-msgstr "Adres"
+msgstr "Endereço"
 
 #: ../admin/venues.php:180
 #: ../admin/venues.php:229
+#, fuzzy
 msgid "Phone"
-msgstr "Telefoon"
+msgstr "Nenhum"
 
 #: ../output/feed.php:48
 msgid "Time"
-msgstr "Tijd"
+msgstr "Hora"
 
 #: ../output/feed.php:66
 msgid "Admission"
-msgstr "Entrée tarief"
+msgstr "Entrada"
 
 #: ../output/gigpress_sidebar.php:41
 msgid "Title"
-msgstr "Titel"
+msgstr "Título"
 
 #: ../output/gigpress_sidebar.php:43
 msgid "Number of shows to list"
-msgstr "Aantal optredens in de lijst"
+msgstr "Número de shows a listar"
 
 #: ../output/gigpress_sidebar.php:47
 msgid "Group by artist"
-msgstr "groepeer bij artiest"
+msgstr "Agrupar por artista"
 
 #: ../output/gigpress_sidebar.php:51
+#, fuzzy
 msgid "Group by tour"
-msgstr "Groepeer bij toers"
+msgstr "Agrupamento de shows em turnês"
 
 #: ../output/gigpress_sidebar.php:55
 msgid "Show RSS and iCal feeds"
-msgstr "Toon RSS en iCal feeds"
+msgstr "Mostrar feeds RSS e iCal"
 
 #: ../output/gigpress_sidebar.php:59
 msgid "Show link to shows page"
-msgstr "Toon link naar optreedpagina"
+msgstr "Mostrar links na página"
 
 #: ../output/gigpress_sidebar.php:61
+#, fuzzy
 msgid "Shows page link text"
-msgstr "Toon tekst van pagina link"
+msgstr "Shows na turnê"
 
 #: ../templates/shows-list-footer.php:15
 #: ../templates/sidebar-list-footer.php:21
 msgid "Subscribe"
-msgstr "Aanmelden"
+msgstr "Assinar"
 
 #~ msgid "All Ages"
-#~ msgstr "Alle leeftijden"
+#~ msgstr "Livre"
 #~ msgid "All Ages/Licensed"
-#~ msgstr "Alle leeftijden/Met licentie"
+#~ msgstr "Livre com Restrições"
 #~ msgid "No minors"
-#~ msgstr "Geen jongeren"
+#~ msgstr "Maiores de 18"
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
-#~ msgstr "<strong>Welkom bij GigPress!</strong> Je moet eerst"
+#~ msgstr "<strong>Bem-Vindo ao GigPress!</strong> Você deveria antes"
 #~ msgid "customize some of the options"
-#~ msgstr "een paar opties aanpassen"
+#~ msgstr "ajustar algumas das configurações"
 #~ msgid "N/A"
 #~ msgstr "N/A"
-#~ msgid ""
+#~ msgid "N/A"
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
-#~ msgstr "Het aanbevolen formaat is: <strong>Horn, Limburg</strong>."
+#~ msgstr "Eu sugeriria um formato no estilo: <strong>Curitiba, PR</strong>."
 #~ msgid "toggle venue info"
-#~ msgstr "show/hide adresinformatie"
+#~ msgstr "ver informações do local"
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
-#~ "Dit is een verplicht veld, dus als je het niet weet, vul <strong>n.n.b.</"
-#~ "strong> in."
+#~ "Este é um campo obrigatório, então se você não sabe o que colocar "
+#~ "simplesmente coloque <strong>TBA</strong>."
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
-#~ "Als je een adres invult, zal het automatisch linken naar Google Maps. "
-#~ "Geen grapje."
+#~ "Links automáticos para o Google Maps serão adicionados aos nomes de rua."
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr ""
-#~ "Alles wat hier ingevuld wordt, zal toegevoegd worden als hyperlink naar "
-#~ "de naam van het podium."
+#~ "Qualquer valor colocado aqui vai ser mostrado como um link para o nome do "
+#~ "local."
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
-#~ "Om de verscheidene valuta correct weer te geven, zal er geen auto-"
-#~ "formatting plaatsvinden op wat je hier invult. Denk hieraan!"
+#~ "Cifras de moeda não serão mostradas (R$, US$, £, etc.). Lembre-se disso "
+#~ "ao fazer shows no exterior. :)"
 #~ msgid "This will enable the purchase link when displaying your tour dates."
-#~ msgstr ""
-#~ "Dit zal een link naar de verkoopsite mogelijk maken wanneer de tour data "
-#~ "weergegeven worden."
+#~ msgstr "Isto habilitará o link de compras na listagem das datas de turnê"
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
-#~ "Als dit optreden deel uitmaakt van een tour die al aangemaakt is in "
-#~ "GigPress, selecteer het hier.<br />Nog geen tours?"
+#~ "Se este show é parte de uma turnê já cadastrada no GigPress, selecione-i "
+#~ "aqui. <br />Nenhuma turnê ainda?"
 #~ msgid "Create them here."
-#~ msgstr "Maak ze hier aan."
+#~ msgstr "Crie aqui."
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
 #~ msgstr ""
-#~ "Je kunt een WordPress bericht aan het optreden koppelen. Dit is handig "
-#~ "voor aankondigingen, verslagen, foto's of om bezoekers te laten reageren."
+#~ "Você pode lincar qualquer show a qualquer post, o que é útil para "
+#~ "recordação, fotos, vídeos e, logicamente, deixar os visitantes comentarem."
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
-#~ msgstr "Je moet een podium invullen (misschien nog niet bekend?)"
+#~ msgstr "Você precisa indicar um local"
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr ""
-#~ "Je moet een naam invullen voor de tour. Was het nou zo moeilijk om dat "
-#~ "ene veldje in te vullen?"
+#~ "Você precisa entrar com o nome de uma turnê. É o único campo que está "
+#~ "reclamando!"
 #~ msgid "You need to enter a name for the tour!"
-#~ msgstr "Je moet een naam invullen voor de tour!"
+#~ msgstr "Você precisa colocar um nome na turnê!"
 #~ msgid "Tours successfully reordered."
-#~ msgstr "De tours zijn succesvol herschikt."
+#~ msgstr "Turnês reordenadas."
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
-#~ msgstr ""
-#~ "Er is iets fout gegaan met het legen van de prullenbak, onze excuses "
-#~ "hiervoor."
+#~ msgstr "Tivemos alguns problemas deletando shows da lixeira. Desculpe."
 #~ msgid "All tours in the trash have been permanently deleted."
-#~ msgstr "Alle tours in de prullenbak zijn permanent verwijderd."
+#~ msgstr "Todas as turnês na lixeira foram deletadas para sempre."
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
-#~ msgstr ""
-#~ "Er is iets fout gegaan met het legen van de prullenbak, onze excuses "
-#~ "hiervoor."
+#~ msgstr "Tivemos alguns problemas deletando as turnês da lixeira. Desculpe."
 #~ msgid "Name of your band"
-#~ msgstr "Naam van de band"
+#~ msgstr "Nome da banda"
 #~ msgid "This is used in your RSS feed and hCalendar data."
-#~ msgstr "Dit wordt gebruik in de RSS feed en de hCalendar data."
+#~ msgstr "Esta informação é usada no seu RSS e hCalendar."
 #~ msgid "Show a link to this page below my sidebar listing."
-#~ msgstr "Laat een link zien naar deze pagina onderaan in het zijmenu."
+#~ msgstr "Mostre um link desta página abaixo da listagem na barra lateral"
 #~ msgid "Upcoming Shows link phrase"
-#~ msgstr "Tekst voor de link naar de aanstaande optredens"
+#~ msgstr "Frase para o link de próximos shows"
 #~ msgid "Used in the main show listings."
-#~ msgstr "Wordt gebruikt in de lijst met optredens."
+#~ msgstr "Usado nas listagens dos principais shows."
 #~ msgid "Used in the Related Post entry."
-#~ msgstr "Wordt gebruikt in het verwante bericht."
+#~ msgstr "Usado para o post relacionado."
 #~ msgid "Click 'Update options' to update the sample output."
-#~ msgstr "Klik 'Update opties' om de voorbeel output te updaten."
+#~ msgstr "Clique em 'Atualizar opções' para atualizar o exemplo."
 #~ msgid "Related Posts"
-#~ msgstr "Verwant bericht"
+#~ msgstr "Posts Relacionados"
 #~ msgid "RSS Feed"
 #~ msgstr "RSS Feed"
 #~ msgid "Please include a link to my upcoming shows RSS feed"
-#~ msgstr "Plaats een link naar mijn aanstaande optredens in de RSS feed"
+#~ msgstr "Por favor adicione um link para o feed RSS dos meus próximos shows"
 #~ msgid "below my upcoming shows table"
-#~ msgstr "onder de tabel met aanstaan de shows"
+#~ msgstr "abaixo a minha tabela de próximos shows"
 #~ msgid "below my sidebar listing"
-#~ msgstr "onder mijn zijbalk"
+#~ msgstr "abaixo a minha listagem na barra lateral"
 #~ msgid "in the <code>head</code> portion of my page"
-#~ msgstr "in het <code>head</code> gedeelte van mijn pagina"
+#~ msgstr "na seção <code>head</code> de minha página"
 #~ msgid "Your RSS feed for upcoming shows is"
-#~ msgstr "Jouw RSS feed voor aanstaande optredens is"
+#~ msgstr "O seu RSS para próximos shows é"
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
-#~ msgstr "Let wel: de FeedBurner FeedSmith plugin werkt niet met GigPress."
+#~ msgstr ""
+#~ "Observe que os plugins FeedBurner e FeedSmith não são compatíveis com "
+#~ "GigPress"
 #~ msgid "Tour grouping"
-#~ msgstr "Tour groepen"
+#~ msgstr "Agrupamento de turnês"
 #~ msgid "display tours <b>before</b> non-tour shows"
-#~ msgstr "laat de tours zien <b>voor</b> niet-tour optredens"
+#~ msgstr "mostrar turnês <b>antes</b> de shows sem turnê"
 #~ msgid "display tours <b>after</b> non-tour shows"
-#~ msgstr "laat de tours zien <b>na</b> de niet-tour optredens"
+#~ msgstr "mostrar turnês <b>depois</b> de shows sem turnê"
 #~ msgid "Individual Shows heading"
-#~ msgstr "Individuele optredens titel"
+#~ msgstr "Cabeçalho dos shows individuais"
 #~ msgid "Heading level of tour names"
-#~ msgstr "Heading level van tour namen"
+#~ msgstr "Nível de cabeçalho dos nomes de turnê"
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
 #~ "level."
 #~ msgstr ""
-#~ "Afhankelijk van de structuur van jouw template, zou het kunnen dat je de "
-#~ "titels van de tours in een ander heading level wilt laten zien."
+#~ "Dependendo da estrutura tipográfica do seu template, você poderá preferir "
+#~ "um nível diferente de cabeçalho para o nome das turnês."
 #~ msgid "More on HTML headings."
-#~ msgstr "Meer over HTML headings."
+#~ msgstr "Mais sobre cabeçalhos de HTML"
 #~ msgid "This will add the"
-#~ msgstr "dit zal het"
+#~ msgstr "Isto adicionará um"
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
 #~ "browser, and that this attribute does not validate under strict HTML "
 #~ "doctypes."
 #~ msgstr ""
-#~ "attribuut toevoegen aan alle links. Houd er rekening mee dat er "
-#~ "gebruikers zijn die graag controle behouden over hun web browser, en dat "
-#~ "dit attribuut niet valt onder strikte HTML doctypes."
+#~ "atributo para todos os sites dos locais de shows, compra de ingressos e "
+#~ "do Google Maps. Observe que isto pode incomodar usuários que gostam de "
+#~ "controlar tudo no seu navegador, e que também este atributo não válida "
+#~ "HTMLs. "
 #~ msgid "Past shows"
-#~ msgstr "Optredens die al geweest zijn"
+#~ msgstr "Shows passados"
+#~ msgid "Buy link"
+#~ msgstr "Comprar Ingressos"
 #~ msgid "Link"
 #~ msgstr "Link"
 #~ msgid "Reorder tours"
-#~ msgstr "Herschik tours"
+#~ msgstr "Organizar Turnês"
 #~ msgid "Display order"
-#~ msgstr "Verschijningsvolgorde"
+#~ msgstr "Ordem"
 #~ msgid "No tours in the database!"
-#~ msgstr "Geen tours in de database!"
+#~ msgstr "Nenhuma turnê cadastrada no banco de dados"
 #~ msgid "Save order"
-#~ msgstr "Volgorde opslaan"
+#~ msgstr "Ordem de salvamento"
 #~ msgid "edit"
-#~ msgstr "bewerken"
+#~ msgstr "editar"
 #~ msgid "Find this address using Google Maps."
-#~ msgstr "Zoek dit adres met Google Maps."
+#~ msgstr "Encontre este endereço com o Google Maps."
 #~ msgid "Buy Tickets"
-#~ msgstr "Koop je ticket"
+#~ msgstr "Comprar ingressos"
 #~ msgid "Segment list into tours?"
-#~ msgstr "Lijst splitten in tours?"
+#~ msgstr "Listar segmentos nas turnês?"
+#~ msgid "Options"
+#~ msgstr "Opções"
+#~ msgid "Nope"
+#~ msgstr "Não"
+#~ msgid "General options"
+#~ msgstr "Opções Gerais"
+#~ msgid "Display &amp; Formatting"
+#~ msgstr "Mostrar &amp; Formatação"
+#~ msgid "Widget options"
+#~ msgstr "Opções do Widget"
+#~ msgid "List heading"
+#~ msgstr "Listar cabeçalho"
+#~ msgid "Any number from 1 to 99"
+#~ msgstr "Qualquer número entre 1 e 99"
+#~ msgid "GigPress widget options can be found on the"
+#~ msgstr "Opções para o Widget GigPress pode ser encontrada em"
+#~ msgid "GigPress options page"
+#~ msgstr "Página de Opções do GigPress"
+#~ msgid "Tour dates from"
+#~ msgstr "Datas de turnê de"
+#~ msgid "Ends"
+#~ msgstr "Término"
+#~ msgid "Part of"
+#~ msgstr "Parte de"
+#~ msgid "You&rsquo;re using GigPress"
+#~ msgstr "Você está usando GigPress"
 

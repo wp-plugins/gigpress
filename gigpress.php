@@ -32,7 +32,7 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.0');
+define('GIGPRESS_VERSION', '2.0.1');
 define('GIGPRESS_DB_VERSION', '1.4');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
@@ -111,7 +111,9 @@ function gigpress_js() {
 	if ( $gpo['load_jquery'] == 1) {
 		wp_enqueue_script('jquery');
 	}
+	if ( $gpo['disable_js'] != 1) {
 		wp_enqueue_script('gigpress-js', WP_PLUGIN_URL . '/gigpress/scripts/gigpress.js', 'jquery');
+	}
 }
 
 
@@ -119,13 +121,20 @@ function gigpress_head() {
 	
 	global $gpo;
 	
-	// Default stylesheet
-	echo('<link type="text/css" rel="stylesheet" href="' . WP_PLUGIN_URL . '/gigpress/css/gigpress.css" media="all" />
+	if($gpo['disable_css'] != 1) {
+		// Default stylesheet
+		echo('<link type="text/css" rel="stylesheet" href="' . WP_PLUGIN_URL . '/gigpress/css/gigpress.css" media="all" />
 ');
+	}
 	
-	// If there's a custom stylesheet, load it too ...
-	if (file_exists(get_stylesheet_directory()."/gigpress.css")) {
-	echo('<link type="text/css" rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/gigpress.css" media="all" />
+	// If there's a custom stylesheet, load it.
+	// First check the child theme.
+	if(file_exists(get_stylesheet_directory()."/gigpress.css")) {
+		echo('<link type="text/css" rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/gigpress.css" media="all" />
+');
+	// If not, check the parent theme.
+	} elseif(file_exists(get_template_directory()."/gigpress.css")) {
+		echo('<link type="text/css" rel="stylesheet" href="' . get_template_directory_uri() . '/gigpress.css" media="all" />
 ');
 	}
 	
@@ -138,7 +147,23 @@ function gigpress_head() {
 
 
 function gigpress_template($path) {
-	return (file_exists(WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php')) ? WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php' : WP_PLUGIN_DIR . '/gigpress/templates/'  . $path . '.php';
+
+	// Look for our template in the following locations:
+	// 1) Child theme directory
+	// 2) Parent theme directory
+	// 3) wp-content directory
+	// 4) Default template directory
+	
+	if(file_exists(get_stylesheet_directory() . '/gigpress-templates/' . $path . '.php')) {
+		$load = get_stylesheet_directory() . '/gigpress-templates/' . $path . '.php';
+	} elseif(file_exists(get_template_directory() . '/gigpress-templates/' . $path . '.php')) {
+		$load = get_template_directory() . '/gigpress-templates/' . $path . '.php';
+	} elseif(file_exists(WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php')) {
+		$load = WP_CONTENT_DIR . '/gigpress-templates/' . $path . '.php';
+	} else {
+		$load = WP_PLUGIN_DIR . '/gigpress/templates/'  . $path . '.php';
+	}
+	return $load;
 }
 
 
@@ -153,13 +178,18 @@ function gigpress_prepare($show, $scope = 'public') {
 
 	$showdata = array();
 	
-	$showdata['address'] = ($show->venue_address) ? '<a href="http://maps.google.com/maps?&amp;q='. urlencode($show->venue_address). ',' . urlencode($show->venue_city) . ',' . urlencode($show->venue_country) . '" class="gigpress-address"' . $target . '>' . wptexturize($show->venue_address) . '</a>' : '';
+	$showdata['address_plain'] = ($show->venue_address) ? wptexturize($show->venue_address) : '';
+	$showdata['address_url'] = ($show->venue_address) ? 'http://maps.google.com/maps?&amp;q='. urlencode($show->venue_address). ',' . urlencode($show->venue_city) . ',' . urlencode($show->venue_country) : '';
+	$showdata['address'] = ($show->venue_address) ? '<a href="' . $showdata['address_url'] . '" class="gigpress-address"' . $target . '>' . wptexturize($show->venue_address) . '</a>' : '';
 	$showdata['city'] = ($show->show_related && $gpo['relatedlink_city'] == 1 && $scope == 'public') ? '<a href="' . gigpress_related_link($show->show_related, "url") . '">' . wptexturize($show->venue_city) . '</a>' : wptexturize($show->venue_city);	
 	$showdata['country'] = ($gpo['country_view'] == 'long') ? wptexturize($gp_countries[$show->venue_country]) : $show->venue_country;
 	$showdata['venue'] = ($show->venue_url) ? '<a href="' . gigpress_check_url($show->venue_url) . '"' . $target . '>' . wptexturize($show->venue_name) . '</a>' : wptexturize($show->venue_name);
-	$showdata['venue_phone'] = wptexturize($show->venue_phone);	
+	$showdata['venue_id'] = $show->venue_id;
+	$showdata['venue_plain'] = wptexturize($show->venue_name);
+	$showdata['venue_phone'] = wptexturize($show->venue_phone);
+	$showdata['venue_url'] = ($show->venue_url) ? gigpress_check_url($show->venue_url) : '';	
 
-	// Shield these fields when we're calling this fucntion from the venues admin screen
+	// Shield these fields when we're calling this function from the venues admin screen
 	if($scope != 'venue') {
 		$timeparts = explode(':', $show->show_time);
 		$showdata['admittance'] = (!empty($show->show_ages) && $show->show_ages != 'Not sure') ? wptexturize($show->show_ages) : '';
@@ -199,6 +229,7 @@ function gigpress_prepare($show, $scope = 'public') {
 			case 'cancelled' : $showdata['ticket_link'] = '<strong class="gigpress-cancelled">' . __("Cancelled", "gigpress") . '</strong>';
 			break;
 		}
+		$showdata['ticket_url'] = ($show->show_tix_url) ? gigpress_check_url($show->show_tix_url) : '';
 		$showdata['ticket_phone'] = wptexturize($show->show_tix_phone);
 		$showdata['time'] = ($timeparts[2] == '01') ? '' : date($gpo['time_format'], mktime($timeparts[0], $timeparts[1]));
 		$showdata['tour'] = wptexturize($show->tour_name);

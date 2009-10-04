@@ -13,6 +13,10 @@ function gigpress_ical() {
 	if(isset($_GET['tour'])) {
 		$further_where .= $wpdb->prepare(' AND s.show_tour_id = %d', $_GET['tour']);
 	}
+	if(isset($_GET['venue'])) {
+		$further_where .= $wpdb->prepare(' AND s.show_venue_id = %d', $_GET['venue']);
+	}
+
 	$shows = $wpdb->get_results(
 		$wpdb->prepare("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where, $_GET['show_id'])
 		);
@@ -27,6 +31,9 @@ function gigpress_ical() {
 			} elseif(isset($_GET['tour'])) {
 				$filename = sanitize_title($showdata['tour']) . '-icalendar';
 				$title = $show->tour_name;
+			} elseif(isset($_GET['venue'])) {
+				$filename = sanitize_title($showdata['venue_plain']) . '-icalendar';
+				$title = $show->venue_name;
 			} elseif(isset($_GET['show_id'])) {
 				$filename = sanitize_title($showdata['artist']) . '-' . $show->show_date;
 				$title = $show->artist_name . ' - ' . $showdata['date'];

@@ -21,6 +21,7 @@ function gigpress_shows($filter = null, $content = null) {
 	extract(shortcode_atts(array(
 		'tour' => FALSE,
 		'artist' => FALSE,
+		'venue' => FALSE,
 		'limit' => FALSE,
 		'scope' => 'upcoming',
 		'group_artists' => 'yes'
@@ -41,6 +42,7 @@ function gigpress_shows($filter = null, $content = null) {
 	}	
 	if($artist) $further_where .= ' AND show_artist_id = ' . $wpdb->prepare('%d', $artist);
 	if($tour) $further_where .= ' AND show_tour_id = ' . $wpdb->prepare('%d', $tour);
+	if($venue) $further_where .= ' AND show_venue_id = ' . $wpdb->prepare('%d', $venue);
 	if($limit) $limit = ' LIMIT ' . $limit;
 	
 	$no_results_message = ($scope == 'upcoming') ? wptexturize($gpo['noupcoming']) : wptexturize($gpo['nopast']);

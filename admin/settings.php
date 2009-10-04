@@ -152,25 +152,30 @@ function gigpress_settings() {
 			</td>
 		</tr>
 		<tr>
-			<th scope="row"><?php _e("Country display", "gigpress") ?>:</th>
+			<th scope="row"><?php _e("Country display", "gigpress") ?></th>
 			<td>	
 				<p><label><input type="checkbox" name="gigpress_settings[display_country]" value="1" <?php if($gpo['display_country'] == 1) echo('checked="checked"'); ?> /> <?php _e("Display country column.", "gigpress") ?></label> &nbsp; <label><input type="checkbox" name="gigpress_settings[country_view]" value="long" <?php if($gpo['country_view'] == 'long') echo('checked="checked"'); ?> /> <?php _e("Use full country names.", "gigpress") ?></label></p>
 			</td>
 		</tr>
 		<tr>
-			<th scope="row"><?php _e("Link behaviour", "gigpress") ?>:</th>
+			<th scope="row"><?php _e("Link behaviour", "gigpress") ?></th>
 			<td><p><label><input type="checkbox" name="gigpress_settings[target_blank]" value="1" <?php if($gpo['target_blank'] == 1) echo('checked="checked"'); ?> /> <?php _e("Open external links in new windows.", "gigpress") ?></label>
 			</td>
 		</tr>
 		<tr>
-			<th scope="row"><?php _e("jQuery", "gigpress") ?>:</th>
+			<th scope="row"><?php _e("jQuery", "gigpress") ?></th>
 			<td>	
 				<p><label><input type="checkbox" name="gigpress_settings[load_jquery]" value="1" <?php if($gpo['load_jquery'] == 1) echo('checked="checked"'); ?> /> <?php _e("Load jQuery into my theme.", "gigpress") ?></label>
 				<br /><span class="description"><?php _e("Uncheck this if you have a hard-coded link to the jQuery library in your theme.", "gigpress"); ?></span>
 				</p>
 			</td>
 		</tr>
-		
+		<tr>
+			<th scope="row"><?php _e("Advanced", "gigpress"); ?></th>
+			<td>	
+				<p><label><input type="checkbox" name="gigpress_settings[disable_css]" value="1" <?php if($gpo['disable_css'] == 1) echo('checked="checked"'); ?> /> <?php _e("Disable the default GigPress CSS.", "gigpress") ?></label> &nbsp; <label><input type="checkbox" name="gigpress_settings[disable_js]" value="1" <?php if($gpo['disable_js'] == 1) echo('checked="checked"'); ?> /> <?php _e("Disable the default GigPress JavaScript.", "gigpress") ?></label></p>
+			</td>
+		</tr>		
 		
 	</table>
 			

@@ -276,7 +276,7 @@ ul.gigpress-related-show {
 
 
 /* This is just to include data for hcalendar support, but hide it from view */
-span.hide {
+.hide {
 	display: none;
 }
 

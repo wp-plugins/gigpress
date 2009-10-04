@@ -23,7 +23,7 @@ function gigpress_admin_shows() {
 	}	
 	
 	global $wpdb, $gpo;
-	
+		
 	// Checks for filtering and pagination
 	$url_args = '';
 	$further_where = '';
@@ -44,21 +44,27 @@ function gigpress_admin_shows() {
 			$condition = 'IS NOT NULL';
 	}
 
+	global $current_user;
+	get_currentuserinfo();
+
 	switch($_GET['sort']) {
 		case 'asc':
 			$sort = 'ASC';
-			$url_args .= '&amp;sort=asc';
-			$pagination_args['sort'] = 'asc';
+			update_usermeta($current_user->ID, 'gigpress_sort', $sort);
 			break;
 		case 'desc':
 			$sort = 'DESC';
-			$url_args .= '&amp;sort=desc';
-			$pagination_args['sort'] = 'desc';
+			update_usermeta($current_user->ID, 'gigpress_sort', $sort);
 			break;
-		default:
-			$sort = 'DESC';
 	}
 	
+	if(!isset($_GET['sort'])) {
+		if( ! $sort = get_usermeta($current_user->ID, 'gigpress_sort')) {
+			$sort = 'DESC';
+			update_usermeta($current_user->ID, 'gigpress_sort', $sort);
+		}
+	}
+		
 	if(isset($_GET['gp-page'])) $url_args .= '&amp;gp-page=' . $_GET['gp-page'];
 	
 	if(isset($_GET['artist_id']) && $_GET['artist_id'] != '-1') {
@@ -163,8 +169,8 @@ function gigpress_admin_shows() {
 						</select>
 								
 						<select name="sort">
-							<option value="desc"<?php if(isset($_GET['sort']) && $_GET['sort'] == 'desc') echo(' selected="selected"'); ?>><?php _e("Descending", "gigpress"); ?></option>
-							<option value="asc"<?php if(isset($_GET['sort']) && $_GET['sort'] == 'asc') echo(' selected="selected"'); ?>><?php _e("Ascending", "gigpress"); ?></option>
+							<option value="desc"<?php if($sort == 'DESC') echo(' selected="selected"'); ?>><?php _e("Descending", "gigpress"); ?></option>
+							<option value="asc"<?php if($sort == 'ASC') echo(' selected="selected"'); ?>><?php _e("Ascending", "gigpress"); ?></option>
 						</select>
 						<input type="submit" value="Filter" class="button-secondary" />
 					</div>
