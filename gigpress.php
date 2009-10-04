@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.0 
+Version: 2.0.1
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
