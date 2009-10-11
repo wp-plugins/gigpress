@@ -16,6 +16,7 @@ function gigpress_show_related($content) {
 			ob_start();
 				
 				$count = 1;
+				$total_shows = count($shows);
 				foreach ($shows as $show) {
 					$showdata = gigpress_prepare($show, 'related');						
 					include gigpress_template('related');

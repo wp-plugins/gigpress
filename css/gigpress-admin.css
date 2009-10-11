@@ -34,8 +34,6 @@ strong.gigpress-soldout {
 	vertical-align: top;
 }
 
-
-
 .gp-table p {
 	margin-top: 0;
 }
@@ -67,8 +65,31 @@ th.gp-thead h3 {
 	font-size: 110%;
 }
 
-td.gp-centre, th.gp-centre {
+.gp-tiny {
+	width: 16px;
+}
+
+th.gp-centre, th.gp-tiny, td.gp-centre, td.gp-tiny {
 	text-align: center;
+}
+
+img.gp-sort-handle {
+	display: none;
+	cursor: move;
+}
+
+#artist-sort-update {
+	display: none;
+	background-color: #ffffe0;
+	border: 1px solid #e6db55;
+	padding: 0.6em 1em;
+	margin: 5px 0;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
 }
 
 span.gigpress-date {

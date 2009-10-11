@@ -752,7 +752,7 @@ function gigpress_import() {
 				}				
 
 				// Check to see if we have this venue
-				$venue_exists = $wpdb->get_var("SELECT venue_id FROM " . GIGPRESS_VENUES . " WHERE venue_name = '" . mysql_real_escape_string($show['Venue']) . "'");
+				$venue_exists = $wpdb->get_var("SELECT venue_id FROM " . GIGPRESS_VENUES . " WHERE venue_name = '" . mysql_real_escape_string($show['Venue']) . "' AND venue_city = '" . mysql_real_escape_string($show['City']) . "' AND venue_country = '" . mysql_real_escape_string($show['Country']) . "'");
 				if(!$venue_exists) {
 					// Can't find a venue with this name, so we'll have to create it
 					$new_venue = array(
@@ -837,13 +837,13 @@ function gigpress_import() {
 			
 		} else {
 			// The file uploaded, but there were no results from the parse
-			echo('<div id="message" class="error fade"><p>' . __e("Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?", "gigpress") . '.</p></div>');
+			echo('<div id="message" class="error fade"><p>' . __("Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?", "gigpress") . '.</p></div>');
 		
 		}
 		
 	} else {
 		// The upload failed
-		echo('<div id="message" class="error fade"><p>' . __e("Sorry, but there was an error uploading", "gigpress") . $_FILES['gp_import']['name'] . ': ' . $upload['error'] . '.</p></div>');
+		echo('<div id="message" class="error fade"><p>' . __("Sorry, but there was an error uploading", "gigpress") . $_FILES['gp_import']['name'] . ': ' . $upload['error'] . '.</p></div>');
 	}
 	
 	// Bye-bye

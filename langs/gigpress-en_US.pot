@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GigPress 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-04 12:56-0400\n"
+"POT-Creation-Date: 2009-10-11 10:41-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Derek Hogue <derek@amphibian.info>\n"
 "Language-Team:  <derek@gigpress.com>\n"
@@ -51,23 +51,23 @@ msgstr ""
 msgid "Import/Export"
 msgstr ""
 
-#: ../gigpress.php:105
+#: ../gigpress.php:106
 msgid "You're using"
 msgstr ""
 
-#: ../gigpress.php:105
+#: ../gigpress.php:106
 msgid "Like it?"
 msgstr ""
 
-#: ../gigpress.php:105
+#: ../gigpress.php:106
 msgid "Make a donation"
 msgstr ""
 
-#: ../gigpress.php:177
+#: ../gigpress.php:178
 msgid "opens in a new window"
 msgstr ""
 
-#: ../gigpress.php:197
+#: ../gigpress.php:199
 #: ../admin/handlers.php:815
 #: ../admin/handlers.php:824
 #: ../admin/handlers.php:833
@@ -75,64 +75,68 @@ msgstr ""
 msgid "at"
 msgstr ""
 
-#: ../gigpress.php:200
+#: ../gigpress.php:202
 #: ../admin/new.php:489
 #: ../admin/shows.php:229
 msgid "Price"
 msgstr ""
 
-#: ../gigpress.php:201
+#: ../gigpress.php:203
 #: ../admin/shows.php:232
 #: ../output/feed.php:73
 msgid "Box office"
 msgstr ""
 
-#: ../gigpress.php:202
+#: ../gigpress.php:204
 #: ../admin/new.php:455
 #: ../admin/venues.php:132
 #: ../output/feed.php:59
 msgid "Venue phone"
 msgstr ""
 
-#: ../gigpress.php:203
+#: ../gigpress.php:205
 #: ../admin/new.php:501
 #: ../admin/settings.php:130
 #: ../output/feed.php:80
 msgid "Notes"
 msgstr ""
 
-#: ../gigpress.php:212
+#: ../gigpress.php:218
 msgid "Download iCal"
 msgstr ""
 
-#: ../gigpress.php:224
+#: ../gigpress.php:230
 msgid "Buy tickets"
 msgstr ""
 
-#: ../gigpress.php:226
+#: ../gigpress.php:232
 #: ../admin/new.php:466
 msgid "Sold Out"
 msgstr ""
 
-#: ../gigpress.php:228
+#: ../gigpress.php:234
 #: ../admin/new.php:467
 msgid "Cancelled"
 msgstr ""
 
-#: ../gigpress.php:249
+#: ../gigpress.php:255
 msgid "Add to Google Calendar"
 msgstr ""
 
-#: ../gigpress.php:339
+#: ../gigpress.php:345
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
 msgstr ""
 
-#: ../gigpress.php:457
+#: ../gigpress.php:432
+msgid "Artist order updated."
+msgstr ""
+
+#: ../gigpress.php:483
 msgid "Nothing to export."
 msgstr ""
 
-#: ../gigpress.php:464
+#: ../gigpress.php:490
 msgid "You are not authorized to do that. Try logging-in first."
 msgstr ""
 
@@ -172,8 +176,8 @@ msgid "Add artist"
 msgstr ""
 
 #: ../admin/artists.php:79
-#: ../admin/artists.php:109
-#: ../admin/artists.php:151
+#: ../admin/artists.php:113
+#: ../admin/artists.php:157
 #: ../admin/new.php:388
 msgid "Artist name"
 msgstr ""
@@ -186,46 +190,41 @@ msgstr ""
 msgid "Note that you cannot delete an artist while they have shows in the database."
 msgstr ""
 
-#: ../admin/artists.php:110
-#: ../admin/artists.php:152
-msgid "Artist ID"
-msgstr ""
-
-#: ../admin/artists.php:111
-#: ../admin/artists.php:153
+#: ../admin/artists.php:114
+#: ../admin/artists.php:158
 #: ../admin/tours.php:113
 #: ../admin/tours.php:150
-#: ../admin/venues.php:181
-#: ../admin/venues.php:230
+#: ../admin/venues.php:182
+#: ../admin/venues.php:233
 msgid "Number of shows"
 msgstr ""
 
-#: ../admin/artists.php:112
-#: ../admin/artists.php:154
+#: ../admin/artists.php:115
+#: ../admin/artists.php:159
 #: ../admin/shows.php:197
 #: ../admin/shows.php:252
 #: ../admin/tours.php:114
 #: ../admin/tours.php:151
-#: ../admin/venues.php:182
-#: ../admin/venues.php:231
+#: ../admin/venues.php:183
+#: ../admin/venues.php:234
 msgid "Actions"
 msgstr ""
 
-#: ../admin/artists.php:137
+#: ../admin/artists.php:141
 #: ../admin/shows.php:220
 #: ../admin/tours.php:135
-#: ../admin/venues.php:211
+#: ../admin/venues.php:213
 msgid "Edit"
 msgstr ""
 
-#: ../admin/artists.php:138
+#: ../admin/artists.php:142
 #: ../admin/shows.php:222
 #: ../admin/tours.php:135
-#: ../admin/venues.php:212
+#: ../admin/venues.php:214
 msgid "Delete"
 msgstr ""
 
-#: ../admin/artists.php:146
+#: ../admin/artists.php:150
 #: ../admin/import-export.php:61
 #: ../admin/new.php:378
 #: ../admin/shows.php:138
@@ -401,6 +400,14 @@ msgstr ""
 
 #: ../admin/handlers.php:830
 msgid "shows were successfully imported"
+msgstr ""
+
+#: ../admin/handlers.php:840
+msgid "Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?"
+msgstr ""
+
+#: ../admin/handlers.php:846
+msgid "Sorry, but there was an error uploading"
 msgstr ""
 
 #: ../admin/handlers.php:867
@@ -619,7 +626,7 @@ msgstr ""
 
 #: ../admin/new.php:414
 #: ../admin/shows.php:166
-#: ../admin/venues.php:220
+#: ../admin/venues.php:222
 msgid "No venues in the database"
 msgstr ""
 
@@ -694,8 +701,8 @@ msgstr ""
 
 #: ../admin/new.php:536
 #: ../admin/tours.php:82
-#: ../admin/tours.php:111
-#: ../admin/tours.php:148
+#: ../admin/tours.php:112
+#: ../admin/tours.php:149
 msgid "Tour name"
 msgstr ""
 
@@ -865,8 +872,8 @@ msgstr ""
 #: ../admin/settings.php:129
 #: ../admin/shows.php:193
 #: ../admin/shows.php:248
-#: ../admin/venues.php:177
-#: ../admin/venues.php:226
+#: ../admin/venues.php:178
+#: ../admin/venues.php:229
 #: ../output/feed.php:50
 msgid "City"
 msgstr ""
@@ -943,7 +950,7 @@ msgstr ""
 msgid "Disable the default GigPress JavaScript."
 msgstr ""
 
-#: ../admin/settings.php:212
+#: ../admin/settings.php:213
 msgid "Save Changes"
 msgstr ""
 
@@ -981,8 +988,8 @@ msgstr ""
 
 #: ../admin/shows.php:195
 #: ../admin/shows.php:250
-#: ../admin/venues.php:179
-#: ../admin/venues.php:228
+#: ../admin/venues.php:180
+#: ../admin/venues.php:231
 #: ../output/feed.php:62
 msgid "Country"
 msgstr ""
@@ -1053,11 +1060,6 @@ msgstr ""
 msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
 msgstr ""
 
-#: ../admin/tours.php:112
-#: ../admin/tours.php:149
-msgid "Tour ID"
-msgstr ""
-
 #: ../admin/venues.php:70
 msgid "Sorry, but we had trouble loading that venue for editing."
 msgstr ""
@@ -1086,19 +1088,19 @@ msgstr ""
 msgid "Note that you cannot delete a venue while it has shows in the database."
 msgstr ""
 
-#: ../admin/venues.php:176
-#: ../admin/venues.php:225
+#: ../admin/venues.php:177
+#: ../admin/venues.php:228
 msgid "Name"
 msgstr ""
 
-#: ../admin/venues.php:178
-#: ../admin/venues.php:227
+#: ../admin/venues.php:179
+#: ../admin/venues.php:230
 #: ../output/feed.php:55
 msgid "Address"
 msgstr ""
 
-#: ../admin/venues.php:180
-#: ../admin/venues.php:229
+#: ../admin/venues.php:181
+#: ../admin/venues.php:232
 msgid "Phone"
 msgstr ""
 
@@ -1110,31 +1112,39 @@ msgstr ""
 msgid "Admission"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:41
+#: ../output/gigpress_sidebar.php:43
 msgid "Title"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:43
+#: ../output/gigpress_sidebar.php:45
 msgid "Number of shows to list"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:47
+#: ../output/gigpress_sidebar.php:49
 msgid "Group by artist"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:51
+#: ../output/gigpress_sidebar.php:54
+msgid "Order artists by custom order"
+msgstr ""
+
+#: ../output/gigpress_sidebar.php:57
+msgid "Order artists alphabetically"
+msgstr ""
+
+#: ../output/gigpress_sidebar.php:62
 msgid "Group by tour"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:55
+#: ../output/gigpress_sidebar.php:66
 msgid "Show RSS and iCal feeds"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:59
+#: ../output/gigpress_sidebar.php:70
 msgid "Show link to shows page"
 msgstr ""
 
-#: ../output/gigpress_sidebar.php:61
+#: ../output/gigpress_sidebar.php:72
 msgid "Shows page link text"
 msgstr ""
 

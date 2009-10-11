@@ -91,7 +91,8 @@ function gigpress_artists() {
 	<div class="tablenav">
 		<div class="alignleft"><p><?php _e("Note that you cannot delete an artist while they have shows in the database.", "gigpress"); ?></p></div>
 	<?php
-		$artists = $wpdb->get_results("SELECT * FROM ". GIGPRESS_ARTISTS ." ORDER BY artist_name ASC");
+		$artists = $wpdb->get_results("SELECT * FROM ". GIGPRESS_ARTISTS ." ORDER BY artist_order ASC,artist_name ASC");
+/*		Removed pagination to allow for single-page AJAX reordering. Complaints might being it back?
 		if($artists) {
 			$pagination_args['page'] = 'gigpress-artists';
 			$pagination = gigpress_admin_pagination(count($artists), 20, $pagination_args);
@@ -100,19 +101,21 @@ function gigpress_artists() {
 				echo $pagination['output'];
 			}
 		}
+*/
 	?>
 	</div>
 	
 	<table class="widefat">
 		<thead>
 			<tr>
-				<th scope="col" class="gp-centre">ID</th>
+				<th scope="col" class="gp-tiny">&nbsp;</th>
+				<th scope="col" class="gp-tiny">ID</th>
 				<th scope="col"><?php _e("Artist name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody class="gigpress-artist-sort">
 	<?php
 
 		if($artists) {
@@ -129,8 +132,9 @@ function gigpress_artists() {
 				$style = ($i % 2) ? '' : ' class="alternate"';
 				// Print out our rows.
 				?>
-				<tr<?php echo $style; ?>>
-					<td class="gp-centre"><?php echo $artist->artist_id; ?></td>
+				<tr<?php echo $style; ?> id="artist_<?php echo $artist->artist_id; ?>">
+					<td class="gp-tiny"><img src="<?php echo WP_PLUGIN_URL; ?>/gigpress/images/sort.png" alt="" class="gp-sort-handle" /></td>
+					<td class="gp-tiny"><?php echo $artist->artist_id; ?></td>
 					<td><?php echo wptexturize($artist->artist_name); ?></td>
 					<td class="gp-centre"><?php echo $count; ?></td>
 					<td class="gp-centre">
@@ -143,22 +147,27 @@ function gigpress_artists() {
 
 			// We don't have any artists, so let's say so
 			?>
-			<tr><td colspan="4"><strong><?php _e("No artists in the database", "gigpress"); ?></strong></td></tr>
+			<tr><td colspan="5"><strong><?php _e("No artists in the database", "gigpress"); ?></strong></td></tr>
 	<?php } ?>
 		</tbody>
 		<tfoot>
 			<tr>
-				<th scope="col" class="gp-centre">ID</th>
+				<th scope="col" class="gp-tiny">&nbsp;</th>
+				<th scope="col" class="gp-tiny">ID</th>
 				<th scope="col"><?php _e("Artist name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 			</tr>
 		</tfoot>
 	</table>
-	
+
+<?php if($pagination) : ?>
 	<div class="tablenav">
-	<?php if($pagination) echo $pagination['output']; ?>
-	</div>	
+	<?php // echo $pagination['output']; ?>
+	</div>
+<?php endif; ?>
+	
+	<div id="artist-sort-update"></div>	
 	
 	</div>
 <?php }

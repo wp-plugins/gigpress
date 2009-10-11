@@ -108,7 +108,7 @@ function gigpress_tours() {
 	<table class="widefat">
 		<thead>
 			<tr>
-				<th scope="col" class="gp-centre">ID</th>
+				<th scope="col" class="gp-tiny">ID</th>
 				<th scope="col"><?php _e("Tour name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
@@ -128,7 +128,7 @@ function gigpress_tours() {
 				?>
 
 				<tr<?php echo $style; ?>>
-					<td class="gp-centre"><?php echo $tour->tour_id; ?></td>
+					<td class="gp-tiny"><?php echo $tour->tour_id; ?></td>
 					<td><?php echo wptexturize($tour->tour_name); ?></td>
 					<td class="gp-centre"><?php echo $count; ?></td>
 					<td class="gp-centre">
@@ -145,7 +145,7 @@ function gigpress_tours() {
 		</tbody>
 		<tfoot>
 			<tr>
-				<th scope="col" class="gp-centre">ID</th>
+				<th scope="col" class="gp-tiny">ID</th>
 				<th scope="col"><?php _e("Tour name", "gigpress"); ?></th>
 				<th scope="col" class="gp-centre"><?php _e("Number of shows", "gigpress"); ?></th>
 				<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>

@@ -45,6 +45,7 @@ PRIMARY KEY  (show_id)
 $gp_db[] = "CREATE TABLE " . GIGPRESS_ARTISTS . " (
 artist_id INTEGER(4) AUTO_INCREMENT,
 artist_name VARCHAR(255) NOT NULL,
+artist_order INTEGER(4) DEFAULT 0,
 PRIMARY KEY  (artist_id)
 ) $charset_collate";
 
@@ -112,6 +113,7 @@ $default_settings = array(
 	'welcome' => 'yes',
 	'widget_feeds' => 1,
 	'widget_group_by_artist' => 0,
+	'widget_artist_order' => 'custom',
 	'widget_heading' => 'Upcoming shows',
 	'widget_number' => 5,
 	'widget_segment' => 1

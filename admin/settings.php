@@ -193,6 +193,7 @@ function gigpress_settings() {
 		<input type="hidden" name="gigpress_settings[widget_number]" value="<?php echo $gpo['widget_number']; ?>" />
 		<input type="hidden" name="gigpress_settings[widget_segment]" value="<?php echo $gpo['widget_segment']; ?>" />
 		<input type="hidden" name="gigpress_settings[widget_group_by_artist]" value="<?php echo $gpo['widget_group_by_artist']; ?>" />
+		<input type="hidden" name="gigpress_settings[widget_artist_order]" value="<?php echo $gpo['widget_artist_order']; ?>" />
 		<input type="hidden" name="gigpress_settings[widget_feeds]" value="<?php echo $gpo['widget_feeds']; ?>" />
 		<input type="hidden" name="gigpress_settings[sidebar_link]" value="<?php echo $gpo['sidebar_link']; ?>" />
 		<input type="hidden" name="gigpress_settings[upcoming_phrase]" value="<?php echo $gpo['upcoming_phrase']; ?>" />

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GigPress 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-30 14:36-0500\n"
-"PO-Revision-Date: 2009-09-30 14:41-0500\n"
+"POT-Creation-Date: 2009-10-09 17:03-0500\n"
+"PO-Revision-Date: 2009-10-09 17:07-0500\n"
 "Last-Translator: Frederic Barry <email@fredericbarry.com>\n"
 "Language-Team: Frederic Barry <fredericbarry.com>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgid "Add a show"
 msgstr "Ajouter un spectacle"
 
 #: ../gigpress.php:70
-#: ../admin/shows.php:96
+#: ../admin/shows.php:102
 msgid "Shows"
 msgstr "Spectacles"
 
@@ -62,11 +62,11 @@ msgstr "Vous aimez?"
 msgid "Make a donation"
 msgstr "Faire un don"
 
-#: ../gigpress.php:152
+#: ../gigpress.php:177
 msgid "opens in a new window"
 msgstr "ouvre dans une nouvelle fenêtre"
 
-#: ../gigpress.php:168
+#: ../gigpress.php:198
 #: ../admin/handlers.php:815
 #: ../admin/handlers.php:824
 #: ../admin/handlers.php:833
@@ -74,64 +74,64 @@ msgstr "ouvre dans une nouvelle fenêtre"
 msgid "at"
 msgstr "à"
 
-#: ../gigpress.php:171
+#: ../gigpress.php:201
 #: ../admin/new.php:489
-#: ../admin/shows.php:223
+#: ../admin/shows.php:229
 msgid "Price"
 msgstr "Prix"
 
-#: ../gigpress.php:172
-#: ../admin/shows.php:226
+#: ../gigpress.php:202
+#: ../admin/shows.php:232
 #: ../output/feed.php:73
 msgid "Box office"
 msgstr "Billetterie"
 
-#: ../gigpress.php:173
+#: ../gigpress.php:203
 #: ../admin/new.php:455
 #: ../admin/venues.php:132
 #: ../output/feed.php:59
 msgid "Venue phone"
 msgstr "Téléphone de la salle"
 
-#: ../gigpress.php:174
+#: ../gigpress.php:204
 #: ../admin/new.php:501
 #: ../admin/settings.php:130
 #: ../output/feed.php:80
 msgid "Notes"
 msgstr "Notes"
 
-#: ../gigpress.php:183
+#: ../gigpress.php:213
 msgid "Download iCal"
 msgstr "Télécharger iCal"
 
-#: ../gigpress.php:195
+#: ../gigpress.php:225
 msgid "Buy tickets"
 msgstr "Acheter des billets"
 
-#: ../gigpress.php:197
+#: ../gigpress.php:227
 #: ../admin/new.php:466
 msgid "Sold Out"
 msgstr "Complet"
 
-#: ../gigpress.php:199
+#: ../gigpress.php:229
 #: ../admin/new.php:467
 msgid "Cancelled"
 msgstr "Cancellé"
 
-#: ../gigpress.php:219
+#: ../gigpress.php:250
 msgid "Add to Google Calendar"
 msgstr "Ajouter à Google Calendar"
 
-#: ../gigpress.php:309
+#: ../gigpress.php:340
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
 msgstr "Affichage %s&#8211;%s sur %s"
 
-#: ../gigpress.php:427
+#: ../gigpress.php:458
 msgid "Nothing to export."
 msgstr "Rien à exporter."
 
-#: ../gigpress.php:434
+#: ../gigpress.php:465
 msgid "You are not authorized to do that. Try logging-in first."
 msgstr "Vous n'êtes pas autorisé à faire ceci. Tentez de vous connecter en premier."
 
@@ -171,8 +171,8 @@ msgid "Add artist"
 msgstr "Ajouter un artiste"
 
 #: ../admin/artists.php:79
-#: ../admin/artists.php:109
-#: ../admin/artists.php:151
+#: ../admin/artists.php:110
+#: ../admin/artists.php:152
 #: ../admin/new.php:388
 msgid "Artist name"
 msgstr "Nom de l'artiste"
@@ -185,55 +185,50 @@ msgstr "Tous les artistes"
 msgid "Note that you cannot delete an artist while they have shows in the database."
 msgstr "Notez que vous ne pouvez pas supprimer un artiste qui possède des spectacles dans la base de données."
 
-#: ../admin/artists.php:110
-#: ../admin/artists.php:152
-msgid "Artist ID"
-msgstr "ID Artiste"
-
 #: ../admin/artists.php:111
 #: ../admin/artists.php:153
 #: ../admin/tours.php:113
 #: ../admin/tours.php:150
-#: ../admin/venues.php:181
-#: ../admin/venues.php:230
+#: ../admin/venues.php:182
+#: ../admin/venues.php:233
 msgid "Number of shows"
 msgstr "Nombre de spectacles"
 
 #: ../admin/artists.php:112
 #: ../admin/artists.php:154
-#: ../admin/shows.php:191
-#: ../admin/shows.php:246
+#: ../admin/shows.php:197
+#: ../admin/shows.php:252
 #: ../admin/tours.php:114
 #: ../admin/tours.php:151
-#: ../admin/venues.php:182
-#: ../admin/venues.php:231
+#: ../admin/venues.php:183
+#: ../admin/venues.php:234
 msgid "Actions"
 msgstr "Actions"
 
 #: ../admin/artists.php:137
-#: ../admin/shows.php:214
+#: ../admin/shows.php:220
 #: ../admin/tours.php:135
-#: ../admin/venues.php:211
+#: ../admin/venues.php:213
 msgid "Edit"
 msgstr "Modifier"
 
 #: ../admin/artists.php:138
-#: ../admin/shows.php:216
+#: ../admin/shows.php:222
 #: ../admin/tours.php:135
-#: ../admin/venues.php:212
+#: ../admin/venues.php:214
 msgid "Delete"
 msgstr "Supprimer"
 
 #: ../admin/artists.php:146
 #: ../admin/import-export.php:61
 #: ../admin/new.php:378
-#: ../admin/shows.php:132
+#: ../admin/shows.php:138
 msgid "No artists in the database"
 msgstr "Pas d'artistes dans la base de données"
 
 #: ../admin/handlers.php:45
 msgid "We had trouble creating your new artist. Sorry."
-msgstr "Nus avons rencontré des difficultées tentant d'ajouter le nouvel artiste."
+msgstr "Nous avons rencontré des difficultées tentant d'ajouter le nouvel artiste."
 
 #: ../admin/handlers.php:60
 msgid "We had trouble creating your new venue. Sorry."
@@ -448,7 +443,7 @@ msgstr "Exporter toutes les tournées"
 
 #: ../admin/import-export.php:75
 #: ../admin/new.php:526
-#: ../admin/shows.php:146
+#: ../admin/shows.php:152
 #: ../admin/tours.php:143
 msgid "No tours in the database"
 msgstr "Pas de tournée dans la base de données"
@@ -486,7 +481,7 @@ msgid "documentation"
 msgstr "documentation"
 
 #: ../admin/new.php:33
-#: ../admin/shows.php:264
+#: ../admin/shows.php:270
 msgid "and"
 msgstr "et"
 
@@ -512,8 +507,8 @@ msgstr "Modifier ce spectacle"
 
 #: ../admin/new.php:203
 #: ../admin/settings.php:128
-#: ../admin/shows.php:185
-#: ../admin/shows.php:240
+#: ../admin/shows.php:191
+#: ../admin/shows.php:246
 #: ../output/feed.php:42
 msgid "Date"
 msgstr "Date"
@@ -604,8 +599,8 @@ msgid "End date"
 msgstr "Date de fin"
 
 #: ../admin/new.php:362
-#: ../admin/shows.php:186
-#: ../admin/shows.php:241
+#: ../admin/shows.php:192
+#: ../admin/shows.php:247
 msgid "Artist"
 msgstr "Artiste"
 
@@ -614,8 +609,8 @@ msgid "Add a new artist"
 msgstr "Ajouter un nouvel artiste"
 
 #: ../admin/new.php:395
-#: ../admin/shows.php:188
-#: ../admin/shows.php:243
+#: ../admin/shows.php:194
+#: ../admin/shows.php:249
 #: ../output/feed.php:52
 msgid "Venue"
 msgstr "Salle"
@@ -629,8 +624,8 @@ msgid "Select a venue"
 msgstr "Sélectionner une salle"
 
 #: ../admin/new.php:414
-#: ../admin/shows.php:160
-#: ../admin/venues.php:220
+#: ../admin/shows.php:166
+#: ../admin/venues.php:222
 msgid "No venues in the database"
 msgstr "Pas de salles dans la base de données"
 
@@ -705,8 +700,8 @@ msgstr "Ajouter une nouvelle tournée"
 
 #: ../admin/new.php:536
 #: ../admin/tours.php:82
-#: ../admin/tours.php:111
-#: ../admin/tours.php:148
+#: ../admin/tours.php:112
+#: ../admin/tours.php:149
 msgid "Tour name"
 msgstr "Nom de la tournée"
 
@@ -764,7 +759,7 @@ msgstr "Administrateur"
 
 #: ../admin/settings.php:44
 msgid "Editor"
-msgstr "éditeur"
+msgstr "Editeur"
 
 #: ../admin/settings.php:45
 msgid "Author"
@@ -874,10 +869,10 @@ msgid "Place a link to each show's related post in the following fields"
 msgstr "Placer un lien vers chaque article lié pour un spectacle dans les champs suivant"
 
 #: ../admin/settings.php:129
-#: ../admin/shows.php:187
-#: ../admin/shows.php:242
-#: ../admin/venues.php:177
-#: ../admin/venues.php:226
+#: ../admin/shows.php:193
+#: ../admin/shows.php:248
+#: ../admin/venues.php:178
+#: ../admin/venues.php:229
 #: ../output/feed.php:50
 msgid "City"
 msgstr "Ville"
@@ -942,80 +937,92 @@ msgstr "Charger jQuery dans mon thème."
 msgid "Uncheck this if you have a hard-coded link to the jQuery library in your theme."
 msgstr "Décochez cette case si vous avez la librairie jQuery de codé en dur dans votre thème."
 
-#: ../admin/settings.php:207
+#: ../admin/settings.php:174
+msgid "Advanced"
+msgstr "Avancé"
+
+#: ../admin/settings.php:176
+msgid "Disable the default GigPress CSS."
+msgstr "Désactiver le fichier CSS de GigPress."
+
+#: ../admin/settings.php:176
+msgid "Disable the default GigPress JavaScript."
+msgstr "Désactiver le fichier JavaScript de GigPress."
+
+#: ../admin/settings.php:212
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: ../admin/shows.php:105
+#: ../admin/shows.php:111
 msgid "All"
 msgstr "Tous"
 
-#: ../admin/shows.php:108
+#: ../admin/shows.php:114
 msgid "Upcoming"
 msgstr "A venir"
 
-#: ../admin/shows.php:111
+#: ../admin/shows.php:117
 msgid "Past"
 msgstr "Passé"
 
-#: ../admin/shows.php:124
+#: ../admin/shows.php:130
 msgid "View all artists"
 msgstr "Tous les artistes"
 
-#: ../admin/shows.php:138
+#: ../admin/shows.php:144
 msgid "View all tours"
 msgstr "Toutes les tournées"
 
-#: ../admin/shows.php:152
+#: ../admin/shows.php:158
 msgid "View all venues"
 msgstr "Toutes les salles"
 
-#: ../admin/shows.php:166
+#: ../admin/shows.php:172
 msgid "Descending"
 msgstr "Descendant"
 
-#: ../admin/shows.php:167
+#: ../admin/shows.php:173
 msgid "Ascending"
 msgstr "Ascendant"
 
-#: ../admin/shows.php:189
-#: ../admin/shows.php:244
-#: ../admin/venues.php:179
-#: ../admin/venues.php:228
+#: ../admin/shows.php:195
+#: ../admin/shows.php:250
+#: ../admin/venues.php:180
+#: ../admin/venues.php:231
 #: ../output/feed.php:62
 msgid "Country"
 msgstr "Pays"
 
-#: ../admin/shows.php:190
-#: ../admin/shows.php:245
+#: ../admin/shows.php:196
+#: ../admin/shows.php:251
 msgid "Tour"
 msgstr "Tournée"
 
-#: ../admin/shows.php:215
+#: ../admin/shows.php:221
 msgid "Copy"
 msgstr "Copier"
 
-#: ../admin/shows.php:235
+#: ../admin/shows.php:241
 msgid "Sorry, no shows to display based on your criteria."
 msgstr "Désolé, aucun spectacle à afficher selon vos critères."
 
-#: ../admin/shows.php:264
+#: ../admin/shows.php:270
 msgid "You have"
 msgstr "Vous avez"
 
-#: ../admin/shows.php:264
+#: ../admin/shows.php:270
 msgid "shows"
 msgstr "spectacles"
 
-#: ../admin/shows.php:264
+#: ../admin/shows.php:270
 msgid "tours"
 msgstr "tournées"
 
-#: ../admin/shows.php:264
+#: ../admin/shows.php:270
 msgid "in your trash"
 msgstr "dans votre corbeille"
 
-#: ../admin/shows.php:266
+#: ../admin/shows.php:272
 msgid "Take out the trash now"
 msgstr "Vider la corbeille maintenant"
 
@@ -1052,11 +1059,6 @@ msgstr "Toutes les tournées"
 msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
 msgstr "Notez que la suppression d'une tournée ne supprimera <strong>PAS</strong> les spectacles associés à cette tournée."
 
-#: ../admin/tours.php:112
-#: ../admin/tours.php:149
-msgid "Tour ID"
-msgstr "Identifiant de la tournée"
-
 #: ../admin/venues.php:70
 msgid "Sorry, but we had trouble loading that venue for editing."
 msgstr "Désolé, nous avons rencontré un problème en chargeant cette tournée pour l'édition."
@@ -1085,19 +1087,19 @@ msgstr "Toutes les salles"
 msgid "Note that you cannot delete a venue while it has shows in the database."
 msgstr "Notez que vous ne pouvez pas supprimer une salle qui possède des spectacles dans la base de données."
 
-#: ../admin/venues.php:176
-#: ../admin/venues.php:225
+#: ../admin/venues.php:177
+#: ../admin/venues.php:228
 msgid "Name"
 msgstr "Nom"
 
-#: ../admin/venues.php:178
-#: ../admin/venues.php:227
+#: ../admin/venues.php:179
+#: ../admin/venues.php:230
 #: ../output/feed.php:55
 msgid "Address"
 msgstr "Adresse"
 
-#: ../admin/venues.php:180
-#: ../admin/venues.php:229
+#: ../admin/venues.php:181
+#: ../admin/venues.php:232
 msgid "Phone"
 msgstr "Téléphonne"
 
@@ -1142,6 +1144,10 @@ msgstr "Texte du lien vers la page des spectacles"
 msgid "Subscribe"
 msgstr "S'abonner"
 
+#~ msgid "Artist ID"
+#~ msgstr "ID Artiste"
+#~ msgid "Tour ID"
+#~ msgstr "Identifiant de la tournée"
 #~ msgid "All Ages"
 #~ msgstr "Pour tous"
 #~ msgid "All Ages/Licensed"

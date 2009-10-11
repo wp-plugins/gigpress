@@ -8,6 +8,10 @@
 //	If you're curious what all variables are available in the $showdata array,
 //	have a look at the docs: http://gigpress.com/docs/
 
+// Also available here:
+// $count = current related show (if you have mutliple)
+// $total_shows = total number of related shows for this post
+
 // This is marked-up to be an hCalendar, so mess about at risk of munging that.
 // See http://microformats.org/wiki/hcalendar for specs.
 

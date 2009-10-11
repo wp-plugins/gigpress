@@ -37,6 +37,30 @@ $gp(document).ready(function()
 				}
 			}
 		);
+		
+		// Return a helper with preserved width of cells
+		var fixHelper = function(e, ui) {
+			ui.children().each(function() {
+				$gp(this).width($gp(this).width());
+			});
+			return ui;
+		};
+				
+		// Sortable artist table
+		$gp('img.gp-sort-handle').show();
+		$gp('.gigpress-artist-sort').sortable({
+			handle: '.gp-sort-handle', 
+			axis: 'y',
+			helper: fixHelper,
+			update : function () { 
+		      var order = $gp('.gigpress-artist-sort').sortable('serialize');
+		      $gp("#artist-sort-update").load(ajaxurl, order + '&action=gigpress_reorder_artists&cachebuster=' + Math.floor(Math.random()*99999), function()
+		      	{
+		   			$gp("#artist-sort-update").fadeIn(100, function(){$gp(this).fadeOut(1500)});  
+		      	}
+		      ); 
+		    } 
+		});
 					
 	}
 );

@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.0.1
+Version: 2.0.2
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -32,8 +32,8 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.0.1');
-define('GIGPRESS_DB_VERSION', '1.4');
+define('GIGPRESS_VERSION', '2.0.2');
+define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
 define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', get_bloginfo('url')) . '/?feed=gigpress-ical');
@@ -95,6 +95,7 @@ function gigpress_admin_menu() {
 
 function gigpress_admin_head()	{
 	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-ui-sortable');
 	wp_enqueue_script('gigpress-admin-js', WP_PLUGIN_URL . '/gigpress/scripts/gigpress-admin.js', 'jquery');
 	wp_enqueue_style('gigpress-admin-css', WP_PLUGIN_URL . '/gigpress/css/gigpress-admin.css');
 }
@@ -205,7 +206,11 @@ function gigpress_prepare($show, $scope = 'public') {
 			$showdata['calendar_details'] .= $showdata['admittance'];	
 		$showdata['calendar_location'] = $show->venue_name . ', ' . $show->venue_address . ', ' . $show->venue_city . ', ' . $show->venue_country;
 		$showdata['calendar_start'] = ($timeparts[2] == '01') ? str_replace('-', '', $show->show_date) : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_date . ' ' . $show->show_time)) . 'Z';
-		$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_expire . ' ' . $show->show_time)) . 'Z';	
+		if($timeparts[2] == '01') {
+			$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : date('Ymd', strtotime($show->show_expire . '+1 day'));	
+		} else {
+			$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_expire . ' ' . $show->show_time)) . 'Z';		
+		}
 		$showdata['date'] = ($show->show_related && $gpo['relatedlink_date'] == 1 && $scope == 'public') ? '<a href="' . gigpress_related_link($show->show_related, "url") . '">' . mysql2date($gpo['date_format'], $show->show_date) . '</a>' : mysql2date($gpo['date_format'], $show->show_date);
 		$showdata['date_long'] = mysql2date($gpo['date_format_long'], $show->show_date);		
 		$showdata['end_date'] = ($show->show_date != $show->show_expire) ? mysql2date($gpo['date_format'], $show->show_expire) : '';
@@ -410,6 +415,26 @@ function add_upload_ext($mimes='') {
 	return $mimes;
 }
 
+function gigpress_reorder_artists() {
+	
+	global $wpdb;
+	$wpdb->show_errors();
+	
+	$sql = "UPDATE " . GIGPRESS_ARTISTS . " SET artist_order = CASE artist_id ";
+	foreach($_REQUEST['artist'] as $order => $artist) {
+		$sql .= $wpdb->prepare("WHEN %d THEN %d ", $artist, $order);
+	}
+	$sql .= " END";
+	
+	$update_order = $wpdb->query($sql);
+	
+	if($update_order !== FALSE) {
+		_e("Artist order updated.", "gigpress");
+	}
+	
+	die();
+}
+
 
 function gigpress_export() {
 
@@ -487,6 +512,7 @@ add_action('template_redirect', 'gigpress_js');
 add_action('wp_head', 'gigpress_head');
 add_action('admin_post_gigpress_export', 'gigpress_export');
 add_action('admin_post_nopriv_gigpress_export', 'gigpress_export_nopriv');
+add_action('wp_ajax_gigpress_reorder_artists', 'gigpress_reorder_artists');
 
 add_filter('custom_menu_order', 'enable_custom_menu_order');
 add_filter('menu_order', 'custom_menu_order');

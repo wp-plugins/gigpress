@@ -20,6 +20,17 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.0.2 =
+
+* Fixed an issue with multi-day shows ending one day ahead of time in gCal and iCal
+* Fixed a bug where `$artist` and `$tour` parameters passed to the `gigpress_sidebar()` function were ignored
+* Updated CSV import to allow venues with the same name but in different cities and/or countries
+* You can now customize the order in which artists are displayed when grouping by artist
+* Added a new shortcode parameter `artist_order` - defaults to `custom` but can be set to `alphabetical` to override custom artist ordering
+* Added new widget setting re: artist order
+* Added `$total_shows` variable to related show template (useful for posts with multiple related shows)
+
+
 = 2.0.1 =
 
 * Updated jQuery script for better compatibility with other JS libraries

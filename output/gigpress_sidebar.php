@@ -14,11 +14,12 @@ function gigpress_widget_init() {
 		$limit = $gpo['widget_number'];
 		$show_tours = $gpo['widget_segment'];
 		$group_by_artist = $gpo['widget_group_by_artist'];
+		$artist_order = $gpo['widget_artist_order'];
 	
 		echo $before_widget . $before_title . $title . $after_title;
 		
 		// Call our sidebar function
-		gigpress_sidebar($limit, $show_tours, $group_by_artist);
+		gigpress_sidebar($limit, $show_tours, $group_by_artist, NULL, NULL, $artist_order);
 		
 		echo $after_widget;
 	}
@@ -32,6 +33,7 @@ function gigpress_widget_init() {
 			$gpo['widget_number'] = gigpress_db_in($_POST['gigpress_widget_number']);
 			$gpo['widget_segment'] = gigpress_db_in($_POST['gigpress_widget_segment']);
 			$gpo['widget_group_by_artist'] = gigpress_db_in($_POST['gigpress_widget_group_by_artist']);
+			$gpo['widget_artist_order'] = gigpress_db_in($_POST['gigpress_widget_artist_order']);
 			$gpo['widget_feeds'] = gigpress_db_in($_POST['gigpress_widget_feeds']);
 			$gpo['sidebar_link'] = gigpress_db_in($_POST['gigpress_widget_link']);
 			$gpo['upcoming_phrase'] = gigpress_db_in($_POST['gigpress_widget_upcoming_phrase']);
@@ -43,10 +45,19 @@ function gigpress_widget_init() {
 		echo '<p><label for="gigpress_widget_number">' . __('Number of shows to list', 'gigpress') . ': <input style="width: 25px; text-align: center;" id="gigpress_widget_number" name="gigpress_widget_number" type="text" value="' . $gpo['widget_number'] . '" /></label></p>';
 
 		echo '<p><label><input id="gigpress_widget_group_by_artist" name="gigpress_widget_group_by_artist" type="checkbox" value="1"';
-		if ( $gpo['widget_group_by_artist'] == 1 ) echo ' checked="checked"';
-		echo ' />  ' . __('Group by artist', 'gigpress') . '</label><br />';
+		if($gpo['widget_group_by_artist'] == 1) echo ' checked="checked"';
+		echo ' />  ' . __('Group by artist', 'gigpress') . '</label></p>';
 		
-		echo '<label><input id="gigpress_widget_segment" name="gigpress_widget_segment" type="checkbox" value="1"';
+		echo '<p><select id="gigpress_widget_artist_order" name="gigpress_widget_artist_order">
+		<option value="custom"';
+		if($gpo['widget_artist_order'] == 'custom') echo ' selected="selected"';
+		echo '>' . __("Order artists by custom order", "gigpress") . '</option>
+		<option value="alphabetical"';
+		if($gpo['widget_artist_order'] == 'alphabetical') echo ' selected="selected"';
+		echo '>' . __("Order artists alphabetically", "gigpress") . '</option>
+		</select></p>';
+				
+		echo '<p><label><input id="gigpress_widget_segment" name="gigpress_widget_segment" type="checkbox" value="1"';
 		if ( $gpo['widget_segment'] == 1 ) echo ' checked="checked"';
 		echo ' />  ' . __('Group by tour', 'gigpress') . '</label><br />';
 
@@ -69,7 +80,7 @@ function gigpress_widget_init() {
 }
 
 
-function gigpress_sidebar($limit = 5, $show_tours = 1, $group_artists = 0, $artist = NULL, $tour = NULL) {
+function gigpress_sidebar($limit = 5, $show_tours = 1, $group_artists = 0, $artist = NULL, $tour = NULL, $artist_order = 'custom') {
 
 	global $wpdb, $gpo;
 	$total_artists = $wpdb->get_var("SELECT count(*) from " . GIGPRESS_ARTISTS);
@@ -79,16 +90,17 @@ function gigpress_sidebar($limit = 5, $show_tours = 1, $group_artists = 0, $arti
 	if($artist) $further_where .= ' AND show_artist_id = ' . $wpdb->prepare('%d', $artist);
 	if($tour) $further_where .= ' AND show_tour_id = ' . $wpdb->prepare('%d', $tour);
 	if($group_artists == 1) $orderby = 'a.artist_name ASC,';
+	$artist_order = ($artist_order == 'custom') ?  "artist_order ASC," : '';
 		
 	// If we're grouping by artist, we'll unfortunately have to first get all artists
 	// Then  make a query for each one. Looking for a better way to do this.
 	
 	if($group_artists == 1 && !$tour && !$artist && $total_artists > 1) { 
 		
-		$artists = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " ORDER BY artist_name");
+		$artists = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " ORDER BY " . $artist_order . "artist_name ASC");
 		
 		foreach($artists as $artist_group) {
-			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire >= '" . GIGPRESS_NOW . "' AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
+			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire >= '" . GIGPRESS_NOW . "' AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
 			
 			if($shows) {
 				// For each artist group
