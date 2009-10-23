@@ -508,10 +508,10 @@ function gigpress_add() {
 					<th scope="row"><label for="show_tour_id"><?php _e("Part of a tour?", "gigpress"); ?></label></th>
 					<td>
 						<select name="show_tour_id" id="show_tour_id" class="can-add-new">
-						<option value=""><?php _e("No", "gigpress"); ?></option>
-						<option value="">------------------</option>
+						<option value="0"><?php _e("No", "gigpress"); ?></option>
+						<option value="0">------------------</option>
 						<option value="new"<?php if($show_tour_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new tour", "gigpress"); ?></option>
-						<option value="">------------------</option>
+						<option value="0">------------------</option>
 					  	<?php $tours = $wpdb->get_results("
 							SELECT * FROM ". GIGPRESS_TOURS ." WHERE tour_status = 'active' ORDER BY tour_name ASC
 							");
