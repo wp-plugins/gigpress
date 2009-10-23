@@ -20,7 +20,7 @@ $gp_db[] = "CREATE TABLE " . GIGPRESS_SHOWS . " (
 show_id INTEGER(4) AUTO_INCREMENT,
 show_artist_id INTEGER(4) NOT NULL,
 show_venue_id INTEGER(4) NOT NULL,
-show_tour_id INTEGER(4) NOT NULL DEFAULT 0,
+show_tour_id INTEGER(4) DEFAULT 0,
 show_date DATE NOT NULL,
 show_multi INTEGER(1),
 show_time TIME NOT NULL,
