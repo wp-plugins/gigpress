@@ -20,6 +20,12 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.0.3 =
+
+* Fixed a bug (for real this time) where `$artist` and `$tour` parameters passed to the `gigpress_sidebar()` function were ignored when not grouping by artist
+* Some fixes for people running MySQL in strict mode
+* Updated German localization
+
 = 2.0.2 =
 
 * Fixed an issue with multi-day shows ending one day ahead of time in gCal and iCal
