@@ -543,10 +543,10 @@ function gigpress_add() {
 					<th scope="row"><label for="show_related"><?php _e("Related post", "gigpress") ?>:</label></th>
 					<td>
 						<select name="show_related" id="show_related" class="can-add-new">
-					  		<option value=""><?php _e("None", "gigpress"); ?></option>
-							<option value="">------------------</option>
+					  		<option value="0"><?php _e("None", "gigpress"); ?></option>
+							<option value="0">------------------</option>
 					  		<option value="new"<?php if($_GET['gpaction'] != "edit" && $gpo['autocreate_post'] == "1") echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
-							<option value="">------------------</option>
+							<option value="0">------------------</option>
 					  	<?php 
 					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 100");
 							foreach($entries as $entry) { ?>
