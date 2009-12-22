@@ -30,7 +30,7 @@ function gigpress_tours() {
 
 	<div class="wrap gigpress gp-tours">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>		
+	<?php screen_icon('gigpress'); ?>		
 	<h2><?php _e("Tours", "gigpress"); ?></h2>
 	
 	<p><?php _e("A tour is simply a named collection of shows that you want to group together.", "gigpress"); ?></p>
@@ -92,7 +92,7 @@ function gigpress_tours() {
 			<p><?php _e("Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour.", "gigpress"); ?></p>
 		</div>
 		<?php // Get all tours from the DB
-			$tours = $wpdb->get_results("SELECT * from ". GIGPRESS_TOURS ." WHERE tour_status = 'active' ORDER BY tour_name ASC");
+			$tours = fetch_gigpress_tours();
 			
 			if($tours) {
 				$pagination_args['page'] = 'gigpress-tours';

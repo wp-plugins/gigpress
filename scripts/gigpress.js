@@ -8,4 +8,8 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass("gigpress-link-active");
 		return false;
 	});
+	$("select.gigpress_menu").change(function()
+	{
+		window.location = $(this).val();
+	});
 });

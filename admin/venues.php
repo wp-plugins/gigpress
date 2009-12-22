@@ -27,7 +27,7 @@ function gigpress_venues() {
 
 	<div class="wrap gigpress gp-venues">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>		
+	<?php screen_icon('gigpress'); ?>		
 	<h2><?php _e("Venues", "gigpress"); ?></h2>	
 	
 	<?php

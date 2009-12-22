@@ -11,7 +11,7 @@ function gigpress_settings() {
 
 	<div class="wrap gigpress gp-options">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>			
+	<?php screen_icon('gigpress'); ?>			
 	<h2><?php _e("Settings", "gigpress"); ?></h2>
 	
 	<form method="post" action="options.php">
@@ -189,26 +189,8 @@ function gigpress_settings() {
 		<input type="hidden" name="gigpress_settings[default_title]" value="<?php echo $gpo['default_title']; ?>" />
 		<input type="hidden" name="gigpress_settings[related_date]" value="<?php echo $gpo['related_date']; ?>" />
 		<input type="hidden" name="gigpress_settings[welcome]" value="<?php $gpo['welcome']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_heading]" value="<?php echo $gpo['widget_heading']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_number]" value="<?php echo $gpo['widget_number']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_segment]" value="<?php echo $gpo['widget_segment']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_group_by_artist]" value="<?php echo $gpo['widget_group_by_artist']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_artist_order]" value="<?php echo $gpo['widget_artist_order']; ?>" />
-		<input type="hidden" name="gigpress_settings[widget_feeds]" value="<?php echo $gpo['widget_feeds']; ?>" />
-		<input type="hidden" name="gigpress_settings[sidebar_link]" value="<?php echo $gpo['sidebar_link']; ?>" />
-		<input type="hidden" name="gigpress_settings[upcoming_phrase]" value="<?php echo $gpo['upcoming_phrase']; ?>" />
 		
-		<?php if ( function_exists('settings_fields') ) {
-		
-			settings_fields('gigpress');
-			
-		} else { ?>
-		
-			<input type="hidden" name="action" value="update" />
-			<input type="hidden" name="page_options" value="gigpress_settings" />
-			<?php wp_nonce_field('update-options');
-		
-		} ?>
+		<?php settings_fields('gigpress'); ?>
 		
 		<p class="submit"><input type="submit" name="Submit" class="button-primary" value="<?php _e("Save Changes", "gigpress") ?>" /></p>
 

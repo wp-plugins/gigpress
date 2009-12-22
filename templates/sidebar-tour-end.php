@@ -8,5 +8,4 @@
 // This template displays at the end of a group of tours in the sidebar
 
 ?>
-
 </ul></li>

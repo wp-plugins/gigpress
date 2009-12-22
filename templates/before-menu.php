@@ -5,7 +5,8 @@
 //	into a new folder called 'gigpress-templates' in your 'wp-content' directory
 //	and then making your changes there. When in place, that file will load in place of this one.
 
-// This template closes a list of shows in the sidebar.
-
+// This template is displayed before the archives dropdown menu 
+// only when the menu is included as part of the [gigpress_shows] shortcode
 ?>
-</ul>
+
+<div class="gigpress-menu-container">

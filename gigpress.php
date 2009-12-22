@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.0.3
+Version: 2.1
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -18,10 +18,6 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 global $wpdb, $gpo;
@@ -32,16 +28,16 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.0.3');
+define('GIGPRESS_VERSION', '2.1');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
-define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', get_bloginfo('url')) . '/?feed=gigpress-ical');
+define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', GIGPRESS_ICAL));
 define('GIGPRESS_URL', ($gpo['shows_page']) ? gigpress_check_url($gpo['shows_page']) : get_bloginfo('url'));
-define('GIGPRESS_NOW', mysql2date('Y-m-d', current_time('mysql')));
+define('GIGPRESS_NOW', date('Y-m-d'));
 define('GIGPRESS_DEBUG', '');
 
-
+// Pull in all of our required files
 require('admin/db.php');
 require('admin/new.php');
 require('admin/shows.php');
@@ -386,9 +382,7 @@ function gigpress_intl() {
 
 
 function register_gigpress_settings() {
-	if ( function_exists('register_setting') ) {
-		register_setting('gigpress','gigpress_settings');
-	}
+	register_setting('gigpress','gigpress_settings');
 }
 
 
@@ -401,12 +395,34 @@ function gigpress_favorites($actions) {
 
 
 function enable_custom_menu_order($flag) {
-	return true;
+	return TRUE;
 }
 
-function custom_menu_order($menu_ord) {
-	global $menu; $menu[35] = array( '', 'read', 'separator3', '', 'wp-menu-separator' );
-	return array('index.php', 'separator1', 'edit.php', 'upload.php', 'link-manager.php', 'edit-pages.php', 'edit-comments.php', 'separator2', 'gigpress/gigpress.php', 'separator3');
+function custom_menu_order($menu_order) {
+	
+	// Add a new separator to the menu array
+	global $menu;
+	$menu[] = array('', 'read', 'separator-gp', '', 'wp-menu-separator');
+	
+	// Remove the current instance of GigPress
+	$current_position = array_search('gigpress/gigpress.php', $menu_order);
+	unset($menu_order[$current_position]);
+	
+	// Create a new array to hold the menu order
+	$new_menu_order = array();
+	
+	// Replicate the existing order,
+	// inserting GigPress and separator where desired
+	foreach($menu_order as $menu_item) {
+		$new_menu_order[] = $menu_item;
+		if($menu_item == 'edit-comments.php')
+		{
+			$new_menu_order[] = 'separator-gp';
+			$new_menu_order[] = 'gigpress/gigpress.php';		
+		}
+	}
+
+	return $new_menu_order;
 }
 
 
@@ -491,15 +507,41 @@ function gigpress_export_nopriv() {
 }
 
 
+function fetch_gigpress_artists() {
+	global $wpdb;
+	$artists = $wpdb->get_results("
+		SELECT * FROM ". GIGPRESS_ARTISTS ." 
+		ORDER BY artist_order ASC,artist_name ASC");
+	return ($artists !== FALSE) ? $artists : FALSE;
+}
+
+
+function fetch_gigpress_tours() {
+	global $wpdb;
+	$tours = $wpdb->get_results("
+		SELECT * FROM ". GIGPRESS_TOURS ." 
+		WHERE tour_status = 'active' 
+		ORDER BY tour_name ASC");
+	return ($tours !== FALSE) ? $tours : FALSE;
+}
+
+
+function fetch_gigpress_venues() {
+	global $wpdb;
+	$venues = $wpdb->get_results("
+		SELECT * FROM ". GIGPRESS_VENUES ." 
+		ORDER BY venue_name ASC");
+	return ($venues !== FALSE) ? $venues : FALSE;
+}
+
+
 register_activation_hook(__FILE__,'gigpress_install');
-if ( function_exists('register_uninstall_hook') )
-	register_uninstall_hook(__FILE__, 'gigpress_uninstall');
+register_uninstall_hook(__FILE__, 'gigpress_uninstall');
 
 add_action(init,'add_gigpress_feeds');
 add_action(init,'gigpress_intl');
 add_action('admin_init', 'register_gigpress_settings'); 
 add_action('admin_menu', 'gigpress_admin_menu');
-add_action('widgets_init', 'gigpress_widget_init');
 add_action('delete_post', 'gigpress_remove_related');
 if(strpos($_SERVER['QUERY_STRING'], 'gigpress') !== FALSE) {
 	add_action('admin_init','gigpress_admin_head');
@@ -523,7 +565,10 @@ if($gpo['related_position'] != "nowhere") {
 	add_filter('the_content', 'gigpress_show_related');
 }
 
+add_action('widgets_init', 'gigpress_load_widgets');
+
 add_shortcode('gigpress_shows','gigpress_shows');
+add_shortcode('gigpress_menu','gigpress_menu');
 add_shortcode('gigpress_upcoming','gigpress_upcoming');
 add_shortcode('gigpress_archive','gigpress_archive');
 

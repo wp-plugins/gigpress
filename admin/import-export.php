@@ -8,7 +8,7 @@ function gigpress_import_export() {
 
 	<div class="wrap gigpress gp-options">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>			
+	<?php screen_icon('gigpress'); ?>			
 	<h2><?php _e("Import/Export", "gigpress"); ?></h2>
 	
 	<div class="gp-import-panel">
@@ -52,7 +52,7 @@ function gigpress_import_export() {
 			<div style="margin-bottom:5px;">
 				<select name="artist_id">
 					<option value="-1"><?php _e("Export all artists", "gigpress"); ?></option>
-				<?php $artistdata = $wpdb->get_results("SELECT artist_id, artist_name from ". GIGPRESS_ARTISTS ." ORDER BY artist_name ASC");
+				<?php $artistdata = fetch_gigpress_artists();
 				if($artistdata) {
 					foreach($artistdata as $artist) {
 						echo('<option value="' . $artist->artist_id . '">' . gigpress_db_out($artist->artist_name) . '</option>');
@@ -66,7 +66,7 @@ function gigpress_import_export() {
 			<div style="margin-bottom:5px;">	
 				<select name="tour_id">
 					<option value="-1"><?php _e("Export all tours", "gigpress"); ?></option>
-				<?php $tourdata = $wpdb->get_results("SELECT tour_id, tour_name from ". GIGPRESS_TOURS ." WHERE tour_status = 'active' ORDER BY tour_name ASC");
+				<?php $tourdata = fetch_gigpress_tours();
 				if($tourdata) {
 					foreach($tourdata as $tour) {
 						echo('<option value="' . $tour->tour_id . '">' . gigpress_db_out($tour->tour_name) . '</option>');

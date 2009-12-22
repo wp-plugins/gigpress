@@ -2,8 +2,8 @@
 Contributors: mrherbivore
 Donate link: http://gigpress.com/donate
 Tags: concerts, bands, tours, shows, record labels, music, musicians, performers, artists
-Requires at least: 2.6.5
-Tested up to: 2.8.4
+Requires at least: 2.8
+Tested up to: 2.9
 
 GigPress is a live performance listing and management plugin built for musicians and performers.
 
@@ -19,6 +19,24 @@ GigPress is a powerful live performance listing and management plugin designed f
 * No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV -- filtered by artist, tour, and date.
 
 == Changelog ==
+
+= 2.1 =
+
+* **GigPress now requires WordPress 2.8 or newer**
+* Overhauled the GigPress widget to use the new WordPress widget class for multiple-widget capability - **existing widgets will have their settings reset**
+* Added options to restrict widget listing to a single artist, tour, or venue
+* Made changes to the `gigpress_sidebar()` function to behave more like the `gigpress_shows()` function (arguments are now passed as an array, and the function must be echoed). **If you call `gigpress_sidebar()` from your template you must update your code - please see the docs for details**
+* New template variables `$link` and `$show_feeds` for the *sidebar-list-footer* template - **update your customized template if neccessary** (see default template for example use)
+* New `[gigpress_menu]` shortcode/function for displaying a monthly or yearly dropdown menu independent of the `[gigpress_shows]` shortcode
+* New `show_menu` parameter for `[gigpress_shows]` shortcode to display a monthly or yearly dropdown menu for filtering the shows specified by the shortcode
+* New `year` and `month` parameters for `[gigpress_shows]` shortcode for filtering shows by date
+* Added *before-menu* and *after-menu* templates for surrounding the new dropdown menu
+* Added bulk-deletion of shows
+* Fixed issue where show->post relationships were lost when shows who's related post was outside of the last 100 posts
+* Increased related post dropdown listing from 100 to 500 posts
+* Updated default templates to not show gCal and iCal links when displaying past shows
+* More fixes for certain strict MySQL configurations
+* Now using the $wp_locale object for month name translations
 
 = 2.0.3 =
 

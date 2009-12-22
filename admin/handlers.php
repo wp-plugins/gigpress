@@ -104,7 +104,8 @@ function gigpress_prepare_show_fields() {
 			'post_title' => str_replace($find, $replace, $token_title),
 			'post_category' => array($gpo['related_category']),
 			'post_date' => $post_date,
-			'post_status' => "publish"
+			'post_status' => "publish",
+			'post_content' => ''
 		);
 		
 		$insert = wp_insert_post($related_post);
@@ -299,26 +300,40 @@ function gigpress_update_show() {
 function gigpress_delete_show() {
 
 	global $wpdb;
-	
-	$wpdb->show_errors();
-		
-	$undo = wp_nonce_url(get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-shows&amp;gpaction=undo&amp;show_id='.$_GET['show_id'], 'gigpress-action');
-	
 	$wpdb->show_errors();
 	
 	// Check the nonce
-	check_admin_referer('gigpress-action');	
+	check_admin_referer('gigpress-action');
 	
-	// Delete the show
-	$where = array('show_id' => $_GET['show_id']);
-	$trashshow = $wpdb->update(GIGPRESS_SHOWS, array('show_status' => 'deleted'), $where, array('%s'), array('%d'));
+	if(is_array($_REQUEST['show_id'])) {
+		// We're deleting multiple shows, so we need to sanitize each id individually
+		$shows = array();
+		foreach($_REQUEST['show_id'] as $show) {
+			$shows[] = $wpdb->prepare('%d', $show);
+		}
+		$shows = implode(',', $shows);
+	
+	} else {
+		// Single show_id
+		$shows = $wpdb->prepare('%d', $_REQUEST['show_id']);
+	}
+	
+	$undo = wp_nonce_url(get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-shows&amp;gpaction=undo&amp;show_id='.$shows, 'gigpress-action');
+		
+	// Delete the show(s)
+	$trashshow = $wpdb->query("UPDATE ".GIGPRESS_SHOWS." SET show_status = 'deleted' WHERE show_id IN($shows)");
 	if($trashshow != FALSE) { ?>
 			
-		<div id="message" class="updated fade"><p><?php _e("Show successfully deleted.", "gigpress"); ?> <small>(<a href="<?php echo $undo; ?>"><?php _e("Undo", "gigpress"); ?></a>)</small></p></div>
+		<div id="message" class="updated fade">
+			<p><?php _e("Show(s) successfully deleted.", "gigpress"); ?> 
+			<small>(<a href="<?php echo $undo; ?>"><?php _e("Undo", "gigpress"); ?></a>)</small></p>
+		</div>
 		
 	<?php } elseif($trashshow === FALSE) { ?>
 		
-		<div id="message" class="error fade"><p><?php _e("We ran into some trouble deleting the show. Sorry.", "gigpress"); ?></p></div>				
+		<div id="message" class="error fade">
+			<p><?php _e("We ran into some trouble deleting the show(s). Sorry.", "gigpress"); ?></p>
+		</div>				
 	<?php }
 }
 
@@ -516,7 +531,7 @@ function gigpress_delete_tour() {
 	global $wpdb;
 	
 	$undo = get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-tours&amp;gpaction=undo&amp;tour_id='.$_GET['tour_id'];
-	$undo = ( function_exists('wp_nonce_url') ) ? wp_nonce_url($undo, 'gigpress-action') : $undo;
+	$undo = wp_nonce_url($undo, 'gigpress-action');
 	
 	$wpdb->show_errors();
 	
@@ -534,7 +549,7 @@ function gigpress_delete_tour() {
 		// Find any shows associated with that tour, and mark them for restore;
 		// Then then remove their foreign key
 		
-		$cleanup = $wpdb->update(GIGPRESS_SHOWS, array('show_tour_restore' => '0'), array('show_tour_restore' => 'NOT IS NULL'));
+		$cleanup = $wpdb->query("UPDATE ".GIGPRESS_SHOWS." SET show_tour_restore = 0 WHERE show_tour_restore != 0");
 		
 		$where = array('show_tour_id' => $_GET['tour_id']);
 		$restore = $wpdb->update(GIGPRESS_SHOWS, array('show_tour_id' => 0, 'show_tour_restore' => 1), $where, array('%d','%d'), array('%d'));
@@ -660,22 +675,37 @@ function gigpress_delete_artist() {
 function gigpress_undo($type) {
 
 	global $wpdb;
-		
 	$wpdb->show_errors();
 	
-	// Check the nonce
 	check_admin_referer('gigpress-action');	
 	
 	if($type == "show") {
 		
-		$where = array('show_id' => $_GET['show_id']);
-		$undo = $wpdb->update(GIGPRESS_SHOWS, array('show_status' => 'active'), $where, array('%s'), array('%d'));
+		$show_ids = explode(',', $_REQUEST['show_id']);
+		
+		if(count($show_ids) > 1) {
+			// We're restoring multiple shows, so we santiize each show_id individually
+			$shows = array();
+			foreach($show_ids as $show) {
+				$shows[] = $wpdb->prepare('%d', $show);
+			}
+			$shows = implode(',', $shows);
+		} else {
+			$shows = $wpdb->prepare('%d', $_REQUEST['show_id']);
+		}
+					
+		// Restore the show(s)
+		$undo = $wpdb->query("UPDATE ".GIGPRESS_SHOWS." SET show_status = 'active' WHERE show_id IN($shows)");		
+		
 		if($undo != FALSE) { ?>
-			<div id="message" class="updated fade"><p><?php _e("Show successfully restored.", "gigpress"); ?></p></div>
+			<div id="message" class="updated fade">
+				<p><?php _e("Show(s) successfully restored.", "gigpress"); ?></p>
+			</div>
 		<?php } elseif($undo === FALSE) { ?>
-			<div id="message" class="error fade"><p><?php _e("We ran into some trouble restoring that show. Sorry.", "gigpress"); ?></p></div>				
+			<div id="message" class="error fade">
+				<p><?php _e("We ran into some trouble restoring your show(s). Sorry.", "gigpress"); ?></p>
+			</div>				
 		<?php }
-		unset($where);
 	}
 	
 	if($type == "tour") {
@@ -843,7 +873,7 @@ function gigpress_import() {
 		
 	} else {
 		// The upload failed
-		echo('<div id="message" class="error fade"><p>' . __("Sorry, but there was an error uploading", "gigpress") . $_FILES['gp_import']['name'] . ': ' . $upload['error'] . '.</p></div>');
+		echo('<div id="message" class="error fade"><p>' . __("Sorry, but there was an error uploading", "gigpress") . ' <strong>' . $_FILES['gp_import']['name'] . '</strong>: ' . $upload['error'] . '.</p></div>');
 	}
 	
 	// Bye-bye

@@ -108,15 +108,8 @@ $default_settings = array(
 	'target_blank' => 0,
 	'time_format' => 'g:ia',
 	'tour_label' => 'Tour',
-	'upcoming_phrase' => 'View all shows',
 	'user_level' => 2,
-	'welcome' => 'yes',
-	'widget_feeds' => 1,
-	'widget_group_by_artist' => 0,
-	'widget_artist_order' => 'custom',
-	'widget_heading' => 'Upcoming shows',
-	'widget_number' => 5,
-	'widget_segment' => 1
+	'welcome' => 'yes'
 );
 
 

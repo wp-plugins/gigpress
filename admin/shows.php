@@ -2,7 +2,7 @@
 
 function gigpress_admin_shows() {
 	
-	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "delete") {
+	if(isset($_REQUEST['gpaction']) && $_REQUEST['gpaction'] == "delete") {
 		require_once('handlers.php');
 		gigpress_delete_show();		
 	}
@@ -98,7 +98,7 @@ function gigpress_admin_shows() {
 		
 	<div class="wrap gigpress">
 
-		<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>		
+		<?php screen_icon('gigpress'); ?>		
 		<h2><?php _e("Shows", "gigpress"); ?></h2>
 		
 		<ul class="subsubsub">
@@ -128,7 +128,7 @@ function gigpress_admin_shows() {
 						<?php endif; ?>
 						<select name="artist_id">
 							<option value="-1"><?php _e("View all artists", "gigpress"); ?></option>
-						<?php $artistdata = $wpdb->get_results("SELECT artist_id, artist_name from ". GIGPRESS_ARTISTS ." ORDER BY artist_name ASC");
+						<?php $artistdata = fetch_gigpress_artists();
 						if($artistdata) {
 							foreach($artistdata as $artist) {
 								$selected = (isset($_GET['artist_id']) && $_GET['artist_id'] == $artist->artist_id) ? ' selected="selected"' : '';
@@ -142,7 +142,7 @@ function gigpress_admin_shows() {
 						
 						<select name="tour_id">
 							<option value="-1"><?php _e("View all tours", "gigpress"); ?></option>
-						<?php $tourdata = $wpdb->get_results("SELECT tour_id, tour_name from ". GIGPRESS_TOURS ." WHERE tour_status = 'active' ORDER BY tour_name ASC");
+						<?php $tourdata = fetch_gigpress_tours();
 						if($tourdata) {
 							foreach($tourdata as $tour) {
 								$selected = (isset($_GET['tour_id']) && $_GET['tour_id'] == $tour->tour_id) ? ' selected="selected"' : '';
@@ -156,7 +156,7 @@ function gigpress_admin_shows() {
 
 						<select name="venue_id">
 							<option value="-1"><?php _e("View all venues", "gigpress"); ?></option>
-						<?php $venuedata = $wpdb->get_results("SELECT venue_id, venue_name from ". GIGPRESS_VENUES ." ORDER BY venue_name ASC");
+						<?php $venuedata = fetch_gigpress_venues();
 						if($venuedata) {
 							foreach($venuedata as $venue) {
 								$selected = (isset($_GET['venue_id']) && $_GET['venue_id'] == $venue->venue_id) ? ' selected="selected"' : '';
@@ -185,9 +185,14 @@ function gigpress_admin_shows() {
 			<div class="clear"></div>
 		</div>
 
+		<form action="" method="post">
+			<?php wp_nonce_field('gigpress-action') ?>
+			<input type="hidden" name="gpaction" value="delete" />
+
 		<table class="widefat">
 			<thead>
 				<tr>
+					<th scope="col" class="column-cb check-column"><input type="checkbox" /></th>
 					<th scope="col"><?php _e("Date", "gigpress"); ?></th>
 					<th scope="col"><?php _e("Artist", "gigpress"); ?></th>
 					<th scope="col"><?php _e("City", "gigpress"); ?></th>
@@ -197,6 +202,18 @@ function gigpress_admin_shows() {
 					<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
 				</tr>
 			</thead>
+			<tfoot>
+				<tr>
+					<th scope="col" class="column-cb check-column"><input type="checkbox" /></th>
+					<th scope="col"><?php _e("Date", "gigpress"); ?></th>
+					<th scope="col"><?php _e("Artist", "gigpress"); ?></th>
+					<th scope="col"><?php _e("City", "gigpress"); ?></th>
+					<th scope="col"><?php _e("Venue", "gigpress"); ?></th>
+					<th scope="col"><?php _e("Country", "gigpress"); ?></th>
+					<th scope="col"><?php _e("Tour", "gigpress") ?></th>					
+					<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
+				</tr>
+			</tfoot>			
 			<tbody>
 		<?php
 		
@@ -209,6 +226,7 @@ function gigpress_admin_shows() {
 
 				?>
 				<tr class="<?php echo 'gigpress-' . $showdata['status']; ?>">
+					<th scope="row" class="check-column"><input type="checkbox" name="show_id[]" value="<?php echo $show->show_id; ?>" /></th>
 					<td><span class="gigpress-date"><?php echo $showdata['date']; if($showdata['end_date']) { echo(' - ') . $showdata['end_date']; } ?></span>
 					</td>
 					<td><?php echo $showdata['artist']; ?></td>
@@ -217,13 +235,11 @@ function gigpress_admin_shows() {
 					<td><?php echo $showdata['country']; ?></td>
 					<td><?php echo $showdata['tour']; ?></td>
 					<td class="gp-centre">
-						<a href="<?php bloginfo('wpurl') ?>/wp-admin/admin.php?page=gigpress/gigpress.php&amp;gpaction=edit&amp;show_id=<?php echo $show->show_id; ?>" class="edit" title="<?php _e("Edit", "gigpress"); ?>"><?php _e("Edit", "gigpress"); ?></a> | 
-						<a href="<?php bloginfo('wpurl') ?>/wp-admin/admin.php?page=gigpress/gigpress.php&amp;gpaction=copy&amp;show_id=<?php echo $show->show_id; ?>" class="edit" title="<?php _e("Copy", "gigpress"); ?>"><?php _e("Copy", "gigpress"); ?></a> | 
-						<a href="<?php echo wp_nonce_url(get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-shows&amp;gpaction=delete&amp;show_id=' . $show->show_id . $url_args, 'gigpress-action'); ?>" class="delete" title="<?php _e("Delete", "gigpress"); ?>"><?php _e("Delete", "gigpress"); ?></a>
+						<a href="<?php bloginfo('wpurl') ?>/wp-admin/admin.php?page=gigpress/gigpress.php&amp;gpaction=edit&amp;show_id=<?php echo $show->show_id; ?>" class="edit" title="<?php _e("Edit", "gigpress"); ?>"><?php _e("Edit", "gigpress"); ?></a>&nbsp;|&nbsp;<a href="<?php bloginfo('wpurl') ?>/wp-admin/admin.php?page=gigpress/gigpress.php&amp;gpaction=copy&amp;show_id=<?php echo $show->show_id; ?>" class="edit" title="<?php _e("Copy", "gigpress"); ?>"><?php _e("Copy", "gigpress"); ?></a>
 					</td>
 				</tr>
 				<tr class="<?php echo 'alternate' . ' gigpress-' . $showdata['status']; ?>">
-					<td colspan="7"><small>
+					<td colspan="8"><small>
 					<?php
 						if($showdata['time']) echo $showdata['time'] . '. ';
 						if($showdata['price']) echo __("Price", "gigpress") . ': ' . $showdata['price'] . '. ';
@@ -238,45 +254,38 @@ function gigpress_admin_shows() {
 			<?php } // end foreach			
 		} else { // No results from the query
 		?>
-			<tr><td colspan="7"><?php _e("Sorry, no shows to display based on your criteria.", "gigpress"); ?></td></tr>
+			<tr><td colspan="8"><?php _e("Sorry, no shows to display based on your criteria.", "gigpress"); ?></td></tr>
 		<?php } ?>
 			</tbody>
-			<tfoot>
-				<tr>
-					<th scope="col"><?php _e("Date", "gigpress"); ?></th>
-					<th scope="col"><?php _e("Artist", "gigpress"); ?></th>
-					<th scope="col"><?php _e("City", "gigpress"); ?></th>
-					<th scope="col"><?php _e("Venue", "gigpress"); ?></th>
-					<th scope="col"><?php _e("Country", "gigpress"); ?></th>
-					<th scope="col"><?php _e("Tour", "gigpress") ?></th>					
-					<th class="gp-centre" scope="col"><?php _e("Actions", "gigpress"); ?></th>
-				</tr>
-			</tfoot>
 		</table>
 		<div class="tablenav">
-		<?php
-			if($tour_count = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_TOURS ." WHERE tour_status = 'deleted'")) {
-				$tours = $tour_count;
-			} else {
-				$tours = 0;
-			}
-			
-			if($show_count = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_SHOWS ." WHERE show_status = 'deleted'")) {
-				$shows = $show_count;
-			} else {
-				$shows = 0;
-			}
-			if($tour_count || $show_count) {					
-				echo('<div class="alignleft"><small>'. __("You have", "gigpress"). ' <strong>'. $shows .' '. __("shows", "gigpress"). '</strong> '. __("and", "gigpress"). ' <strong>'. $tours .' '. __("tours", "gigpress") .'</strong> '. __("in your trash", "gigpress").'.');
-				if($shows != 0 || $tours != 0) {
-					echo(' <a href="'. wp_nonce_url(get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-shows&amp;gpaction=trash' . $url_args, 'gigpress-action') .'">'. __("Take out the trash now", "gigpress") .'</a>.');
+			<div class="alignleft">
+				<input type="submit" value="<?php _e('Trash selected shows', 'gigpress'); ?>" class="button-secondary" /> &nbsp; 
+				<?php
+				if($tour_count = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_TOURS ." WHERE tour_status = 'deleted'")) {
+					$tours = $tour_count;
+				} else {
+					$tours = 0;
 				}
-				echo('</small></div>');
-			}
-			?>
+				
+				if($show_count = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_SHOWS ." WHERE show_status = 'deleted'")) {
+					$shows = $show_count;
+				} else {
+					$shows = 0;
+				}
+				if($tour_count || $show_count) {					
+					echo('<small>'. __("You have", "gigpress"). ' <strong>'. $shows .' '. __("shows", "gigpress"). '</strong> '. __("and", "gigpress"). ' <strong>'. $tours .' '. __("tours", "gigpress") .'</strong> '. __("in your trash", "gigpress").'.');
+					if($shows != 0 || $tours != 0) {
+						echo(' <a href="'. wp_nonce_url(get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-shows&amp;gpaction=trash' . $url_args, 'gigpress-action') .'">'. __("Take out the trash now", "gigpress") .'</a>.');
+					}
+					echo('</small>');
+				}
+				?>
+				</div>
 	
 			<?php if($pagination) echo $pagination['output']; ?>
 
 		</div>
+		</form>
 	</div>
 <?php } ?>

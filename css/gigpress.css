@@ -15,6 +15,12 @@ span.gigpress-artist-subscriptions {
 	float: right;
 }
 
+/* Default wrapper for the year/month menu */
+.gigpress-menu-container {
+	padding: 5px 0;
+	text-align: right;
+}
+
 /* Meet the table that displays our shows */
 .gigpress-table {
 	width: 100%;
@@ -111,6 +117,11 @@ tr.gigpress-info td {
 	font-size: 90%;
 	color: #333;
 	border-bottom: 1px solid #CCC;
+}
+
+/* Fix for themes that hide .description */
+tr.gigpress-info td.description {
+	visibility: visible;
 }
 
 /* Greys-out cancelled shows */

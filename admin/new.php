@@ -2,7 +2,7 @@
 
 function gigpress_add() {
 
-	global $wpdb;
+	global $wpdb, $wp_locale;
 		
 	if(isset($_POST['gpaction']) && $_POST['gpaction'] == "add") {
 		// This is for when we've just POST-ed a new show ...
@@ -29,7 +29,7 @@ function gigpress_add() {
 	
 		<div id="message" class="updated">
 			<p>
-				<?php _e("<strong>Welcome to GigPress!</strong> Get started by adding your first show below. To display your shows, simply add the", "gigpress"); ?> <code>[gigpress_shows]</code> <?php _e("shortcode to any page or post.", "gigpress"); ?>
+				<?php _e("<strong>Welcome to GigPress!</strong> Get started by adding your first show below. To display your shows, simply add the", "gigpress"); ?> [gigpress_shows] <?php _e("shortcode to any page or post.", "gigpress"); ?>
 				<?php _e("Questions?  Please check out the", "gigpress"); ?> <a href="http://gigpress.com/docs"><?php _e("documentation", "gigpress"); ?></a> <?php _e("and", "gigpress"); ?> <a href="http://gigpress.com/faq"><?php _e("FAQ", "gigpress"); ?></a> <?php _e("on the GigPress website. Enjoy!", "gigpress"); ?> <small>(<a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=gigpress/gigpress.php&amp;gpaction=killwelcome"><?php _e("Don't show this again", "gigpress"); ?>.</a>)</small>
 			</p>
 		</div>
@@ -39,6 +39,9 @@ function gigpress_add() {
 	<div class="wrap gigpress">
 	
 	<?php
+		
+		// Setup months
+		$gp_months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');		
 		
 		// Sanitize the show_id if we're editing or fixing errors
 		$show_id = (isset($_REQUEST['show_id'])) ? $wpdb->prepare('%d', $_REQUEST['show_id']) : '';
@@ -172,7 +175,7 @@ function gigpress_add() {
 			$show_related_date = $gpo['related_date'];
 		}
 	
-		if ( function_exists('screen_icon') ) screen_icon('gigpress');	
+		screen_icon('gigpress');	
 		
 		// We're editing a show
 		if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" && $show_edit || $result['editing'] == TRUE) { ?>
@@ -204,18 +207,11 @@ function gigpress_add() {
 					<td>
 					<?php if($result['show_date']) echo('<span class="gigpress-error">'); ?>				
 					<select name="gp_mm" id="gp_mm">
-					  <option value="01"<?php if($mm == "01") echo(' selected="selected"'); ?>><?php _e("January"); ?></option>
-					  <option value="02"<?php if($mm == "02") echo(' selected="selected"'); ?>><?php _e("February"); ?></option>
-					  <option value="03"<?php if($mm == "03") echo(' selected="selected"'); ?>><?php _e("March"); ?></option>
-					  <option value="04"<?php if($mm == "04") echo(' selected="selected"'); ?>><?php _e("April"); ?></option>
-					  <option value="05"<?php if($mm == "05") echo(' selected="selected"'); ?>><?php _e("May"); ?></option>
-					  <option value="06"<?php if($mm == "06") echo(' selected="selected"'); ?>><?php _e("June"); ?></option>
-					  <option value="07"<?php if($mm == "07") echo(' selected="selected"'); ?>><?php _e("July"); ?></option>
-					  <option value="08"<?php if($mm == "08") echo(' selected="selected"'); ?>><?php _e("August"); ?></option>
-					  <option value="09"<?php if($mm == "09") echo(' selected="selected"'); ?>><?php _e("September"); ?></option>
-					  <option value="10"<?php if($mm == "10") echo(' selected="selected"'); ?>><?php _e("October"); ?></option>
-					  <option value="11"<?php if($mm == "11") echo(' selected="selected"'); ?>><?php _e("November"); ?></option>
-					  <option value="12"<?php if($mm == "12") echo(' selected="selected"'); ?>><?php _e("December"); ?></option>
+					<?php foreach($gp_months as $month) : ?>
+						<option value="<?php echo $month; ?>"<?php if($mm == $month) : ?> selected="selected"<?php endif; ?>>
+							<?php echo $wp_locale->get_month($month); ?>
+						</option>
+					<?php endforeach; ?>
 					</select>
 					  <select name="gp_dd" id="gp_dd">
 					  	<?php for($i = 1; $i <= 31; $i++) {
@@ -325,18 +321,11 @@ function gigpress_add() {
 						<td>
 						<?php if($result['expire_date']) echo('<span class="gigpress-error">'); ?>
 						<select name="exp_mm" id="exp_mm">
-							  <option value="01"<?php if($exp_mm == "01") echo(' selected="selected"'); ?>><?php _e("January"); ?></option>
-							  <option value="02"<?php if($exp_mm == "02") echo(' selected="selected"'); ?>><?php _e("February"); ?></option>
-							  <option value="03"<?php if($exp_mm == "03") echo(' selected="selected"'); ?>><?php _e("March"); ?></option>
-							  <option value="04"<?php if($exp_mm == "04") echo(' selected="selected"'); ?>><?php _e("April"); ?></option>
-							  <option value="05"<?php if($exp_mm == "05") echo(' selected="selected"'); ?>><?php _e("May"); ?></option>
-							  <option value="06"<?php if($exp_mm == "06") echo(' selected="selected"'); ?>><?php _e("June"); ?></option>
-							  <option value="07"<?php if($exp_mm == "07") echo(' selected="selected"'); ?>><?php _e("July"); ?></option>
-							  <option value="08"<?php if($exp_mm == "08") echo(' selected="selected"'); ?>><?php _e("August"); ?></option>
-							  <option value="09"<?php if($exp_mm == "09") echo(' selected="selected"'); ?>><?php _e("September"); ?></option>
-							  <option value="10"<?php if($exp_mm == "10") echo(' selected="selected"'); ?>><?php _e("October"); ?></option>
-							  <option value="11"<?php if($exp_mm == "11") echo(' selected="selected"'); ?>><?php _e("November"); ?></option>
-							  <option value="12"<?php if($exp_mm == "12") echo(' selected="selected"'); ?>><?php _e("December"); ?></option>
+						<?php foreach($gp_months as $month) : ?>
+							<option value="<?php echo $month; ?>"<?php if($exp_mm == $month) : ?> selected="selected"<?php endif; ?>>
+								<?php echo $wp_locale->get_month($month); ?>
+							</option>
+						<?php endforeach; ?>
 						</select>
 						
 						  <select name="exp_dd" id="exp_dd">
@@ -364,9 +353,7 @@ function gigpress_add() {
 					<select name="show_artist_id" id="show_artist_id" class="can-add-new">
 						<option value="new"<?php if($show_artist_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new artist", "gigpress"); ?></option>
 						<option value="">------------------</option>
-					  	<?php $artists = $wpdb->get_results("
-							SELECT * FROM ". GIGPRESS_ARTISTS ." ORDER BY artist_name ASC
-							");
+					  	<?php $artists = fetch_gigpress_artists();
 							if($artists != FALSE) {
 								foreach($artists as $artist) {
 									$artist_name = gigpress_db_out($artist->artist_name);
@@ -399,9 +386,7 @@ function gigpress_add() {
 						<option value="">------------------</option>
 						<option value=""<?php if(!$show_venue_id) echo(' selected="selected"'); ?>><?php _e("Select a venue", "gigpress"); ?></option>
 						<option value="">------------------</option>
-					  	<?php $venues = $wpdb->get_results("
-							SELECT * FROM ". GIGPRESS_VENUES ." ORDER BY venue_name ASC
-							");
+					  	<?php $venues = fetch_gigpress_venues();
 							if($venues != FALSE) {
 								foreach($venues as $venue) {
 									$venue_name = gigpress_db_out($venue->venue_name);
@@ -512,9 +497,7 @@ function gigpress_add() {
 						<option value="0">------------------</option>
 						<option value="new"<?php if($show_tour_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new tour", "gigpress"); ?></option>
 						<option value="0">------------------</option>
-					  	<?php $tours = $wpdb->get_results("
-							SELECT * FROM ". GIGPRESS_TOURS ." WHERE tour_status = 'active' ORDER BY tour_name ASC
-							");
+					  	<?php $tours = fetch_gigpress_tours();
 							if($tours != FALSE) {
 								foreach($tours as $tour) {
 									$tour_name = gigpress_db_out($tour->tour_name);
@@ -547,17 +530,20 @@ function gigpress_add() {
 							<option value="0">------------------</option>
 					  		<option value="new"<?php if($_GET['gpaction'] != "edit" && $gpo['autocreate_post'] == "1") echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
 							<option value="0">------------------</option>
+							
 					  	<?php 
-					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 100");
-							foreach($entries as $entry) { ?>
-								<option value="<?php echo $entry->ID; ?>"<?php if($entry->ID == $show_related) echo(' selected="selected"'); ?>><?php echo gigpress_db_out($entry->post_title); ?></option>
-								
-							<?php } ?>
+					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 5", ARRAY_A);					  	
+						foreach($entries as $entry) { ?>
+							<option value="<?php echo $entry['ID']; ?>"<?php if($entry['ID'] == $show_related) { echo(' selected="selected"'); $found_related = TRUE; } ?>><?php echo gigpress_db_out($entry['post_title']); ?></option>
+						<?php } ?>
+						
+						<?php if(isset($show_related) && !isset($found_related)) {
+							$old_related = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' AND ID = ".$wpdb->prepare('%d', $show_related)." LIMIT 1", ARRAY_A);
+							foreach($old_related as $entry) { ?>
+								<option value="<?php echo $entry['ID']; ?>" selected="selected"><?php echo gigpress_db_out($entry['post_title']); ?></option>
+						<?php }
+						} ?>
 					  </select>
-					  <!-- 
-					  <br />
-					<span class="description"><?php // _e("You can link any show to a WordPress post, useful for show recaps, tour journals, uploading pictures, and allowing user comments.", "gigpress"); ?></span>
-					 -->
 					</td>
 				  </tr>
 				 </tbody>

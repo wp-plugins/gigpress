@@ -8,7 +8,7 @@ function gigpress_debug() {
 
 	<div class="wrap gigpress gp-options">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>			
+	<?php screen_icon('gigpress'); ?>			
 	<h2>Debug</h2>
 	
 	<h3>GigPress Constants</h3>

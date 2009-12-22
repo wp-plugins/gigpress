@@ -27,7 +27,7 @@
 		<?php endif; ?>
 		</td>
 		
-	<?php if((!$artist && $group_artists == 'no' || $tour) && $total_artists > 1) : ?>
+	<?php if((!$artist && $group_artists == 'no') && $total_artists > 1) : ?>
 		<td class="gigpress-artist">
 			<?php echo $showdata['artist']; ?>
 		</td>
@@ -49,6 +49,9 @@
 	<tr class="gigpress-info <?php echo $class; ?>">
 	
 		<td class="gigpress-links-cell">
+			<?php
+			// Only show these links if this show is in the future
+			if($scope == 'upcoming') : ?>
 			<div class="gigpress-calendar-add">
 				<a class="gigpress-links-toggle" href="#calendar-links-<?php echo $showdata['id']; ?>">Add</a>
 				<div class="gigpress-calendar-links" id="calendar-links-<?php echo $showdata['id']; ?>">
@@ -58,6 +61,7 @@
 					</div>
 				</div>
 			</div>
+			<?php endif; ?>
 		</td>
 		
 		<td colspan="<?php echo $cols - 1; ?>" class="description">

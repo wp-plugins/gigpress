@@ -30,7 +30,7 @@ function gigpress_artists() {
 
 	<div class="wrap gigpress gp-artists">
 
-	<?php if ( function_exists('screen_icon') ) screen_icon('gigpress'); ?>		
+	<?php screen_icon('gigpress'); ?>		
 	<h2><?php _e("Artists", "gigpress"); ?></h2>	
 	
 	<?php
@@ -91,7 +91,7 @@ function gigpress_artists() {
 	<div class="tablenav">
 		<div class="alignleft"><p><?php _e("Note that you cannot delete an artist while they have shows in the database.", "gigpress"); ?></p></div>
 	<?php
-		$artists = $wpdb->get_results("SELECT * FROM ". GIGPRESS_ARTISTS ." ORDER BY artist_order ASC,artist_name ASC");
+		$artists = fetch_gigpress_artists();
 /*		Removed pagination to allow for single-page AJAX reordering. Complaints might being it back?
 		if($artists) {
 			$pagination_args['page'] = 'gigpress-artists';
