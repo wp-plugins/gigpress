@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+=2.1.1=
+
+* Fixed bug where widget title would not display
+
 = 2.1 =
 
 * **GigPress now requires WordPress 2.8 or newer**

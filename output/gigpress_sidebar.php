@@ -14,7 +14,7 @@ class Gigpress_widget extends WP_Widget
 		extract($args, EXTR_SKIP);
 
 		echo $before_widget;
-		if (!empty($instance['title'])) echo $before_title . $title . $after_title;
+		if (!empty($instance['title'])) echo $before_title . $instance['title'] . $after_title;
 		echo gigpress_sidebar($instance);
 		echo $after_widget;
 	}
