@@ -83,10 +83,10 @@ class Gigpress_widget extends WP_Widget
 		
 		<p>
 			<select style="width:100%;" id="<?php echo $this->get_field_id('scope'); ?>" name="<?php echo $this->get_field_name('scope'); ?>">	
-				<option value="upcoming"<?php if($scope == 'upcoming') echo ' selected="selected"'; ?> /> 
+				<option value="upcoming"<?php if($scope == 'upcoming') echo ' selected="selected"'; ?>> 
 					<?php _e('Display upcoming shows', 'gigpress'); ?>
 				</option>
-				<option value="today"<?php if($scope == 'today') echo ' selected="selected"'; ?> /> 
+				<option value="today"<?php if($scope == 'today') echo ' selected="selected"'; ?>> 
 					<?php _e("Display today's shows", 'gigpress'); ?>
 				</option>
 			</select>
@@ -204,7 +204,7 @@ function gigpress_sidebar($filter = null) {
 	$total_artists = $wpdb->get_var("SELECT count(*) from " . GIGPRESS_ARTISTS);
 	
 	//  Upcoming or Today?
-	$date_condition = ($scope == 'upcoming') ? "show_expire >= '".GIGPRESS_NOW."'" : 
+	$date_condition = ($filter['scope'] == 'upcoming') ? "show_expire >= '".GIGPRESS_NOW."'" : 
 		"show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
 	
 	// Number of shows to list (per artist if grouping by artist)	

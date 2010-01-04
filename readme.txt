@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+=2.1.3=
+
+* Fixed bug introduced in 2.1.2 where widget listing was broken. Oops.
+
 =2.1.2=
 
 * Added new "today" option for the "scope" parameter of the `[gigpress_shows]` shortcode to display only shows happening today
