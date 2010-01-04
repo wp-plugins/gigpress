@@ -532,7 +532,7 @@ function gigpress_add() {
 							<option value="0">------------------</option>
 							
 					  	<?php 
-					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 5", ARRAY_A);					  	
+					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT 500", ARRAY_A);					  	
 						foreach($entries as $entry) { ?>
 							<option value="<?php echo $entry['ID']; ?>"<?php if($entry['ID'] == $show_related) { echo(' selected="selected"'); $found_related = TRUE; } ?>><?php echo gigpress_db_out($entry['post_title']); ?></option>
 						<?php } ?>

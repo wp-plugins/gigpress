@@ -3,11 +3,11 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.1.1
+Version: 2.1.2
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
-Copyright 2007-2009 DEREK HOGUE
+Copyright 2007-2010 DEREK HOGUE
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -28,13 +28,13 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.1');
+define('GIGPRESS_VERSION', '2.1.2');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
 define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', GIGPRESS_ICAL));
 define('GIGPRESS_URL', ($gpo['shows_page']) ? gigpress_check_url($gpo['shows_page']) : get_bloginfo('url'));
-define('GIGPRESS_NOW', date('Y-m-d'));
+define('GIGPRESS_NOW', date('Y-m-d', current_time('timestamp')));
 define('GIGPRESS_DEBUG', '');
 
 // Pull in all of our required files
@@ -199,8 +199,12 @@ function gigpress_prepare($show, $scope = 'public') {
 			if($show->show_tix_phone) $showdata['calendar_details'] .= __("Box office", "gigpress") . ': ' . $show->show_tix_phone . '. ';
 			if($show->show_venue_phone) $showdata['calendar_details'] .= __("Venue phone", "gigpress") . ': ' . $show->venue_phone . '. ';
 			if($show->show_notes) $showdata['calendar_details'] .= __("Notes", "gigpress") . ': ' . $show->show_notes . ' ';
-			$showdata['calendar_details'] .= $showdata['admittance'];	
-		$showdata['calendar_location'] = $show->venue_name . ', ' . $show->venue_address . ', ' . $show->venue_city . ', ' . $show->venue_country;
+			$showdata['calendar_details'] .= $showdata['admittance'];
+			$showdata['calendar_details'] = str_replace(array(";",",","\n","\r"), array('\;','\,',' ',' '), $showdata['calendar_details']);
+		$showdata['calendar_location'] = $show->venue_name . ', ';
+			if($show->venue_address) $showdata['calendar_location'] .= $show->venue_address . ', ';
+			$showdata['calendar_location'] .= $show->venue_city . ', ' . $show->venue_country;
+		$show->venue_city . ', ' . $show->venue_country;
 		$showdata['calendar_start'] = ($timeparts[2] == '01') ? str_replace('-', '', $show->show_date) : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_date . ' ' . $show->show_time)) . 'Z';
 		if($timeparts[2] == '01') {
 			$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : date('Ymd', strtotime($show->show_expire . '+1 day'));	

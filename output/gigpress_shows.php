@@ -24,6 +24,7 @@ function gigpress_shows($filter = null, $content = null) {
 			'venue' => FALSE,
 			'limit' => FALSE,
 			'scope' => 'upcoming',
+			'sort' => FALSE,
 			'group_artists' => 'yes',
 			'artist_order' => 'custom',
 			'show_menu' => FALSE,
@@ -39,17 +40,22 @@ function gigpress_shows($filter = null, $content = null) {
 	// Date conditionals and sorting based on scope
 	switch($scope) {
 		case 'upcoming':
-			$condition = ">= '" . GIGPRESS_NOW . "'";
-			$sort = 'asc';
+			$date_condition = "show_expire >= '" . GIGPRESS_NOW . "'";
+			if(!isset($sort)) $sort = 'asc';
 			break;
 		case 'past':
-			$condition = "< '" . GIGPRESS_NOW . "'";
-			$sort = 'desc';
+			$date_condition = "show_expire < '" . GIGPRESS_NOW . "'";
+			if(!isset($sort)) $sort = 'desc';
+			break;
+		case 'today':
+			$date_condition = "show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
+			if(!isset($sort)) $sort = 'asc';
 			break;
 		case 'all':
-			$condition = "!= ''";
-			$sort = 'desc';
-	}	
+			$date_condition = "show_expire != ''";
+			if(!isset($sort)) $sort = 'desc';
+			break;
+	}
 	
 	// Artist, tour and venue filtering
 	if($artist) $further_where .= ' AND show_artist_id = ' . $wpdb->prepare('%d', $artist);
@@ -72,12 +78,12 @@ function gigpress_shows($filter = null, $content = null) {
 	// At the very least we need a valid year to filter by date
 	if($year && (strlen($year) == 4 || $year == 'current')) {
 	
-		if($year == 'current') $year = date('Y');
+		if($year == 'current') $year = date('Y', current_time('timestamp'));
 		
 		// Figure out if we want a specific month
 		if($month) {
 			if($month == 'current') {
-				$month = date('m');
+				$month = date('m', current_time('timestamp'));
 			} elseif(round($month) == 0) {
 				// Probably using a month name
 				$month = date('m', strtotime($month));
@@ -138,7 +144,7 @@ function gigpress_shows($filter = null, $content = null) {
 		$artists = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " ORDER BY " . $artist_order . "artist_name ASC");
 		
 		foreach($artists as $artist_group) {
-			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire $condition AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id $further_where ORDER BY s.show_date $sort,s.show_time $sort $limit");
+			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_time ". $sort . $limit);
 			
 			if($shows) {
 				// For each artist group
@@ -194,7 +200,7 @@ function gigpress_shows($filter = null, $content = null) {
 		// Not grouping by artists
 
 		$shows = $wpdb->get_results("
-			SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire " . $condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id $further_where ORDER BY $orderby show_date $sort,show_time $sort $limit");
+			SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY " . $orderby . " show_date " . $sort . ",show_time " . $sort . $limit);
 				
 		if($shows) {
 		
@@ -261,13 +267,13 @@ function gigpress_menu($options = null) {
 	// Date conditionals based on scope
 	switch($scope) {
 		case 'upcoming':
-			$condition = ">= '" . GIGPRESS_NOW . "'";
+			$date_condition = ">= '" . GIGPRESS_NOW . "'";
 			break;
 		case 'past':
-			$condition = "< '" . GIGPRESS_NOW . "'";
+			$date_condition = "< '" . GIGPRESS_NOW . "'";
 			break;
 		case 'all':
-			$condition = "!= ''";
+			$date_condition = "!= ''";
 	}
 	
 	$further_where = '';
@@ -293,11 +299,11 @@ function gigpress_menu($options = null) {
 	
 	// Build query
 	$dates = $wpdb->get_results("
-		SELECT YEAR(show_date) AS year, $sql_select_extra count(show_id) as shows 
+		SELECT YEAR(show_date) AS year, " . $sql_select_extra . " count(show_id) as shows 
 		FROM ".GIGPRESS_SHOWS." 
 		WHERE show_status != 'deleted' 
-		AND show_date $condition $further_where 
-		GROUP BY YEAR(show_date)$sql_group_extra 
+		AND show_date " . $date_condition . $further_where . " 
+		GROUP BY YEAR(show_date)" . $sql_group_extra . " 
 		ORDER BY show_date desc");
 	
 	ob_start();

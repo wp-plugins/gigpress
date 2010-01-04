@@ -20,6 +20,16 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+=2.1.2=
+
+* Added new "today" option for the "scope" parameter of the `[gigpress_shows]` shortcode to display only shows happening today
+* Added new "sort" parameter to the `[gigpress_shows]` shortcode to control date sorting
+* Added option to the widget to display only shows happening today
+* Fixed a bug where linebreaks and other characters in the "notes" field could break the iCalendar format
+* Fixed a bug which allowed the entry of shows with no artist
+* Fixed a bug introduced in 2.1 where server time was being used rather than WordPress GMT offset time
+* Some small fixes for iCal feeds
+
 =2.1.1=
 
 * Fixed bug where widget title would not display

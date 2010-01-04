@@ -151,6 +151,8 @@ function gigpress_error_checking($context) {
 		case 'show':
 			if(empty($_POST['show_venue_id']))
 				$errors['show_venue_id'] = __("You must select a venue.", "gigpress");
+			if(empty($_POST['show_artist_id']))
+				$errors['artist_name'] = __("You must select an artist.", "gigpress");
 			if($_POST['show_artist_id'] == 'new' && empty($_POST['artist_name']))
 				$errors['artist_name'] = __("You must enter an artist name.", "gigpress");
 			if($_POST['show_venue_id'] == 'new' && empty($_POST['venue_name']))

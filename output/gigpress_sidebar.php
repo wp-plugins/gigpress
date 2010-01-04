@@ -24,7 +24,8 @@ class Gigpress_widget extends WP_Widget
 		$instance = array();
 		$allowed = array(
 			'title', 
-			'limit', 
+			'limit',
+			'scope',
 			'show_tours', 
 			'group_artists', 
 			'artist_order',
@@ -57,7 +58,8 @@ class Gigpress_widget extends WP_Widget
 		
 		$defaults = array(
 			'title' => 'Upcoming shows', 
-			'limit' => 5, 
+			'limit' => 5,
+			'scope' => 'upcoming',
 			'show_tours' => 'no',
 			'group_artists' => 'no',
 			'artist_order' => 'alphabetical', 
@@ -78,6 +80,17 @@ class Gigpress_widget extends WP_Widget
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
+		
+		<p>
+			<select style="width:100%;" id="<?php echo $this->get_field_id('scope'); ?>" name="<?php echo $this->get_field_name('scope'); ?>">	
+				<option value="upcoming"<?php if($scope == 'upcoming') echo ' selected="selected"'; ?> /> 
+					<?php _e('Display upcoming shows', 'gigpress'); ?>
+				</option>
+				<option value="today"<?php if($scope == 'today') echo ' selected="selected"'; ?> /> 
+					<?php _e("Display today's shows", 'gigpress'); ?>
+				</option>
+			</select>
+		</p>		
 
 		<p>
 			<label for="<?php echo $this->get_field_id('limit'); ?>"><?php _e('Number of shows to list', 'gigpress'); ?>: 
@@ -190,6 +203,10 @@ function gigpress_sidebar($filter = null) {
 	// Check total number of artists
 	$total_artists = $wpdb->get_var("SELECT count(*) from " . GIGPRESS_ARTISTS);
 	
+	//  Upcoming or Today?
+	$date_condition = ($scope == 'upcoming') ? "show_expire >= '".GIGPRESS_NOW."'" : 
+		"show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
+	
 	// Number of shows to list (per artist if grouping by artist)	
 	$limit = (isset($filter['limit']) && is_numeric($filter['limit'])) ? $wpdb->prepare('%d', $filter['limit']) : 5;
 	
@@ -229,7 +246,7 @@ function gigpress_sidebar($filter = null) {
 		
 		foreach($artists as $artist_group) {
 		
-			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire >= '" . GIGPRESS_NOW . "' AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
+			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
 			
 			if($shows) {
 				// For each artist group
@@ -303,7 +320,7 @@ function gigpress_sidebar($filter = null) {
 
 		// Not grouping by artists
 
-		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire >= '" . GIGPRESS_NOW . "' AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
+		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
 			
 		if($shows) {
 			
