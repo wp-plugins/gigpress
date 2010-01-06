@@ -20,15 +20,15 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
-=2.1.4=
+= 2.1.4 =
 
 * Fixed another bug introduced in 2.1.2 where the default scope for `gigpress_sidebar()` was "today" rather than "upcoming"
 
-=2.1.3=
+= 2.1.3 =
 
 * Fixed bug introduced in 2.1.2 where widget listing was broken. Oops.
 
-=2.1.2=
+= 2.1.2 =
 
 * Added new "today" option for the "scope" parameter of the `[gigpress_shows]` shortcode to display only shows happening today
 * Added new "sort" parameter to the `[gigpress_shows]` shortcode to control date sorting
@@ -38,7 +38,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * Fixed a bug introduced in 2.1 where server time was being used rather than WordPress GMT offset time
 * Some small fixes for iCal feeds
 
-=2.1.1=
+= 2.1.1 =
 
 * Fixed bug where widget title would not display
 
