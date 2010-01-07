@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.5 =
+
+* Fixed PHP error introduced in 2.1 caused by the Related Post menu when editing shows
+
 = 2.1.4 =
 
 * Fixed another bug introduced in 2.1.2 where the default scope for `gigpress_sidebar()` was "today" rather than "upcoming"
