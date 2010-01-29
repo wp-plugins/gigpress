@@ -100,7 +100,8 @@
 			
 			<?php if($showdata['ticket_link']) : ?>
 				<span class="gigpress-info-item"><?php echo $showdata['ticket_link']; ?></span>
-			<?php endif; ?>			
+			<?php endif; ?>
+					
 		
 		</td>
 	

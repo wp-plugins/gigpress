@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.1.5
+Version: 2.1.6
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -28,7 +28,7 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.5');
+define('GIGPRESS_VERSION', '2.1.6');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
@@ -221,6 +221,7 @@ function gigpress_prepare($show, $scope = 'public') {
 		$showdata['iso_end_date'] = $show->show_expire." ".$show->show_time;
 		$showdata['notes'] = wptexturize($show->show_notes);
 		$showdata['price'] = wptexturize($show->show_price);
+		$showdata['related_id'] = ($show->show_related) ? $show->show_related : 0;
 		$showdata['related_url'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'url') : '';
 		$showdata['related_edit'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'edit') : '';
 		$showdata['related_link'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'view') : '';

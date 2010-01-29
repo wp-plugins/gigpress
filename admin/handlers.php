@@ -873,13 +873,14 @@ function gigpress_import() {
 		
 		}
 		
+		// Bye-bye
+		unlink($upload['file']);
+	
 	} else {
 		// The upload failed
 		echo('<div id="message" class="error fade"><p>' . __("Sorry, but there was an error uploading", "gigpress") . ' <strong>' . $_FILES['gp_import']['name'] . '</strong>: ' . $upload['error'] . '.</p></div>');
 	}
-	
-	// Bye-bye
-	unlink($upload['file']);
+
 }
 
 

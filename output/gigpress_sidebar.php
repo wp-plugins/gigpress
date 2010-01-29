@@ -203,10 +203,21 @@ function gigpress_sidebar($filter = null) {
 	// Check total number of artists
 	$total_artists = $wpdb->get_var("SELECT count(*) from " . GIGPRESS_ARTISTS);
 	
-	//  Upcoming or Today?
-	$date_condition = ($filter['scope'] == 'today') 
-		? "show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'"
-		: "show_expire >= '".GIGPRESS_NOW."'";
+	// Scope
+	switch($filter['scope']) {
+		case 'today':
+			$date_condition = "show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
+			break;
+		case 'past':
+			$date_condition = "show_expire < '".GIGPRESS_NOW."'";
+			break;
+		case 'all':
+			$date_condition = "show_date != ''";
+			break;
+		default:
+			$date_condition = "show_expire >= '".GIGPRESS_NOW."'";	
+	}
+
 	
 	// Number of shows to list (per artist if grouping by artist)	
 	$limit = (isset($filter['limit']) && is_numeric($filter['limit'])) ? $wpdb->prepare('%d', $filter['limit']) : 5;

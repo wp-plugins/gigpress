@@ -20,6 +20,15 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.6 =
+
+* Added `$showdata['related_id']` to the list of available template variables, containing the ID of the show's related post
+* Removed CDATA block from the title element of the GigPress RSS feed, as it was preventing character entities from being properly displayed in some readers
+* Now assuming a "year" paremeter of "current" when only a "month" parameter is passed to the shortcode
+* Added "past" and "all" as valid values for the "scope" argument to the `gigpress_sidebar()` function
+* Corrected file name of the Swedish translation
+* Small bug fix for the CSV import routine
+
 = 2.1.5 =
 
 * Fixed PHP error introduced in 2.1 caused by the Related Post menu when editing shows

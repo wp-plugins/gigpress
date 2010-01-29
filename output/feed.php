@@ -32,7 +32,7 @@ function gigpress_feed() {
 			<?php endif; ?>			
 			
 			<item>
-				<title><?php echo('<![CDATA['); ?><?php echo $showdata['artist'] . ' ' . __("in", "gigpress") . ' ' . $showdata['city'] . ' ' . __("on", "gigpress") . ' ' . $showdata['date']; ?>]]></title>
+				<title><?php echo $showdata['artist'] . ' ' . __("in", "gigpress") . ' ' . $showdata['city'] . ' ' . __("on", "gigpress") . ' ' . $showdata['date']; ?></title>
 				<description><?php echo('<![CDATA['); ?>
 			<ul>
 				<li><strong><?php echo wptexturize($gpo['artist_label']); ?>:</strong> <?php echo $showdata['artist']; ?></li>

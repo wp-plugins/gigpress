@@ -67,20 +67,30 @@ function gigpress_shows($filter = null, $content = null) {
 	// Query vars take precedence over function vars
 	if(isset($_REQUEST['gpy'])) { 
 		$year = $_REQUEST['gpy'];
+	
+		if(isset($_REQUEST['gpm'])) {
+			$month = $_REQUEST['gpm'];
+		} else {
+			unset($month);
+		}
 		$no_limit = TRUE;
 	}
 	
-	if(isset($_REQUEST['gpm'])) {
-		$month = $_REQUEST['gpm'];
-		$no_limit = TRUE;
-	}
 	
-	// At the very least we need a valid year to filter by date
-	if($year && (strlen($year) == 4 || $year == 'current')) {
+	// Validate year and date parameters
+	if($year || $month) {
 	
-		if($year == 'current') $year = date('Y', current_time('timestamp'));
+		if($year) {
+			if(is_numeric($year) && strlen($year) == 4) {
+				$year = round($year);
+			} else {
+				$year = date('Y', current_time('timestamp'));
+			}
+		} else {
+			// We've only specified a month, so we'll assume the year is current
+			$year = date('Y', current_time('timestamp'));
+		}
 		
-		// Figure out if we want a specific month
 		if($month) {
 			if($month == 'current') {
 				$month = date('m', current_time('timestamp'));
@@ -110,6 +120,7 @@ function gigpress_shows($filter = null, $content = null) {
 		$end = $year.'-'.$end_month.'-31';
 		$further_where .= ' AND show_date BETWEEN '.$wpdb->prepare('%s', $start).' AND '.$wpdb->prepare('%s', $end);
 	}
+
 	
 	$limit = ($limit && !$no_limit) ? ' LIMIT ' . $wpdb->prepare('%d', $limit) : '';
 	$artist_order = ($artist_order == 'custom') ?  "artist_order ASC," : '';
