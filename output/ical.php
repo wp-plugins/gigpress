@@ -60,8 +60,8 @@ DESCRIPTION;CHARSET=" . get_bloginfo('charset') . ':' . $showdata['calendar_deta
 LOCATION;CHARSET=" . get_bloginfo('charset') . ':' . $showdata['calendar_location'] . "
 UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "
 URL:" . $showdata['permalink'] . "
-DTSTART;VALUE=DATE:" . $showdata['calendar_start'] . "
-DTEND;VALUE=DATE:" . $showdata['calendar_end'] . "
+DTSTART;VALUE=DATE;TZID=Etc/GMT:" . $showdata['calendar_start'] . "
+DTEND;VALUE=DATE;TZID=Etc/GMT:" . $showdata['calendar_end'] . "
 DTSTAMP:" . date('Ymd') . 'T' . date('his') . 'Z' . "
 END:VEVENT
 ");

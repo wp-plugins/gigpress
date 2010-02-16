@@ -20,6 +20,15 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.7 =
+
+* Added "sort" as a valid argument to `gigpress_sidebar()` function options
+* Some changes to the iCalendar date format for better timezone support
+* Fixed GMT offset in RSS feeds
+* Optimized "Shows" and "Venues" administration screens to reduce memory use
+* Added Italian translation (thanks to Chiara Esposito)
+* Added `$showdata['date_mysql']` and `$showdata['end_date_mysql']` variables to the `$showdata` array
+
 = 2.1.6 =
 
 * Added `$showdata['related_id']` to the list of available template variables, containing the ID of the show's related post

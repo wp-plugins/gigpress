@@ -51,7 +51,7 @@
 		<td class="gigpress-links-cell">
 			<?php
 			// Only show these links if this show is in the future
-			if($scope == 'upcoming') : ?>
+			if($scope != 'past') : ?>
 			<div class="gigpress-calendar-add">
 				<a class="gigpress-links-toggle" href="#calendar-links-<?php echo $showdata['id']; ?>">Add</a>
 				<div class="gigpress-calendar-links" id="calendar-links-<?php echo $showdata['id']; ?>">

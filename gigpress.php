@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.1.6
+Version: 2.1.7
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -28,7 +28,7 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.6');
+define('GIGPRESS_VERSION', '2.1.7');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
@@ -164,6 +164,27 @@ function gigpress_template($path) {
 }
 
 
+function gigpress_get_O_offset($offset) {
+	
+	$first = substr($offset, 0, 1);
+	$length = strlen($offset);
+	
+	switch($first) {
+		// Deal with GMT first
+		case '0':
+			return '+0000';
+			break;
+		// Negative offset ($length is either 2 or 3)
+		case '-':
+			return ($length == 3) ? $offset.'00' : '-0'.substr($offset, 1, 2).'00';
+			break;
+		// Positive offset ($length is either 1 or 2)
+		default:
+			return ($length == 2) ? '+'.$offset.'00' : '+0'.$offset.'00';
+	}
+}
+
+
 function gigpress_prepare($show, $scope = 'public') {
 	
 	// This function takes an array for one show ($show)
@@ -171,6 +192,7 @@ function gigpress_prepare($show, $scope = 'public') {
 	// prepared for various outputs based on context and GigPress settings
 	
 	global $wpdb, $gp_countries, $gpo;
+	
 	$target = ($gpo['target_blank'] == 1) ? ' target="_blank" title="(' . __("opens in a new window", "gigpress") . ')"' : '';	
 
 	$showdata = array();
@@ -213,8 +235,10 @@ function gigpress_prepare($show, $scope = 'public') {
 		}
 		$showdata['date'] = ($show->show_related && $gpo['relatedlink_date'] == 1 && $scope == 'public') ? '<a href="' . gigpress_related_link($show->show_related, "url") . '">' . mysql2date($gpo['date_format'], $show->show_date) . '</a>' : mysql2date($gpo['date_format'], $show->show_date);
 		$showdata['date_long'] = mysql2date($gpo['date_format_long'], $show->show_date);		
+		$showdata['date_mysql'] = $show->show_date;		
 		$showdata['end_date'] = ($show->show_date != $show->show_expire) ? mysql2date($gpo['date_format'], $show->show_expire) : '';
 		$showdata['end_date_long'] = ($show->show_date != $show->show_expire) ? mysql2date($gpo['date_format_long'], $show->show_expire) : '';
+		$showdata['end_date_mysql'] = $show->show_expire;		
 		$showdata['ical'] = '<a href="' . GIGPRESS_ICAL . '&amp;show_id=' . $show->show_id . '">' . __("Download iCal", "gigpress") . '</a>';
 		$showdata['id'] = $show->show_id;
 		$showdata['iso_date'] = $show->show_date." ".$show->show_time;
@@ -225,7 +249,7 @@ function gigpress_prepare($show, $scope = 'public') {
 		$showdata['related_url'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'url') : '';
 		$showdata['related_edit'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'edit') : '';
 		$showdata['related_link'] = ($show->show_related) ? gigpress_related_link($show->show_related, 'view') : '';
-		$showdata['rss_date'] = mysql2date('D, d M Y', $show->show_date, false). " ". $show->show_time." " . date('O');
+		$showdata['rss_date'] = mysql2date('D, d M Y', $show->show_date, false). " ". $show->show_time." " . gigpress_get_O_offset(get_option('gmt_offset'));
 		$showdata['status'] = $show->show_status;
 		switch($showdata['status']) {
 			case 'active': $showdata['ticket_link'] = ($show->show_tix_url && $show->show_expire >= GIGPRESS_NOW) ? '<a href="' . gigpress_check_url($show->show_tix_url)  . '"' . $target . ' class="gigpress-tickets-link">' . __("Buy tickets", "gigpress") . '</a>' : '';

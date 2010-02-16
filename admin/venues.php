@@ -2,7 +2,7 @@
 
 function gigpress_venues() {
 
-	global $wpdb;
+	global $wpdb, $gpo;
 	
 	if(isset($_POST['gpaction']) && $_POST['gpaction'] == "add") {
 		require_once('handlers.php');
@@ -18,9 +18,7 @@ function gigpress_venues() {
 		require_once('handlers.php');
 		gigpress_delete_venue();		
 	}
-	
-	$gpo = get_option('gigpress_settings');	
-	
+		
 	$url_args = (isset($_GET['gp-page'])) ? '&amp;gp-page=' . $_GET['gp-page'] : '';
 
 	?>
@@ -157,15 +155,13 @@ function gigpress_venues() {
 			<p><?php _e("Note that you cannot delete a venue while it has shows in the database.", "gigpress"); ?></p>
 		</div>
 	<?php
-		$venues = $wpdb->get_results("SELECT * FROM ". GIGPRESS_VENUES ." ORDER BY venue_name ASC");
-		if($venues) {
+		$venue_count = $wpdb->get_var("SELECT COUNT(*) FROM ". GIGPRESS_VENUES);
+		if($venue_count) {
 			$pagination_args['page'] = 'gigpress-venues';
-			$pagination = gigpress_admin_pagination(count($venues), 15, $pagination_args);
-			if($pagination) {
-				$venues = array_slice($venues, $pagination['offset'], $pagination['records_per_page']);
-				echo $pagination['output'];
-			}
+			$pagination = gigpress_admin_pagination($venue_count, 15, $pagination_args);
+			if($pagination) echo $pagination['output'];
 		}
+		$limit = (isset($_GET['gp-page'])) ? $pagination['offset'].','.$pagination['records_per_page'] : 15;	
 	?>
 		<div class="clear"></div>
 	</div>
@@ -185,6 +181,7 @@ function gigpress_venues() {
 		</thead>
 		<tbody>
 	<?php
+		$venues = $wpdb->get_results("SELECT * FROM ". GIGPRESS_VENUES ." ORDER BY venue_name ASC LIMIT ". $limit);
 		if($venues) {
 						
 			foreach($venues as $venue) {

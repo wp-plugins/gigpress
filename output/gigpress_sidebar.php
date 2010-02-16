@@ -203,16 +203,22 @@ function gigpress_sidebar($filter = null) {
 	// Check total number of artists
 	$total_artists = $wpdb->get_var("SELECT count(*) from " . GIGPRESS_ARTISTS);
 	
+	// Check for sorting
+	if(isset($filter['sort'])) $sort = $filter['sort'];
+	
 	// Scope
 	switch($filter['scope']) {
 		case 'today':
 			$date_condition = "show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
+			if(!isset($sort)) $sort = 'asc';
 			break;
 		case 'past':
 			$date_condition = "show_expire < '".GIGPRESS_NOW."'";
+			if(!isset($sort)) $sort = 'desc';
 			break;
 		case 'all':
 			$date_condition = "show_date != ''";
+			if(!isset($sort)) $sort = 'desc';
 			break;
 		default:
 			$date_condition = "show_expire >= '".GIGPRESS_NOW."'";	
@@ -258,7 +264,7 @@ function gigpress_sidebar($filter = null) {
 		
 		foreach($artists as $artist_group) {
 		
-			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
+			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_time " . $sort . " LIMIT " . $limit);
 			
 			if($shows) {
 				// For each artist group
@@ -332,7 +338,7 @@ function gigpress_sidebar($filter = null) {
 
 		// Not grouping by artists
 
-		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date ASC,s.show_time ASC LIMIT " . $limit);
+		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_time " . $sort . " LIMIT " . $limit);
 			
 		if($shows) {
 			
