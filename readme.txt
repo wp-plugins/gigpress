@@ -20,6 +20,13 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.8 =
+
+* Fixed timezone issues with iCal feeds imported into Google Calendar (thanks to Michael Delaney)
+* Now using WP's `clean_url()` function on inputted URLs in place of my far-less-robust version
+* Added `[gigpress_related_shows]` shortcode for manual placement of related show info in posts
+* Updates to German localization (thanks to Georg Fischer)
+
 = 2.1.7 =
 
 * Added "sort" as a valid argument to `gigpress_sidebar()` function options

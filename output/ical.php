@@ -52,16 +52,24 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 X-WR-TIMEZONE:Etc/GMT
 METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:GMT
+BEGIN:STANDARD
+DTSTART:20071028T010000
+TZOFFSETTO:+0000
+TZOFFSETFROM:+0000
+END:STANDARD
+END:VTIMEZONE
 ");
 			}
 echo("BEGIN:VEVENT
-SUMMARY;CHARSET=" . get_bloginfo('charset') . ':' . $showdata['calendar_summary'] . "
-DESCRIPTION;CHARSET=" . get_bloginfo('charset') . ':' . $showdata['calendar_details'] . "
-LOCATION;CHARSET=" . get_bloginfo('charset') . ':' . $showdata['calendar_location'] . "
+SUMMARY:" . $showdata['calendar_summary'] . "
+DESCRIPTION:" . $showdata['calendar_details'] . "
+LOCATION:" . $showdata['calendar_location'] . "
 UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "
 URL:" . $showdata['permalink'] . "
-DTSTART;VALUE=DATE;TZID=Etc/GMT:" . $showdata['calendar_start'] . "
-DTEND;VALUE=DATE;TZID=Etc/GMT:" . $showdata['calendar_end'] . "
+DTSTART;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_start'] . "
+DTEND;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_end'] . "
 DTSTAMP:" . date('Ymd') . 'T' . date('his') . 'Z' . "
 END:VEVENT
 ");

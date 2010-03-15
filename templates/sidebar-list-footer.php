@@ -13,7 +13,7 @@
 
 <?php // Show the "more" link if specified
 if($link) : ?>
-	<p class="gigpress-sidebar-more"><a href="<?php echo gigpress_check_url($gpo['shows_page']); ?>" title="<?php echo $link; ?>"><?php echo $link; ?></a></p>
+	<p class="gigpress-sidebar-more"><a href="<?php echo $gpo['shows_page']; ?>" title="<?php echo $link; ?>"><?php echo $link; ?></a></p>
 <?php endif; ?>
 
 <?php // Show the RSS/iCal links if specified

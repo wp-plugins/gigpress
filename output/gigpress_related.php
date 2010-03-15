@@ -1,10 +1,11 @@
 <?php
 
-function gigpress_show_related($content) {
+function gigpress_show_related($content = '') {
 	
 	global $is_excerpt, $wpdb, $gpo, $post;
 	if( $is_excerpt == TRUE || !is_object($post) ) {
-		$is_excerpt = FALSE; return $content;
+		$is_excerpt = FALSE;
+		return $content;
 	} else {
 	
 		$shows = $wpdb->get_results(

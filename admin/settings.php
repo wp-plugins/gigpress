@@ -94,7 +94,7 @@ function gigpress_settings() {
 				<p><?php _e("Display gig info in related posts", "gigpress"); ?> &hellip;</p>
 				<p><label><input type="radio" name="gigpress_settings[related_position]" value="before"<?php if($gpo['related_position'] == "before") echo(' checked="checked"'); ?> /> <?php _e("before the post content", "gigpress"); ?></label> &hellip; 
 				<label><input type="radio" name="gigpress_settings[related_position]" value="after"<?php if($gpo['related_position'] == "after") echo(' checked="checked"'); ?> /> <?php _e("after the post content", "gigpress"); ?></label> &hellip; 
-				<label><input type="radio" name="gigpress_settings[related_position]" value="nowhere"<?php if($gpo['related_position'] == "nowhere") echo(' checked="checked"'); ?> /> <?php _e("nowhere at all", "gigpress"); ?></label></p>
+				<label><input type="radio" name="gigpress_settings[related_position]" value="nowhere"<?php if($gpo['related_position'] == "nowhere") echo(' checked="checked"'); ?> /> <?php _e("using <code>[gigpress_related_shows]</code>", "gigpress"); ?></label></p>
 				<span class="description"><?php _e("If a gig has a related post, that gig's details will appear at the specified position in that post.", "gigpress"); ?></span>
 			</td>
 		</tr>
