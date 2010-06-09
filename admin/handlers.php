@@ -825,10 +825,16 @@ function gigpress_import() {
 						'show_price' => gigpress_db_in($show['Price']),
 						'show_tix_url' => gigpress_db_in($show['Ticket URL']),
 						'show_tix_phone' => gigpress_db_in($show['Ticket phone']),
-						'show_notes' => gigpress_db_in($show['Notes'], FALSE)
+						'show_notes' => gigpress_db_in($show['Notes'], FALSE),
+						'show_related' => '0'
 					);
 					
-					$formats = array('%s','%s','%d','%s','%d','%d','%d','%s','%s','%s','%s','%s');
+					// Are we importing related post IDs?
+					if(isset($_POST['include_related']) && $_POST['include_related'] = 'y') {
+						$new_show['show_related'] = $show['Related ID'];
+					}
+					
+					$formats = array('%s','%s','%d','%s','%d','%d','%d','%s','%s','%s','%s','%s','%d');
 					
 					$import = $wpdb->insert(GIGPRESS_SHOWS, $new_show, $formats);
 					

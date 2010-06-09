@@ -98,7 +98,7 @@ function gigpress_admin_shows() {
 	
 	// Build the query	
 	$shows = $wpdb->get_results("
-		SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire " . $condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . "ORDER BY show_date " . $sort . ",show_time " . $sort . " LIMIT " . $limit);
+		SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_expire " . $condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . "ORDER BY show_date " . $sort . ",show_expire " . $sort . ",show_time " . $sort . " LIMIT " . $limit);
 
 	?>
 		

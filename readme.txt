@@ -3,7 +3,7 @@ Contributors: mrherbivore
 Donate link: http://gigpress.com/donate
 Tags: concerts, bands, tours, shows, record labels, music, musicians, performers, artists
 Requires at least: 2.8
-Tested up to: 2.9
+Tested up to: 3.0
 
 GigPress is a live performance listing and management plugin built for musicians and performers.
 
@@ -16,9 +16,19 @@ GigPress is a powerful live performance listing and management plugin designed f
 * GigPress features RSS and iCalendar feeds for your upcoming shows and for individual artists and tours, plus Google Calendar and iCal download links for each individual show. Also: hCalendar markup!
 * Advanced users can fully-customize the HTML and CSS used by GigPress to display your shows without altering any plugin files, making all changes upgrade-safe.
 * Link up a related post for each show and your show's full details will appear within your post. Automatically create new related posts with customizable titles when entering new shows.
-* No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV -- filtered by artist, tour, and date.
+* No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV - filtered by artist, tour, and date.
 
 == Changelog ==
+
+= 2.1.9 =
+
+* Tested in WordPress 3.0
+* Added "sort" as a valid argument to `gigpress_menu()` ("menu_sort" when used as part of the shortcode)
+* Added "sort" and "scope" as valid arguments to the `[gigpress_related_shows]` shortcode
+* Shows are now further ordered by their end date everywhere (for shows starting on the same day but ending on different days)
+* You can now optionally maintain Related Post associations when importing from a GigPress-generated CSV file
+* Fixed a bug where related posts weren't appearing in search results when the specified related posts category was excluded from normal listings
+* Replaced now-deprecated `clean_url()` calls with `esc_url()`
 
 = 2.1.8 =
 
@@ -83,7 +93,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * New `year` and `month` parameters for `[gigpress_shows]` shortcode for filtering shows by date
 * Added *before-menu* and *after-menu* templates for surrounding the new dropdown menu
 * Added bulk-deletion of shows
-* Fixed issue where show->post relationships were lost when shows who's related post was outside of the last 100 posts
+* Fixed issue where show->post relationships were lost when shows whose related post was outside of the last 100 posts
 * Increased related post dropdown listing from 100 to 500 posts
 * Updated default templates to not show gCal and iCal links when displaying past shows
 * More fixes for certain strict MySQL configurations

@@ -29,6 +29,7 @@ function gigpress_shows($filter = null, $content = null) {
 			'artist_order' => 'custom',
 			'show_menu' => FALSE,
 			'show_menu_count' => FALSE,
+			'menu_sort' => FALSE,
 			'menu_title' => FALSE,
 			'year' => FALSE,
 			'month' => FALSE
@@ -138,6 +139,7 @@ function gigpress_shows($filter = null, $content = null) {
 		$menu_options['type'] = $show_menu;
 		if($menu_title) $menu_options['title'] = $menu_title;
 		if($show_menu_count) $menu_options['show_count'] = $show_menu_count;
+		if($menu_sort) $menu_options['sort'] = $menu_sort;
 		if($artist) $menu_options['artist'] = $artist;
 		if($tour) $menu_options['tour'] = $tour;
 		if($venue) $menu_options['venue'] = $venue;
@@ -155,7 +157,7 @@ function gigpress_shows($filter = null, $content = null) {
 		$artists = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " ORDER BY " . $artist_order . "artist_name ASC");
 		
 		foreach($artists as $artist_group) {
-			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_time ". $sort . $limit);
+			$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = " . $artist_group->artist_id . " AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_expire " . $sort . ",s.show_time ". $sort . $limit);
 			
 			if($shows) {
 				// For each artist group
@@ -211,7 +213,7 @@ function gigpress_shows($filter = null, $content = null) {
 		// Not grouping by artists
 
 		$shows = $wpdb->get_results("
-			SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY " . $orderby . " show_date " . $sort . ",show_time " . $sort . $limit);
+			SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY " . $orderby . " show_date " . $sort . ",s.show_expire " . $sort . ",show_time " . $sort . $limit);
 				
 		if($shows) {
 		
@@ -270,7 +272,8 @@ function gigpress_menu($options = null) {
 		'show_count' => FALSE,
 		'artist' => FALSE,
 		'tour' => FALSE,
-		'venue' => FALSE
+		'venue' => FALSE,
+		'sort' => 'desc'
 	), $options));
 	
 	$base .= (strpos($base, '?') === FALSE) ? '?' : '&amp;';
@@ -315,7 +318,7 @@ function gigpress_menu($options = null) {
 		WHERE show_status != 'deleted' 
 		AND show_date " . $date_condition . $further_where . " 
 		GROUP BY YEAR(show_date)" . $sql_group_extra . " 
-		ORDER BY show_date desc");
+		ORDER BY show_date " . $sort);
 	
 	ob_start();
 	

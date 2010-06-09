@@ -23,6 +23,9 @@ function gigpress_import_export() {
 					<?php wp_nonce_field('gigpress-action') ?>
 					<input type="hidden" name="gpaction" value="import" />
 					<input type="file" name="gp_import" />
+					<p>
+						<label><input type="checkbox" name="include_related" value="y" /> <?php _e("Include Related Post associations?", "gigpress"); ?></label>
+					</p>
 					<input type="submit" class="button" value="<?php _e("Upload CSV", "gigpress"); ?>" />
 				</div>
 			</form>
