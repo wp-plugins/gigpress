@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.9.1 =
+
+* Fix for future-dated posts not appearing in the related post menu
+
 = 2.1.9 =
 
 * Tested in WordPress 3.0
