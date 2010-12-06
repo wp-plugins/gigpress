@@ -26,6 +26,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * Fixed error with unquoted `init` action being interpreted as a constant
 * Removed deprecated numeric user level indicators, replaced with appropriate role-based permissions
 * Edited default templates to only display "Tour" label the "Tour" label setting is not empty
+* Added Polish and Simplified Chinese translations (thanks to Krystian Buczak and Liang Chuan)
 
 = 2.1.9.1 =
 
