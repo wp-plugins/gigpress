@@ -16,7 +16,7 @@
 <tbody>
 	<tr>
 		<th colspan="<?php echo $cols; ?>" class="gigpress-heading">
-			<?php echo wptexturize($gpo['tour_label']) . ': ' . $showdata['tour']; ?>
+			<?php if(isset($gpo['tour_label']) && !empty($gpo['tour_label'])) echo wptexturize($gpo['tour_label']) . ': '; echo $showdata['tour']; ?>
 		</th>
 	</tr>	
 </tbody>

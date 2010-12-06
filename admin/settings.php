@@ -40,10 +40,10 @@ function gigpress_settings() {
 			<th scope="row"><?php _e("User level required to use GigPress", "gigpress") ?>:</th>
 			<td>
 				<select name="gigpress_settings[user_level]">
-					<option value="8"<?php if ($gpo['user_level'] == '8') echo (' selected="selected"'); ?>><?php _e("Administrator", "gigpress"); ?></option>
-					<option value="5"<?php if ($gpo['user_level'] == '5') echo (' selected="selected"'); ?>><?php _e("Editor", "gigpress"); ?></option>
-					<option value="2"<?php if ($gpo['user_level'] == '2') echo (' selected="selected"'); ?>><?php _e("Author", "gigpress"); ?></option>
-					<option value="1"<?php if ($gpo['user_level'] == '1') echo (' selected="selected"'); ?>><?php _e("Contributor", "gigpress"); ?></option>
+					<option value="activate_plugins"<?php if ($gpo['user_level'] == 'activate_plugins') echo (' selected="selected"'); ?>><?php _e("Administrator", "gigpress"); ?></option>
+					<option value="edit_published_posts"<?php if ($gpo['user_level'] == 'edit_published_posts') echo (' selected="selected"'); ?>><?php _e("Editor", "gigpress"); ?></option>
+					<option value="publish_posts"<?php if ($gpo['user_level'] == 'publish_posts') echo (' selected="selected"'); ?>><?php _e("Author", "gigpress"); ?></option>
+					<option value="edit_posts"<?php if ($gpo['user_level'] == 'edit_posts') echo (' selected="selected"'); ?>><?php _e("Contributor", "gigpress"); ?></option>
 				</select>
 			</td>
 		</tr>

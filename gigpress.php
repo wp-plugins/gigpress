@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.1.9.1
+Version: 2.1.10
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -28,13 +28,13 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.9.1');
+define('GIGPRESS_VERSION', '2.1.10');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
 define('GIGPRESS_WEBCAL', str_replace('http://', 'webcal://', GIGPRESS_ICAL));
 define('GIGPRESS_URL', ($gpo['shows_page']) ? esc_url($gpo['shows_page']) : get_bloginfo('url'));
-define('GIGPRESS_NOW', date('Y-m-d', current_time('timestamp')));
+define('GIGPRESS_NOW', substr(current_time('mysql'), 0, 10));
 define('GIGPRESS_DEBUG', '');
 
 // Pull in all of our required files
@@ -555,8 +555,8 @@ function fetch_gigpress_venues() {
 register_activation_hook(__FILE__,'gigpress_install');
 register_uninstall_hook(__FILE__, 'gigpress_uninstall');
 
-add_action(init,'add_gigpress_feeds');
-add_action(init,'gigpress_intl');
+add_action('init','add_gigpress_feeds');
+add_action('init','gigpress_intl');
 add_action('admin_init', 'register_gigpress_settings'); 
 add_action('admin_menu', 'gigpress_admin_menu');
 add_action('delete_post', 'gigpress_remove_related');

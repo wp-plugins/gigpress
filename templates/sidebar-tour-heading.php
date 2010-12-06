@@ -14,6 +14,6 @@
 ?>
 
 <li>
-	<span class="gigpress-list-tour-heading"><?php echo wptexturize($gpo['tour_label']) . ': ' . $showdata['tour']; ?></span>
+	<span class="gigpress-list-tour-heading"><?php if(isset($gpo['tour_label']) && !empty($gpo['tour_label'])) echo wptexturize($gpo['tour_label']) . ': '; echo $showdata['tour']; ?></span>
 	<ul>
 	

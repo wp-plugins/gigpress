@@ -108,7 +108,7 @@ $default_settings = array(
 	'target_blank' => 0,
 	'time_format' => 'g:ia',
 	'tour_label' => 'Tour',
-	'user_level' => 2,
+	'user_level' => 'edit_posts',
 	'welcome' => 'yes'
 );
 
