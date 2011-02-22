@@ -20,9 +20,15 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.11 =
+
+* Updated front-end javascript to fix an incompatibility with plugins that rewrite all hash links to include the full site URL
+* Improved sanitation of data, especially in the Notes field
+* Fixed default sorting when using "past" show scope to properly display in descending order
+
 = 2.1.10 =
 
-* Changed GIGPRESS_NOW constant to compensate for bug in WordPress' `current_time()` function which was causing shows to epxire based on the server time rather than the WordPress localized time
+* Changed GIGPRESS_NOW constant to compensate for bug in WordPress' `current_time()` function which was causing shows to expire based on the server time rather than the WordPress localized time
 * Fixed error with unquoted `init` action being interpreted as a constant
 * Removed deprecated numeric user level indicators, replaced with appropriate role-based permissions
 * Edited default templates to only display the "Tour" label if the "Tour" label setting is not empty

@@ -42,19 +42,19 @@ function gigpress_shows($filter = null, $content = null) {
 	switch($scope) {
 		case 'upcoming':
 			$date_condition = "show_expire >= '" . GIGPRESS_NOW . "'";
-			if(!isset($sort)) $sort = 'asc';
+			if(empty($sort)) $sort = 'asc';
 			break;
 		case 'past':
 			$date_condition = "show_expire < '" . GIGPRESS_NOW . "'";
-			if(!isset($sort)) $sort = 'desc';
+			if(empty($sort)) $sort = 'desc';
 			break;
 		case 'today':
 			$date_condition = "show_expire >= '".GIGPRESS_NOW."' AND show_date <= '".GIGPRESS_NOW."'";
-			if(!isset($sort)) $sort = 'asc';
+			if(empty($sort)) $sort = 'asc';
 			break;
 		case 'all':
 			$date_condition = "show_expire != ''";
-			if(!isset($sort)) $sort = 'desc';
+			if(empty($sort)) $sort = 'desc';
 			break;
 	}
 	

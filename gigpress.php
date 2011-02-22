@@ -3,7 +3,7 @@
 Plugin Name: GigPress
 Plugin URI: http://gigpress.com
 Description: GigPress is a live performance listing and management plugin built for musicians and performers.
-Version: 2.1.10
+Version: 2.1.11
 Author: Derek Hogue
 Author URI: http://amphibian.info
 
@@ -28,7 +28,7 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.10');
+define('GIGPRESS_VERSION', '2.1.11');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
@@ -382,8 +382,12 @@ function gigpress_admin_pagination($total_records, $records_per_page, $args) {
 
 function gigpress_db_in($value, $strip_tags = TRUE) {
 	$value = stripslashes(trim($value));
-	if($strip_tags == TRUE)
-		$value = strip_tags($value);	
+	if($strip_tags == TRUE) {
+		$value = sanitize_text_field($value, TRUE);
+	} else {
+		global $allowedtags;
+		$value = wp_kses($value, $allowedtags);
+	}
 	return $value;
 }
 
