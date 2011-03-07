@@ -20,6 +20,11 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.13 =
+
+* Fixed formatting error when creating related post titles introduced in 2.1.11
+* Added "past" scope to sidebar widget
+
 = 2.1.12 =
 
 * Allowing more HTML in the notes field again, while still stripping script tags (some tags were disallowed in last update)

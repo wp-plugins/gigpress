@@ -89,6 +89,9 @@ class Gigpress_widget extends WP_Widget
 				<option value="today"<?php if($scope == 'today') echo ' selected="selected"'; ?>> 
 					<?php _e("Display today's shows", 'gigpress'); ?>
 				</option>
+				<option value="past"<?php if($scope == 'past') echo ' selected="selected"'; ?>> 
+					<?php _e("Display past shows", 'gigpress'); ?>
+				</option>
 			</select>
 		</p>		
 

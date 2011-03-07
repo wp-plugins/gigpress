@@ -88,7 +88,7 @@ function gigpress_prepare_show_fields() {
 		$venue = $wpdb->get_results("SELECT venue_name, venue_city FROM " . GIGPRESS_VENUES . " WHERE venue_id = " . $show['show_venue_id'] . "", ARRAY_A);
 		
 		// Prepare the post title
-		$token_title = (isset($_POST['show_related_title'])) ? gigpress_db_in($_POST['show_related_title']) : $gpo['default_title'];
+		$token_title = (isset($_POST['show_related_title'])) ? stripslashes(strip_tags(trim($_POST['show_related_title']))) : $gpo['default_title'];
 		$find = array('%date%', '%long_date%', '%artist%', '%venue%', '%city%');
 		$replace = array(
 			mysql2date($gpo['date_format'], $show['show_date']),
