@@ -13,10 +13,11 @@ function gigpress_prepare_show_fields() {
 	
 	$show = array();
 	$show['show_date'] = $_POST['gp_yy'] . '-' . $_POST['gp_mm'] . '-' . $_POST['gp_dd'];
-	if($_POST['gp_hh'] == "na" || $_POST['gp_min'] == "na") {
+	if($_POST['gp_hh'] == "na") {
 		$show['show_time'] = "00:00:01";
-	} else {	
-		$show['show_time'] = $_POST['gp_hh'] . ':' . $_POST['gp_min'] . ':00';
+	} else {
+		$min = ($_POST['gp_min'] == "na") ? '00' : $_POST['gp_min'];
+		$show['show_time'] = $_POST['gp_hh'] . ':' . $min . ':00';
 	}
 	// If it's not a multi-day show, we need to set the expire date to match the show date
 	if($_POST['show_multi'] != 1) {

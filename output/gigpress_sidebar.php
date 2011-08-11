@@ -199,7 +199,7 @@ function gigpress_load_widgets() {
 function gigpress_sidebar($filter = null) {
 
 	global $wpdb, $gpo;
-	$further_where = $orderby = '';
+	$further_where = '';
 
 	// Variables we need for conditionals
 	
@@ -253,7 +253,6 @@ function gigpress_sidebar($filter = null) {
 	if($artist) $further_where .= ' AND show_artist_id IN(' . $wpdb->prepare('%s', $artist).')';
 	if($tour) $further_where .= ' AND show_tour_id IN(' . $wpdb->prepare('%s', $tour).')';
 	if($venue) $further_where .= ' AND show_venue_id IN(' . $wpdb->prepare('%s', $venue).')';
-	if($group_artists) $orderby = 'a.artist_name ASC,';
 	$artist_order = ($artist_order == 'custom') ?  "artist_order ASC," : '';
 		
 	ob_start();
@@ -341,7 +340,7 @@ function gigpress_sidebar($filter = null) {
 
 		// Not grouping by artists
 
-		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_time " . $sort . " LIMIT " . $limit);
+		$shows = $wpdb->get_results("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE " . $date_condition . " AND show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id " . $further_where . " ORDER BY s.show_date " . $sort . ",s.show_expire " . $sort . ",s.show_time " . $sort . " LIMIT " . $limit);
 			
 		if($shows) {
 			

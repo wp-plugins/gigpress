@@ -30,7 +30,7 @@
 	
 <?php if($showdata['tour']) : ?>
 	<li>
-		<span class="gigpress-related-label"><?php echo wptexturize($gpo['tour_label']); ?>:</span> 
+		<?php if($gpo['tour_label'] != '') : ?><span class="gigpress-related-label"><?php echo wptexturize($gpo['tour_label']); ?>:</span> <?php endif; ?>
 		<span class="gigpress-related-item"><?php echo $showdata['tour']; ?></span>
 	</li>
 <?php endif; ?>

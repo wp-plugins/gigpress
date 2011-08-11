@@ -25,6 +25,7 @@
 				<?php echo $showdata['end_date']; ?>
 			</abbr>
 		<?php endif; ?>
+			<span class="hide url"><?php echo $showdata['url']; ?></span>
 		</td>
 		
 	<?php if((!$artist && $group_artists == 'no') && $total_artists > 1) : ?>

@@ -1,7 +1,7 @@
 <?php
 
 function gigpress_ical() {
-
+	
 	global $wpdb, $gpo;
 	$further_where = '';
 	if(isset($_GET['show_id'])) {
@@ -42,41 +42,46 @@ function gigpress_ical() {
 				$title = $gpo['rss_title'];
 			}
 
-			if($count == 1) {		
-header('Content-type: text/calendar');
-header('Content-Disposition: attachment; filename="' . $filename . '.ics"');
-echo("BEGIN:VCALENDAR
-X-WR-CALNAME:" . $title . "
-PRODID:GIGPRESS 2.0 WORDPRESS PLUGIN
-VERSION:2.0
-CALSCALE:GREGORIAN
-X-WR-TIMEZONE:Etc/GMT
-METHOD:PUBLISH
-BEGIN:VTIMEZONE
-TZID:GMT
-BEGIN:STANDARD
-DTSTART:20071028T010000
-TZOFFSETTO:+0000
-TZOFFSETFROM:+0000
-END:STANDARD
-END:VTIMEZONE
-");
+			if($count == 1) {
+				header('Content-type: text/calendar');
+				header('Content-Disposition: attachment; filename="' . $filename . '.ics"');	
+				echo("BEGIN:VCALENDAR\r\n" . 
+				"VERSION:2.0\r\n");
+				if($total > 1) {
+					echo("X-WR-CALNAME: $title\r\n");
+				}
+				echo("PRODID:GIGPRESS 2.0 WORDPRESS PLUGIN\r\n".
+				"CALSCALE:GREGORIAN\r\n".
+				"X-WR-TIMEZONE:Etc/GMT\r\n".
+				"METHOD:PUBLISH\r\n".
+				"BEGIN:VTIMEZONE\r\n".
+				"TZID:GMT\r\n".
+				"BEGIN:STANDARD\r\n".
+				"DTSTART:20071028T010000\r\n".
+				"TZOFFSETTO:+0000\r\n".
+				"TZOFFSETFROM:+0000\r\n".
+				"END:STANDARD\r\n".
+				"END:VTIMEZONE\r\n");
 			}
-echo("BEGIN:VEVENT
-SUMMARY:" . $showdata['calendar_summary'] . "
-DESCRIPTION:" . $showdata['calendar_details'] . "
-LOCATION:" . $showdata['calendar_location'] . "
-UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "
-URL:" . $showdata['permalink'] . "
-DTSTART;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_start'] . "
-DTEND;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_end'] . "
-DTSTAMP:" . date('Ymd') . 'T' . date('his') . 'Z' . "
-END:VEVENT
-");
-		if($count == $total) {
-echo("END:VCALENDAR");		
-		}
-		$count++;
+				echo("BEGIN:VEVENT\r\n" . 
+				"SUMMARY:" . $showdata['calendar_summary'] . "\r\n" .
+				"DESCRIPTION:" . $showdata['calendar_details'] . "\r\n" . 
+				"LOCATION:" . $showdata['calendar_location'] . "\r\n" . 
+				"UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "\r\n" .
+				"URL:" . $showdata['permalink'] . "\r\n");
+				if(strlen($showdata['calendar_start']) == 8) {
+					echo("DTSTART;VALUE=DATE;TZID=GMT:" . $showdata['calendar_start'] . 
+					"\r\nDTEND;VALUE=DATE;TZID=GMT:" . $showdata['calendar_end'] . "\r\n");
+				} else {
+					echo("DTSTART;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_start'] . "\r\n" . 
+					"DTEND;VALUE=DATE-TIME;TZID=GMT:" . $showdata['calendar_end'] . "\r\n");
+				}
+				echo("DTSTAMP:" . date('Ymd') . "T" . date('his') . "Z\r\n" . 
+				"END:VEVENT\r\n");
+				if($count == $total) {
+					echo("END:VCALENDAR");		
+				}
+			$count++;
 		}
 	} 
 }

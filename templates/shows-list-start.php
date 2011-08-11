@@ -20,7 +20,7 @@
 	$cols = ($gpo['display_country'] == 1) ? $cols + 1 : $cols;
 ?>
 
-<table class="gigpress-table <?php echo $scope; ?> hcalendar" cellspacing="0">
+<table class="gigpress-table <?php echo $scope; ?>" cellspacing="0">
 	<tbody>
 		<tr class="gigpress-header">
 			<th scope="col" class="gigpress-date"><?php _e("Date", "gigpress"); ?></th>
