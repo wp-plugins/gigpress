@@ -28,7 +28,7 @@ define('GIGPRESS_SHOWS', $wpdb->prefix . 'gigpress_shows');
 define('GIGPRESS_TOURS', $wpdb->prefix . 'gigpress_tours');
 define('GIGPRESS_ARTISTS', $wpdb->prefix . 'gigpress_artists');
 define('GIGPRESS_VENUES', $wpdb->prefix . 'gigpress_venues');
-define('GIGPRESS_VERSION', '2.1.14');
+define('GIGPRESS_VERSION', '2.1.15');
 define('GIGPRESS_DB_VERSION', '1.5');
 define('GIGPRESS_RSS', get_bloginfo('url') . '/?feed=gigpress');
 define('GIGPRESS_ICAL', get_bloginfo('url') . '/?feed=gigpress-ical');
@@ -99,7 +99,7 @@ function gigpress_admin_head()	{
 
 function gigpress_admin_footer() {
 	
-	echo(__("You're using", "gigpress").' <a href="http://gigpress.com">GigPress '.GIGPRESS_VERSION.'</a>. '. __("Like it?", "gigpress") . ' <a href="http://gigpress.com/donate">' . __("Make a donation", "gigpress") . '</a>. | ');
+	return (__("You're using", "gigpress").' <a href="http://gigpress.com">GigPress '.GIGPRESS_VERSION.'</a>. '. __("Like it?", "gigpress") . ' <a href="http://gigpress.com/donate">' . __("Make a donation", "gigpress") . '</a>.');
 }
 
 
@@ -230,12 +230,12 @@ function gigpress_prepare($show, $scope = 'public') {
 			if($show->show_venue_phone) $showdata['calendar_details'] .= __("Venue phone", "gigpress") . ': ' . $show->venue_phone . '. ';
 			if($show->show_notes) $showdata['calendar_details'] .= __("Notes", "gigpress") . ': ' . $show->show_notes . ' ';
 			$showdata['calendar_details'] .= $showdata['admittance'];
-			$showdata['calendar_details'] = str_replace(array(";",",","\n","\r"), array('\;','\,',' ',' '), $showdata['calendar_details']);
+			$showdata['calendar_details_ical'] = str_replace(array(";",",","\n","\r"), array('\;','\,',' ',' '), $showdata['calendar_details']);
 		$showdata['calendar_location'] = $show->venue_name . ", ";
 			if($show->venue_address) $showdata['calendar_location'] .= $show->venue_address . ", ";
 			$showdata['calendar_location'] .= $show->venue_city . ", " . $show->venue_country;
 		$show->venue_city . ", " . $show->venue_country;
-		$showdata['calendar_location'] = str_replace(",", "\,", $showdata['calendar_location']);
+		$showdata['calendar_location_ical'] = str_replace(",", "\,", $showdata['calendar_location']);
 		$showdata['calendar_start'] = ($timeparts[2] == '01') ? str_replace('-', '', $show->show_date) : str_replace(array('-',':',' '), array('','','T'), get_gmt_from_date($show->show_date . ' ' . $show->show_time)) . 'Z';
 		if($timeparts[2] == '01') {
 			$showdata['calendar_end'] = ($show->show_expire == $show->show_date) ? $showdata['calendar_start'] : date('Ymd', strtotime($show->show_expire . '+1 day'));	
@@ -574,7 +574,7 @@ add_action('admin_menu', 'gigpress_admin_menu');
 add_action('delete_post', 'gigpress_remove_related');
 if(strpos($_SERVER['QUERY_STRING'], 'gigpress') !== FALSE) {
 	add_action('admin_init','gigpress_admin_head');
-	add_action('in_admin_footer', 'gigpress_admin_footer');
+	add_action('admin_footer_text', 'gigpress_admin_footer');
 }
 if($gpo['category_exclude'] == 1) {
 	add_action('pre_get_posts','gigpress_exclude_shows');

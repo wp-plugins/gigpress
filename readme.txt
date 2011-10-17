@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.1.15 =
+
+* Removed escaping of commas in Google Calendar links; added new `$showdata` parameters 'calendar_location_ical' and 'calendar_details_ical'
+
 = 2.1.14 =
 
 * Fixed some validation issues with the iCal formatting

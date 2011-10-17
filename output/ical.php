@@ -65,8 +65,8 @@ function gigpress_ical() {
 			}
 				echo("BEGIN:VEVENT\r\n" . 
 				"SUMMARY:" . $showdata['calendar_summary'] . "\r\n" .
-				"DESCRIPTION:" . $showdata['calendar_details'] . "\r\n" . 
-				"LOCATION:" . $showdata['calendar_location'] . "\r\n" . 
+				"DESCRIPTION:" . $showdata['calendar_details_ical'] . "\r\n" . 
+				"LOCATION:" . $showdata['calendar_location_ical'] . "\r\n" . 
 				"UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "\r\n" .
 				"URL:" . $showdata['permalink'] . "\r\n");
 				if(strlen($showdata['calendar_start']) == 8) {
@@ -79,7 +79,7 @@ function gigpress_ical() {
 				echo("DTSTAMP:" . date('Ymd') . "T" . date('his') . "Z\r\n" . 
 				"END:VEVENT\r\n");
 				if($count == $total) {
-					echo("END:VCALENDAR");		
+					echo("END:VCALENDAR");
 				}
 			$count++;
 		}
