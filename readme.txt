@@ -32,7 +32,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * The "Related Post" menu is now restricted to the category chosen for Related Posts in your GigPress settings
 * Increased the size of the "price" datbase column to allow for more data
 * "the" is now ignored when sorting artists alphabetically
-* Added Romanian translation (thanks to Web Hosting Geeks)
+* Added Romanian and Belarusian translations (thanks to Web Hosting Geeks)
 
 = 2.1.15 =
 
