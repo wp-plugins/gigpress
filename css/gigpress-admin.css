@@ -1,8 +1,3 @@
-/* @override 
-	http://sandbox.amphibian.info/wp-content/plugins/gigpress/css/gigpress-admin.css
-	http://sandbox.amphibian.info/2.6.5/wp-content/plugins/gigpress/css/gigpress-admin.css
-*/
-
 .gigpress {
 }
 
@@ -39,8 +34,8 @@ strong.gigpress-soldout {
 }
 
 .gigpress-error {
-	background: #ffebe8;
-	border: 1px solid #C00;	
+	background: #ffebe8 !important;
+	border: 1px solid #C00 !important;	
 }
 
 span.gigpress-error {

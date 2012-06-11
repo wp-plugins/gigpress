@@ -34,12 +34,12 @@ function gigpress_artists() {
 	<h2><?php _e("Artists", "gigpress"); ?></h2>	
 	
 	<?php
-	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || is_array($result) && $result['editing'] == TRUE) {
+	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($result) && isset($result['editing']) ) {
 
 		$artist_id = (isset($_REQUEST['artist_id'])) ? $wpdb->prepare('%d', $_REQUEST['artist_id']) : '';
 	
-		$artist_name = gigpress_db_out($wpdb->get_var("SELECT artist_name from ". GIGPRESS_ARTISTS ." WHERE artist_id = ". $artist_id));
-		if($artist_name) {
+		$artist = $wpdb->get_row("SELECT artist_name, artist_url from ". GIGPRESS_ARTISTS ." WHERE artist_id = ". $artist_id);
+		if($artist) {
 			
 			$submit = '<span class="submit"><input type="submit" name="Submit" class="button-primary" value="' .  __("Update artist", "gigpress") . '" /></span> ' . __("or", "gigpress") . ' <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-artists' . $url_args . '">' . __("cancel", "gigpress") . '</a>'; ?>
 
@@ -62,7 +62,7 @@ function gigpress_artists() {
 		
 	} else {
 		
-		$artist_name = '';
+		$artist = array();
 		$submit = '<span class="submit"><input type="submit" name="Submit" class="button-primary" value="' .  __("Add artist", "gigpress") . '" /></span>'; ?>
 
 		<h3><?php _e("Add an artist", "gigpress"); ?></h3>
@@ -78,10 +78,21 @@ function gigpress_artists() {
 			<tr>
 				<th scope="row"><label for="artist_name"><?php _e("Artist name", "gigpress"); ?>:</label></th>
 				<td>
-					<input name="artist_name" id="artist_name" type="text" size="48" value="<?php echo $artist_name; ?>" /> &nbsp; <?php echo $submit; ?>
+					<input name="artist_name" id="artist_name" type="text" size="48" value="<?php if(isset($artist->artist_name)) echo gigpress_db_out($artist->artist_name); ?>" />
 				</td>
 			</tr>
-		
+			<tr>
+				<th scope="row"><label for="artist_url"><?php _e("Artist URL", "gigpress"); ?>:</label></th>
+				<td>
+					<input name="artist_url" id="artist_url" type="text" size="48" value="<?php if(isset($artist->artist_url)) echo gigpress_db_out($artist->artist_url); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<?php echo $submit; ?>
+				</td>
+			</tr>					
 		</table>
 		
 		</form>
@@ -120,6 +131,7 @@ function gigpress_artists() {
 
 		if($artists) {
 				
+			$i = 0;
 			foreach($artists as $artist) {
 			
 				if($n = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_SHOWS ." WHERE show_artist_id = ". $artist->artist_id . " AND show_status != 'deleted'")) {
@@ -128,14 +140,14 @@ function gigpress_artists() {
 					$count = 0;
 				}
 
-				++ $i;
+				$i++;
 				$style = ($i % 2) ? '' : ' class="alternate"';
 				// Print out our rows.
 				?>
 				<tr<?php echo $style; ?> id="artist_<?php echo $artist->artist_id; ?>">
 					<td class="gp-tiny"><img src="<?php echo WP_PLUGIN_URL; ?>/gigpress/images/sort.png" alt="" class="gp-sort-handle" /></td>
 					<td class="gp-tiny"><?php echo $artist->artist_id; ?></td>
-					<td><?php echo wptexturize($artist->artist_name); ?></td>
+					<td><?php if(!empty($artist->artist_url)) echo '<a href="'.esc_url($artist->artist_url).'">'; echo wptexturize($artist->artist_name); if(!empty($artist->artist_url)) echo '</a>';?></td>
 					<td class="gp-centre"><?php echo $count; ?></td>
 					<td class="gp-centre">
 						<a href="<?php echo get_bloginfo('wpurl').'/wp-admin/admin.php?page=gigpress-artists&amp;gpaction=edit&amp;artist_id='.$artist->artist_id . $url_args; ?>" class="edit"><?php _e("Edit", "gigpress"); ?></a>
@@ -161,7 +173,7 @@ function gigpress_artists() {
 		</tfoot>
 	</table>
 
-<?php if($pagination) : ?>
+<?php if(isset($pagination)) : ?>
 	<div class="tablenav">
 	<?php // echo $pagination['output']; ?>
 	</div>

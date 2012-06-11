@@ -1142,52 +1142,67 @@ msgstr "Abonnér"
 
 #~ msgid "All Ages"
 #~ msgstr "For alle"
+
 #~ msgid "All Ages/Licensed"
 #~ msgstr "For alle aldersgrupper/lisensiert"
+
 #~ msgid "No minors"
 #~ msgstr "Ingen mindreårige"
+
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
 #~ msgstr "<strong>Velkommen til GigPress!</strong> Aller først bør du"
+
 #~ msgid "customize some of the options"
 #~ msgstr "justere noen av innstillingene"
+
 #~ msgid "N/A"
 #~ msgstr "TBA"
+
 #~ msgid ""
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
 #~ msgstr "Foreslår et format i stil med: <strong>5411 Stord</strong>."
+
 #~ msgid "toggle venue info"
 #~ msgstr "vis/skjul info om arena"
+
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
 #~ "Dette er et obligatorisk felt, er du usikker, skriv <strong>TBA</strong>."
+
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
 #~ "Om du skriver inn en gateadresse, kommer det automatisk en link til "
 #~ "Google Maps. Banna bein!"
+
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr "Det du skriver inn her kommer som en linke på arenaens navn."
+
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
 #~ "Vær obs på at det du skriver inn her ikke vil autoformateres. Dette fordi "
 #~ "det er så sabla mange forskjellige valutaformat."
+
 #~ msgid "This will enable the purchase link when displaying your tour dates."
 #~ msgstr "Dette vil aktivere link til billettkjøp når dine turnedatoer vises."
+
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
 #~ "Om denne konserten er en del av en turné som du allerede har lagt til i "
 #~ "GigPress, velg den her.<br />Ingen turné enda?"
+
 #~ msgid "Create them here."
 #~ msgstr "Legg de til her."
+
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
@@ -1195,67 +1210,95 @@ msgstr "Abonnér"
 #~ "Du kan linke hvilken som helst konsert til et WordPress-innlegg; praktisk "
 #~ "for informasjon om konserter, turnéoppdateringer, opplasting av bilder og "
 #~ "kommentarer."
+
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
 #~ msgstr "Du må skrive inn en arena (evt. skriv inn Kommer senere?)"
+
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr "Angi et navn for turnéen – det er det eneste feltet..."
+
 #~ msgid "You need to enter a name for the tour!"
 #~ msgstr "Du må angi et navn for turnéen!"
+
 #~ msgid "Tours successfully reordered."
 #~ msgstr "Rekkefølgen av turnéene oppdatert."
+
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
 #~ msgstr ""
 #~ "Det ser ut til at noe gikk galt ved slettingen av konsertene i "
 #~ "søppelbøtten. Beklager."
+
 #~ msgid "All tours in the trash have been permanently deleted."
 #~ msgstr "Alle turnéer i søppelbøtten er slettet permanent."
+
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
 #~ msgstr ""
 #~ "Det ser ut til at noe gikk galt ved slettingen av turnéene i "
 #~ "søppelbøtten. Beklager."
+
 #~ msgid "Name of your band"
 #~ msgstr "Gruppenavn"
+
 #~ msgid "This is used in your RSS feed and hCalendar data."
 #~ msgstr "Dette anvendes i din RSS-feed og hCalendar informasjon."
+
 #~ msgid "Show a link to this page below my sidebar listing."
 #~ msgstr "Vis en link til denne siden under oppføringen i sidepanelet."
+
 #~ msgid "Upcoming Shows link phrase"
 #~ msgstr "'Kommende konserter' link frase"
+
 #~ msgid "Used in the main show listings."
 #~ msgstr "Brukt i hovedkonsert-listinga."
+
 #~ msgid "Used in the Related Post entry."
 #~ msgstr "Brukt i relatert innlegg."
+
 #~ msgid "Click 'Update options' to update the sample output."
 #~ msgstr "Trykk 'Oppdater visning' for å oppdatere eksempel-informasjonen."
+
 #~ msgid "Related Posts"
 #~ msgstr "Relaterte innlegg"
+
 #~ msgid "RSS Feed"
 #~ msgstr "RSS-feed"
+
 #~ msgid "Please include a link to my upcoming shows RSS feed"
 #~ msgstr "Legg til en link til min RSS-flyt for kommende konserter"
+
 #~ msgid "below my upcoming shows table"
 #~ msgstr "under tabellen for kommende konserter"
+
 #~ msgid "below my sidebar listing"
 #~ msgstr "under listen i sidepanelet"
+
 #~ msgid "in the <code>head</code> portion of my page"
 #~ msgstr "i <code>head</code>-delen av siden"
+
 #~ msgid "Your RSS feed for upcoming shows is"
 #~ msgstr "RSS-feed for kommende konserter er"
+
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
 #~ msgstr "Merk at FeedBurner FeedSmith ikke er kompatibel med GigPress."
+
 #~ msgid "Tour grouping"
 #~ msgstr "Turnégruppering"
+
 #~ msgid "display tours <b>before</b> non-tour shows"
 #~ msgstr "vis turnéer <b>før</b> individuelle konserter"
+
 #~ msgid "display tours <b>after</b> non-tour shows"
 #~ msgstr "vis turnéer <b>etter</b> individuelle konserter"
+
 #~ msgid "Individual Shows heading"
 #~ msgstr "Tittel til de enkelte konsertene"
+
 #~ msgid "Heading level of tour names"
 #~ msgstr "Tittelnivå for turnénavn"
+
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
@@ -1263,10 +1306,13 @@ msgstr "Abonnér"
 #~ msgstr ""
 #~ "Basert på strukturen av dine maler, vil du kanskje at titlene som viser "
 #~ "dine turnéer skal være på et annet nivå."
+
 #~ msgid "More on HTML headings."
 #~ msgstr "Mer informasjon om HTML-titler."
+
 #~ msgid "This will add the"
 #~ msgstr "Dette legger"
+
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
@@ -1277,50 +1323,72 @@ msgstr "Abonnér"
 #~ "denne funksjonen kanskje kan virke irriterende for brukere som liker å ha "
 #~ "full kontroll i nettleseren, og at denne attributten ikke validerer HTML "
 #~ "Strict."
+
 #~ msgid "Past shows"
 #~ msgstr "Tidligere konserter"
+
 #~ msgid "Buy link"
 #~ msgstr "Billettlink"
+
 #~ msgid "Link"
 #~ msgstr "Link"
+
 #~ msgid "Reorder tours"
 #~ msgstr "Endre rekkefølgen på turnéene"
+
 #~ msgid "Display order"
 #~ msgstr "Vis rekkefølge"
+
 #~ msgid "No tours in the database!"
 #~ msgstr "Ingen turnéer i databasen!"
+
 #~ msgid "Save order"
 #~ msgstr "Lagre rekkefølgen"
+
 #~ msgid "edit"
 #~ msgstr "endre"
+
 #~ msgid "Find this address using Google Maps."
 #~ msgstr "Finn denne adressen ved hjelp av Google Maps"
+
 #~ msgid "Buy Tickets"
 #~ msgstr "Kjøp billetter"
+
 #~ msgid "Segment list into tours?"
 #~ msgstr "Del listen inn i turneer?"
+
 #~ msgid "Options"
 #~ msgstr "Valg"
+
 #~ msgid "Nope"
 #~ msgstr "Nei"
+
 #~ msgid "General options"
 #~ msgstr "Genrelle innstillinger"
+
 #~ msgid "Display &amp; Formatting"
 #~ msgstr "Visning og formatering"
+
 #~ msgid "Widget options"
 #~ msgstr "Widget-innstillinger"
+
 #~ msgid "List heading"
 #~ msgstr "Listetittel"
+
 #~ msgid "Any number from 1 to 99"
 #~ msgstr "Et nummer mellom 1 og 99"
+
 #~ msgid "GigPress widget options can be found on the"
 #~ msgstr "GigPress widget-innstillinger fins i"
+
 #~ msgid "GigPress options page"
 #~ msgstr "GigPress innstillinger"
+
 #~ msgid "Tour dates from"
 #~ msgstr "Turnédato fra"
+
 #~ msgid "Ends"
 #~ msgstr "Slutter"
+
 #~ msgid "Part of"
 #~ msgstr "Del av"
-

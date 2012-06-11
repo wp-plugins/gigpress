@@ -4,64 +4,64 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-11 14:22-0600\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Rasmus Kern <rasmus.kern@gmail.com>\n"
-"Language-Team: Kerns <rasmus.kern@gmail.com>\n"
+"Last-Translator: \n"
+"Language-Team: Web Geeks\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: Romania\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: _e;__\n"
-"X-Poedit-Language: Danish\n"
-"X-Poedit-Country: DENMARK\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../gigpress.php:65
 #: ../admin/new.php:199
 msgid "Add a show"
-msgstr "Opret show"
+msgstr "Adăugaţi un spectacol"
 
 #: ../gigpress.php:66
 #: ../admin/shows.php:126
 msgid "Shows"
-msgstr "Shows"
+msgstr "Spectacole"
 
 #: ../gigpress.php:67
 #: ../admin/artists.php:34
 msgid "Artists"
-msgstr "Artist"
+msgstr "Artişti"
 
 #: ../gigpress.php:68
 #: ../admin/venues.php:29
 msgid "Venues"
-msgstr "Spillested"
+msgstr "Locaţii"
 
 #: ../gigpress.php:69
 #: ../admin/tours.php:34
 msgid "Tours"
-msgstr "Tourneer"
+msgstr "Tururi"
 
 #: ../gigpress.php:70
 #: ../admin/settings.php:15
 msgid "Settings"
-msgstr "Indstillinger"
+msgstr "Setări"
 
 #: ../gigpress.php:71
 #: ../admin/import-export.php:12
 msgid "Import/Export"
-msgstr "Import/Eksport"
+msgstr "Import/Export"
 
 #: ../gigpress.php:102
 msgid "You're using"
-msgstr "Du bruger"
+msgstr "Utilizaţi"
 
 #: ../gigpress.php:102
 msgid "Like it?"
-msgstr "Er det ok?"
+msgstr "Place?"
 
 #: ../gigpress.php:102
 msgid "Make a donation"
-msgstr "Doner"
+msgstr "Fă o donaţie"
 
 #: ../gigpress.php:242
 #: ../admin/handlers.php:906
@@ -69,114 +69,114 @@ msgstr "Doner"
 #: ../admin/handlers.php:924
 #: ../admin/new.php:241
 msgid "at"
-msgstr "på"
+msgstr "la"
 
 #: ../gigpress.php:245
 #: ../admin/new.php:496
 #: ../admin/shows.php:273
 msgid "Price"
-msgstr "Pris"
+msgstr "Preţ"
 
 #: ../gigpress.php:246
 #: ../admin/shows.php:277
 #: ../output/feed.php:73
 msgid "Box office"
-msgstr "Billetsalg"
+msgstr "Box office"
 
 #: ../gigpress.php:247
 #: ../admin/new.php:462
 #: ../admin/venues.php:139
 #: ../output/feed.php:59
 msgid "Venue phone"
-msgstr "Spillestedets telefon"
+msgstr "Locul desfăşurării telefon"
 
 #: ../gigpress.php:248
 #: ../admin/new.php:512
 #: ../admin/settings.php:136
 #: ../output/feed.php:80
 msgid "Notes"
-msgstr "Noter"
+msgstr "Note"
 
 #: ../gigpress.php:270
 msgid "Download iCal"
-msgstr "iCal"
+msgstr "Download iCal"
 
 #: ../gigpress.php:283
 msgid "Buy tickets"
-msgstr "Køb billet"
+msgstr "Cumpara bilete"
 
 #: ../gigpress.php:285
 #: ../admin/new.php:473
 msgid "Sold Out"
-msgstr "UDSOLGT!"
+msgstr "Vândut"
 
 #: ../gigpress.php:287
 #: ../admin/new.php:474
 msgid "Cancelled"
-msgstr "Aflyst :-("
+msgstr "Anulat"
 
 #: ../gigpress.php:308
 msgid "Add to Google Calendar"
-msgstr "Google Cal"
+msgstr "Adăugaţi la Google Calendar"
 
 #: ../gigpress.php:398
-#, php-format
+#, fuzzy, php-format
 msgid "Displaying %s&#8211;%s of %s"
-msgstr "Viser %s&#8211;%s af %s"
+msgstr "Afişarea %s – %s din %s"
 
 #: ../gigpress.php:496
 msgid "Artist order updated."
-msgstr "Artist orden opdateret."
+msgstr "Artist ordinea actualizate."
 
 #: ../gigpress.php:547
 msgid "Nothing to export."
-msgstr "Intet af eksportere."
+msgstr "Nimic de export."
 
 #: ../gigpress.php:554
 msgid "You are not authorized to do that. Try logging-in first."
-msgstr "Du er ikke autoriseret til det dersens. Prøv at logge ind først."
+msgstr "Nu sunteţi autorizat să fac asta. Încercaţi logging-în primul rând."
 
 #: ../admin/artists.php:44
 msgid "Update artist"
-msgstr "Opdater artist"
+msgstr "Actualizare artist"
 
 #: ../admin/artists.php:44
 #: ../admin/new.php:596
 #: ../admin/tours.php:49
 #: ../admin/venues.php:147
 msgid "or"
-msgstr "ellers"
+msgstr "sau"
 
 #: ../admin/artists.php:44
 #: ../admin/new.php:596
 #: ../admin/tours.php:49
 #: ../admin/venues.php:147
 msgid "cancel"
-msgstr "afbryd"
+msgstr "Revocare"
 
 #: ../admin/artists.php:46
 msgid "Edit this artist"
-msgstr "Rediger denne artist"
+msgstr "Editaţi acest artist"
 
 #: ../admin/artists.php:56
 msgid "Sorry, but we had trouble loading that artist for editing."
-msgstr "Undskyld, men vi havde lidt problemer med at loade artisten til redigering."
+msgstr "Ne pare rău, dar am avut probleme de încărcare ca artist pentru editare."
 
 #: ../admin/artists.php:58
 #: ../admin/artists.php:68
 msgid "Add an artist"
-msgstr "Tilføj en artist"
+msgstr "Adăugaţi un artist"
 
 #: ../admin/artists.php:66
 msgid "Add artist"
-msgstr "Tilføj artist"
+msgstr "Adăugaţi artist"
 
 #: ../admin/artists.php:79
 #: ../admin/artists.php:124
 #: ../admin/artists.php:169
 #: ../admin/new.php:383
 msgid "Artist name"
-msgstr "Artist navn"
+msgstr "Nume artist"
 
 #: ../admin/artists.php:85
 #: ../admin/new.php:387
@@ -186,11 +186,11 @@ msgstr "Artist"
 
 #: ../admin/artists.php:100
 msgid "All artists"
-msgstr "Alle artister"
+msgstr "Toţi artiştii"
 
 #: ../admin/artists.php:103
 msgid "Note that you cannot delete an artist while they have shows in the database."
-msgstr "Noter at du ikke kan slette en artist der stadig har shows i databasen."
+msgstr "Reţineţi că aveţi posibilitatea să ştergeţi un artist în timp ce au arată în baza de date."
 
 #: ../admin/artists.php:125
 #: ../admin/artists.php:170
@@ -199,7 +199,7 @@ msgstr "Noter at du ikke kan slette en artist der stadig har shows i databasen."
 #: ../admin/venues.php:187
 #: ../admin/venues.php:240
 msgid "Number of shows"
-msgstr "Antal shows"
+msgstr "Numărul de spectacole"
 
 #: ../admin/artists.php:126
 #: ../admin/artists.php:171
@@ -210,93 +210,93 @@ msgstr "Antal shows"
 #: ../admin/venues.php:188
 #: ../admin/venues.php:241
 msgid "Actions"
-msgstr "Handlinger"
+msgstr "Acţiuni"
 
 #: ../admin/artists.php:153
 #: ../admin/shows.php:266
 #: ../admin/tours.php:136
 #: ../admin/venues.php:220
 msgid "Edit"
-msgstr "Rediger"
+msgstr "Editare"
 
 #: ../admin/artists.php:154
 #: ../admin/tours.php:136
 #: ../admin/venues.php:221
 msgid "Delete"
-msgstr "Slet"
+msgstr "Ştergere"
 
 #: ../admin/artists.php:162
 #: ../admin/import-export.php:64
 #: ../admin/new.php:372
 #: ../admin/shows.php:162
 msgid "No artists in the database"
-msgstr "Ingen artister i databasen"
+msgstr "Nu artişti în baza de date"
 
 #: ../admin/handlers.php:52
 msgid "We had trouble creating your new artist. Sorry."
-msgstr "Vi havde sgu lidt problemer med at oprette en ny artist. Undskyld du."
+msgstr "Am avut probleme la crearea your new artist. îmi pare rău."
 
 #: ../admin/handlers.php:67
 msgid "We had trouble creating your new venue. Sorry."
-msgstr "Vi havde sgu lidt problemer med at oprette et nyt spillested. Undskyld du."
+msgstr "Am avut probleme la crearea locaţie dumneavoastră noi. îmi pare rău."
 
 #: ../admin/handlers.php:84
 msgid "We had trouble creating your new tour. Sorry."
-msgstr "Vi havde sgu lidt problemer med at oprette en ny tour. Undskyld du."
+msgstr "Am avut probleme la crearea tur noi. îmi pare rău."
 
 #: ../admin/handlers.php:123
 msgid "We had trouble creating your Related Post. Sorry."
-msgstr "Vi havde sgu lidt problemer med at oprette din Relaterede post. Undskyld du."
+msgstr "Am avut probleme la crearea Post-ul conexe. îmi pare rău."
 
 #: ../admin/handlers.php:180
 msgid "You must select a venue."
-msgstr "Du skal vælge et spillested."
+msgstr "Trebuie să selectaţi un loc de întâlnire."
 
 #: ../admin/handlers.php:182
 msgid "You must select an artist."
-msgstr "Du skal vælge en artist."
+msgstr "Trebuie să selectaţi un artist."
 
 #: ../admin/handlers.php:184
 #: ../admin/handlers.php:198
 msgid "You must enter an artist name."
-msgstr "Du skal indtaste artistens navn."
+msgstr "Trebuie să introduceţi un nume de artist."
 
 #: ../admin/handlers.php:186
 #: ../admin/handlers.php:206
 msgid "You must enter a venue name."
-msgstr "Du skal indtaste spillestedet navn."
+msgstr "Trebuie să introduceţi un nume de loc de întâlnire."
 
 #: ../admin/handlers.php:188
 #: ../admin/handlers.php:208
 msgid "You must enter a city."
-msgstr "Du skal indtaste en by."
+msgstr "Trebuie să introduceţi un oraș."
 
 #: ../admin/handlers.php:190
 #: ../admin/handlers.php:202
 msgid "You must enter a tour name."
-msgstr "Du skal indtaste et tour-navn."
+msgstr "Trebuie să introduceţi un nume de turneu."
 
 #: ../admin/handlers.php:192
 msgid "That's not a valid date."
-msgstr "Det er da ikke en rigtig dato... er det?"
+msgstr "Aceasta nu este o dată validă."
 
 #: ../admin/handlers.php:194
 msgid "That's not a valid end date."
-msgstr "Det er da ikke en rigtig slutdato... er det?"
+msgstr "Aceasta nu este o dată de sfârşit valabil."
 
 #: ../admin/handlers.php:247
 #: ../admin/handlers.php:305
 msgid "Your show  on"
-msgstr "Dit show den"
+msgstr "Emisiunea ta pe"
 
 #: ../admin/handlers.php:247
 msgid "was successfully added."
-msgstr "blev oprettet."
+msgstr "a fost adăugat cu succes."
 
 #: ../admin/handlers.php:247
 #: ../admin/handlers.php:305
 msgid "Edit the related post"
-msgstr "Rediger den relaterede post"
+msgstr "Editare related post"
 
 #: ../admin/handlers.php:260
 #: ../admin/handlers.php:316
@@ -307,141 +307,141 @@ msgstr "Rediger den relaterede post"
 #: ../admin/handlers.php:636
 #: ../admin/handlers.php:681
 msgid "Something ain't right - try again?"
-msgstr "Noget er ikke helt rigtigt - prøv igen?"
+msgstr "Ceva nu este drept - încercaţi din nou?"
 
 #: ../admin/handlers.php:305
 #: ../admin/handlers.php:444
 msgid "was successfully updated."
-msgstr "blev oprettet."
+msgstr "a fost actualizat cu succes."
 
 #: ../admin/handlers.php:355
 msgid "Show(s) successfully deleted."
-msgstr "Show(s) blev slettet."
+msgstr "Show(s) sters cu succes."
 
 #: ../admin/handlers.php:356
 #: ../admin/handlers.php:589
 msgid "Undo"
-msgstr "Fortryd"
+msgstr "Anulare"
 
 #: ../admin/handlers.php:362
 msgid "We ran into some trouble deleting the show(s). Sorry."
-msgstr "Vi løb ind i lidt problemer med at slette show(s). undskyld"
+msgstr "Am alergat în unele probleme cu ştergerea show(s). îmi pare rău."
 
 #: ../admin/handlers.php:402
 #: ../admin/handlers.php:506
 #: ../admin/handlers.php:634
 msgid "was successfully added to the database."
-msgstr "blev føjet til databasen."
+msgstr "a fost adăugat cu succes la baza de date."
 
 #: ../admin/handlers.php:468
 msgid "Venue successfully deleted."
-msgstr "Spillested blev slettet."
+msgstr "Locul desfăşurării cu succes şterse."
 
 #: ../admin/handlers.php:470
 msgid "We ran into some trouble deleting the venue. Sorry."
-msgstr "Vi løb ind i nogle problemer med at slette spillestedet. Undskyld."
+msgstr "Am alergat în unele probleme cu ştergerea locul de desfăşurare. îmi pare rău."
 
 #: ../admin/handlers.php:546
 msgid "Tour name successfully changed to"
-msgstr "Tour navn succes ændret til"
+msgstr "Tur numele schimbat cu succes"
 
 #: ../admin/handlers.php:589
 msgid "Tour successfully deleted."
-msgstr "Tour blev slettet."
+msgstr "Tur cu succes şterse."
 
 #: ../admin/handlers.php:593
 msgid "We ran into some trouble deleting the tour. Sorry."
-msgstr "Vi løb ind i nogle problemer med at slette touren. Undskyld."
+msgstr "Am alergat în unele probleme cu ştergerea turneului. îmi pare rău."
 
 #: ../admin/handlers.php:679
 msgid "successfully updated."
-msgstr "blev opdateret."
+msgstr "actualizat cu succes."
 
 #: ../admin/handlers.php:704
 msgid "Artist successfully deleted."
-msgstr "Artist blev slettet."
+msgstr "Artist cu succes şterse."
 
 #: ../admin/handlers.php:707
 msgid "We ran into some trouble deleting the artist. Sorry."
-msgstr "Vi løb ind i nogle problemer med at slette artisten. Undskyld."
+msgstr "Am alergat în unele probleme cu ştergerea artist. îmi pare rău."
 
 #: ../admin/handlers.php:744
 msgid "Show(s) successfully restored."
-msgstr "Show(s) blev genoprettet."
+msgstr "Show(s) restaurat cu succes."
 
 #: ../admin/handlers.php:748
 msgid "We ran into some trouble restoring your show(s). Sorry."
-msgstr "Vi løb ind i nogle problemer at genoprette dit/dine show(s). Undskyld."
+msgstr "Am alergat în unele probleme restaurarea dumneavoastră show(s). îmi pare rău."
 
 #: ../admin/handlers.php:766
 msgid "Tour successfully restored from the database."
-msgstr "Touren blev genoprettet fra databasen."
+msgstr "Tur cu succes restaurat din baza de date."
 
 #: ../admin/handlers.php:768
 msgid "We ran into some trouble restoring the tour. Sorry."
-msgstr "Vi løb ind i nogle problemer genoprette touren. Undskyld."
+msgstr "Am alergat în unele probleme restaurarea turneului. îmi pare rău."
 
 #: ../admin/handlers.php:903
 msgid "shows were skipped due to errors"
-msgstr "shows blev sprunget over på grund af fejl"
+msgstr "spectacole au fost ignorate datorită unei erori"
 
 #: ../admin/handlers.php:906
 #: ../admin/handlers.php:915
 #: ../admin/handlers.php:924
 #: ../output/feed.php:35
 msgid "in"
-msgstr "i"
+msgstr "în"
 
 #: ../admin/handlers.php:906
 #: ../admin/handlers.php:915
 #: ../admin/handlers.php:924
 #: ../output/feed.php:35
 msgid "on"
-msgstr "på"
+msgstr "pe"
 
 #: ../admin/handlers.php:912
 msgid "shows were skipped as they were deemed duplicates"
-msgstr "shows blev sprunget over, da de blev anset for dubletter"
+msgstr "spectacole au fost ignorate ca acestea au fost considerate duplicate"
 
 #: ../admin/handlers.php:921
 msgid "shows were successfully imported"
-msgstr "shows blev importeret"
+msgstr "spectacole au fost importate cu succes"
 
 #: ../admin/handlers.php:931
 msgid "Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?"
-msgstr "Beklager, men der var en fejl ved håndtering af din fil. Dobbelt-tjek din formatering og filtype?"
+msgstr "Ne pare rău, dar nu a existat o eroare la analizarea fişierul. Verificaţi poate tipului de formatare şi de fişier?"
 
 #: ../admin/handlers.php:940
 msgid "Sorry, but there was an error uploading"
-msgstr "Beklager, men der var en fejl under upload"
+msgstr "Ne pare rău, dar acolo a fost o eroare încărcarea"
 
 #: ../admin/handlers.php:959
 msgid "All shows and tours in the trash have been permanently deleted."
-msgstr "Alle shows og toure i papirkurven er blevet slettet permanent."
+msgstr "Toate Arată şi excursii în coşul de gunoi au fost şters definitiv."
 
 #: ../admin/handlers.php:961
 msgid "We ran into some trouble emptying the trash. Sorry."
-msgstr "Vi løb ind i nogle problemer med at tømme papirkurven. Undskyld."
+msgstr "Am alergat în unele probleme golirea coşul de gunoi. îmi pare rău."
 
 #: ../admin/handlers.php:983
 msgid "All tours have been migrated into artists."
-msgstr "Alle toure er migreret til kunstnere."
+msgstr "Toate excursii au migrat în artişti."
 
 #: ../admin/handlers.php:985
 msgid "There was an error migrating tours to artists. Sorry."
-msgstr "Der opstod en fejl med at migrere toure til kunstnere. Rundstyk'."
+msgstr "Eroare la migrarea tururi pentru artişti. îmi pare rău."
 
 #: ../admin/handlers.php:989
 msgid "There were no tours to migrate."
-msgstr "Der var ingen toure til migrere."
+msgstr "Au existat nici excursii pentru a migra."
 
 #: ../admin/import-export.php:18
 msgid "Upload a CSV (comma-separated values) file to import into your GigPress database."
-msgstr "Upload et CSV (kommasepareret) fil til at importere ind i din GigPress database."
+msgstr "Încărcaţi un fişier de CSV (valori separate prin virgulă) pentru a importa în baza de date GigPress."
 
 #: ../admin/import-export.php:18
 msgid "Please review the formatting specifications to save yourself headaches!"
-msgstr "Gennemgå venligst formaterings-specifikationerne for at redde dig selv fra en rigtig dårlig oplevelse!"
+msgstr "Vă rugăm să revedeţi specificațiile formatare sa te salvezi dureri de cap!"
 
 #: ../admin/import-export.php:27
 msgid "Include Related Post associations?"
@@ -449,63 +449,63 @@ msgstr ""
 
 #: ../admin/import-export.php:29
 msgid "Upload CSV"
-msgstr "Upload CSV"
+msgstr "Încărcaţi CSV"
 
 #: ../admin/import-export.php:48
 msgid "Download your complete show database as a CSV (comma-separated values) file, compatible with programs such as Microsoft Excel. This file is also suitable to import into another GigPress installation."
-msgstr "Download din komplette show-database som en CSV (kommasepareret) fil, kompatibel med programmer som fx Microsoft Excel. Denne fil er også velegnet til at importere ind i en anden GigPress installation."
+msgstr "Descarca arată complet baza de date ca un fişier CSV (valori separate prin virgulă), compatibil cu programe cum ar fi Microsoft Excel. Acest fişier este, de asemenea, potrivit pentru import într-un alt instalare GigPress."
 
 #: ../admin/import-export.php:57
 msgid "Export all artists"
-msgstr "Eksporter alle artister"
+msgstr "Toţi artiştii de export"
 
 #: ../admin/import-export.php:71
 msgid "Export all tours"
-msgstr "Eksporter alle tourneer"
+msgstr "Export toate excursii"
 
 #: ../admin/import-export.php:78
 #: ../admin/new.php:535
 #: ../admin/shows.php:176
 #: ../admin/tours.php:144
 msgid "No tours in the database"
-msgstr "Ingen tourneer i databasen"
+msgstr "Nu tururi în baza de date"
 
 #: ../admin/import-export.php:85
 msgid "Export all dates"
-msgstr "Eksporter alle datoer"
+msgstr "Toate datele de export"
 
 #: ../admin/import-export.php:86
 msgid "Export upcoming dates"
-msgstr "Eksporter kommende datoer"
+msgstr "Export date viitoare"
 
 #: ../admin/import-export.php:87
 msgid "Export past dates"
-msgstr "Eksporter tidligere datoer"
+msgstr "Export trecut datele"
 
 #: ../admin/import-export.php:91
 msgid "Download CSV"
-msgstr "Download CSV"
+msgstr "Descarca CSV"
 
 #: ../admin/new.php:32
 msgid "<strong>Welcome to GigPress!</strong> Get started by adding your first show below. To display your shows, simply add the"
-msgstr "<strong> Velkommen til GigPress! Juhuuu </ strong> Kom godt i gang ved at tilføje dit første show nedenfor. For at vise dine shows, skal du blot tilføje"
+msgstr "<strong>Bine ati venit la GigPress!</strong> Începeţi prin adăugarea dumneavoastră primul spectacol de mai jos. Pentru a afişa emisiunile, pur şi simplu adăugaţi"
 
 #: ../admin/new.php:32
 msgid "shortcode to any page or post."
-msgstr "kortkode til en side eller post."
+msgstr "Shortcode la orice pagină sau post."
 
 #: ../admin/new.php:33
 msgid "Questions?  Please check out the"
-msgstr "Spørgsmål? Venligst tjek"
+msgstr "Întrebări?  Vă rugăm să verificaţi"
 
 #: ../admin/new.php:33
 msgid "documentation"
-msgstr "dokumentation"
+msgstr "documentaţia"
 
 #: ../admin/new.php:33
 #: ../admin/shows.php:306
 msgid "and"
-msgstr "og"
+msgstr "şi"
 
 #: ../admin/new.php:33
 msgid "FAQ"
@@ -513,19 +513,19 @@ msgstr "FAQ"
 
 #: ../admin/new.php:33
 msgid "on the GigPress website. Enjoy!"
-msgstr "på GigPress hjemmeside. God fornøjelse!"
+msgstr "pe site-ul GigPress. Bucuraţi-vă!"
 
 #: ../admin/new.php:33
 msgid "Don't show this again"
-msgstr "Vis ikke dette igen"
+msgstr "Nu se mai afişează acest din nou"
 
 #: ../admin/new.php:146
 msgid "Sorry, but we had trouble loading that show for editing."
-msgstr "Beklager, men vi havde problemer med at indlæse showet til redigering."
+msgstr "Ne pare rău, dar am avut probleme la încărcarea care arată pentru editare."
 
 #: ../admin/new.php:190
 msgid "Edit this show"
-msgstr "Rediger dette show"
+msgstr "Editaţi acest spectacol"
 
 #: ../admin/new.php:213
 #: ../admin/settings.php:134
@@ -533,20 +533,20 @@ msgstr "Rediger dette show"
 #: ../admin/shows.php:236
 #: ../output/feed.php:42
 msgid "Date"
-msgstr "Dato"
+msgstr "Data"
 
 #: ../admin/new.php:273
 #: ../admin/new.php:555
 msgid "None"
-msgstr "Ingen"
+msgstr "Nici unul"
 
 #: ../admin/new.php:322
 msgid "This is a multi-day event"
-msgstr "Dette er en flerdages begivenhed"
+msgstr "Acesta este un eveniment multi"
 
 #: ../admin/new.php:327
 msgid "End date"
-msgstr "Slutdato"
+msgstr "Data de terminare"
 
 #: ../admin/new.php:358
 #: ../admin/shows.php:225
@@ -556,93 +556,93 @@ msgstr "Artist"
 
 #: ../admin/new.php:361
 msgid "Add a new artist"
-msgstr "Tilføj en ny artist"
+msgstr "Adăugaţi un artist nou"
 
 #: ../admin/new.php:396
 #: ../admin/shows.php:226
 #: ../admin/shows.php:238
 #: ../output/feed.php:52
 msgid "Venue"
-msgstr "Spillested"
+msgstr "Locul desfăşurării"
 
 #: ../admin/new.php:399
 msgid "Add a new venue"
-msgstr "Tilføj et nyt spillested"
+msgstr "Adăugaţi un nou loc de întâlnire"
 
 #: ../admin/new.php:401
 msgid "Select a venue"
-msgstr "Vælg et spillested"
+msgstr "Selectaţi un loc de întâlnire"
 
 #: ../admin/new.php:414
 #: ../admin/shows.php:190
 #: ../admin/venues.php:229
 msgid "No venues in the database"
-msgstr "Ingen spillesteder i databasen"
+msgstr "Nu locuri în baza de date"
 
 #: ../admin/new.php:424
 #: ../admin/venues.php:103
 msgid "Venue name"
-msgstr "Spillestedsnavn"
+msgstr "Nume locul desfăşurării"
 
 #: ../admin/new.php:429
 #: ../admin/venues.php:107
 msgid "Venue address"
-msgstr "Spillestedets adresse"
+msgstr "Locul desfăşurării adresa"
 
 #: ../admin/new.php:433
 #: ../admin/venues.php:111
 msgid "Venue city"
-msgstr "Spillestedet by"
+msgstr "Locul desfăşurării city"
 
 #: ../admin/new.php:437
 #: ../admin/venues.php:115
 #, fuzzy
 msgid "Venue state/province"
-msgstr "Spillestedets telefon"
+msgstr "Locul desfăşurării telefon"
 
 #: ../admin/new.php:441
 #: ../admin/venues.php:119
 #, fuzzy
 msgid "Venue postal code"
-msgstr "Spillestedets telefon"
+msgstr "Locul desfăşurării telefon"
 
 #: ../admin/new.php:445
 #: ../admin/venues.php:123
 msgid "Venue country"
-msgstr "Spillestedet land"
+msgstr "Locul desfăşurării ţară"
 
 #: ../admin/new.php:458
 #: ../admin/venues.php:135
 msgid "Venue website"
-msgstr "Spillestedets website"
+msgstr "Locul desfăşurării website"
 
 #: ../admin/new.php:470
 msgid "Status"
-msgstr "Status"
+msgstr "Statutul"
 
 #: ../admin/new.php:472
 msgid "Active"
-msgstr "Aktiv<"
+msgstr "Active"
 
 #: ../admin/new.php:480
 msgid "Admittance"
-msgstr "Adgangskrav"
+msgstr "Admitere"
 
 #: ../admin/new.php:482
 msgid "Not sure"
-msgstr "Ikke sikker"
+msgstr "nu sunt sigur"
 
 #: ../admin/new.php:497
 msgid "include currency symbol"
-msgstr "omfatter valutasymbol"
+msgstr "include simbolul monetar"
 
 #: ../admin/new.php:500
 msgid "Ticket URL"
-msgstr "Billet URL"
+msgstr "Bilet URL"
 
 #: ../admin/new.php:504
 msgid "Ticket phone"
-msgstr "Tlf.nr til billetsalg"
+msgstr "Bilet de telefon"
 
 #: ../admin/new.php:508
 msgid "External URL"
@@ -650,74 +650,74 @@ msgstr ""
 
 #: ../admin/new.php:515
 msgid "Use this space to list other bands, 'presented by' info, etc"
-msgstr "Brug denne plads til at liste andre bands, \"præsenteret af 'info mv"
+msgstr "Utilizaţi acest spaţiu pentru a lista de alte trupe, 'prezentate de' info, etc"
 
 #: ../admin/new.php:519
 msgid "Part of a tour?"
-msgstr "En del af en tour?"
+msgstr "Parte de un turneu?"
 
 #: ../admin/new.php:522
 msgid "No"
-msgstr "Nej"
+msgstr "nu"
 
 #: ../admin/new.php:524
 msgid "Add a new tour"
-msgstr "Tilføj en ny tour"
+msgstr "Adăugaţi un nou turneu"
 
 #: ../admin/new.php:545
 #: ../admin/tours.php:82
 #: ../admin/tours.php:112
 #: ../admin/tours.php:150
 msgid "Tour name"
-msgstr "Tour navn"
+msgstr "Numele de tur"
 
 #: ../admin/new.php:552
 msgid "Related post"
-msgstr "Relateret post"
+msgstr "Related post"
 
 #: ../admin/new.php:557
 msgid "Add a new post"
-msgstr "Tilføj en ny post"
+msgstr "Adăugaţi un nou post"
 
 #: ../admin/new.php:583
 msgid "Related post title"
-msgstr "Titel på post"
+msgstr "Related post titlu"
 
 #: ../admin/new.php:585
 msgid "Available placeholders:"
-msgstr "Tilgængelige pladsholdere"
+msgstr "Substituenţi disponibile:"
 
 #: ../admin/new.php:586
 msgid "Publish now"
-msgstr "Publicer nu"
+msgstr "Publică acum"
 
 #: ../admin/new.php:587
 msgid "Publish on show date"
-msgstr "Publicer på dato for show"
+msgstr "Publica data Arată"
 
 #: ../admin/new.php:596
 msgid "Update show"
-msgstr "Opdater show"
+msgstr "Actualizare Arată"
 
 #: ../admin/new.php:600
 msgid "Add show"
-msgstr "Tilføj show"
+msgstr "Adăugaţi Arată"
 
 #: ../admin/settings.php:22
 msgid "Full URL to your 'Upcoming Shows' page"
-msgstr "Fuld URL til din 'Kommende shows' side"
+msgstr "URL-ul complet la pagina \"Arată viitoare\""
 
 #: ../admin/settings.php:27
 msgid "No upcoming shows message"
-msgstr "Ingen kommende shows besked"
+msgstr "Nici un mesaj viitoare spectacole"
 
 #: ../admin/settings.php:33
 msgid "No past shows message"
-msgstr "Ingen tidligere shows besked"
+msgstr "Trecut nu afişează mesaj"
 
 #: ../admin/settings.php:40
 msgid "User level required to use GigPress"
-msgstr "Det kræver 'Bruger-niveau' for at bruge GigPress"
+msgstr "La nivel de utilizator cerute pentru a utiliza GigPress"
 
 #: ../admin/settings.php:43
 msgid "Administrator"
@@ -729,45 +729,45 @@ msgstr "Editor"
 
 #: ../admin/settings.php:45
 msgid "Author"
-msgstr "Forfatter"
+msgstr "Autor"
 
 #: ../admin/settings.php:46
 msgid "Contributor"
-msgstr "Bidragyder"
+msgstr "Contribuitor"
 
 #: ../admin/settings.php:52
 msgid "Short date format"
-msgstr "Kort datoformat"
+msgstr "Format dată scurtă"
 
 #: ../admin/settings.php:55
 #: ../admin/settings.php:62
 #: ../admin/settings.php:69
 msgid "Output"
-msgstr "Output"
+msgstr "Ieşire"
 
 #: ../admin/settings.php:59
 msgid "Long date format"
-msgstr "Lang datoformat"
+msgstr "Format dată lungă"
 
 #: ../admin/settings.php:66
 msgid "Time format"
-msgstr "Tidsformat"
+msgstr "Formatul orei"
 
 #: ../admin/settings.php:70
 msgid "Here's some documentation on date and time formatting"
-msgstr "Her er noget dokumentation på dato og tid formatering"
+msgstr "Aici este unele documentația privind data şi ora formatarea"
 
 #: ../admin/settings.php:71
 msgid "I use a 24 hour clock"
-msgstr "Jeg bruger 24 timers ur"
+msgstr "I folos un ceas cu 24 de ore"
 
 #: ../admin/settings.php:75
 msgid "Artist label"
-msgstr "Artist etiket"
+msgstr "Artist etichetă"
 
 #: ../admin/settings.php:81
 msgid "Tour label"
-msgstr "Tour etiket"
+msgstr "Eticheta Tour"
 
 #: ../admin/settings.php:87
 msgid "External link label"
@@ -776,67 +776,67 @@ msgstr ""
 #: ../admin/settings.php:93
 #: ../output/feed.php:69
 msgid "Age restrictions"
-msgstr "Aldersbegrænsninger"
+msgstr "Restricţiile de vârstă"
 
 #: ../admin/settings.php:95
 msgid "A pipe-separated list of available age restrictions."
-msgstr "En pibe-tegn adskilt liste over tilgængelige aldersbegrænsninger."
+msgstr "O listă separată de conducte de restricţiile de vârstă disponibile."
 
 #: ../admin/settings.php:98
 msgid "Related posts"
-msgstr "Relateret post"
+msgstr "Legate de posturi"
 
 #: ../admin/settings.php:100
 msgid "Display gig info in related posts"
-msgstr "Display koncert info i relaterede posts"
+msgstr "Afişare info gig în legate de posturi"
 
 #: ../admin/settings.php:101
 msgid "before the post content"
-msgstr "før indeholdet af post"
+msgstr "Înainte post de conţinut"
 
 #: ../admin/settings.php:102
 msgid "after the post content"
-msgstr "efter indeholdet af post"
+msgstr "după ce post de conţinut"
 
 #: ../admin/settings.php:103
 msgid "using <code>[gigpress_related_shows]</code>"
-msgstr "brug <code>[gigpress_related_shows]</code>"
+msgstr "folosind <code>[gigpress_related_shows]</code>"
 
 #: ../admin/settings.php:104
 msgid "If a gig has a related post, that gig's details will appear at the specified position in that post."
-msgstr "Hvis en koncert har en relateret post, vil den koncerts detaljer vises i den angivne position i posten."
+msgstr "Dacă un concert are un post legate, care detalii de gig va apărea la poziţia specificată în acest post."
 
 #: ../admin/settings.php:108
 msgid "Related show heading"
-msgstr "Relaterede vise overskrift"
+msgstr "Rubrica Arată conexe"
 
 #: ../admin/settings.php:111
 msgid "This appears before the gig details in your related post."
-msgstr "Dette vises før koncerte-detaljerne i din relaterede post."
+msgstr "Acest lucru apare înaintea detaliile gig în post-ul conexe."
 
 #: ../admin/settings.php:115
 msgid "Related posts category"
-msgstr "post"
+msgstr "Legate de posturi categorie"
 
 #: ../admin/settings.php:117
 msgid "Automatically create a related post for every new show I enter."
-msgstr "Automatisk oprette en relateret post for hvert nyt show jeg indsætter."
+msgstr "Creaţi automat un post legate pentru fiecare spectacol nou introduse."
 
 #: ../admin/settings.php:118
 msgid "When creating related posts, put them in this category"
-msgstr "Når du opretter relaterede post, sætte dem i denne kategori"
+msgstr "Atunci când crearea legate de posturi, le-a pus în această categorie"
 
 #: ../admin/settings.php:126
 msgid "Exclude this category from my normal post listings."
-msgstr "Udelukke denne kategori fra min normale post lister."
+msgstr "Exclude această categorie de la meu post normală listări."
 
 #: ../admin/settings.php:131
 msgid "Related posts linking"
-msgstr "Relaterede post linking"
+msgstr "Legate de posturi de legătură"
 
 #: ../admin/settings.php:133
 msgid "Place a link to each show's related post in the following fields"
-msgstr "Placer et link til hvert shows relateret post på følgende felt"
+msgstr "Loc un link pentru fiecare Arată related post în următoarele domenii"
 
 #: ../admin/settings.php:135
 #: ../admin/shows.php:227
@@ -845,20 +845,20 @@ msgstr "Placer et link til hvert shows relateret post på følgende felt"
 #: ../admin/venues.php:236
 #: ../output/feed.php:50
 msgid "City"
-msgstr "By"
+msgstr "City"
 
 #: ../admin/settings.php:140
 msgid "Related post phrase"
-msgstr "Relaterede post sætning"
+msgstr "Related post fraza"
 
 #: ../admin/settings.php:143
 msgid "This appears in your shows listing."
-msgstr "Dette vises i dine shows fortegnelse."
+msgstr "Acest lucru apare în emisiunile listarea."
 
 #: ../admin/settings.php:147
 #, fuzzy
 msgid "Artist URLs"
-msgstr "Artist"
+msgstr "Artişti"
 
 #: ../admin/settings.php:148
 msgid "Link artist names to their URLs."
@@ -870,39 +870,39 @@ msgstr "RSS/iCal"
 
 #: ../admin/settings.php:154
 msgid "Make the GigPress RSS feed auto-discoverable."
-msgstr "Gør at GigPress RSS feed auto-registreres."
+msgstr "GigPress RSS feed a face auto-descoperit."
 
 #: ../admin/settings.php:155
 msgid "Show RSS and iCal subscription links."
-msgstr "Vis RSS og iCal abonnement links."
+msgstr "Arată RSS şi link-uri de abonament iCal."
 
 #: ../admin/settings.php:156
 msgid "Note that the FeedBurner FeedSmith plugin will kill your GigPress RSS and iCal feeds, but the FD FeedBurner plugin will not."
-msgstr "Bemærk, at FeedBurner FeedSmith plugin vil slagte dine GigPress RSS og iCal-feeds, men FD FeedBurner plugin vil ikke."
+msgstr "Reţineţi că plugin-ul FeedBurner FeedSmith va ucide GigPress RSS dumneavoastră şi de feed-uri iCal, dar FD FeedBurner plugin-ul nu va."
 
 #: ../admin/settings.php:160
 msgid "RSS/iCal feed title"
-msgstr "Titel på RSS/iCal feed"
+msgstr "RSS/iCal titlul backend"
 
 #: ../admin/settings.php:166
 msgid "Country display"
-msgstr "Vis land"
+msgstr "Afişare ţară"
 
 #: ../admin/settings.php:168
 msgid "Display country column."
-msgstr "Vis kolonne med land."
+msgstr "Afişare coloană ţară."
 
 #: ../admin/settings.php:168
 msgid "Use full country names."
-msgstr "Brug fuldt landenavn."
+msgstr "Utilizaţi full țara nume."
 
 #: ../admin/settings.php:172
 msgid "Link behaviour"
-msgstr "Link mulighed"
+msgstr "Link-ul de comportament"
 
 #: ../admin/settings.php:173
 msgid "Open external links in new windows."
-msgstr "Åbne eksterne links i nye vinduer."
+msgstr "Legături externe deschidere înăuntru nou Ferestre."
 
 #: ../admin/settings.php:177
 msgid "jQuery"
@@ -910,59 +910,59 @@ msgstr "jQuery"
 
 #: ../admin/settings.php:179
 msgid "Load jQuery into my theme."
-msgstr "Load jQuery ind i mit tema."
+msgstr "JQuery de încărcare în tema mea."
 
 #: ../admin/settings.php:180
 msgid "Uncheck this if you have a hard-coded link to the jQuery library in your theme."
-msgstr "Fjern markeringen, hvis du har et hard-kodet link til jQuery biblioteket i dit tema."
+msgstr "Debifati aceasta în cazul în care aveţi un hard-coded link la biblioteca jQuery în tema."
 
 #: ../admin/settings.php:185
 msgid "Advanced"
-msgstr "Advanceret"
+msgstr "Avansate"
 
 #: ../admin/settings.php:187
 msgid "Disable the default GigPress CSS."
-msgstr "Deaktivere standard GigPress CSS."
+msgstr "Dezactivează implicit GigPress CSS."
 
 #: ../admin/settings.php:187
 msgid "Disable the default GigPress JavaScript."
-msgstr "Deaktivere standard GigPress JavaScript."
+msgstr "Dezactivează implicit GigPress JavaScript."
 
 #: ../admin/settings.php:206
 msgid "Save Changes"
-msgstr "Gem ændringer"
+msgstr "Salvaţi modificările"
 
 #: ../admin/shows.php:135
 msgid "All"
-msgstr "Alle"
+msgstr "Toate"
 
 #: ../admin/shows.php:138
 msgid "Upcoming"
-msgstr "Kommende"
+msgstr "Viitoare"
 
 #: ../admin/shows.php:141
 msgid "Past"
-msgstr "Forrige"
+msgstr "Trecut"
 
 #: ../admin/shows.php:154
 msgid "View all artists"
-msgstr "Se alle artister"
+msgstr "Vizualizaţi toate artişti"
 
 #: ../admin/shows.php:168
 msgid "View all tours"
-msgstr "Se alle tours"
+msgstr "Vizualizaţi toate excursii"
 
 #: ../admin/shows.php:182
 msgid "View all venues"
-msgstr "Se alle spillesteder"
+msgstr "Vizualiza toate locuri"
 
 #: ../admin/shows.php:196
 msgid "Descending"
-msgstr "Faldende"
+msgstr "Descendent"
 
 #: ../admin/shows.php:197
 msgid "Ascending"
-msgstr "Stigende"
+msgstr "Ascendent"
 
 #: ../admin/shows.php:228
 #: ../admin/shows.php:240
@@ -970,7 +970,7 @@ msgstr "Stigende"
 #: ../admin/venues.php:238
 #: ../output/feed.php:62
 msgid "Country"
-msgstr "Land"
+msgstr "Ţară"
 
 #: ../admin/shows.php:229
 #: ../admin/shows.php:241
@@ -979,107 +979,107 @@ msgstr "Tour"
 
 #: ../admin/shows.php:266
 msgid "Copy"
-msgstr "Kopier"
+msgstr "Copie"
 
 #: ../admin/shows.php:286
 msgid "Sorry, no shows to display based on your criteria."
-msgstr "Beklager, ingen viser sig at vise ud fra dine kriterier."
+msgstr "Ne pare rău, nu spectacole pentru a afişa pe baza criteriilor."
 
 #: ../admin/shows.php:292
 msgid "Trash selected shows"
-msgstr "Slet valgte shows"
+msgstr "Gunoi selectat afişează"
 
 #: ../admin/shows.php:306
 msgid "You have"
-msgstr "Du har"
+msgstr "Aveţi"
 
 #: ../admin/shows.php:306
 msgid "shows"
-msgstr "shows"
+msgstr "spectacole"
 
 #: ../admin/shows.php:306
 msgid "tours"
-msgstr "tours"
+msgstr "tururi"
 
 #: ../admin/shows.php:306
 msgid "in your trash"
-msgstr "i din skraldespand"
+msgstr "la gunoiul"
 
 #: ../admin/shows.php:308
 msgid "Take out the trash now"
-msgstr "Ud med skraldet"
+msgstr "Ia acum la coşul de gunoi"
 
 #: ../admin/tours.php:36
 msgid "A tour is simply a named collection of shows that you want to group together."
-msgstr "En tur er bare en navngivet samling af shows, som du vil gruppere sammen."
+msgstr "Un tur este pur şi simplu o colecţie numit de arată că doriţi să grupaţi împreună."
 
 #: ../admin/tours.php:49
 msgid "Update tour"
-msgstr "Opdater tour"
+msgstr "Actualizare tour"
 
 #: ../admin/tours.php:51
 msgid "Edit this tour"
-msgstr "Rediger tour"
+msgstr "Editaţi acest tur"
 
 #: ../admin/tours.php:60
 msgid "Sorry, but we had trouble loading that tour for editing."
-msgstr "Beklager, men vi havde problemer med at indlæse din tour til redigering."
+msgstr "Ne pare rău, dar am avut probleme la încărcarea acest tur pentru editare."
 
 #: ../admin/tours.php:62
 #: ../admin/tours.php:72
 msgid "Add a tour"
-msgstr "Tilføj en tour"
+msgstr "Adăugaţi un tur"
 
 #: ../admin/tours.php:70
 msgid "Add tour"
-msgstr "Tilføj tour"
+msgstr "Adăugaţi tour"
 
 #: ../admin/tours.php:88
 msgid "All tours"
-msgstr "Alle toure"
+msgstr "Toate excursii"
 
 #: ../admin/tours.php:92
 msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
-msgstr "Noter, at sletning af en tour  <strong>IKKE</strong> vil slette de tilhørende shows på den tour."
+msgstr "Reţineţi <strong>că un tur de ştergere va şterge Arată asociate cu acel turneu</strong>."
 
 #: ../admin/venues.php:71
 msgid "Sorry, but we had trouble loading that venue for editing."
-msgstr "Beklager, men vi havde problemer med at indlæse dit spillested til redigering."
+msgstr "Ne pare rău, dar am avut probleme la încărcarea acest loc de întâlnire pentru editare."
 
 #: ../admin/venues.php:84
 msgid "Edit this venue"
-msgstr "Rediger dette spillested"
+msgstr "Editaţi acest loc de întâlnire"
 
 #: ../admin/venues.php:94
 msgid "Add an venue"
-msgstr "Tilføj spillested"
+msgstr "Adăugaţi un loc de întâlnire"
 
 #: ../admin/venues.php:147
 msgid "Update venue"
-msgstr "Opdater spillested"
+msgstr "Locul desfăşurării Update"
 
 #: ../admin/venues.php:151
 msgid "Add venue"
-msgstr "Tilføj spillested"
+msgstr "Adăugaţi locul desfăşurării"
 
 #: ../admin/venues.php:160
 msgid "All venues"
-msgstr "Alle spillesteder"
+msgstr "Toate locuri"
 
 #: ../admin/venues.php:164
 msgid "Note that you cannot delete a venue while it has shows in the database."
-msgstr "Bemærk, at du ikke kan slette et spillested, mens der er shows i databasen."
+msgstr "Reţineţi că aveţi posibilitatea să ştergeţi un loc de întâlnire în timp ce are arată în baza de date."
 
 #: ../admin/venues.php:182
 #: ../admin/venues.php:235
 msgid "Name"
-msgstr "Navn"
+msgstr "nume"
 
 #: ../admin/venues.php:184
 #: ../admin/venues.php:237
 #: ../output/feed.php:55
 msgid "Address"
-msgstr "Adresse"
+msgstr "Adresa"
 
 #: ../admin/venues.php:186
 #: ../admin/venues.php:239
@@ -1088,97 +1088,97 @@ msgstr "Telefon"
 
 #: ../output/feed.php:47
 msgid "Time"
-msgstr "Tid"
+msgstr "Timp"
 
 #: ../output/feed.php:65
 msgid "Admission"
-msgstr "Adgangsbegrænsning"
+msgstr "Admiterea"
 
 #: ../output/gigpress_shows.php:307
 msgid "Select Month"
-msgstr "Vælg måned"
+msgstr "Selectaţi luna"
 
 #: ../output/gigpress_shows.php:312
 msgid "Select Year"
-msgstr "Vælg år"
+msgstr "Selectaţi anul"
 
 #: ../output/gigpress_sidebar.php:8
 msgid "List upcoming GigPress shows"
-msgstr "Vis kommende GigPress-shows"
+msgstr "GigPress viitoare listă afişează"
 
 #: ../output/gigpress_sidebar.php:79
 msgid "Title"
-msgstr "Titel"
+msgstr "Titlul"
 
 #: ../output/gigpress_sidebar.php:87
 msgid "Display upcoming shows"
-msgstr "Vis kommende shows"
+msgstr "Afişare viitoare spectacole"
 
 #: ../output/gigpress_sidebar.php:90
 msgid "Display today's shows"
-msgstr "Vis dagens shows"
+msgstr "Afişa Arată azi"
 
 #: ../output/gigpress_sidebar.php:93
 #, fuzzy
 msgid "Display past shows"
-msgstr "Vis dagens shows"
+msgstr "Afişa Arată azi"
 
 #: ../output/gigpress_sidebar.php:99
 msgid "Number of shows to list"
-msgstr "Antal af shows der skal vises"
+msgstr "Numărul de spectacole la lista"
 
 #: ../output/gigpress_sidebar.php:106
 msgid "Only display shows from this artist"
-msgstr "Vis kun shows fra denne artist"
+msgstr "Afişare doar arată la acest artist"
 
 #: ../output/gigpress_sidebar.php:121
 msgid "Only display shows from this tour"
-msgstr "Vis kun shows fra denne tour"
+msgstr "Afişare doar arată la acest turneu"
 
 #: ../output/gigpress_sidebar.php:136
 msgid "Only display shows from this venue"
-msgstr "Vis kun shows fra dette spillested"
+msgstr "Afişare doar arată la acest loc de întâlnire"
 
 #: ../output/gigpress_sidebar.php:152
 msgid "Group by artist"
-msgstr "Grupper på artist"
+msgstr "Grupa de artist"
 
 #: ../output/gigpress_sidebar.php:153
 msgid "Ignored when filtering by artist, tour, or venue."
-msgstr "Ignorer når der er filtreret på artist, tour eller spillested."
+msgstr "Ignorat când filtrare de artist, tur sau locul de desfăşurare."
 
 #: ../output/gigpress_sidebar.php:160
 msgid "Order artists alphabetically"
-msgstr "Orden artist alfabetisk"
+msgstr "Comanda artişti în ordine alfabetică"
 
 #: ../output/gigpress_sidebar.php:163
 msgid "Order artists by custom order"
-msgstr "Bestil artist ved brugerdefineret rækkefølge"
+msgstr "Ordinea artişti de ordine particularizată"
 
 #: ../output/gigpress_sidebar.php:166
 msgid "Ignored when not grouping by artist."
-msgstr "Ignorer når den ikke er grupperet på artist."
+msgstr "Ignorat când nu gruparea de artist."
 
 #: ../output/gigpress_sidebar.php:172
 msgid "Group by tour"
-msgstr "Grupper på tour"
+msgstr "Grupa de turneu"
 
 #: ../output/gigpress_sidebar.php:179
 msgid "Show RSS and iCal feeds"
-msgstr "Vis RSS og iCal feeds"
+msgstr "Arată RSS şi iCal feed-uri"
 
 #: ../output/gigpress_sidebar.php:184
 msgid "Link text"
-msgstr "Link tekst"
+msgstr "Text link-ul"
 
 #: ../output/gigpress_sidebar.php:186
 msgid "This phrase is used to link to the page specified in your GigPress settings. (Leave blank to disable this link.)"
-msgstr "Denne linje bruges til at linke til siden der indeholder dine GigPress-settings. (Efterlad blank for at deaktivere dette link.)"
+msgstr "Această frază este utilizat pentru legătura la pagina specificată în setările GigPress. (Lăsaţi necompletată pentru a dezactiva acest link)."
 
 #: ../templates/shows-list-footer.php:15
 #: ../templates/sidebar-list-footer.php:21
 msgid "Subscribe"
-msgstr "Abonner"
+msgstr "Aboneaza-te"
 
 #~ msgid "opens in a new window"
-#~ msgstr "Åbner i et nyt vindue"
+#~ msgstr "se deschide într-o fereastră nouă"

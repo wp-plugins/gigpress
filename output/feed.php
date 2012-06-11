@@ -24,18 +24,18 @@ function gigpress_feed() {
 			if($count == 1) : ?>
 			
 			<channel>
-			<title><?php echo wptexturize($gpo['rss_title']); if(isset($_GET['artist'])) echo(': ' . $showdata['artist']); if(isset($_GET['tour'])) echo(': ' . $showdata['tour']); if(isset($_GET['venue'])) echo(': ' . $showdata['venue_plain']); ?></title>
-			<description><?php echo wptexturize($gpo['rss_title']); if(isset($_GET['artist'])) echo(': ' . $showdata['artist']); if(isset($_GET['tour'])) echo(': ' . $showdata['tour']); if(isset($_GET['venue'])) echo(': ' . $showdata['venue_plain']); ?></description>
+			<title><?php echo wptexturize($gpo['rss_title']); if(isset($_GET['artist'])) echo(': ' . $showdata['artist_plain']); if(isset($_GET['tour'])) echo(': ' . $showdata['tour']); if(isset($_GET['venue'])) echo(': ' . $showdata['venue_plain']); ?></title>
+			<description><?php echo wptexturize($gpo['rss_title']); if(isset($_GET['artist'])) echo(': ' . $showdata['artist_plain']); if(isset($_GET['tour'])) echo(': ' . $showdata['tour']); if(isset($_GET['venue'])) echo(': ' . $showdata['venue_plain']); ?></description>
 			<atom:link href="<?php echo GIGPRESS_RSS; if(isset($_GET['artist'])) echo('&amp;artist=' . $_GET['artist']); if(isset($_GET['tour'])) echo('&amp;tour=' . $_GET['tour']); if(isset($_GET['venue'])) echo('&amp;venue=' . $_GET['venue']); ?>" rel="self" type="application/rss+xml" />
 			<link><?php echo GIGPRESS_URL; ?></link>
 			
 			<?php endif; ?>			
 			
 			<item>
-				<title><?php echo $showdata['artist'] . ' ' . __("in", "gigpress") . ' ' . $showdata['city'] . ' ' . __("on", "gigpress") . ' ' . $showdata['date']; ?></title>
+				<title><?php echo $showdata['artist_plain'] . ' ' . __("in", "gigpress") . ' ' . $showdata['city'] . ' ' . __("on", "gigpress") . ' ' . $showdata['date']; ?></title>
 				<description><?php echo('<![CDATA['); ?>
 			<ul>
-				<li><strong><?php echo wptexturize($gpo['artist_label']); ?>:</strong> <?php echo $showdata['artist']; ?></li>
+				<li><strong><?php echo wptexturize($gpo['artist_label']); ?>:</strong> <?php echo $showdata['artist_plain']; ?></li>
 			<?php if($showdata['tour']) { ?>
 				<li><strong><?php echo wptexturize($gpo['tour_label']); ?>:</strong> <?php echo $showdata['tour']; ?></li>
 			<?php } ?>

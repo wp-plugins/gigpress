@@ -1142,55 +1142,70 @@ msgstr "Подписаться"
 
 #~ msgid "All Ages"
 #~ msgstr "Все возрасты"
+
 #~ msgid "All Ages/Licensed"
 #~ msgstr "Все возрасты/с родителями"
+
 #~ msgid "No minors"
 #~ msgstr "Только для совершеннолетних"
+
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
 #~ msgstr "Добро пожаловать в панель управления GigPress! Сперва вы должны"
+
 #~ msgid "customize some of the options"
 #~ msgstr "подстроить некоторые из установок"
+
 #~ msgid "N/A"
 #~ msgstr "информации нет"
+
 #~ msgid ""
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
 #~ msgstr "Мы бы предложили следующую форму: <strong>Москва, Россия</strong>"
+
 #~ msgid "toggle venue info"
 #~ msgstr "включить детали клуба"
+
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
 #~ "Это обязательная строка, так что если вы не знаете, что вписать, впишите "
 #~ "<strong>Детали скоро</strong>"
+
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
 #~ "Если вы внесете точный адрес, то станет возможной связь с картами Гугла. "
 #~ "Честное слово."
+
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr ""
 #~ "Любой адрес внесенный в это поле будет добавлен как гипер-ссылка к имени "
 #~ "клуба"
+
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
 #~ "Для того, чтобы не вышло чехарды с различными видами валюты, здесь нет "
 #~ "никакого автоформатинга. Помните это!"
+
 #~ msgid "This will enable the purchase link when displaying your tour dates."
 #~ msgstr "Это включит ссылку покупки билетов при показе дат тура."
+
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
 #~ "Если это выступление часть тура, который внеен в базу GigPress, то "
 #~ "выберете тур тут.<br /> Пока ни одного тура?"
+
 #~ msgid "Create them here."
 #~ msgstr "Создайте их тут."
+
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
@@ -1198,66 +1213,94 @@ msgstr "Подписаться"
 #~ "Вы можете связать любой концерт с постом в WordPress, полезно для отчетов "
 #~ "о концертах, путевых заметок, закачивания фотографий и позволения "
 #~ "комментариев посетителей сайта."
+
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
 #~ msgstr "Вам необходимо внести название клуба (или это ДЕТАЛИ СКОРО?)"
+
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr ""
 #~ "Вам нужно внести название тура. Это единственная графа, в конце концов!"
+
 #~ msgid "You need to enter a name for the tour!"
 #~ msgstr "Вам нужно внести название тура!"
+
 #~ msgid "Tours successfully reordered."
 #~ msgstr "Порядок в списке туров восстановлен."
+
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
 #~ msgstr ""
 #~ "Нам не удалось удалить концерты из мусорной корзины. Просим прощения."
+
 #~ msgid "All tours in the trash have been permanently deleted."
 #~ msgstr "Все туры в мусорной корзине удалены без следа."
+
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
 #~ msgstr "Нам не удалось удалить туры из мусорки. Извините."
+
 #~ msgid "Name of your band"
 #~ msgstr "Название вашей группы"
+
 #~ msgid "This is used in your RSS feed and hCalendar data."
 #~ msgstr "Это используется в вашем RSS потоке и hCalender."
+
 #~ msgid "Show a link to this page below my sidebar listing."
 #~ msgstr "Показать линк к этой странице под списком сайдбара"
+
 #~ msgid "Upcoming Shows link phrase"
 #~ msgstr "фраза ссылки на Будущие Концерты"
+
 #~ msgid "Used in the main show listings."
 #~ msgstr "для главного списка концертов"
+
 #~ msgid "Used in the Related Post entry."
 #~ msgstr "для Связанных Постов"
+
 #~ msgid "Click 'Update options' to update the sample output."
 #~ msgstr "Нажмите на ОБНОВИТЬ НАСТРОЙКИ для обновления вывода примера"
+
 #~ msgid "Related Posts"
 #~ msgstr "Связанные посты"
+
 #~ msgid "RSS Feed"
 #~ msgstr "RSS поток"
+
 #~ msgid "Please include a link to my upcoming shows RSS feed"
 #~ msgstr ""
 #~ "Пожалуйста присовокупите ссылку на RSS  поток моих будущих концертов"
+
 #~ msgid "below my upcoming shows table"
 #~ msgstr "под таблицей с моими будущими шоу"
+
 #~ msgid "below my sidebar listing"
 #~ msgstr "под списком в сайдбаре"
+
 #~ msgid "in the <code>head</code> portion of my page"
 #~ msgstr "в <code>head</code> части моей страницы"
+
 #~ msgid "Your RSS feed for upcoming shows is"
 #~ msgstr "Поток RSS ваших будущих концертов таков"
+
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
 #~ msgstr "Заметьте, что FeedBurner FeedSmith плагин не совместим с GigPress"
+
 #~ msgid "Tour grouping"
 #~ msgstr "Порядок туров"
+
 #~ msgid "display tours <b>before</b> non-tour shows"
 #~ msgstr "показать туры <b>до</b> отдельных выступлений"
+
 #~ msgid "display tours <b>after</b> non-tour shows"
 #~ msgstr "показать туры <b>после</b> отдельных выступлений"
+
 #~ msgid "Individual Shows heading"
 #~ msgstr "Заголовок отдельных выступлений"
+
 #~ msgid "Heading level of tour names"
 #~ msgstr "Уровень заголовка названий туров"
+
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
@@ -1265,10 +1308,13 @@ msgstr "Подписаться"
 #~ msgstr ""
 #~ "В зависимости от семантической структуры шаблонов вашей страницы вы "
 #~ "можете захотеть изменить величину заголовка."
+
 #~ msgid "More on HTML headings."
 #~ msgstr "Узнать больше о заголовках HTML."
+
 #~ msgid "This will add the"
 #~ msgstr "Это добавит опцию"
+
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
@@ -1279,26 +1325,36 @@ msgstr "Подписаться"
 #~ "поведение может не понравится тем посетителям, которые предпочитают "
 #~ "контролировать свой браузер, и что эта опция не утверждена строгим "
 #~ "регламентом HTML."
+
 #~ msgid "Past shows"
 #~ msgstr "Прошлые выступления"
+
 #~ msgid "Buy link"
 #~ msgstr "Ссылка на покупку"
+
 #~ msgid "Link"
 #~ msgstr "Ссылка"
+
 #~ msgid "Reorder tours"
 #~ msgstr "Изменить порядок туров"
+
 #~ msgid "Display order"
 #~ msgstr "Показать последовательность"
+
 #~ msgid "No tours in the database!"
 #~ msgstr "В базе нет ни одного тура!"
+
 #~ msgid "Save order"
 #~ msgstr "Сохранить порядок"
+
 #~ msgid "edit"
 #~ msgstr "редактировать"
+
 #~ msgid "Find this address using Google Maps."
 #~ msgstr "Найти адрес при помощи Google Maps"
+
 #~ msgid "Buy Tickets"
 #~ msgstr "Купить билеты"
+
 #~ msgid "Segment list into tours?"
 #~ msgstr "Разбить список на туры?"
-

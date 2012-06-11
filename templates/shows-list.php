@@ -25,7 +25,7 @@
 				<?php echo $showdata['end_date']; ?>
 			</abbr>
 		<?php endif; ?>
-			<span class="hide url"><?php echo $showdata['url']; ?></span>
+			<span class="hide url"><?php echo ($showdata['related_url']) ? $showdata['related_url'] : GIGPRESS_URL; ?></span>
 		</td>
 		
 	<?php if((!$artist && $group_artists == 'no') && $total_artists > 1) : ?>
@@ -35,8 +35,8 @@
 	<?php endif; ?>
 	
 		<td class="gigpress-city summary">
-			<span class="hide"><?php echo $showdata['artist']; ?> <?php _e("in", "gigpress"); ?> </span>
-			<?php echo $showdata['city']; ?>
+			<span class="hide"><?php echo $showdata['artist_plain']; ?> <?php _e("in", "gigpress"); ?> </span>
+			<?php echo $showdata['city']; if(!empty($showdata['state'])) echo ', '.$showdata['state']; ?>
 		</td>
 		
 		<td class="gigpress-venue location<?php if($venue) : ?> hide<?php endif; ?>"><?php echo $showdata['venue']; ?></td>
@@ -102,7 +102,10 @@
 			<?php if($showdata['ticket_link']) : ?>
 				<span class="gigpress-info-item"><?php echo $showdata['ticket_link']; ?></span>
 			<?php endif; ?>
-					
+
+			<?php if($showdata['external_link']) : ?>
+				<span class="gigpress-info-item"><?php echo $showdata['external_link']; ?></span>
+			<?php endif; ?>					
 		
 		</td>
 	

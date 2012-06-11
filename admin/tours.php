@@ -36,7 +36,7 @@ function gigpress_tours() {
 	<p><?php _e("A tour is simply a named collection of shows that you want to group together.", "gigpress"); ?></p>
 	
 	<?php
-	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || is_array($result) && $result['editing'] == TRUE) {
+	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($result) && isset($result['editing']) ) {
 	
 		// Load the previous show info into the edit form, and so forth 
 	
@@ -116,6 +116,7 @@ function gigpress_tours() {
 		</thead>
 		<tbody>
 	<?php if($tours) {	
+			$i = 0;
 			foreach($tours as $tour) {
 				if($n = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_SHOWS ." WHERE show_tour_id = ". $tour->tour_id ." AND show_status != 'deleted'")) {
 					$count = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-shows&amp;tour_id=' . $tour->tour_id . '">' . $n . '</a>';
@@ -123,7 +124,7 @@ function gigpress_tours() {
 					$count = 0;
 				}
 
-				++ $i;
+				$i++;
 				$style = ($i % 2) ? '' : ' class="alternate"';
 				?>
 
@@ -136,7 +137,7 @@ function gigpress_tours() {
 					</td>
 				</tr>
 				
-			<?php $num++;
+			<?php
 			}
 		
 		} else { ?>
@@ -154,7 +155,7 @@ function gigpress_tours() {
 	</table>
 
 	<div class="tablenav">
-	<?php if($pagination) echo $pagination['output']; ?>
+	<?php if(isset($pagination)) echo $pagination['output']; ?>
 	</div>	
 
 	</div>

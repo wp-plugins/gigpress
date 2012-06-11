@@ -18,7 +18,7 @@ function gigpress_ical() {
 	}
 
 	$shows = $wpdb->get_results(
-		$wpdb->prepare("SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where, $_GET['show_id'])
+		"SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where . " AND s.show_expire >= '" . GIGPRESS_NOW . "' ORDER BY s.show_date ASC, s.show_expire ASC, s.show_time ASC"
 		);
 	if($shows) {
 		$count = 1;
@@ -26,7 +26,7 @@ function gigpress_ical() {
 		foreach($shows as $show) {
 			$showdata = gigpress_prepare($show, 'ical');
 			if(isset($_GET['artist'])) {
-				$filename = sanitize_title($showdata['artist']) . '-icalendar';
+				$filename = sanitize_title($showdata['artist_plain']) . '-icalendar';
 				$title = $show->artist_name;
 			} elseif(isset($_GET['tour'])) {
 				$filename = sanitize_title($showdata['tour']) . '-icalendar';
@@ -35,7 +35,7 @@ function gigpress_ical() {
 				$filename = sanitize_title($showdata['venue_plain']) . '-icalendar';
 				$title = $show->venue_name;
 			} elseif(isset($_GET['show_id'])) {
-				$filename = sanitize_title($showdata['artist']) . '-' . $show->show_date;
+				$filename = sanitize_title($showdata['artist_plain']) . '-' . $show->show_date;
 				$title = $show->artist_name . ' - ' . $showdata['date'];
 			} else {
 				$filename = sanitize_title(get_bloginfo('name')) . '-icalendar';

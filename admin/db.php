@@ -2,12 +2,10 @@
 
 // DB structure
 $charset_collate = '';
-if ( version_compare(mysql_get_server_info(), '4.1.0', '>=') ) {
-	if ( ! empty($wpdb->charset) )
-		$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
-	if ( ! empty($wpdb->collate) )
-		$charset_collate .= " COLLATE $wpdb->collate";
-}
+if ( ! empty( $wpdb->charset ) )
+	$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
+if ( ! empty( $wpdb->collate ) )
+	$charset_collate .= " COLLATE $wpdb->collate";
 
 global $gp_db;
 $gp_db = array();
@@ -25,13 +23,14 @@ show_date DATE NOT NULL,
 show_multi INTEGER(1),
 show_time TIME NOT NULL,
 show_expire DATE NOT NULL,
-show_price VARCHAR(32),
+show_price VARCHAR(255),
 show_tix_url VARCHAR(255),
 show_tix_phone VARCHAR(255),
 show_ages VARCHAR(255),
 show_notes TEXT,
 show_related BIGINT(20) DEFAULT 0,
 show_status VARCHAR(32) DEFAULT 'active',
+show_external_url VARCHAR(255),
 show_tour_restore INTEGER(1) DEFAULT 0,
 show_address VARCHAR(255),
 show_locale VARCHAR(255),
@@ -45,6 +44,8 @@ PRIMARY KEY  (show_id)
 $gp_db[] = "CREATE TABLE " . GIGPRESS_ARTISTS . " (
 artist_id INTEGER(4) AUTO_INCREMENT,
 artist_name VARCHAR(255) NOT NULL,
+artist_alpha VARCHAR(255) NOT NULL,
+artist_url VARCHAR(255),
 artist_order INTEGER(4) DEFAULT 0,
 PRIMARY KEY  (artist_id)
 ) $charset_collate";
@@ -54,6 +55,8 @@ venue_id INTEGER(4) AUTO_INCREMENT,
 venue_name VARCHAR(255) NOT NULL,
 venue_address VARCHAR(255),
 venue_city VARCHAR(255) NOT NULL,
+venue_state VARCHAR(255),
+venue_postal_code VARCHAR(32),
 venue_country VARCHAR(2) NOT NULL,	
 venue_url VARCHAR(255),
 venue_phone VARCHAR(255),	
@@ -74,6 +77,7 @@ $default_settings = array(
 	'age_restrictions' => 'All Ages | All Ages/Licensed | No Minors',
 	'alternate_clock' => 0,
 	'artist_label' => 'Artist',		
+	'artist_link' => 1,	
 	'autocreate_post' => 0,
 	'category_exclude' => 0,
 	'country_view' => 'long',
@@ -89,6 +93,7 @@ $default_settings = array(
 	'disable_js' => 0,
 	'display_subscriptions' => 1,
 	'display_country' => 1,
+	'external_link_label' => 'More information',
 	'load_jquery' => 1,
 	'nopast' => 'No shows in the archive yet.',
 	'noupcoming' => 'No shows booked at the moment.',
@@ -151,18 +156,28 @@ if ( $gpo['db_version'] < GIGPRESS_DB_VERSION ) {
 			gigpress_db_upgrade_120();
 			gigpress_db_upgrade_130();
 			gigpress_db_upgrade_140();
+			gigpress_db_upgrade_160();
 			break;		
 		case "1.1":
 			gigpress_db_upgrade_120();
 			gigpress_db_upgrade_130();
 			gigpress_db_upgrade_140();
+			gigpress_db_upgrade_160();
 			break;
 		case "1.2":
 			gigpress_db_upgrade_130();
 			gigpress_db_upgrade_140();
+			gigpress_db_upgrade_160();
 			break;
 		case "1.3":
 			gigpress_db_upgrade_140();
+			gigpress_db_upgrade_160();
+			break;
+		case "1.4":
+			gigpress_db_upgrade_160();
+			break;
+		case "1.5":
+			gigpress_db_upgrade_160();
 			break;
 	}
 	
@@ -254,6 +269,50 @@ function gigpress_db_upgrade_140() {
 	$gpo['widget_feeds'] = 1;
 	$gpo['widget_group_by_artist'] = 0;
 	
+}
+
+function gigpress_db_upgrade_160() {
+	
+	global $wpdb, $gpo;
+	$gpo['artist_link'] = 1;
+	$gpo['external_link_label'] = 'More information';
+	
+	// Add alpha values for all existing artists
+	$artists = $wpdb->get_results(
+		"SELECT * FROM " . GIGPRESS_ARTISTS
+	);
+	if($artists)
+	{
+		foreach($artists as $artist)
+		{
+			$alpha = preg_replace("/^the /uix", "", strtolower($artist->artist_name));
+			$new_artist = array(
+				'artist_alpha' => $alpha
+			);
+			$where = array('artist_id' => $artist->artist_id);
+			$update = $wpdb->update(GIGPRESS_ARTISTS, $new_artist, $where, array('%s'), array('%d'));
+		}
+	}
+
+	// Try our darndest to extract states from cities and put them in their own column
+	$venues = $wpdb->get_results(
+		"SELECT * FROM " . GIGPRESS_VENUES
+	);
+	if($venues)
+	{
+		foreach($venues as $venue)
+		{
+			preg_match("/,[ ]?([A-Z]{2})$/u", $venue->venue_city, $matches);
+			if(is_array($matches))
+			{
+				$new_venue['venue_state'] = $matches[1];
+				$new_venue['venue_city'] = preg_replace("/,[ ]?[A-Z]{2}$/u", '', $venue->venue_city);
+				$where = array('venue_id' => $venue->venue_id);
+				$update = $wpdb->update(GIGPRESS_VENUES, $new_venue, $where, array('%s', '%s'), array('%d'));
+			}
+		}
+	}
+
 }
 
 function gigpress_uninstall() {

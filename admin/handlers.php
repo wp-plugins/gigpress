@@ -4,14 +4,14 @@
 // ===================
 
 
-function gigpress_prepare_show_fields() {
+function gigpress_prepare_show_fields($context = 'new') {
 
-	global $wpdb, $gpo;
+	global $wpdb;
+	$gpo = get_option('gigpress_settings');
 	$errors = array();
-	
-	// Uses the contents of $_POST
-	
 	$show = array();
+	
+	
 	$show['show_date'] = $_POST['gp_yy'] . '-' . $_POST['gp_mm'] . '-' . $_POST['gp_dd'];
 	if($_POST['gp_hh'] == "na") {
 		$show['show_time'] = "00:00:01";
@@ -20,7 +20,7 @@ function gigpress_prepare_show_fields() {
 		$show['show_time'] = $_POST['gp_hh'] . ':' . $min . ':00';
 	}
 	// If it's not a multi-day show, we need to set the expire date to match the show date
-	if($_POST['show_multi'] != 1) {
+	if(!isset($_POST['show_multi']) || (isset($_POST['show_multi']) && empty($_POST['show_multi']) ) ) {
 		$show['show_expire'] = $show['show_date'];
 		$show['show_multi'] = 0;
 	} else {
@@ -28,8 +28,9 @@ function gigpress_prepare_show_fields() {
 		$show['show_multi'] = 1;
 	}
 	$show['show_price'] = gigpress_db_in($_POST['show_price']);
-	$show['show_tix_url'] = gigpress_db_in($_POST['show_tix_url']);
+	$show['show_tix_url'] = gigpress_db_in($_POST['show_tix_url'], FALSE);
 	$show['show_tix_phone'] = gigpress_db_in($_POST['show_tix_phone']);
+	$show['show_external_url'] = gigpress_db_in($_POST['show_external_url'], FALSE);
 	$show['show_ages'] = $_POST['show_ages'];
 	$show['show_notes'] = gigpress_db_in($_POST['show_notes'], FALSE);
 	$show['show_status'] = $_POST['show_status'];
@@ -37,7 +38,12 @@ function gigpress_prepare_show_fields() {
 	// Create a new artist
 	if($_POST['show_artist_id'] == 'new') {
 		
-		$artist = array('artist_name' => gigpress_db_in($_POST['artist_name']));
+		$alpha = preg_replace("/^the /uix", "", strtolower($_POST['artist_name']));
+		$artist = array(
+			'artist_name' => gigpress_db_in($_POST['artist_name']),
+			'artist_alpha' => gigpress_db_in($alpha),
+			'artist_url' => gigpress_db_in($_POST['artist_url'], FALSE)
+		);
 		$insert_artist = $wpdb->insert(GIGPRESS_ARTISTS, $artist);
 		
 		if($insert_artist) { 
@@ -82,7 +88,8 @@ function gigpress_prepare_show_fields() {
 	}	
 	
 	// Create a new related post
-	if ($_POST['show_related'] == "new") {
+	if ($_POST['show_related'] == "new")
+	{
 		
 		// Find the variables we need for token replacement
 		$artist = $wpdb->get_var("SELECT artist_name FROM " . GIGPRESS_ARTISTS . " WHERE artist_id = " . $show['show_artist_id'] . "");
@@ -114,16 +121,33 @@ function gigpress_prepare_show_fields() {
 		if ( $insert == 0 ) {
 			$show['show_related'] = 0;
 			$errors[] = __("We had trouble creating your Related Post. Sorry.", "gigpress");
-		} else {
+		}
+		else
+		{
 			$show['show_related'] = $insert;
 		}
 		
 		$gpo['default_title'] = $token_title;
 		$gpo['related_date'] = $_POST['show_related_date'];
-		
-	} else {
+	}
+	else
+	{
 		$show['show_related'] = $_POST['show_related'];
 	}
+	
+	if($context == 'new')
+	{
+		// Sticky stuff for the next entry
+		$gpo['default_date'] = $show['show_date'];
+		$gpo['default_time'] = $show['show_time'];
+		$gpo['default_ages'] = $show['show_ages'];
+		$gpo['default_artist'] = $show['show_artist_id'];
+		$gpo['default_venue'] = $show['show_venue_id'];
+		$gpo['default_tour'] = $show['show_tour_id'];
+		update_option('gigpress_settings', $gpo);
+	}
+	
+	// Not doing anything with $errors I suppose? Was I on crack when I wrote this?
 	
 	return $show;
 }
@@ -135,8 +159,10 @@ function gigpress_prepare_venue_fields() {
 		'venue_name' => gigpress_db_in($_POST['venue_name']),
 		'venue_address' => gigpress_db_in($_POST['venue_address']),
 		'venue_city' => gigpress_db_in($_POST['venue_city']),		
+		'venue_state' => gigpress_db_in($_POST['venue_state']),		
+		'venue_postal_code' => gigpress_db_in($_POST['venue_postal_code']),		
 		'venue_country' => $_POST['venue_country'],
-		'venue_url' => gigpress_db_in($_POST['venue_url']),
+		'venue_url' => gigpress_db_in($_POST['venue_url'], FALSE),
 		'venue_phone' => gigpress_db_in($_POST['venue_phone'])
 	);
 	return $venue;
@@ -164,7 +190,7 @@ function gigpress_error_checking($context) {
 				$errors['tour_name'] = __("You must enter a tour name.", "gigpress");
 			if(!checkdate($_POST['gp_mm'], $_POST['gp_dd'], $_POST['gp_yy']))
 				$errors['show_date'] = __("That's not a valid date.", "gigpress");
-			if($_POST['show_multi'] && !checkdate($_POST['exp_mm'], $_POST['exp_dd'], $_POST['exp_yy']))
+			if(isset($_POST['show_multi']) && !checkdate($_POST['exp_mm'], $_POST['exp_dd'], $_POST['exp_yy']))
 				$errors['expire_date'] = __("That's not a valid end date.", "gigpress");	
 			break;
 		case 'artist':
@@ -189,7 +215,7 @@ function gigpress_error_checking($context) {
 
 function gigpress_add_show() {
 
-	global $wpdb, $gpo;
+	global $wpdb;
 	
 	$wpdb->show_errors();
 
@@ -210,18 +236,13 @@ function gigpress_add_show() {
 		// Looks like we're all here, so let's add to the DB
 		
 		$show = gigpress_prepare_show_fields();
-		$formats = array('%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d');
-		$addshow = $wpdb->insert(GIGPRESS_SHOWS, $show, $formats);
-		
-		// Sticky stuff for the next entry
-		$gpo['default_date'] = $show['show_date'];
-		$gpo['default_time'] = $show['show_time'];
-		$gpo['default_artist'] = $show['show_artist_id'];
-		$gpo['default_tour'] = $show['show_tour_id'];
-		update_option('gigpress_settings', $gpo);
+		$format = array('%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d');
+		$addshow = $wpdb->insert(GIGPRESS_SHOWS, $show, $format);
 		
 		// Was the query successful?
-		if($addshow != FALSE) { ?>
+		if($addshow != FALSE)
+		{
+			$gpo = get_option('gigpress_settings'); ?>
 			
 			<div id="message" class="updated fade"><p><?php echo __("Your show  on", "gigpress") . ' ' . mysql2date($gpo['date_format_long'], $show['show_date']) . ' ' . __("was successfully added.", "gigpress"); if($show['show_related']) echo(' <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $show['show_related'] . '">' . __("Edit the related post", "gigpress"). '.</a>'); ?></p>
 		<?php
@@ -239,7 +260,7 @@ function gigpress_add_show() {
 			<div id="message" class="error fade"><p><?php _e("Something ain't right - try again?", "gigpress"); ?></p></div>			
 	
 	<?php }
-		unset($_POST, $show, $formats);
+		unset($_POST, $show, $format);
 	}
 }
 
@@ -270,14 +291,17 @@ function gigpress_update_show() {
 	} else {
 	
 		// Looks like we're all here, so let's update the DB
-		$show = gigpress_prepare_show_fields();
+		$show = gigpress_prepare_show_fields('edit');
 		$where = array('show_id' => $_POST['show_id']);
-		$formats = array('%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d');
+		$format = array('%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d');
 		$where_format = array('%d');
 		$updateshow = $wpdb->update(GIGPRESS_SHOWS, $show, $where, $format, $where_format);
 		
 		// Was the query successful?
-		if($updateshow != FALSE) { ?>			
+		if($updateshow != FALSE)
+		{
+			$gpo = get_option('gigpress_settings');
+			?>	
 			<div id="message" class="updated fade"><p><?php echo __("Your show  on", "gigpress") . ' ' . mysql2date($gpo['date_format_long'], $show['show_date']) . ' ' . __("was successfully updated.", "gigpress"); if($show['show_related']) echo(' <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $show['show_related'] . '">' . __("Edit the related post", "gigpress"). '.</a>'); ?></p>
 			<?php
 				global $errors; if($errors) {
@@ -367,7 +391,8 @@ function gigpress_add_venue() {
 	
 		// Looks like we're all here, so let's add to the DB
 		$venue = gigpress_prepare_venue_fields();
-		$addvenue = $wpdb->insert(GIGPRESS_VENUES, $venue);
+		$format = array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');
+		$addvenue = $wpdb->insert(GIGPRESS_VENUES, $venue, $format);
 		
 		$gpo['default_country'] = $venue['venue_country'];
 		update_option('gigpress_settings', $gpo);
@@ -409,8 +434,10 @@ function gigpress_update_venue() {
 	
 		// Looks like we're all here, so let's add to the DB
 		$venue = gigpress_prepare_venue_fields();
+		$format = array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');
 		$where = array('venue_id' => $_POST['venue_id']);
-		$updatevenue = $wpdb->update(GIGPRESS_VENUES, $venue, $where);
+		$where_format = array('%d');
+		$updatevenue = $wpdb->update(GIGPRESS_VENUES, $venue, $where, $format, $where_format);
 		
 		// Was the query successful?
 		if($updatevenue != FALSE) { ?>
@@ -592,9 +619,15 @@ function gigpress_add_artist() {
 		return $errors;
 		
 	} else {
-	
-		$artist = array('artist_name' => gigpress_db_in($_POST['artist_name']));
-		$addartist = $wpdb->insert(GIGPRESS_ARTISTS, $artist);
+		
+		$alpha = preg_replace("/^the /uix", "", strtolower($_POST['artist_name']));
+		$artist = array(
+			'artist_name' => gigpress_db_in($_POST['artist_name']),
+			'artist_alpha' => gigpress_db_in($alpha),
+			'artist_url' => gigpress_db_in($_POST['artist_url'], FALSE)
+		);
+		$format = array('%s', '%s', '%s');
+		$addartist = $wpdb->insert(GIGPRESS_ARTISTS, $artist, $format);
 		
 		// Was the query successful?
 		if($addartist != FALSE) { ?>
@@ -631,9 +664,15 @@ function gigpress_update_artist() {
 
 	} else {
 
-		$artist = array('artist_name' => gigpress_db_in($_POST['artist_name']));
+		$alpha = preg_replace("/^the /uix", "", strtolower($_POST['artist_name']));
+		$artist = array(
+			'artist_name' => gigpress_db_in($_POST['artist_name']),
+			'artist_alpha' => gigpress_db_in($alpha),
+			'artist_url' => gigpress_db_in($_POST['artist_url'], FALSE)
+		);
+		$format = array('%s', '%s', '%s');
 		$where = array('artist_id' => $_POST['artist_id']);
-		$updateartist = $wpdb->update(GIGPRESS_ARTISTS, $artist, $where, array('%s'), array('%d'));
+		$updateartist = $wpdb->update(GIGPRESS_ARTISTS, $artist, $where, $format, array('%d'));
 		
 		// Was the query successful?
 		if($updateartist != FALSE) { ?>
@@ -763,8 +802,14 @@ function gigpress_import() {
 				$artist_exists = $wpdb->get_var("SELECT artist_id FROM " . GIGPRESS_ARTISTS . " WHERE artist_name = '" . mysql_real_escape_string($show['Artist']) . "'");
 				if(!$artist_exists) {
 					// Can't find an artist with this name, so we'll have to create them
-					$new_artist = array('artist_name' => gigpress_db_in($show['Artist']));
-					$wpdb->insert(GIGPRESS_ARTISTS, $new_artist);
+					$alpha = preg_replace("/^the /uix", "", strtolower($show['Artist']));
+					$new_artist = array(
+						'artist_name' => gigpress_db_in($show['Artist']),
+						'artist_alpha' => gigpress_db_in($alpha),
+						'artist_url' => gigpress_db_in($show['Artist URL'], FALSE)
+					);
+					$format = array('%s', '%s', '%s');
+					$addartist = $wpdb->insert(GIGPRESS_ARTISTS, $new_artist, $format);
 					$show['artist_id'] = $wpdb->insert_id;
 				} else {
 					$show['artist_id'] = $artist_exists;
@@ -775,14 +820,17 @@ function gigpress_import() {
 					$tour_exists = $wpdb->get_var("SELECT tour_id FROM " . GIGPRESS_TOURS . " WHERE tour_name = '" . mysql_real_escape_string($show['Tour']) . "' AND tour_status = 'active'");
 					if(!$tour_exists) {
 						// Can't find a tour with this name, so we'll have to create it
-						$order = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_TOURS ." WHERE tour_status = 'active'"); $order++;
 						$new_tour = array('tour_name' => gigpress_db_in($show['Tour']));
 						$wpdb->insert(GIGPRESS_TOURS, $new_tour);
 						$show['tour_id'] = $wpdb->insert_id;
 					} else {
 						$show['tour_id'] = $tour_exists;
 					}
-				}				
+				}
+				else
+				{
+					$show['tour_id'] = 0;
+				}			
 
 				// Check to see if we have this venue
 				$venue_exists = $wpdb->get_var("SELECT venue_id FROM " . GIGPRESS_VENUES . " WHERE venue_name = '" . mysql_real_escape_string($show['Venue']) . "' AND venue_city = '" . mysql_real_escape_string($show['City']) . "' AND venue_country = '" . mysql_real_escape_string($show['Country']) . "'");
@@ -792,11 +840,14 @@ function gigpress_import() {
 						'venue_name' => gigpress_db_in($show['Venue']),
 						'venue_address' => gigpress_db_in($show['Address']),
 						'venue_city' => gigpress_db_in($show['City']),
+						'venue_state' => gigpress_db_in($show['State']),
+						'venue_postal_code' => gigpress_db_in($show['Postal code']),
 						'venue_country' => gigpress_db_in($show['Country']),
-						'venue_url' => gigpress_db_in($show['Venue URL']),
+						'venue_url' => gigpress_db_in($show['Venue URL'], FALSE),
 						'venue_phone' => gigpress_db_in($show['Venue phone'])
 					);
-					$wpdb->insert(GIGPRESS_VENUES, $new_venue);
+					$format = array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');
+					$wpdb->insert(GIGPRESS_VENUES, $new_venue, $format);
 					$show['venue_id'] = $wpdb->insert_id;
 				} else {
 					$show['venue_id'] = $venue_exists;
@@ -824,8 +875,9 @@ function gigpress_import() {
 						'show_tour_id' => $show['tour_id'],
 						'show_ages' => gigpress_db_in($show['Admittance']),
 						'show_price' => gigpress_db_in($show['Price']),
-						'show_tix_url' => gigpress_db_in($show['Ticket URL']),
+						'show_tix_url' => gigpress_db_in($show['Ticket URL'], FALSE),
 						'show_tix_phone' => gigpress_db_in($show['Ticket phone']),
+						'show_external_url' => gigpress_db_in($show['External URL']),
 						'show_notes' => gigpress_db_in($show['Notes'], FALSE),
 						'show_related' => '0'
 					);
@@ -835,9 +887,9 @@ function gigpress_import() {
 						$new_show['show_related'] = $show['Related ID'];
 					}
 					
-					$formats = array('%s','%s','%d','%s','%d','%d','%d','%s','%s','%s','%s','%s','%d');
+					$format = array('%s','%s','%d','%s','%d','%d','%d','%s','%s','%s','%s','%s', '%s', '%d');
 					
-					$import = $wpdb->insert(GIGPRESS_SHOWS, $new_show, $formats);
+					$import = $wpdb->insert(GIGPRESS_SHOWS, $new_show, $format);
 					
 					if($import != FALSE) {
 						$inserted[] = $show;

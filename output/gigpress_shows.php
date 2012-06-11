@@ -166,8 +166,10 @@ function gigpress_shows($filter = null, $content = null) {
 				$current_tour = '';
 				$i = 0;
 				$showdata = array(
-					'artist' => wptexturize($artist_group->artist_name),
-					'artist_id' => $artist_group->artist_id
+					'artist' => (isset($artist_group->artist_url) && isset($gpo['artist_link']) && $gpo['artist_link'] == 1) ? '<a href="' . esc_url($artist_group->artist_url) . '"' . gigpress_target($artist_group->artist_url) . '>' . wptexturize($artist_group->artist_name) . '</a>' : wptexturize($artist_group->artist_name),
+					'artist_plain' => wptexturize($artist_group->artist_name),
+					'artist_id' => $artist_group->artist_id,
+					'artist_url' => (isset($artist_group->artist_url)) ? esc_url($artist_group->artist_url) : '',
 				);
 			
 				include gigpress_template('shows-artist-heading');
@@ -338,4 +340,33 @@ function gigpress_menu($options = null) {
 	<?php endif;
 	
 	return ob_get_clean();
+}
+
+
+function gigpress_has_upcoming($filter = null)
+{
+	global $wpdb;
+	$further_where = '';
+	extract(shortcode_atts(array(
+			'tour' => FALSE,
+			'artist' => FALSE,
+			'venue' => FALSE
+		), $filter)
+	);
+	
+	// Artist, tour and venue filtering
+	if($artist) $further_where .= ' AND show_artist_id = ' . $wpdb->prepare('%d', $artist);
+	if($tour) $further_where .= ' AND show_tour_id = ' . $wpdb->prepare('%d', $tour);
+	if($venue) $further_where .= ' AND show_venue_id = ' . $wpdb->prepare('%d', $venue);
+
+	$shows = $wpdb->get_results("
+			SELECT show_id 
+			FROM " . GIGPRESS_SHOWS ." 
+			WHERE show_expire >= '" . GIGPRESS_NOW . "' 
+			AND show_status != 'deleted'" . $further_where . " 
+			LIMIT 1
+		");
+	if($shows) return true;
+	
+	
 }

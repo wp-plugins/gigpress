@@ -55,7 +55,7 @@
 		<span class="gigpress-related-label"><?php _e("City", "gigpress"); ?>:</span> 
 		<span class="gigpress-related-item summary">
 			<span class="hide"><?php echo $showdata['artist'] . ' ' . __("in", "gigpress"); ?> </span>
-			<?php echo $showdata['city']; ?>
+			<?php echo $showdata['city']; if(!empty($showdata['state'])) echo ', '.$showdata['state']; ?>
 		</span>
 	</li>
 	
@@ -106,6 +106,10 @@
 
 <?php if($showdata['ticket_link']) : ?>	
 	<li><?php echo $showdata['ticket_link']; ?></li>
+<?php endif; ?>
+
+<?php if($showdata['external_link']) : ?>	
+	<li><?php echo $showdata['external_link']; ?></li>
 <?php endif; ?>
 
 <?php if($showdata['notes']) : ?>	

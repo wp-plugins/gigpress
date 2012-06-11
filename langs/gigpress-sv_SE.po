@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: GigPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-18 21:02-0400\n"
-"PO-Revision-Date: 2009-09-21 18:11+0100\n"
+"PO-Revision-Date: 2012-06-11 14:22-0600\n"
 "Last-Translator: Julian Kommunikation <info@julian.se>\n"
 "Language-Team: Julian Kommunikation <info@julian.se>\n"
 "MIME-Version: 1.0\n"
@@ -1141,56 +1141,71 @@ msgstr "Prenumerera"
 
 #~ msgid "All Ages"
 #~ msgstr "Alla åldrar"
+
 #~ msgid "All Ages/Licensed"
 #~ msgstr "Alla åldrar/licensierad"
+
 #~ msgid "No minors"
 #~ msgstr "Inga minderåriga"
+
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
 #~ msgstr "<strong>Välkommen till GigPress!</strong> Först bör du"
+
 #~ msgid "customize some of the options"
 #~ msgstr "justera några av inställningarna"
+
 #~ msgid "N/A"
 #~ msgstr "ej tillämpbar"
+
 #~ msgid ""
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
 #~ msgstr ""
 #~ "Föreslaget format är något i stil med: : <strong>45931 Ljungskile</"
 #~ "strong>."
+
 #~ msgid "toggle venue info"
 #~ msgstr "växla lokal"
+
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
 #~ "Detta fält krävs, så om du är osäker, skriv <strong>Kommer senare</"
 #~ "strong>."
+
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
 #~ "Ifall du skriver in en gatuadress, kommer det skapas en automatisk länk "
 #~ "till Google Maps."
+
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr ""
 #~ "Ett angivet värde här kommer läggas till som en länk till lokalens namn."
+
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
 #~ "För att kunna visa olika valutor används ingen auto-formatering här, så "
 #~ "ange valutan."
+
 #~ msgid "This will enable the purchase link when displaying your tour dates."
 #~ msgstr "Detta aktiverar köpknappen när du visar turnédatum."
+
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
 #~ "Ifall denna spelning är del av en turnée du redan har lagt in i GigPress, "
 #~ "välj den här.<br />Ingen turné ännu?"
+
 #~ msgid "Create them here."
 #~ msgstr "Skapa dom här."
+
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
@@ -1198,67 +1213,95 @@ msgstr "Prenumerera"
 #~ "Du kan länka en spelning till ett WordPress-inlägg; praktiskt för "
 #~ "information om spelningar, turnékrönikor, uppladdning av bilder och "
 #~ "kommentarer."
+
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
 #~ msgstr "Du måste ange en lokal (kanske Kommer senare?)"
+
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr "Ange ett namn för turnén - det är det enda som måste anges!"
+
 #~ msgid "You need to enter a name for the tour!"
 #~ msgstr "Ange ett namn för turnén!"
+
 #~ msgid "Tours successfully reordered."
 #~ msgstr "Turnéerna har sorterats om."
+
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
 #~ msgstr ""
 #~ "Verkar som något gick fel vid borttagningen av spelningar i "
 #~ "papperskorgen. Ledsen."
+
 #~ msgid "All tours in the trash have been permanently deleted."
 #~ msgstr "Alla turnér i papperskorgen har tagits bort permanent."
+
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
 #~ msgstr ""
 #~ "Verkar som något gick fel vid borttagningen av turnér i papperskorgen. "
 #~ "Ledsen."
+
 #~ msgid "Name of your band"
 #~ msgstr "Gruppnamn"
+
 #~ msgid "This is used in your RSS feed and hCalendar data."
 #~ msgstr "Detta används i ditt RSS-flöde och hCalendar information."
+
 #~ msgid "Show a link to this page below my sidebar listing."
 #~ msgstr "Visa en länk till denna sidan under listan i sidopanelen."
+
 #~ msgid "Upcoming Shows link phrase"
 #~ msgstr "Kommande spelningar länkfras"
+
 #~ msgid "Used in the main show listings."
 #~ msgstr "Används i den huvudsakliga spelningslistan"
+
 #~ msgid "Used in the Related Post entry."
 #~ msgstr "Används i relaterat inlägg"
+
 #~ msgid "Click 'Update options' to update the sample output."
 #~ msgstr "Klicka 'Uppdatera visning' för att uppdatera testinformationen."
+
 #~ msgid "Related Posts"
 #~ msgstr "Relaterade inlägg"
+
 #~ msgid "RSS Feed"
 #~ msgstr "RSS-flöde"
+
 #~ msgid "Please include a link to my upcoming shows RSS feed"
 #~ msgstr "Lägg till en länk till mitt RSS-flöde för kommande spelningar"
+
 #~ msgid "below my upcoming shows table"
 #~ msgstr "under tabellen för kommande spelningar"
+
 #~ msgid "below my sidebar listing"
 #~ msgstr "under listan i sidopanelen"
+
 #~ msgid "in the <code>head</code> portion of my page"
 #~ msgstr "i <code>head</code> delen av sidan"
+
 #~ msgid "Your RSS feed for upcoming shows is"
 #~ msgstr "RSS-flödet för kommande spelningar är"
+
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
 #~ msgstr "Notera att FeedBurner FeedSmith inte är kompatibelt med GigPress."
+
 #~ msgid "Tour grouping"
 #~ msgstr "Turnégruppering"
+
 #~ msgid "display tours <b>before</b> non-tour shows"
 #~ msgstr "visa turnéer <b>innan</b> individuella spelningar"
+
 #~ msgid "display tours <b>after</b> non-tour shows"
 #~ msgstr "visa turnéer <b>efter</b> individuella spelningar"
+
 #~ msgid "Individual Shows heading"
 #~ msgstr "Rubrik för individuella spelningar"
+
 #~ msgid "Heading level of tour names"
 #~ msgstr "Huvudrubrik för turnénamn"
+
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
@@ -1266,10 +1309,13 @@ msgstr "Prenumerera"
 #~ msgstr ""
 #~ "Beroende på strukturen av dina mallar, vill du kanske att rubriken som "
 #~ "visar dina turnéer ska vara på en annan nivå."
+
 #~ msgid "More on HTML headings."
 #~ msgstr "Mer information om HTML-rubriker."
+
 #~ msgid "This will add the"
 #~ msgstr "Detta lägger"
+
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
@@ -1279,50 +1325,72 @@ msgstr "Prenumerera"
 #~ "värdet till alla lokal-, biljett- och Google Maps-länkar. Tänk på att "
 #~ "denna funktion kanske stör besökare som vill ha kontroll över sin egen "
 #~ "webbläsare och att värdet inte godkänns under strikta HTML doctypes."
+
 #~ msgid "Past shows"
 #~ msgstr "Tidigare spelningar"
+
 #~ msgid "Buy link"
 #~ msgstr "Köp-länk"
+
 #~ msgid "Link"
 #~ msgstr "Länk"
+
 #~ msgid "Reorder tours"
 #~ msgstr "Ändra turnéordning"
+
 #~ msgid "Display order"
 #~ msgstr "Visa sorteringsordning"
+
 #~ msgid "No tours in the database!"
 #~ msgstr "Inga turnéer i databasen!"
+
 #~ msgid "Save order"
 #~ msgstr "Spara sorteringsordningen"
+
 #~ msgid "edit"
 #~ msgstr "ändra"
+
 #~ msgid "Find this address using Google Maps."
 #~ msgstr "Hittade denna adressen med hjälp av Google Maps."
+
 #~ msgid "Buy Tickets"
 #~ msgstr "Köp biljetter"
+
 #~ msgid "Segment list into tours?"
 #~ msgstr "Dela upp listan i turnéer?"
+
 #~ msgid "Options"
 #~ msgstr "Val"
+
 #~ msgid "Nope"
 #~ msgstr "Nej"
+
 #~ msgid "General options"
 #~ msgstr "Allmänna inställningar"
+
 #~ msgid "Display &amp; Formatting"
 #~ msgstr "Visning &amp; formatering"
+
 #~ msgid "Widget options"
 #~ msgstr "Widget-inställningar"
+
 #~ msgid "List heading"
 #~ msgstr "Listrubrik"
+
 #~ msgid "Any number from 1 to 99"
 #~ msgstr "Ett nummer mellan 1 och 99"
+
 #~ msgid "GigPress widget options can be found on the"
 #~ msgstr "GigPress widget-inställningar finns på"
+
 #~ msgid "GigPress options page"
 #~ msgstr "GigPress inställningar"
+
 #~ msgid "Tour dates from"
 #~ msgstr "Turnédatum från"
+
 #~ msgid "Ends"
 #~ msgstr "Slutar"
+
 #~ msgid "Part of"
 #~ msgstr "Del av"
-

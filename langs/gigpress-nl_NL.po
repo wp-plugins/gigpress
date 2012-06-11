@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: GigPress 1.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-18 21:02-0400\n"
-"PO-Revision-Date: 2009-09-30 13:29+0100\n"
+"PO-Revision-Date: 2012-06-11 14:22-0600\n"
 "Last-Translator: Guido Vrouwe <guidovrouwe@gmail.com>\n"
 "Language-Team: GigPress <derek@gigpress.com>\n"
 "MIME-Version: 1.0\n"
@@ -1145,126 +1145,169 @@ msgstr "Aanmelden"
 
 #~ msgid "All Ages"
 #~ msgstr "Alle leeftijden"
+
 #~ msgid "All Ages/Licensed"
 #~ msgstr "Alle leeftijden/Met licentie"
+
 #~ msgid "No minors"
 #~ msgstr "Geen jongeren"
+
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
 #~ msgstr "<strong>Welkom bij GigPress!</strong> Je moet eerst"
+
 #~ msgid "customize some of the options"
 #~ msgstr "een paar opties aanpassen"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
+
 #~ msgid ""
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
 #~ msgstr "Het aanbevolen formaat is: <strong>Horn, Limburg</strong>."
+
 #~ msgid "toggle venue info"
 #~ msgstr "show/hide adresinformatie"
+
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
 #~ "Dit is een verplicht veld, dus als je het niet weet, vul <strong>n.n.b.</"
 #~ "strong> in."
+
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
 #~ "Als je een adres invult, zal het automatisch linken naar Google Maps. "
 #~ "Geen grapje."
+
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr ""
 #~ "Alles wat hier ingevuld wordt, zal toegevoegd worden als hyperlink naar "
 #~ "de naam van het podium."
+
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
 #~ "Om de verscheidene valuta correct weer te geven, zal er geen auto-"
 #~ "formatting plaatsvinden op wat je hier invult. Denk hieraan!"
+
 #~ msgid "This will enable the purchase link when displaying your tour dates."
 #~ msgstr ""
 #~ "Dit zal een link naar de verkoopsite mogelijk maken wanneer de tour data "
 #~ "weergegeven worden."
+
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
 #~ "Als dit optreden deel uitmaakt van een tour die al aangemaakt is in "
 #~ "GigPress, selecteer het hier.<br />Nog geen tours?"
+
 #~ msgid "Create them here."
 #~ msgstr "Maak ze hier aan."
+
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
 #~ msgstr ""
 #~ "Je kunt een WordPress bericht aan het optreden koppelen. Dit is handig "
 #~ "voor aankondigingen, verslagen, foto's of om bezoekers te laten reageren."
+
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
 #~ msgstr "Je moet een podium invullen (misschien nog niet bekend?)"
+
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr ""
 #~ "Je moet een naam invullen voor de tour. Was het nou zo moeilijk om dat "
 #~ "ene veldje in te vullen?"
+
 #~ msgid "You need to enter a name for the tour!"
 #~ msgstr "Je moet een naam invullen voor de tour!"
+
 #~ msgid "Tours successfully reordered."
 #~ msgstr "De tours zijn succesvol herschikt."
+
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
 #~ msgstr ""
 #~ "Er is iets fout gegaan met het legen van de prullenbak, onze excuses "
 #~ "hiervoor."
+
 #~ msgid "All tours in the trash have been permanently deleted."
 #~ msgstr "Alle tours in de prullenbak zijn permanent verwijderd."
+
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
 #~ msgstr ""
 #~ "Er is iets fout gegaan met het legen van de prullenbak, onze excuses "
 #~ "hiervoor."
+
 #~ msgid "Name of your band"
 #~ msgstr "Naam van de band"
+
 #~ msgid "This is used in your RSS feed and hCalendar data."
 #~ msgstr "Dit wordt gebruik in de RSS feed en de hCalendar data."
+
 #~ msgid "Show a link to this page below my sidebar listing."
 #~ msgstr "Laat een link zien naar deze pagina onderaan in het zijmenu."
+
 #~ msgid "Upcoming Shows link phrase"
 #~ msgstr "Tekst voor de link naar de aanstaande optredens"
+
 #~ msgid "Used in the main show listings."
 #~ msgstr "Wordt gebruikt in de lijst met optredens."
+
 #~ msgid "Used in the Related Post entry."
 #~ msgstr "Wordt gebruikt in het verwante bericht."
+
 #~ msgid "Click 'Update options' to update the sample output."
 #~ msgstr "Klik 'Update opties' om de voorbeel output te updaten."
+
 #~ msgid "Related Posts"
 #~ msgstr "Verwant bericht"
+
 #~ msgid "RSS Feed"
 #~ msgstr "RSS Feed"
+
 #~ msgid "Please include a link to my upcoming shows RSS feed"
 #~ msgstr "Plaats een link naar mijn aanstaande optredens in de RSS feed"
+
 #~ msgid "below my upcoming shows table"
 #~ msgstr "onder de tabel met aanstaan de shows"
+
 #~ msgid "below my sidebar listing"
 #~ msgstr "onder mijn zijbalk"
+
 #~ msgid "in the <code>head</code> portion of my page"
 #~ msgstr "in het <code>head</code> gedeelte van mijn pagina"
+
 #~ msgid "Your RSS feed for upcoming shows is"
 #~ msgstr "Jouw RSS feed voor aanstaande optredens is"
+
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
 #~ msgstr "Let wel: de FeedBurner FeedSmith plugin werkt niet met GigPress."
+
 #~ msgid "Tour grouping"
 #~ msgstr "Tour groepen"
+
 #~ msgid "display tours <b>before</b> non-tour shows"
 #~ msgstr "laat de tours zien <b>voor</b> niet-tour optredens"
+
 #~ msgid "display tours <b>after</b> non-tour shows"
 #~ msgstr "laat de tours zien <b>na</b> de niet-tour optredens"
+
 #~ msgid "Individual Shows heading"
 #~ msgstr "Individuele optredens titel"
+
 #~ msgid "Heading level of tour names"
 #~ msgstr "Heading level van tour namen"
+
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
@@ -1272,10 +1315,13 @@ msgstr "Aanmelden"
 #~ msgstr ""
 #~ "Afhankelijk van de structuur van jouw template, zou het kunnen dat je de "
 #~ "titels van de tours in een ander heading level wilt laten zien."
+
 #~ msgid "More on HTML headings."
 #~ msgstr "Meer over HTML headings."
+
 #~ msgid "This will add the"
 #~ msgstr "dit zal het"
+
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
@@ -1285,24 +1331,33 @@ msgstr "Aanmelden"
 #~ "attribuut toevoegen aan alle links. Houd er rekening mee dat er "
 #~ "gebruikers zijn die graag controle behouden over hun web browser, en dat "
 #~ "dit attribuut niet valt onder strikte HTML doctypes."
+
 #~ msgid "Past shows"
 #~ msgstr "Optredens die al geweest zijn"
+
 #~ msgid "Link"
 #~ msgstr "Link"
+
 #~ msgid "Reorder tours"
 #~ msgstr "Herschik tours"
+
 #~ msgid "Display order"
 #~ msgstr "Verschijningsvolgorde"
+
 #~ msgid "No tours in the database!"
 #~ msgstr "Geen tours in de database!"
+
 #~ msgid "Save order"
 #~ msgstr "Volgorde opslaan"
+
 #~ msgid "edit"
 #~ msgstr "bewerken"
+
 #~ msgid "Find this address using Google Maps."
 #~ msgstr "Zoek dit adres met Google Maps."
+
 #~ msgid "Buy Tickets"
 #~ msgstr "Koop je ticket"
+
 #~ msgid "Segment list into tours?"
 #~ msgstr "Lijst splitten in tours?"
-

@@ -1142,10 +1142,13 @@ msgstr "הרשם"
 
 #~ msgid "All Ages"
 #~ msgstr "Всички възрасти"
+
 #~ msgid "All Ages/Licensed"
 #~ msgstr "Всички върасти/с лични документи"
+
 #~ msgid "No minors"
 #~ msgstr "Без непълнолетни"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
 
@@ -1156,124 +1159,165 @@ msgstr "הרשם"
 #, fuzzy
 #~ msgid "You must enter an tour name."
 #~ msgstr "Трябва да въведете град."
+
 #~ msgid "Used in the main show listings."
 #~ msgstr "Използвани в главните участия списъци."
+
 #~ msgid "Used in the Related Post entry."
 #~ msgstr "Използва се в Свързаните публикации."
+
 #~ msgid "Related Posts"
 #~ msgstr "Свързани пунликации"
+
 #~ msgid "No tours in the database!"
 #~ msgstr "Няма турнета в базатра данни!"
 
 #, fuzzy
 #~ msgid "No venues in the database!"
 #~ msgstr "Няма турнета в базатра данни!"
+
 #~ msgid "<strong>Welcome to GigPress!</strong> You should first"
 #~ msgstr "<strong>Добре дошли в GigPress!</strong> Трябва първо да"
+
 #~ msgid "customize some of the options"
 #~ msgstr "направите някои настройки"
+
 #~ msgid ""
 #~ "I'd suggest a format along the lines of: <strong>Winnipeg, MB</strong>."
 #~ msgstr "Предлагаме формат, по следния модел: <strong>Winnipeg, MB</strong>."
+
 #~ msgid "toggle venue info"
 #~ msgstr "добави информация за събитието"
+
 #~ msgid ""
 #~ "This is a required field, so if you don't know, just put <strong>TBA</"
 #~ "strong>."
 #~ msgstr ""
 #~ "Това е задължително поле, така че ако не знаеш какво да впишеш остави "
 #~ "<strong>Ще бъде добавено</strong>."
+
 #~ msgid ""
 #~ "If you enter a street address, it will enable auto-linkage to Google "
 #~ "Maps.  True that, double true."
 #~ msgstr ""
 #~ "Ако въведете улица и номер ще бъде направена хипервръзка с Google Maps.  "
 #~ "Опитайте тази опция."
+
 #~ msgid ""
 #~ "Any value entered here will be added as a hyperlink attached to the name "
 #~ "of the venue."
 #~ msgstr ""
 #~ "Всички въведени тук стойности ще бъдат добавени като хипервръзка, към "
 #~ "името на събитието."
+
 #~ msgid ""
 #~ "To accomodate various currency display formats, no auto-formatting will "
 #~ "be applied to what you enter here. Keep that in mind!"
 #~ msgstr ""
 #~ "За да се има възможност за много валути няма автоматично форматиране на "
 #~ "валутта, така че ще ви се изпише това което въведете. Помнете това!"
+
 #~ msgid "This will enable the purchase link when displaying your tour dates."
 #~ msgstr "Това ще позволи \"Купи онлайн\", когато се показват датите."
+
 #~ msgid ""
 #~ "If this show is part of a tour you've already entered into GigPress, "
 #~ "select it here.<br />No tours yet?"
 #~ msgstr ""
 #~ "Ако това участие е част от турне, което вече сте въвели в GigPress, го "
 #~ "изберете от тук. <br />Все още няма турнета?"
+
 #~ msgid "Create them here."
 #~ msgstr "Създайте ги тук."
+
 #~ msgid ""
 #~ "You can link any show to a WordPress post, useful for show recaps, tour "
 #~ "journals, uploading pictures, and allowing user comments."
 #~ msgstr ""
 #~ "Можете да свържете всчко участие с WordPress публикация, полезно за "
 #~ "резюмета, качване на снимки, потребителски коментари."
+
 #~ msgid "You must enter a venue (perhaps it's TBA?)"
 #~ msgstr ""
 #~ "Трябва да въведете събитие(може би е \"Ще бъде въведено по-късно\"?)"
+
 #~ msgid ""
 #~ "You need to enter a name for the tour. It's the only field for crying out "
 #~ "loud!"
 #~ msgstr ""
 #~ "Трябва да въведете име на турнето. Това е единственото поле, което прави "
 #~ "силно впечатление!"
+
 #~ msgid "You need to enter a name for the tour!"
 #~ msgstr "Трябва да въведете име на турнето!"
+
 #~ msgid "Tours successfully reordered."
 #~ msgstr "Турнето бе преподредено успешно."
+
 #~ msgid "We ran into some trouble deleting shows from the trash. Sorry."
 #~ msgstr "Има проблем с изтриването на участията в кошчето. Съжаляваме."
+
 #~ msgid "All tours in the trash have been permanently deleted."
 #~ msgstr "Всички турнета в кошчето бяха безвъзвратно изтрити."
+
 #~ msgid "We ran into some trouble deleting tours from the trash. Sorry."
 #~ msgstr "Има проблем с изтриването на турнетата от кошчето. Съжаляваме."
+
 #~ msgid "Name of your band"
 #~ msgstr "Име на групата"
+
 #~ msgid "This is used in your RSS feed and hCalendar data."
 #~ msgstr "Това се използва за твоя RSS feed и hCalendar данни."
+
 #~ msgid "Show a link to this page below my sidebar listing."
 #~ msgstr ""
 #~ "Покажи хипервръзка до тази страница под списъка в страничната лента."
+
 #~ msgid "Upcoming Shows link phrase"
 #~ msgstr "Фраза на връзката на Предстоящи участия"
+
 #~ msgid "Click 'Update options' to update the sample output."
 #~ msgstr "Кликни \"Обнови бутона\" за да видиш изгледа."
+
 #~ msgid "RSS Feed"
 #~ msgstr "RSS емисия"
+
 #~ msgid "Please include a link to my upcoming shows RSS feed"
 #~ msgstr "Моля включете връзка към RSS емисията на предстоящите участия"
+
 #~ msgid "below my upcoming shows table"
 #~ msgstr "под моята таблица с предстоящи участия"
+
 #~ msgid "below my sidebar listing"
 #~ msgstr "под списъка в страничната лента"
+
 #~ msgid "in the <code>head</code> portion of my page"
 #~ msgstr "в <code>head</code> секцията на моята страница"
+
 #~ msgid "Your RSS feed for upcoming shows is"
 #~ msgstr "Твоя RSS feed за предстоящи участие е"
+
 #~ msgid ""
 #~ "Note that the FeedBurner FeedSmith plugin is not compatible with GigPress."
 #~ msgstr ""
 #~ "Имайте в предвид, че добавката FeedBurner FeedSmith е несъвместима с "
 #~ "GigPress."
+
 #~ msgid "Tour grouping"
 #~ msgstr "Групиране на турнета"
+
 #~ msgid "display tours <b>before</b> non-tour shows"
 #~ msgstr "покажи турнетата <b>преди</b> самостоятелните участия"
+
 #~ msgid "display tours <b>after</b> non-tour shows"
 #~ msgstr "покажи турнетата <b>след</b> самостоятелните участия"
+
 #~ msgid "Individual Shows heading"
 #~ msgstr "Заглавието на Самостоятелните участия"
+
 #~ msgid "Heading level of tour names"
 #~ msgstr "Размер на заглавието на турнетата"
+
 #~ msgid ""
 #~ "Depending on the semantic structure of your page template, you may want "
 #~ "the headings which display the name of your tour(s) to be a different "
@@ -1282,10 +1326,13 @@ msgstr "הרשם"
 #~ "В зависимост от семантичнaтa структура на вашата страница, може да искате "
 #~ "заглавията, които показват името на вашите турнета да бъде на различно "
 #~ "ниво (размер)."
+
 #~ msgid "More on HTML headings."
 #~ msgstr "Повече на HTML заглавията."
+
 #~ msgid "This will add the"
 #~ msgstr "Това ще добави"
+
 #~ msgid ""
 #~ "attribute to all venue, ticket and Google Maps links. Keep in mind that "
 #~ "this behaviour can be annoying to users who like to control their own web "
@@ -1296,24 +1343,33 @@ msgstr "הרשם"
 #~ "забравяйте, че този начин на работа може да бъде неприятен за хора, които "
 #~ "обичат да контролират техният собствен уеб бразузър и че тази "
 #~ "характерност не се валидизира в стриктните HTML правила."
+
 #~ msgid "Past shows"
 #~ msgstr "Минали участия"
+
 #~ msgid "Buy link"
 #~ msgstr "Купи билети"
+
 #~ msgid "Link"
 #~ msgstr "Връзка"
+
 #~ msgid "Reorder tours"
 #~ msgstr "Преподреди турнетата"
+
 #~ msgid "Display order"
 #~ msgstr "Покажи реда"
+
 #~ msgid "Save order"
 #~ msgstr "Запази реда"
+
 #~ msgid "edit"
 #~ msgstr "редактирай"
+
 #~ msgid "Find this address using Google Maps."
 #~ msgstr "Намери адреса с Google Maps."
+
 #~ msgid "Buy Tickets"
 #~ msgstr "Купи билети"
+
 #~ msgid "Segment list into tours?"
 #~ msgstr "Раздели списъка в турнета?"
-

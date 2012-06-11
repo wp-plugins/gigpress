@@ -49,7 +49,7 @@ function gigpress_add() {
 		// If the handler returned an array ($result), it means there were errors.
 		// This takes precedence over any other conditionals below.
 		
-		if(is_array($result)) {
+		if(isset($result)) {
 		
 			$mm = $_POST['gp_mm'];
 			$dd = $_POST['gp_dd'];
@@ -62,13 +62,16 @@ function gigpress_add() {
 			$exp_dd = $_POST['exp_dd'];
 			$exp_yy = $_POST['exp_yy'];
 			
-			$show_multi = $_POST['show_multi'];
+			$show_multi = (isset($_POST['show_multi']) && !empty($_POST['show_multi'])) ? 1 : FALSE;
 			$show_artist_id = $_POST['show_artist_id'];
 			$show_venue_id = $_POST['show_venue_id'];
 			$new_artist_name = gigpress_db_out($_POST['artist_name']);
+			$artist_url = gigpress_db_out($_POST['artist_url']);
 			$new_venue_name = gigpress_db_out($_POST['venue_name']);
 			$venue_address = gigpress_db_out($_POST['venue_address']);
 			$new_venue_city = gigpress_db_out($_POST['venue_city']);
+			$venue_state = gigpress_db_out($_POST['venue_state']);		
+			$venue_postal_code = gigpress_db_out($_POST['venue_postal_code']);					
 			$venue_country = gigpress_db_out($_POST['venue_country']);
 			$venue_url = gigpress_db_out($_POST['venue_url']);
 			$venue_phone = gigpress_db_out($_POST['venue_phone']);
@@ -78,6 +81,7 @@ function gigpress_add() {
 			$show_tix_phone = gigpress_db_out($_POST['show_tix_phone']);
 			$show_notes = gigpress_db_out($_POST['show_notes']);
 			$show_price = gigpress_db_out($_POST['show_price']);
+			$show_external_url = gigpress_db_out($_POST['show_external_url']);
 			$show_tour_id = $_POST['show_tour_id'];
 			$show_related = $_POST['show_related'];
 			$show_related_title = gigpress_db_out($_POST['show_related_title']);
@@ -126,6 +130,7 @@ function gigpress_add() {
 						$show_tix_phone = gigpress_db_out($show->show_tix_phone);
 						$show_notes = gigpress_db_out($show->show_notes);
 						$show_price = gigpress_db_out($show->show_price);
+						$show_external_url = gigpress_db_out($show->show_external_url);
 						$show_tour_id = $show->show_tour_id;
 						$show_related = $show->show_related;
 						$show_related_title = $gpo['default_title'];	
@@ -141,13 +146,12 @@ function gigpress_add() {
 					$load_error = '<div id="message" class="error fade"><p>' . __("Sorry, but we had trouble loading that show for editing.", "gigpress") . '</div>';
 				
 				}
-	
 		}
 		
-		if(!$have_data) {
+		if(!isset($have_data)) {
 	
 			// We're adding a new show, so get the defaults
-	
+			
 			$show_date = explode('-', $gpo['default_date']);
 				$mm = $show_date[1];
 				$dd = $show_date[2];
@@ -167,8 +171,11 @@ function gigpress_add() {
 				$exp_mm = $show_expire[1];
 				$exp_dd = $show_expire[2];
 				$exp_yy = $show_expire[0];
-				
-			$show_artist_id = $gpo['default_artist'];
+			
+			$show_multi = FALSE;	
+			$show_artist_id = (isset($gpo['default_artist'])) ? $gpo['default_artist'] : '';
+			$show_venue_id = (isset($gpo['default_venue'])) ? $gpo['default_venue'] : '';
+			$show_ages = (isset($gpo['default_ages'])) ? $gpo['default_ages'] : '';
 			$show_tour_id = $gpo['default_tour'];
 			$venue_country = $gpo['default_country'];
 			$show_related_title = $gpo['default_title'];
@@ -178,7 +185,7 @@ function gigpress_add() {
 		screen_icon('gigpress');	
 		
 		// We're editing a show
-		if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" && $show_edit || $result['editing'] == TRUE) { ?>
+		if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($show_edit) || (isset($result['editing']))) { ?>
 		
 			<h2><?php _e("Edit this show", "gigpress"); ?></h2>
 		
@@ -191,7 +198,7 @@ function gigpress_add() {
 		
 			<h2><?php _e("Add a show", "gigpress"); ?></h2>
 			
-			<?php if($load_error) echo $load_error; ?>
+			<?php if(isset($load_error)) echo $load_error; ?>
 					
 			<form method="post" action="<?php bloginfo('wpurl') ?>/wp-admin/admin.php?page=gigpress/gigpress.php">
 				<?php wp_nonce_field('gigpress-action') ?>
@@ -205,7 +212,7 @@ function gigpress_add() {
 			  <tr>
 				<th scope="row"><label for="gp_mm"><?php _e("Date", "gigpress") ?>:<span class="gp-required">*</span></label></th>
 					<td>
-					<?php if($result['show_date']) echo('<span class="gigpress-error">'); ?>				
+					<?php if(isset($result['show_date'])) echo('<span class="gigpress-error">'); ?>				
 					<select name="gp_mm" id="gp_mm">
 					<?php foreach($gp_months as $month) : ?>
 						<option value="<?php echo $month; ?>"<?php if($mm == $month) : ?> selected="selected"<?php endif; ?>>
@@ -229,11 +236,11 @@ function gigpress_add() {
 					  	echo('>' . $i . '</option>');
 					  	} ?>
 					</select>
-					<?php if($result['show_date']) echo('</span>'); ?>
+					<?php if(isset($result['show_date'])) echo('</span>'); ?>
 				
 					&nbsp; <?php _e("at", "gigpress"); ?> &nbsp; 
 					
-					<?php if ( $gpo['alternate_clock'] == 1 ) { ?>
+					<?php if(isset($gpo['alternate_clock']) && $gpo['alternate_clock'] == 1 ) { ?>
 					<select name="gp_hh" id="gp_hh" class="twentyfour">
 						<option value="na"<?php if($hh == "na") echo(' selected="selected"'); ?>>--</option>
 						<option value="00"<?php if($hh == "00") echo(' selected="selected"'); ?>>00</option>
@@ -312,14 +319,14 @@ function gigpress_add() {
 							<option value="55"<?php if($min == "55") echo(' selected="selected"'); ?>>55</option>
 					</select>
 						<span id="ampm">&nbsp;</span>
-						<p><span class="description">&nbsp;<label><input type="checkbox" value="1"<?php if($show_multi == 1) echo(' checked="checked"'); ?> id="show_multi" name="show_multi" />&nbsp;<?php _e("This is a multi-day event", "gigpress"); ?></label></span></p>
+						<p><span class="description">&nbsp;<label><input type="checkbox" value="1"<?php if(isset($show_multi) && $show_multi == 1) echo(' checked="checked"'); ?> id="show_multi" name="show_multi" />&nbsp;<?php _e("This is a multi-day event", "gigpress"); ?></label></span></p>
 						</td>
 					</tr>
 					<!-- For multiple-day events -->
-					<tr id="expire"<?php if($show_multi != 1) echo(' class="gigpress-inactive"'); ?>>
+					<tr id="expire"<?php if(empty($show_multi)) echo(' class="gigpress-inactive"'); ?>>
 						<th scope="row"><label for="exp_mm"><?php _e("End date", "gigpress") ?>:</label></th>
 						<td>
-						<?php if($result['expire_date']) echo('<span class="gigpress-error">'); ?>
+						<?php if(isset($result['expire_date'])) echo('<span class="gigpress-error">'); ?>
 						<select name="exp_mm" id="exp_mm">
 						<?php foreach($gp_months as $month) : ?>
 							<option value="<?php echo $month; ?>"<?php if($exp_mm == $month) : ?> selected="selected"<?php endif; ?>>
@@ -344,14 +351,14 @@ function gigpress_add() {
 						  	echo('>' . $i . '</option>');
 						  	} ?>
 					  	</select>
-						<?php if($result['expire_date']) echo('</span>'); ?>
+						<?php if(isset($result['expire_date'])) echo('</span>'); ?>
 						</td>
 					</tr>
 				<tr>
 					<th scope="row"><label for="show_artist_id"><?php _e("Artist", "gigpress") ?>:<span class="gp-required">*</span></label></th>
 					<td>
 					<select name="show_artist_id" id="show_artist_id" class="can-add-new">
-						<option value="new"<?php if($show_artist_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new artist", "gigpress"); ?></option>
+						<option value="new"<?php if(isset($show_artist_id) && $show_artist_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new artist", "gigpress"); ?></option>
 						<option value="">------------------</option>
 					  	<?php $artists = fetch_gigpress_artists();
 							if($artists != FALSE) {
@@ -362,7 +369,8 @@ function gigpress_add() {
 									echo(">$artist_name</option>\n\t\t\t");
 								}
 							} else {
-								echo('<option value="0" selected="selected">' . __("No artists in the database", "gigpress") . '</option>');
+								echo('<option value="0">' . __("No artists in the database", "gigpress") . '</option>');
+								$no_artists = true;
 							}
 						?>
 					  </select>
@@ -370,11 +378,17 @@ function gigpress_add() {
 				  </tr>
 				 </tbody>
 				 
-				<tbody id="show_artist_id_new" class="gigpress-addition<?php if($show_artist_id != 'new') echo(' gigpress-inactive'); ?>">
+				<tbody id="show_artist_id_new" class="gigpress-addition<?php if(!isset($show_artist_id) || (isset($show_artist_id) && $show_artist_id != 'new') && !isset($no_artists)) echo(' gigpress-inactive'); ?>">
 				<tr>
-					<th scope="row"><label for="artist_name"><?php _e("Artist name", "gigpress"); ?>:</label></th>
-					<td><input type="text" size="48" name="artist_name" id="artist_name" value="<?php echo $new_artist_name; ?>"<?php if($result['artist_name']) echo(' class="gigpress-error"'); ?> /></td>
+					<th scope="row"><label for="artist_name"><?php _e("Artist name", "gigpress"); ?>:<span class="gp-required">*</span></label></th>
+					<td><input type="text" size="48" name="artist_name" id="artist_name" value="<?php if(isset($new_artist_name)) echo $new_artist_name; ?>"<?php if(isset($result['artist_name'])) echo(' class="gigpress-error"'); ?> /></td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="artist_url"><?php _e("Artist URL", "gigpress"); ?>:</label></th>
+					<td>
+						<input name="artist_url" id="artist_url" type="text" size="48" value="<?php if(isset($artist_url)) echo $artist_url; ?>" />
+					</td>
+				</tr>				
 				</tbody>
 				
 				<tbody>
@@ -382,17 +396,18 @@ function gigpress_add() {
 					<th scope="row"><label for="show_venue_id"><?php _e("Venue", "gigpress") ?>:<span class="gp-required">*</span></label></th>
 					<td>
 					<select name="show_venue_id" id="show_venue_id" class="can-add-new">
-						<option value="new"<?php if($show_venue_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new venue", "gigpress"); ?></option>
+						<option value="new"<?php if(isset($show_venue_id) && $show_venue_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new venue", "gigpress"); ?></option>
 						<option value="">------------------</option>
-						<option value=""<?php if(!$show_venue_id) echo(' selected="selected"'); ?>><?php _e("Select a venue", "gigpress"); ?></option>
+						<option value=""<?php if(!isset($show_venue_id) || (isset($show_venue_id) && $show_venue_id == '') ) echo(' selected="selected"'); ?>><?php _e("Select a venue", "gigpress"); ?></option>
 						<option value="">------------------</option>
 					  	<?php $venues = fetch_gigpress_venues();
 							if($venues != FALSE) {
 								foreach($venues as $venue) {
 									$venue_name = gigpress_db_out($venue->venue_name);
 									$venue_city = gigpress_db_out($venue->venue_city);
+									if($venue->venue_state) $venue_city .= ', '.gigpress_db_out($venue->venue_state);
 									echo("<option value=\"$venue->venue_id\"");
-									if($show_venue_id == $venue->venue_id) echo(' selected="selected"');
+									if(isset($show_venue_id) && $show_venue_id == $venue->venue_id) echo(' selected="selected"');
 									echo(">$venue_name ($venue_city)</option>\n\t\t\t");
 								}
 							} else {
@@ -404,21 +419,28 @@ function gigpress_add() {
 				  </tr>
 				</tbody>
 				
-				<tbody id="show_venue_id_new" class="gigpress-addition<?php if($show_venue_id != 'new') echo(' gigpress-inactive'); ?>">
+				<tbody id="show_venue_id_new" class="gigpress-addition<?php if(!isset($show_venue_id) || (isset($show_venue_id) && $show_venue_id != 'new')) echo(' gigpress-inactive'); ?>">
 				  <tr>
 					<th scope="row"><label for="venue_name"><?php _e("Venue name", "gigpress") ?>:<span class="gp-required">*</span></label>
 					</th>
-					<td><input type="text" size="48" name="venue_name" id="venue_name" value="<?php echo $new_venue_name; ?>"<?php if($result['venue_name']) echo(' class="gigpress-error"'); ?> /></td>
+					<td><input type="text" size="48" name="venue_name" id="venue_name" value="<?php if(isset($new_venue_name)) echo $new_venue_name; ?>"<?php if(isset($result['venue_name'])) echo(' class="gigpress-error"'); ?> /></td>
 				  </tr>	
 				<tr>
+					<th scope="row"><label for="venue_address"><?php _e("Venue address", "gigpress") ?>:</label></th>
+					<td><input type="text" size="48" name="venue_address" id="venue_address" value="<?php if(isset($venue_address)) echo $venue_address; ?>" /></td>
+				</tr>
+				<tr>
 					<th scope="row"><label for="venue_city"><?php _e("Venue city", "gigpress") ?>:<span class="gp-required">*</span></label></th>
-					<td><input type="text" size="48" name="venue_city" id="venue_city" value="<?php echo $new_venue_city; ?>"<?php if($result['venue_city']) echo(' class="gigpress-error"'); ?> class="required" /></td>
+					<td><input type="text" size="48" name="venue_city" id="venue_city" value="<?php if(isset($new_venue_city)) echo $new_venue_city; ?>"<?php if(isset($result['venue_city'])) echo(' class="gigpress-error"'); ?> class="required" /></td>
 				</tr>			  		
 				<tr>
-					<th scope="row"><label for="venue_address"><?php _e("Venue address", "gigpress") ?>:</label></th>
-					<td><input type="text" size="48" name="venue_address" id="venue_address" value="<?php echo $venue_address; ?>" /></td>
+					<th scope="row"><label for="venue_state"><?php _e("Venue state/province", "gigpress") ?>:</label></th>
+					<td><input type="text" size="48" name="venue_state" id="venue_state" value="<?php if(isset($venue_state)) echo $venue_state; ?>" /></td>
 				  </tr>
-				  
+				<tr>
+					<th scope="row"><label for="venue_postal_code"><?php _e("Venue postal code", "gigpress") ?>:</label></th>
+					<td><input type="text" size="48" name="venue_postal_code" id="venue_postal_code" value="<?php if(isset($venue_postal_code)) echo $venue_postal_code; ?>" /></td>
+				  </tr>				  				  
 				 <tr>
 					<th scope="row"><label for="venue_country"><?php _e("Venue country", "gigpress") ?>:</label></th>
 					<td>
@@ -434,16 +456,16 @@ function gigpress_add() {
 				  			  
 				  <tr>
 					<th scope="row"><label for="venue_url"><?php _e("Venue website", "gigpress") ?>:</label></th>
-					<td><input type="text" size="48" name="venue_url" id="venue_url" value="<?php echo $venue_url; ?>" /></td>
+					<td><input type="text" size="48" name="venue_url" id="venue_url" value="<?php if(isset($venue_url)) echo $venue_url; ?>" /></td>
 				  </tr>
 				  <tr>
 					<th scope="row"><label for="venue_phone"><?php _e("Venue phone", "gigpress") ?>:</label></th>
-					<td><input type="text" size="48" name="venue_phone" id="venue_phone" value="<?php echo $venue_phone; ?>" /></td>
+					<td><input type="text" size="48" name="venue_phone" id="venue_phone" value="<?php if(isset($venue_phone)) echo $venue_phone; ?>" /></td>
 				  </tr>			  
 				</tbody>
 				
 				<tbody>
-				<?php if ( $_GET['gpaction'] == 'edit' || $result['editing'] == TRUE ) { ?>
+				<?php if(isset($_GET['gpaction']) && $_GET['gpaction'] == 'edit' || isset($result['editing'])) { ?>
 				<tr>
 					<th scope="row"><label for="show_status"><?php _e("Status", "gigpress") ?>:</label></th>
 					<td><select name="show_status" id="show_status">
@@ -457,12 +479,12 @@ function gigpress_add() {
 				  <tr>
 					<th scope="row"><label for="show_ages"><?php _e("Admittance", "gigpress") ?>:</label></th>
 					<td><select name="show_ages" id="show_ages">
-					  <option value="Not sure"<?php if($show_ages == "Not sure") echo(' selected="selected"'); ?>><?php _e("Not sure", "gigpress") ?></option>
+					  <option value="Not sure"<?php if(isset($show_ages) && $show_ages == "Not sure") echo(' selected="selected"'); ?>><?php _e("Not sure", "gigpress") ?></option>
 					  <?php
 					  	$ages = explode('|', $gpo['age_restrictions']);
 					  	foreach($ages as $age) {
 					  		$age = trim($age);
-					  		$selected = ($show_ages == $age) ? ' selected="selected"' : '';
+					  		$selected = (isset($show_ages) && $show_ages == $age) ? ' selected="selected"' : '';
 					  		echo('<option value="' . $age . '"' . $selected . '>' . $age . '</option>
 					  		');
 					  	}	
@@ -472,20 +494,24 @@ function gigpress_add() {
 				  </tr>
 				  <tr>
 					<th scope="row"><label for="show_price"><?php _e("Price", "gigpress") ?>:</label></th>
-					<td><input type="text" size="10" name="show_price" id="show_price" value="<?php echo $show_price; ?>" /> <span class="description">(<?php _e("include currency symbol", "gigpress"); ?>)</span></td>
+					<td><input type="text" size="10" name="show_price" id="show_price" value="<?php if(isset($show_price)) echo $show_price; ?>" /> <span class="description">(<?php _e("include currency symbol", "gigpress"); ?>)</span></td>
 				  </tr>
 				  <tr>
 					<th scope="row"><label for="show_tix_url"><?php _e("Ticket URL", "gigpress") ?>:</label></th>
-					<td><input type="text" size="48" name="show_tix_url" id="show_tix_url" value="<?php echo $show_tix_url; ?>" /></td>
+					<td><input type="text" size="48" name="show_tix_url" id="show_tix_url" value="<?php if(isset($show_tix_url)) echo $show_tix_url; ?>" /></td>
 				  </tr>
 	 				<tr>
 					<th scope="row"><label for="show_tix_phone"><?php _e("Ticket phone", "gigpress") ?>:</label></th>
-					<td><input type="text" size="48" name="show_tix_phone" id="show_tix_phone" value="<?php echo $show_tix_phone; ?>" /></td>
+					<td><input type="text" size="48" name="show_tix_phone" id="show_tix_phone" value="<?php if(isset($show_tix_phone)) echo $show_tix_phone; ?>" /></td>
 				  </tr>
+				  <tr>
+					<th scope="row"><label for="show_external_url"><?php _e("External URL", "gigpress") ?>:</label></th>
+					<td><input type="text" size="48" name="show_external_url" id="show_external_url" value="<?php if(isset($show_external_url)) echo $show_external_url; ?>" /></td>
+				  </tr>				  
 				  <tr>
 					<th scope="row"><label for="show_notes"><?php _e("Notes", "gigpress") ?>:</label></th>
 					<td>
-						<textarea name="show_notes" id="show_notes" cols="45" rows="5"><?php echo $show_notes; ?></textarea><br />
+						<textarea name="show_notes" id="show_notes" cols="45" rows="5"><?php if(isset($show_notes)) echo $show_notes; ?></textarea><br />
 						<span class="description"><?php _e("Use this space to list other bands, 'presented by' info, etc", "gigpress"); ?></span>
 					</td>
 				  </tr>
@@ -495,14 +521,14 @@ function gigpress_add() {
 						<select name="show_tour_id" id="show_tour_id" class="can-add-new">
 						<option value="0"><?php _e("No", "gigpress"); ?></option>
 						<option value="0">------------------</option>
-						<option value="new"<?php if($show_tour_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new tour", "gigpress"); ?></option>
+						<option value="new"<?php if(isset($show_tour_id) && $show_tour_id == 'new') echo(' selected="selected"'); ?>><?php _e("Add a new tour", "gigpress"); ?></option>
 						<option value="0">------------------</option>
 					  	<?php $tours = fetch_gigpress_tours();
 							if($tours != FALSE) {
 								foreach($tours as $tour) {
 									$tour_name = gigpress_db_out($tour->tour_name);
 									echo("<option value=\"$tour->tour_id\"");
-									if($show_tour_id == $tour->tour_id) echo(' selected="selected"');
+									if(isset($show_tour_id) && $show_tour_id == $tour->tour_id) echo(' selected="selected"');
 									echo(">$tour_name</option>\n\t\t\t");
 								}
 							} else {
@@ -514,10 +540,10 @@ function gigpress_add() {
 				  </tr>
 			</tbody>
 			
-			<tbody id="show_tour_id_new" class="gigpress-addition<?php if($show_tour_id != 'new') echo(' gigpress-inactive'); ?>">
+			<tbody id="show_tour_id_new" class="gigpress-addition<?php if(!isset($show_tour_id) || (isset($show_tour_id) && $show_tour_id != 'new')) echo(' gigpress-inactive'); ?>">
 				<tr>
 					<th scope="row"><label for="tour_name"><?php _e("Tour name", "gigpress"); ?>:</label></th>
-					<td><input type="text" size="48" name="tour_name" id="tour_name" value="<?php echo $new_tour_name; ?>"<?php if($result['tour_name']) echo(' class="gigpress-error"'); ?> /></td>
+					<td><input type="text" size="48" name="tour_name" id="tour_name" value="<?php if(isset($new_tour_name)) echo $new_tour_name; ?>"<?php if(isset($result['tour_name'])) echo(' class="gigpress-error"'); ?> /></td>
 				</tr>
 			</tbody>	  
 			
@@ -528,18 +554,18 @@ function gigpress_add() {
 						<select name="show_related" id="show_related" class="can-add-new">
 					  		<option value="0"><?php _e("None", "gigpress"); ?></option>
 							<option value="0">------------------</option>
-					  		<option value="new"<?php if($_GET['gpaction'] != "edit" && $gpo['autocreate_post'] == "1") echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
+					  		<option value="new"<?php if( (isset($_GET['gpaction']) && !in_array($_GET['gpaction'], array('edit', 'killwelcome'))) || (isset($gpo['autocreate_post']) && $gpo['autocreate_post'] == "1") ) echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
 							<option value="0">------------------</option>
 							
 					  	<?php 
-					  	$entries = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE (post_status = 'publish' OR post_status = 'future') AND post_type = 'post' ORDER BY ID DESC LIMIT 500", ARRAY_A);	
+					  	$entries = $wpdb->get_results("SELECT p.ID, p.post_title FROM " . $wpdb->prefix . "posts p LEFT JOIN " . $wpdb->prefix . "term_relationships tr ON tr.object_id = p.ID LEFT JOIN " . $wpdb->prefix . "term_taxonomy tt ON tt.term_taxonomy_id = tr.term_taxonomy_id WHERE (p.post_status = 'publish' OR p.post_status = 'future') AND p.post_type = 'post' AND tt.term_id = " . $gpo['related_category'] . " ORDER BY p.ID DESC LIMIT 500", ARRAY_A);	
 					  	if($entries != FALSE) {				  	
 							foreach($entries as $entry) { ?>
-								<option value="<?php echo $entry['ID']; ?>"<?php if($entry['ID'] == $show_related) { echo(' selected="selected"'); $found_related = TRUE; } ?>><?php echo gigpress_db_out($entry['post_title']); ?></option>
+								<option value="<?php echo $entry['ID']; ?>"<?php if(isset($show_related) && $entry['ID'] == $show_related) { echo(' selected="selected"'); $found_related = TRUE; } ?>><?php echo gigpress_db_out($entry['post_title']); ?></option>
 						<?php }
 						} ?>
 						
-						<?php if($show_related != FALSE && !isset($found_related)) {
+						<?php if(isset($show_related) && !isset($found_related)) {
 							$old_related = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_type = 'post' AND ID = ".$wpdb->prepare('%d', $show_related)." LIMIT 1", ARRAY_A);
 							if($old_related != FALSE) {
 								foreach($old_related as $entry) { ?>
@@ -551,13 +577,14 @@ function gigpress_add() {
 					</td>
 				  </tr>
 				 </tbody>
-				<tbody id="show_related_new" class="gigpress-addition<?php if($show_related != 'new' && $gpo['autocreate_post'] != "1") echo(' gigpress-inactive'); ?>">
+				 				 
+				<tbody id="show_related_new" class="gigpress-addition<?php if( (isset($show_related) && $show_related != 'new') || (isset($gpo['autocreate_post']) && empty($gpo['autocreate_post'])) || !isset($gpo['autocreate_post']) ) echo(' gigpress-inactive'); ?>">
 				<tr>
 					<th scope="row"><label for="show_related_title"><?php _e("Related post title", "gigpress"); ?>:</label></th>
-					<td><input type="text" size="48" name="show_related_title" id="show_related_title" value="<?php echo $show_related_title; ?>" /><br />
+					<td><input type="text" size="48" name="show_related_title" id="show_related_title" value="<?php if(isset($show_related_title)) echo $show_related_title; ?>" /><br />
 					<span class="description"><?php _e("Available placeholders:", "gigpress"); ?> <code>%date%</code>, <code>%long_date%</code>, <code>%artist%</code>, <code>%city%</code>, <code>%venue%</code>.</span><br />
-					<label><input type="radio" name="show_related_date" value="now"<?php if ($show_related_date == 'now') echo(' checked="checked"'); ?> /> <?php _e('Publish now', 'gigpress'); ?></label> &nbsp; 
-					<label><input type="radio" name="show_related_date" value="show"<?php if ($show_related_date == 'show') echo(' checked="checked"'); ?> /> <?php _e('Publish on show date', 'gigpress'); ?></label>
+					<label><input type="radio" name="show_related_date" value="now"<?php if (isset($show_related_date) && $show_related_date == 'now') echo(' checked="checked"'); ?> /> <?php _e('Publish now', 'gigpress'); ?></label> &nbsp; 
+					<label><input type="radio" name="show_related_date" value="show"<?php if (isset($show_related_date) && $show_related_date == 'show') echo(' checked="checked"'); ?> /> <?php _e('Publish on show date', 'gigpress'); ?></label>
 					</td>
 				</tr>
 			</tbody>
@@ -565,7 +592,7 @@ function gigpress_add() {
 				<tr>
 					<td>&nbsp;</td>
 					<td>
-				<?php if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || $result['editing'] == TRUE) { ?>
+				<?php if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($result['editing'])) { ?>
 					<span class="submit"><input type="submit" name="Submit" class="button-primary" value="<?php _e("Update show", "gigpress") ?>" /></span> <?php _e("or", "gigpress"); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=gigpress-shows"><?php _e("cancel", "gigpress"); ?></a>
 				
 				<?php } else { ?>

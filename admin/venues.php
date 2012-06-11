@@ -34,13 +34,14 @@ function gigpress_venues() {
 	
 	// Check our context to determine what we're populating
 	
-	if(is_array($result)) {
+	if(isset($result)) {
 	
 		// This means we $_POSTed and there were errors
-		
 		$venue_name = gigpress_db_out($_POST['venue_name']);		
 		$venue_city = gigpress_db_out($_POST['venue_city']);		
-		$venue_address = gigpress_db_out($_POST['venue_address']);		
+		$venue_address = gigpress_db_out($_POST['venue_address']);
+		$venue_state = gigpress_db_out($_POST['venue_state']);		
+		$venue_postal_code = gigpress_db_out($_POST['venue_postal_code']);				
 		$venue_country = $_POST['venue_country'];		
 		$venue_url = gigpress_db_out($_POST['venue_url']);		
 		$venue_phone = gigpress_db_out($_POST['venue_phone']);
@@ -58,6 +59,8 @@ function gigpress_venues() {
 				$venue_name = gigpress_db_out($venue->venue_name);		
 				$venue_city = gigpress_db_out($venue->venue_city);		
 				$venue_address = gigpress_db_out($venue->venue_address);		
+				$venue_state = gigpress_db_out($venue->venue_state);		
+				$venue_postal_code = gigpress_db_out($venue->venue_postal_code);		
 				$venue_country = $venue->venue_country;		
 				$venue_url = gigpress_db_out($venue->venue_url);		
 				$venue_phone = gigpress_db_out($venue->venue_phone);		
@@ -72,13 +75,11 @@ function gigpress_venues() {
 	} else {
 		
 		// New venue entry
-		
-		$venue_name = $venue_city = $venue_address = $venue_url = $venue_phone = $load_error = '';
 		$venue_country = $gpo['default_country'];
 	
 	}
 	
-	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" && $venuedata || is_array($result) && $result['editing'] == TRUE) {
+	if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" && $venuedata || isset($result) && isset($result['editing']) ) {
 	?>
 		<h3><?php _e("Edit this venue", "gigpress"); ?></h3>
 	
@@ -88,7 +89,7 @@ function gigpress_venues() {
 
 	<?php } else { ?>
 	
-		<?php if($load_error) echo $load_error; ?>
+		<?php if(isset($load_error)) echo $load_error; ?>
 
 		<h3><?php _e("Add an venue", "gigpress"); ?></h3>
 		
@@ -100,16 +101,24 @@ function gigpress_venues() {
 		<table class="form-table gp-table">
 			<tr>
 				<th scope="row"><label for="venue_name"><?php _e("Venue name", "gigpress") ?>:<span class="gp-required">*</span></label></th>
-				<td><input type="text" size="48" name="venue_name" id="venue_name" value="<?php echo $venue_name; ?>"<?php if($result['venue_name']) echo(' class="gigpress-error"'); ?> /></td>
-			</tr>	
-			<tr>
-				<th scope="row"><label for="venue_city"><?php _e("Venue city", "gigpress") ?>:<span class="gp-required">*</span></label></th>
-				<td><input type="text" size="48" name="venue_city" id="venue_city" value="<?php echo $venue_city; ?>"<?php if($result['venue_city']) echo(' class="gigpress-error"'); ?> /></td>
+				<td><input type="text" size="48" name="venue_name" id="venue_name" value="<?php if(isset($venue_name)) echo $venue_name; ?>"<?php if(isset($result) && isset($result['venue_name'])) echo(' class="gigpress-error"'); ?> /></td>
 			</tr>			  		
 			<tr>
 				<th scope="row"><label for="venue_address"><?php _e("Venue address", "gigpress") ?>:</label></th>
-				<td><input type="text" size="48" name="venue_address" id="venue_address" value="<?php echo $venue_address; ?>" /></td>
+				<td><input type="text" size="48" name="venue_address" id="venue_address" value="<?php if(isset($venue_address)) echo $venue_address; ?>" /></td>
 			</tr>
+			<tr>
+				<th scope="row"><label for="venue_city"><?php _e("Venue city", "gigpress") ?>:<span class="gp-required">*</span></label></th>
+				<td><input type="text" size="48" name="venue_city" id="venue_city" value="<?php if(isset($venue_city)) echo $venue_city; ?>"<?php if(isset($result) && isset($result['venue_city'])) echo(' class="gigpress-error"'); ?> /></td>
+			</tr>				
+			<tr>
+				<th scope="row"><label for="venue_state"><?php _e("Venue state/province", "gigpress") ?>:</label></th>
+				<td><input type="text" size="48" name="venue_state" id="venue_state" value="<?php if(isset($venue_state)) echo $venue_state; ?>" /></td>
+			  </tr>
+			<tr>
+				<th scope="row"><label for="venue_postal_code"><?php _e("Venue postal code", "gigpress") ?>:</label></th>
+				<td><input type="text" size="48" name="venue_postal_code" id="venue_postal_code" value="<?php if(isset($venue_postal_code)) echo $venue_postal_code; ?>" /></td>
+			  </tr>	
 			<tr>
 				<th scope="row"><label for="venue_country"><?php _e("Venue country", "gigpress") ?>:</label></th>
 				<td>
@@ -124,16 +133,16 @@ function gigpress_venues() {
 			</tr>	  
 			<tr>
 				<th scope="row"><label for="venue_url"><?php _e("Venue website", "gigpress") ?>:</label></th>
-				<td><input type="text" size="48" name="venue_url" id="venue_url" value="<?php echo $venue_url; ?>" /></td>
+				<td><input type="text" size="48" name="venue_url" id="venue_url" value="<?php if(isset($venue_url)) echo $venue_url; ?>" /></td>
 			</tr>
 			<tr>
 				<th scope="row"><label for="venue_phone"><?php _e("Venue phone", "gigpress") ?>:</label></th>
-				<td><input type="text" size="48" name="venue_phone" id="venue_phone" value="<?php echo $venue_phone; ?>" /></td>
+				<td><input type="text" size="48" name="venue_phone" id="venue_phone" value="<?php if(isset($venue_phone)) echo $venue_phone; ?>" /></td>
 			</tr>			  
 			<tr>
 				<td>&nbsp;</td>
 				<td>
-		<?php if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || is_array($result) && $result['editing'] == TRUE) { ?>
+		<?php if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($result) && isset($result['editing']) ) { ?>
 		
 				<span class="submit"><input type="submit" name="Submit" class="button-primary" value="<?php _e("Update venue", "gigpress") ?>" /></span> <?php _e("or", "gigpress"); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=gigpress-venues<?php echo $url_args; ?>"><?php _e("cancel", "gigpress"); ?></a>
 		
@@ -159,7 +168,7 @@ function gigpress_venues() {
 		if($venue_count) {
 			$pagination_args['page'] = 'gigpress-venues';
 			$pagination = gigpress_admin_pagination($venue_count, 15, $pagination_args);
-			if($pagination) echo $pagination['output'];
+			if(isset($pagination)) echo $pagination['output'];
 		}
 		$limit = (isset($_GET['gp-page'])) ? $pagination['offset'].','.$pagination['records_per_page'] : 15;	
 	?>
@@ -184,6 +193,7 @@ function gigpress_venues() {
 		$venues = $wpdb->get_results("SELECT * FROM ". GIGPRESS_VENUES ." ORDER BY venue_name ASC LIMIT ". $limit);
 		if($venues) {
 						
+			$i = 0;
 			foreach($venues as $venue) {
 			
 				if($n = $wpdb->get_var("SELECT count(*) FROM ". GIGPRESS_SHOWS ." WHERE show_venue_id = ". $venue->venue_id ." AND show_status != 'deleted'")) {
@@ -201,7 +211,7 @@ function gigpress_venues() {
 				<tr<?php echo $style; ?>>
 					<td class="gp-tiny"><?php echo $venuedata['venue_id']; ?></td>
 					<td><?php echo $venuedata['venue']; ?></td>
-					<td><?php echo $venuedata['city']; ?></td>
+					<td><?php echo $venuedata['city']; if(!empty($venuedata['state'])) echo ', '.$venuedata['state']; ?></td>
 					<td><?php echo $venuedata['address']; ?></td>
 					<td><?php echo $venuedata['country']; ?></td>
 					<td><?php echo $venuedata['venue_phone']; ?></td>
@@ -216,7 +226,7 @@ function gigpress_venues() {
 
 			// We don't have any venues, so let's say so
 			?>
-			<tr><td colspan="7"><strong><?php _e("No venues in the database", "gigpress"); ?></strong></td></tr>
+			<tr><td colspan="8"><strong><?php _e("No venues in the database", "gigpress"); ?></strong></td></tr>
 	<?php } ?>
 		</tbody>
 		<tfoot>
@@ -234,7 +244,7 @@ function gigpress_venues() {
 	</table>
 	
 	<div class="tablenav">
-	<?php if($pagination) echo $pagination['output']; ?>
+	<?php if(isset($pagination)) echo $pagination['output']; ?>
 	</div>
 </div>
 <?php }

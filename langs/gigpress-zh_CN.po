@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GigPress 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-15 14:30-0400\n"
+"POT-Creation-Date: 2012-06-11 14:22-0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Liang Chuan <santiao@gmail.com>\n"
 "Language-Team: mocreative <santiao@gmail.com>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../gigpress.php:65
-#: ../admin/new.php:192
+#: ../admin/new.php:199
 msgid "Add a show"
 msgstr "新增演出"
 
 #: ../gigpress.php:66
-#: ../admin/shows.php:108
+#: ../admin/shows.php:126
 msgid "Shows"
 msgstr "演出"
 
@@ -63,80 +63,76 @@ msgstr "喜欢吗？"
 msgid "Make a donation"
 msgstr "赞助一下"
 
-#: ../gigpress.php:196
-msgid "opens in a new window"
-msgstr "新窗口打开"
-
-#: ../gigpress.php:217
-#: ../admin/handlers.php:847
-#: ../admin/handlers.php:856
-#: ../admin/handlers.php:865
-#: ../admin/new.php:234
+#: ../gigpress.php:242
+#: ../admin/handlers.php:906
+#: ../admin/handlers.php:915
+#: ../admin/handlers.php:924
+#: ../admin/new.php:241
 msgid "at"
 msgstr "于"
 
-#: ../gigpress.php:220
-#: ../admin/new.php:474
-#: ../admin/shows.php:246
+#: ../gigpress.php:245
+#: ../admin/new.php:496
+#: ../admin/shows.php:273
 msgid "Price"
 msgstr "票价"
 
-#: ../gigpress.php:221
-#: ../admin/shows.php:249
+#: ../gigpress.php:246
+#: ../admin/shows.php:277
 #: ../output/feed.php:73
 msgid "Box office"
 msgstr "票房"
 
-#: ../gigpress.php:222
-#: ../admin/new.php:440
-#: ../admin/venues.php:130
+#: ../gigpress.php:247
+#: ../admin/new.php:462
+#: ../admin/venues.php:139
 #: ../output/feed.php:59
 msgid "Venue phone"
 msgstr "场馆电话"
 
-#: ../gigpress.php:223
-#: ../admin/new.php:486
-#: ../admin/settings.php:130
+#: ../gigpress.php:248
+#: ../admin/new.php:512
+#: ../admin/settings.php:136
 #: ../output/feed.php:80
 msgid "Notes"
 msgstr "备注"
 
-#: ../gigpress.php:242
+#: ../gigpress.php:270
 msgid "Download iCal"
 msgstr "下载iCal"
 
-#: ../gigpress.php:255
+#: ../gigpress.php:283
 msgid "Buy tickets"
 msgstr "购票"
 
-#: ../gigpress.php:257
-#: ../admin/new.php:451
+#: ../gigpress.php:285
+#: ../admin/new.php:473
 msgid "Sold Out"
 msgstr "售罄"
 
-#: ../gigpress.php:259
-#: ../admin/new.php:452
+#: ../gigpress.php:287
+#: ../admin/new.php:474
 msgid "Cancelled"
 msgstr "已取消"
 
-#: ../gigpress.php:280
+#: ../gigpress.php:308
 msgid "Add to Google Calendar"
 msgstr "加入Google Calendar"
 
-#: ../gigpress.php:370
+#: ../gigpress.php:398
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
 msgstr "显示%s&#8211;%s of %s"
 
-#: ../gigpress.php:465
+#: ../gigpress.php:496
 msgid "Artist order updated."
 msgstr "艺人顺序已更新。"
 
-#: ../gigpress.php:516
+#: ../gigpress.php:547
 msgid "Nothing to export."
 msgstr "没有可以导出的项目。"
 
-#: ../gigpress.php:523
+#: ../gigpress.php:554
 msgid "You are not authorized to do that. Try logging-in first."
 msgstr "您未被授权这样做。先登录试试。"
 
@@ -145,16 +141,16 @@ msgid "Update artist"
 msgstr "更新艺人"
 
 #: ../admin/artists.php:44
-#: ../admin/new.php:569
+#: ../admin/new.php:596
 #: ../admin/tours.php:49
-#: ../admin/venues.php:138
+#: ../admin/venues.php:147
 msgid "or"
 msgstr "或"
 
 #: ../admin/artists.php:44
-#: ../admin/new.php:569
+#: ../admin/new.php:596
 #: ../admin/tours.php:49
-#: ../admin/venues.php:138
+#: ../admin/venues.php:147
 msgid "cancel"
 msgstr "取消"
 
@@ -176,260 +172,266 @@ msgid "Add artist"
 msgstr "新增艺人"
 
 #: ../admin/artists.php:79
-#: ../admin/artists.php:113
-#: ../admin/artists.php:157
-#: ../admin/new.php:375
+#: ../admin/artists.php:124
+#: ../admin/artists.php:169
+#: ../admin/new.php:383
 msgid "Artist name"
 msgstr "艺人名"
 
-#: ../admin/artists.php:89
+#: ../admin/artists.php:85
+#: ../admin/new.php:387
+#, fuzzy
+msgid "Artist URL"
+msgstr "艺人"
+
+#: ../admin/artists.php:100
 msgid "All artists"
 msgstr "所有艺人"
 
-#: ../admin/artists.php:92
+#: ../admin/artists.php:103
 msgid "Note that you cannot delete an artist while they have shows in the database."
 msgstr "注意：你不能删除数据库中尚有演出信息的艺人。"
 
-#: ../admin/artists.php:114
-#: ../admin/artists.php:158
+#: ../admin/artists.php:125
+#: ../admin/artists.php:170
 #: ../admin/tours.php:113
-#: ../admin/tours.php:150
-#: ../admin/venues.php:178
-#: ../admin/venues.php:230
+#: ../admin/tours.php:151
+#: ../admin/venues.php:187
+#: ../admin/venues.php:240
 msgid "Number of shows"
 msgstr "演出数量"
 
-#: ../admin/artists.php:115
-#: ../admin/artists.php:159
-#: ../admin/shows.php:203
-#: ../admin/shows.php:215
+#: ../admin/artists.php:126
+#: ../admin/artists.php:171
+#: ../admin/shows.php:230
+#: ../admin/shows.php:242
 #: ../admin/tours.php:114
-#: ../admin/tours.php:151
-#: ../admin/venues.php:179
-#: ../admin/venues.php:231
+#: ../admin/tours.php:152
+#: ../admin/venues.php:188
+#: ../admin/venues.php:241
 msgid "Actions"
 msgstr "操作"
 
-#: ../admin/artists.php:141
-#: ../admin/shows.php:239
-#: ../admin/tours.php:135
-#: ../admin/venues.php:210
+#: ../admin/artists.php:153
+#: ../admin/shows.php:266
+#: ../admin/tours.php:136
+#: ../admin/venues.php:220
 msgid "Edit"
 msgstr "编辑"
 
-#: ../admin/artists.php:142
-#: ../admin/tours.php:135
-#: ../admin/venues.php:211
+#: ../admin/artists.php:154
+#: ../admin/tours.php:136
+#: ../admin/venues.php:221
 msgid "Delete"
 msgstr "删除"
 
-#: ../admin/artists.php:150
-#: ../admin/import-export.php:61
-#: ../admin/new.php:365
-#: ../admin/shows.php:144
+#: ../admin/artists.php:162
+#: ../admin/import-export.php:64
+#: ../admin/new.php:372
+#: ../admin/shows.php:162
 msgid "No artists in the database"
 msgstr "数据库中没有艺人信息。"
 
-#: ../admin/handlers.php:45
+#: ../admin/handlers.php:52
 msgid "We had trouble creating your new artist. Sorry."
 msgstr "创建新艺人时出错了。不好意思。"
 
-#: ../admin/handlers.php:60
+#: ../admin/handlers.php:67
 msgid "We had trouble creating your new venue. Sorry."
 msgstr "创建新场馆时出错了。不好意思。"
 
-#: ../admin/handlers.php:77
+#: ../admin/handlers.php:84
 msgid "We had trouble creating your new tour. Sorry."
 msgstr "创建新巡演时出错了。不好意思。"
 
-#: ../admin/handlers.php:115
+#: ../admin/handlers.php:123
 msgid "We had trouble creating your Related Post. Sorry."
 msgstr "创建相关文章时出错了。不好意思。"
 
-#: ../admin/handlers.php:153
+#: ../admin/handlers.php:180
 msgid "You must select a venue."
 msgstr "您必须选择一个场馆。"
 
-#: ../admin/handlers.php:155
+#: ../admin/handlers.php:182
 msgid "You must select an artist."
 msgstr "您必须选择一个艺人。"
 
-#: ../admin/handlers.php:157
-#: ../admin/handlers.php:171
+#: ../admin/handlers.php:184
+#: ../admin/handlers.php:198
 msgid "You must enter an artist name."
 msgstr "您必须输入一个艺人名。"
 
-#: ../admin/handlers.php:159
-#: ../admin/handlers.php:179
+#: ../admin/handlers.php:186
+#: ../admin/handlers.php:206
 msgid "You must enter a venue name."
 msgstr "您必须输入一个场馆名。"
 
-#: ../admin/handlers.php:161
-#: ../admin/handlers.php:181
+#: ../admin/handlers.php:188
+#: ../admin/handlers.php:208
 msgid "You must enter a city."
 msgstr "您必须输入一个城市。"
 
-#: ../admin/handlers.php:163
-#: ../admin/handlers.php:175
+#: ../admin/handlers.php:190
+#: ../admin/handlers.php:202
 msgid "You must enter a tour name."
 msgstr "您必须输入一个巡演名。"
 
-#: ../admin/handlers.php:165
+#: ../admin/handlers.php:192
 msgid "That's not a valid date."
 msgstr "这是一个错误的日期。"
 
-#: ../admin/handlers.php:167
+#: ../admin/handlers.php:194
 msgid "That's not a valid end date."
 msgstr "这是一个错误的结束日期。"
 
-#: ../admin/handlers.php:225
-#: ../admin/handlers.php:280
+#: ../admin/handlers.php:247
+#: ../admin/handlers.php:305
 msgid "Your show  on"
 msgstr "您的演出于"
 
-#: ../admin/handlers.php:225
+#: ../admin/handlers.php:247
 msgid "was successfully added."
 msgstr "成功地创建了。"
 
-#: ../admin/handlers.php:225
-#: ../admin/handlers.php:280
+#: ../admin/handlers.php:247
+#: ../admin/handlers.php:305
 msgid "Edit the related post"
 msgstr "编辑相关文章"
 
-#: ../admin/handlers.php:238
-#: ../admin/handlers.php:291
-#: ../admin/handlers.php:378
-#: ../admin/handlers.php:418
-#: ../admin/handlers.php:480
-#: ../admin/handlers.php:520
-#: ../admin/handlers.php:602
-#: ../admin/handlers.php:641
+#: ../admin/handlers.php:260
+#: ../admin/handlers.php:316
+#: ../admin/handlers.php:404
+#: ../admin/handlers.php:446
+#: ../admin/handlers.php:508
+#: ../admin/handlers.php:548
+#: ../admin/handlers.php:636
+#: ../admin/handlers.php:681
 msgid "Something ain't right - try again?"
 msgstr "有些不对 - 再试一次？"
 
-#: ../admin/handlers.php:280
-#: ../admin/handlers.php:416
+#: ../admin/handlers.php:305
+#: ../admin/handlers.php:444
 msgid "was successfully updated."
 msgstr "成功地更新了。"
 
-#: ../admin/handlers.php:330
+#: ../admin/handlers.php:355
 msgid "Show(s) successfully deleted."
 msgstr "演出成功地删除了。"
 
-#: ../admin/handlers.php:331
-#: ../admin/handlers.php:561
+#: ../admin/handlers.php:356
+#: ../admin/handlers.php:589
 msgid "Undo"
 msgstr "撤销"
 
-#: ../admin/handlers.php:337
+#: ../admin/handlers.php:362
 msgid "We ran into some trouble deleting the show(s). Sorry."
 msgstr "删除演出时出错了。不好意思。"
 
-#: ../admin/handlers.php:376
-#: ../admin/handlers.php:478
-#: ../admin/handlers.php:600
+#: ../admin/handlers.php:402
+#: ../admin/handlers.php:506
+#: ../admin/handlers.php:634
 msgid "was successfully added to the database."
 msgstr "成功地加入了数据库。"
 
-#: ../admin/handlers.php:440
+#: ../admin/handlers.php:468
 msgid "Venue successfully deleted."
 msgstr "场馆成功地删除了。"
 
-#: ../admin/handlers.php:442
+#: ../admin/handlers.php:470
 msgid "We ran into some trouble deleting the venue. Sorry."
 msgstr "删除场馆时出错了。不好意思。"
 
-#: ../admin/handlers.php:518
+#: ../admin/handlers.php:546
 msgid "Tour name successfully changed to"
 msgstr "巡演名成功地修改成了"
 
-#: ../admin/handlers.php:561
+#: ../admin/handlers.php:589
 msgid "Tour successfully deleted."
 msgstr "巡演成功地删除了。"
 
-#: ../admin/handlers.php:565
+#: ../admin/handlers.php:593
 msgid "We ran into some trouble deleting the tour. Sorry."
 msgstr "删除巡演时出错了。不好意思。"
 
-#: ../admin/handlers.php:639
+#: ../admin/handlers.php:679
 msgid "successfully updated."
 msgstr "成功地更新了。"
 
-#: ../admin/handlers.php:664
+#: ../admin/handlers.php:704
 msgid "Artist successfully deleted."
 msgstr "艺人成功地删除了。"
 
-#: ../admin/handlers.php:667
+#: ../admin/handlers.php:707
 msgid "We ran into some trouble deleting the artist. Sorry."
 msgstr "删除艺人时出错了。不好意思。"
 
-#: ../admin/handlers.php:704
+#: ../admin/handlers.php:744
 msgid "Show(s) successfully restored."
 msgstr "演出成功地回复了。"
 
-#: ../admin/handlers.php:708
+#: ../admin/handlers.php:748
 msgid "We ran into some trouble restoring your show(s). Sorry."
 msgstr "恢复演出时出错了。不好意思。"
 
-#: ../admin/handlers.php:726
+#: ../admin/handlers.php:766
 msgid "Tour successfully restored from the database."
 msgstr "巡演成功地从数据库恢复了。"
 
-#: ../admin/handlers.php:728
+#: ../admin/handlers.php:768
 msgid "We ran into some trouble restoring the tour. Sorry."
 msgstr "恢复巡演时出错了。不好意思。"
 
-#: ../admin/handlers.php:844
+#: ../admin/handlers.php:903
 msgid "shows were skipped due to errors"
 msgstr "因为错误，演出被跳过"
 
-#: ../admin/handlers.php:847
-#: ../admin/handlers.php:856
-#: ../admin/handlers.php:865
+#: ../admin/handlers.php:906
+#: ../admin/handlers.php:915
+#: ../admin/handlers.php:924
 #: ../output/feed.php:35
 msgid "in"
 msgstr "在"
 
-#: ../admin/handlers.php:847
-#: ../admin/handlers.php:856
-#: ../admin/handlers.php:865
+#: ../admin/handlers.php:906
+#: ../admin/handlers.php:915
+#: ../admin/handlers.php:924
 #: ../output/feed.php:35
 msgid "on"
 msgstr "on"
 
-#: ../admin/handlers.php:853
+#: ../admin/handlers.php:912
 msgid "shows were skipped as they were deemed duplicates"
 msgstr "演出被跳过，因为被认为重复了"
 
-#: ../admin/handlers.php:862
+#: ../admin/handlers.php:921
 msgid "shows were successfully imported"
 msgstr "演出成功地导入了"
 
-#: ../admin/handlers.php:872
+#: ../admin/handlers.php:931
 msgid "Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?"
 msgstr "对不起，粘贴你的文件时有错误。请再次检查以下你的文件格式？"
 
-#: ../admin/handlers.php:881
+#: ../admin/handlers.php:940
 msgid "Sorry, but there was an error uploading"
 msgstr "对不起，有错误不能上传"
 
-#: ../admin/handlers.php:900
+#: ../admin/handlers.php:959
 msgid "All shows and tours in the trash have been permanently deleted."
 msgstr "回收站内的所有演出和巡演被完全删除了。"
 
-#: ../admin/handlers.php:902
+#: ../admin/handlers.php:961
 msgid "We ran into some trouble emptying the trash. Sorry."
 msgstr "清空回收站时出错了。不好意思。"
 
-#: ../admin/handlers.php:924
+#: ../admin/handlers.php:983
 msgid "All tours have been migrated into artists."
 msgstr "所有的巡演被关联到艺人。"
 
-#: ../admin/handlers.php:926
+#: ../admin/handlers.php:985
 msgid "There was an error migrating tours to artists. Sorry."
 msgstr "关联巡演到艺人时出错了。不好意思。"
 
-#: ../admin/handlers.php:930
+#: ../admin/handlers.php:989
 msgid "There were no tours to migrate."
 msgstr "没有巡演可移动。"
 
@@ -441,42 +443,46 @@ msgstr "上传一个CSV（逗号分隔值）文件导入到你的GigPress数据�
 msgid "Please review the formatting specifications to save yourself headaches!"
 msgstr "请查阅格式定义规范避免你郁闷！"
 
-#: ../admin/import-export.php:26
+#: ../admin/import-export.php:27
+msgid "Include Related Post associations?"
+msgstr ""
+
+#: ../admin/import-export.php:29
 msgid "Upload CSV"
 msgstr "上传CSV"
 
-#: ../admin/import-export.php:45
+#: ../admin/import-export.php:48
 msgid "Download your complete show database as a CSV (comma-separated values) file, compatible with programs such as Microsoft Excel. This file is also suitable to import into another GigPress installation."
 msgstr "下载完整的演出数据库的CSV（逗号分隔值）文件，用类似Microsoft Excel的程序编译。文件也可以用来导入到其他GigPress中。"
 
-#: ../admin/import-export.php:54
+#: ../admin/import-export.php:57
 msgid "Export all artists"
 msgstr "导出所有艺人"
 
-#: ../admin/import-export.php:68
+#: ../admin/import-export.php:71
 msgid "Export all tours"
 msgstr "导出所有巡演"
 
-#: ../admin/import-export.php:75
-#: ../admin/new.php:509
-#: ../admin/shows.php:158
-#: ../admin/tours.php:143
+#: ../admin/import-export.php:78
+#: ../admin/new.php:535
+#: ../admin/shows.php:176
+#: ../admin/tours.php:144
 msgid "No tours in the database"
 msgstr "数据库中没有巡演。"
 
-#: ../admin/import-export.php:82
+#: ../admin/import-export.php:85
 msgid "Export all dates"
 msgstr "导出全部日期"
 
-#: ../admin/import-export.php:83
+#: ../admin/import-export.php:86
 msgid "Export upcoming dates"
 msgstr "导出未来的日期"
 
-#: ../admin/import-export.php:84
+#: ../admin/import-export.php:87
 msgid "Export past dates"
 msgstr "导出过去的日期"
 
-#: ../admin/import-export.php:88
+#: ../admin/import-export.php:91
 msgid "Download CSV"
 msgstr "下载CSV"
 
@@ -497,7 +503,7 @@ msgid "documentation"
 msgstr "文档"
 
 #: ../admin/new.php:33
-#: ../admin/shows.php:278
+#: ../admin/shows.php:306
 msgid "and"
 msgstr "和"
 
@@ -513,171 +519,187 @@ msgstr "好好享受吧！"
 msgid "Don't show this again"
 msgstr "不再显示此消息"
 
-#: ../admin/new.php:141
+#: ../admin/new.php:146
 msgid "Sorry, but we had trouble loading that show for editing."
 msgstr "对不起，载入要编辑的演出时发生了错误。"
 
-#: ../admin/new.php:183
+#: ../admin/new.php:190
 msgid "Edit this show"
 msgstr "编辑此演出"
 
-#: ../admin/new.php:206
-#: ../admin/settings.php:128
-#: ../admin/shows.php:197
-#: ../admin/shows.php:209
+#: ../admin/new.php:213
+#: ../admin/settings.php:134
+#: ../admin/shows.php:224
+#: ../admin/shows.php:236
 #: ../output/feed.php:42
 msgid "Date"
 msgstr "日期"
 
-#: ../admin/new.php:266
-#: ../admin/new.php:529
+#: ../admin/new.php:273
+#: ../admin/new.php:555
 msgid "None"
 msgstr "无"
 
-#: ../admin/new.php:315
+#: ../admin/new.php:322
 msgid "This is a multi-day event"
 msgstr "这试一个多日事件"
 
-#: ../admin/new.php:320
+#: ../admin/new.php:327
 msgid "End date"
 msgstr "结束日期"
 
-#: ../admin/new.php:351
-#: ../admin/shows.php:198
-#: ../admin/shows.php:210
+#: ../admin/new.php:358
+#: ../admin/shows.php:225
+#: ../admin/shows.php:237
 msgid "Artist"
 msgstr "艺人"
 
-#: ../admin/new.php:354
+#: ../admin/new.php:361
 msgid "Add a new artist"
 msgstr "新增一个艺人"
 
-#: ../admin/new.php:382
-#: ../admin/shows.php:200
-#: ../admin/shows.php:212
+#: ../admin/new.php:396
+#: ../admin/shows.php:226
+#: ../admin/shows.php:238
 #: ../output/feed.php:52
 msgid "Venue"
 msgstr "场馆"
 
-#: ../admin/new.php:385
+#: ../admin/new.php:399
 msgid "Add a new venue"
 msgstr "新增一个场馆"
 
-#: ../admin/new.php:387
+#: ../admin/new.php:401
 msgid "Select a venue"
 msgstr "选择一个场馆"
 
-#: ../admin/new.php:399
-#: ../admin/shows.php:172
-#: ../admin/venues.php:219
+#: ../admin/new.php:414
+#: ../admin/shows.php:190
+#: ../admin/venues.php:229
 msgid "No venues in the database"
 msgstr "数据库中没有场馆"
 
-#: ../admin/new.php:409
-#: ../admin/venues.php:102
+#: ../admin/new.php:424
+#: ../admin/venues.php:103
 msgid "Venue name"
 msgstr "场馆名"
 
-#: ../admin/new.php:414
-#: ../admin/venues.php:106
-msgid "Venue city"
-msgstr "所在城市"
-
-#: ../admin/new.php:418
-#: ../admin/venues.php:110
+#: ../admin/new.php:429
+#: ../admin/venues.php:107
 msgid "Venue address"
 msgstr "场馆地址"
 
-#: ../admin/new.php:423
-#: ../admin/venues.php:114
+#: ../admin/new.php:433
+#: ../admin/venues.php:111
+msgid "Venue city"
+msgstr "所在城市"
+
+#: ../admin/new.php:437
+#: ../admin/venues.php:115
+#, fuzzy
+msgid "Venue state/province"
+msgstr "场馆电话"
+
+#: ../admin/new.php:441
+#: ../admin/venues.php:119
+#, fuzzy
+msgid "Venue postal code"
+msgstr "场馆电话"
+
+#: ../admin/new.php:445
+#: ../admin/venues.php:123
 msgid "Venue country"
 msgstr "所在国家"
 
-#: ../admin/new.php:436
-#: ../admin/venues.php:126
+#: ../admin/new.php:458
+#: ../admin/venues.php:135
 msgid "Venue website"
 msgstr "场馆网站"
 
-#: ../admin/new.php:448
+#: ../admin/new.php:470
 msgid "Status"
 msgstr "状态"
 
-#: ../admin/new.php:450
+#: ../admin/new.php:472
 msgid "Active"
 msgstr "活动"
 
-#: ../admin/new.php:458
+#: ../admin/new.php:480
 msgid "Admittance"
 msgstr "年龄限制"
 
-#: ../admin/new.php:460
+#: ../admin/new.php:482
 msgid "Not sure"
 msgstr "不确定"
 
-#: ../admin/new.php:475
+#: ../admin/new.php:497
 msgid "include currency symbol"
 msgstr "包括货币符号"
 
-#: ../admin/new.php:478
+#: ../admin/new.php:500
 msgid "Ticket URL"
 msgstr "订票网址"
 
-#: ../admin/new.php:482
+#: ../admin/new.php:504
 msgid "Ticket phone"
 msgstr "订票电话"
 
-#: ../admin/new.php:489
+#: ../admin/new.php:508
+msgid "External URL"
+msgstr ""
+
+#: ../admin/new.php:515
 msgid "Use this space to list other bands, 'presented by' info, etc"
 msgstr "用此表单列出暖场乐队、特邀嘉宾等信息。"
 
-#: ../admin/new.php:493
+#: ../admin/new.php:519
 msgid "Part of a tour?"
 msgstr "巡演的一场？"
 
-#: ../admin/new.php:496
+#: ../admin/new.php:522
 msgid "No"
 msgstr "否"
 
-#: ../admin/new.php:498
+#: ../admin/new.php:524
 msgid "Add a new tour"
 msgstr "新增一个巡演"
 
-#: ../admin/new.php:519
+#: ../admin/new.php:545
 #: ../admin/tours.php:82
 #: ../admin/tours.php:112
-#: ../admin/tours.php:149
+#: ../admin/tours.php:150
 msgid "Tour name"
 msgstr "巡演名"
 
-#: ../admin/new.php:526
+#: ../admin/new.php:552
 msgid "Related post"
 msgstr "相关文章"
 
-#: ../admin/new.php:531
+#: ../admin/new.php:557
 msgid "Add a new post"
 msgstr "新增文章"
 
-#: ../admin/new.php:556
+#: ../admin/new.php:583
 msgid "Related post title"
 msgstr "相关文章标题"
 
-#: ../admin/new.php:558
+#: ../admin/new.php:585
 msgid "Available placeholders:"
 msgstr "可用的占位符："
 
-#: ../admin/new.php:559
+#: ../admin/new.php:586
 msgid "Publish now"
 msgstr "现在发布"
 
-#: ../admin/new.php:560
+#: ../admin/new.php:587
 msgid "Publish on show date"
 msgstr "演出日发布"
 
-#: ../admin/new.php:569
+#: ../admin/new.php:596
 msgid "Update show"
 msgstr "更新演出"
 
-#: ../admin/new.php:573
+#: ../admin/new.php:600
 msgid "Add show"
 msgstr "新增演出"
 
@@ -748,229 +770,242 @@ msgid "Tour label"
 msgstr "巡演标签"
 
 #: ../admin/settings.php:87
+msgid "External link label"
+msgstr ""
+
+#: ../admin/settings.php:93
 #: ../output/feed.php:69
 msgid "Age restrictions"
 msgstr "年龄限制"
 
-#: ../admin/settings.php:89
+#: ../admin/settings.php:95
 msgid "A pipe-separated list of available age restrictions."
 msgstr "使用 | 符号分隔列表项。"
 
-#: ../admin/settings.php:92
+#: ../admin/settings.php:98
 msgid "Related posts"
 msgstr "相关文章"
 
-#: ../admin/settings.php:94
+#: ../admin/settings.php:100
 msgid "Display gig info in related posts"
 msgstr "在相关文章显示演出信息"
 
-#: ../admin/settings.php:95
+#: ../admin/settings.php:101
 msgid "before the post content"
 msgstr "在文章正文之前"
 
-#: ../admin/settings.php:96
+#: ../admin/settings.php:102
 msgid "after the post content"
 msgstr "在文章正文之后"
 
-#: ../admin/settings.php:97
+#: ../admin/settings.php:103
 msgid "using <code>[gigpress_related_shows]</code>"
 msgstr "使用 <code>[gigpress_related_shows]</code>"
 
-#: ../admin/settings.php:98
+#: ../admin/settings.php:104
 msgid "If a gig has a related post, that gig's details will appear at the specified position in that post."
 msgstr "当演出有相关文章时，演出细节会显示在文章的特定位置上。"
 
-#: ../admin/settings.php:102
+#: ../admin/settings.php:108
 msgid "Related show heading"
 msgstr "相关演出标题"
 
-#: ../admin/settings.php:105
+#: ../admin/settings.php:111
 msgid "This appears before the gig details in your related post."
 msgstr "这将显示在相关文章中的演出细节之前。"
 
-#: ../admin/settings.php:109
+#: ../admin/settings.php:115
 msgid "Related posts category"
 msgstr "相关文章分类"
 
-#: ../admin/settings.php:111
+#: ../admin/settings.php:117
 msgid "Automatically create a related post for every new show I enter."
 msgstr "为每一个新输入的演出自动创建相关文章。"
 
-#: ../admin/settings.php:112
+#: ../admin/settings.php:118
 msgid "When creating related posts, put them in this category"
 msgstr "当创建相关文章时，将其放入此分类"
 
-#: ../admin/settings.php:120
+#: ../admin/settings.php:126
 msgid "Exclude this category from my normal post listings."
 msgstr "在我的常规文章列表中排除此分类。"
 
-#: ../admin/settings.php:125
+#: ../admin/settings.php:131
 msgid "Related posts linking"
 msgstr "相关文章链接"
 
-#: ../admin/settings.php:127
+#: ../admin/settings.php:133
 msgid "Place a link to each show's related post in the following fields"
 msgstr "在每个演出的相关文章中放置以下链接"
 
-#: ../admin/settings.php:129
-#: ../admin/shows.php:199
-#: ../admin/shows.php:211
-#: ../admin/venues.php:174
-#: ../admin/venues.php:226
+#: ../admin/settings.php:135
+#: ../admin/shows.php:227
+#: ../admin/shows.php:239
+#: ../admin/venues.php:183
+#: ../admin/venues.php:236
 #: ../output/feed.php:50
 msgid "City"
 msgstr "城市"
 
-#: ../admin/settings.php:134
+#: ../admin/settings.php:140
 msgid "Related post phrase"
 msgstr "相关文章字段"
 
-#: ../admin/settings.php:137
+#: ../admin/settings.php:143
 msgid "This appears in your shows listing."
 msgstr "这会显示在你的演出列表里。"
 
-#: ../admin/settings.php:141
+#: ../admin/settings.php:147
+#, fuzzy
+msgid "Artist URLs"
+msgstr "艺人"
+
+#: ../admin/settings.php:148
+msgid "Link artist names to their URLs."
+msgstr ""
+
+#: ../admin/settings.php:152
 msgid "RSS/iCal"
 msgstr "RSS/iCal"
 
-#: ../admin/settings.php:143
+#: ../admin/settings.php:154
 msgid "Make the GigPress RSS feed auto-discoverable."
 msgstr "令GigPress RSS供稿可被自动发现。"
 
-#: ../admin/settings.php:144
+#: ../admin/settings.php:155
 msgid "Show RSS and iCal subscription links."
 msgstr "显示RSS和iCal订阅链接。"
 
-#: ../admin/settings.php:145
+#: ../admin/settings.php:156
 msgid "Note that the FeedBurner FeedSmith plugin will kill your GigPress RSS and iCal feeds, but the FD FeedBurner plugin will not."
 msgstr "注意：FeedBurner FeedSmith插件会干掉你的GigPress RSS和iCal供稿，但是FD FeedBurner插件则不会。"
 
-#: ../admin/settings.php:149
+#: ../admin/settings.php:160
 msgid "RSS/iCal feed title"
 msgstr "RSS/iCal供稿标题"
 
-#: ../admin/settings.php:155
+#: ../admin/settings.php:166
 msgid "Country display"
 msgstr "国家显示"
 
-#: ../admin/settings.php:157
+#: ../admin/settings.php:168
 msgid "Display country column."
 msgstr "显示国家列。"
 
-#: ../admin/settings.php:157
+#: ../admin/settings.php:168
 msgid "Use full country names."
 msgstr "使用国家全名。"
 
-#: ../admin/settings.php:161
+#: ../admin/settings.php:172
 msgid "Link behaviour"
 msgstr "链接行为"
 
-#: ../admin/settings.php:162
+#: ../admin/settings.php:173
 msgid "Open external links in new windows."
 msgstr "新窗口打开外部链接。"
 
-#: ../admin/settings.php:166
+#: ../admin/settings.php:177
 msgid "jQuery"
 msgstr "jQuery"
 
-#: ../admin/settings.php:168
+#: ../admin/settings.php:179
 msgid "Load jQuery into my theme."
 msgstr "在我的主题里载入jQuery。"
 
-#: ../admin/settings.php:169
+#: ../admin/settings.php:180
 msgid "Uncheck this if you have a hard-coded link to the jQuery library in your theme."
 msgstr "如果你的主题已使用jQuery，请取消选择此项。"
 
-#: ../admin/settings.php:174
+#: ../admin/settings.php:185
 msgid "Advanced"
 msgstr "高级"
 
-#: ../admin/settings.php:176
+#: ../admin/settings.php:187
 msgid "Disable the default GigPress CSS."
 msgstr "禁用默认的GigPress CSS。"
 
-#: ../admin/settings.php:176
+#: ../admin/settings.php:187
 msgid "Disable the default GigPress JavaScript."
 msgstr "禁用默认的GigPress JavaScript。"
 
-#: ../admin/settings.php:195
+#: ../admin/settings.php:206
 msgid "Save Changes"
 msgstr "保存更改"
 
-#: ../admin/shows.php:117
+#: ../admin/shows.php:135
 msgid "All"
 msgstr "所有的"
 
-#: ../admin/shows.php:120
+#: ../admin/shows.php:138
 msgid "Upcoming"
 msgstr "计划中"
 
-#: ../admin/shows.php:123
+#: ../admin/shows.php:141
 msgid "Past"
 msgstr "过去的"
 
-#: ../admin/shows.php:136
+#: ../admin/shows.php:154
 msgid "View all artists"
 msgstr "查看所有艺人"
 
-#: ../admin/shows.php:150
+#: ../admin/shows.php:168
 msgid "View all tours"
 msgstr "查看所有巡演"
 
-#: ../admin/shows.php:164
+#: ../admin/shows.php:182
 msgid "View all venues"
 msgstr "查看所有场馆"
 
-#: ../admin/shows.php:178
+#: ../admin/shows.php:196
 msgid "Descending"
 msgstr "反序"
 
-#: ../admin/shows.php:179
+#: ../admin/shows.php:197
 msgid "Ascending"
 msgstr "顺序"
 
-#: ../admin/shows.php:201
-#: ../admin/shows.php:213
-#: ../admin/venues.php:176
-#: ../admin/venues.php:228
+#: ../admin/shows.php:228
+#: ../admin/shows.php:240
+#: ../admin/venues.php:185
+#: ../admin/venues.php:238
 #: ../output/feed.php:62
 msgid "Country"
 msgstr "国家"
 
-#: ../admin/shows.php:202
-#: ../admin/shows.php:214
+#: ../admin/shows.php:229
+#: ../admin/shows.php:241
 msgid "Tour"
 msgstr "巡演"
 
-#: ../admin/shows.php:239
+#: ../admin/shows.php:266
 msgid "Copy"
 msgstr "复制"
 
-#: ../admin/shows.php:258
+#: ../admin/shows.php:286
 msgid "Sorry, no shows to display based on your criteria."
 msgstr "对不起，没有复合你条件的演出可以显示。"
 
-#: ../admin/shows.php:264
+#: ../admin/shows.php:292
 msgid "Trash selected shows"
 msgstr "删除选中的演出到回收站"
 
-#: ../admin/shows.php:278
+#: ../admin/shows.php:306
 msgid "You have"
 msgstr "您有"
 
-#: ../admin/shows.php:278
+#: ../admin/shows.php:306
 msgid "shows"
 msgstr "个演出"
 
-#: ../admin/shows.php:278
+#: ../admin/shows.php:306
 msgid "tours"
 msgstr "个巡演"
 
-#: ../admin/shows.php:278
+#: ../admin/shows.php:306
 msgid "in your trash"
 msgstr "在你的回收站"
 
-#: ../admin/shows.php:280
+#: ../admin/shows.php:308
 msgid "Take out the trash now"
 msgstr "立即清空回收站"
 
@@ -1007,47 +1042,47 @@ msgstr "所有巡演"
 msgid "Note that deleting a tour will <strong>NOT</strong> delete the shows associated with that tour."
 msgstr "注意：删除巡演<strong>不会</strong>删除附属的演出。"
 
-#: ../admin/venues.php:68
+#: ../admin/venues.php:71
 msgid "Sorry, but we had trouble loading that venue for editing."
 msgstr "对不起，载入要编辑的场馆时出错了。"
 
-#: ../admin/venues.php:83
+#: ../admin/venues.php:84
 msgid "Edit this venue"
 msgstr "编辑此场馆"
 
-#: ../admin/venues.php:93
+#: ../admin/venues.php:94
 msgid "Add an venue"
 msgstr "新增场馆"
 
-#: ../admin/venues.php:138
+#: ../admin/venues.php:147
 msgid "Update venue"
 msgstr "更新场馆"
 
-#: ../admin/venues.php:142
+#: ../admin/venues.php:151
 msgid "Add venue"
 msgstr "新增场馆"
 
-#: ../admin/venues.php:151
+#: ../admin/venues.php:160
 msgid "All venues"
 msgstr "所有场馆"
 
-#: ../admin/venues.php:155
+#: ../admin/venues.php:164
 msgid "Note that you cannot delete a venue while it has shows in the database."
 msgstr "注意：您不能删除数据库中有演出的场馆。"
 
-#: ../admin/venues.php:173
-#: ../admin/venues.php:225
+#: ../admin/venues.php:182
+#: ../admin/venues.php:235
 msgid "Name"
 msgstr "场馆名"
 
-#: ../admin/venues.php:175
-#: ../admin/venues.php:227
+#: ../admin/venues.php:184
+#: ../admin/venues.php:237
 #: ../output/feed.php:55
 msgid "Address"
 msgstr "地址"
 
-#: ../admin/venues.php:177
-#: ../admin/venues.php:229
+#: ../admin/venues.php:186
+#: ../admin/venues.php:239
 msgid "Phone"
 msgstr "电话"
 
@@ -1059,11 +1094,11 @@ msgstr "时间"
 msgid "Admission"
 msgstr "限制"
 
-#: ../output/gigpress_shows.php:302
+#: ../output/gigpress_shows.php:307
 msgid "Select Month"
 msgstr "选择月"
 
-#: ../output/gigpress_shows.php:307
+#: ../output/gigpress_shows.php:312
 msgid "Select Year"
 msgstr "选择年"
 
@@ -1083,55 +1118,60 @@ msgstr "显示演出计划"
 msgid "Display today's shows"
 msgstr "显示今日演出"
 
-#: ../output/gigpress_sidebar.php:96
+#: ../output/gigpress_sidebar.php:93
+#, fuzzy
+msgid "Display past shows"
+msgstr "显示今日演出"
+
+#: ../output/gigpress_sidebar.php:99
 msgid "Number of shows to list"
 msgstr "显示演出数量"
 
-#: ../output/gigpress_sidebar.php:103
+#: ../output/gigpress_sidebar.php:106
 msgid "Only display shows from this artist"
 msgstr "只显示此艺人"
 
-#: ../output/gigpress_sidebar.php:118
+#: ../output/gigpress_sidebar.php:121
 msgid "Only display shows from this tour"
 msgstr "只显示此巡演"
 
-#: ../output/gigpress_sidebar.php:133
+#: ../output/gigpress_sidebar.php:136
 msgid "Only display shows from this venue"
 msgstr "只显示此场馆"
 
-#: ../output/gigpress_sidebar.php:149
+#: ../output/gigpress_sidebar.php:152
 msgid "Group by artist"
 msgstr "按艺人分组"
 
-#: ../output/gigpress_sidebar.php:150
+#: ../output/gigpress_sidebar.php:153
 msgid "Ignored when filtering by artist, tour, or venue."
 msgstr "当按艺人、巡演或场馆过滤时则无效"
 
-#: ../output/gigpress_sidebar.php:157
+#: ../output/gigpress_sidebar.php:160
 msgid "Order artists alphabetically"
 msgstr "按字母顺序排序艺人"
 
-#: ../output/gigpress_sidebar.php:160
+#: ../output/gigpress_sidebar.php:163
 msgid "Order artists by custom order"
 msgstr "自定义顺序排序艺人"
 
-#: ../output/gigpress_sidebar.php:163
+#: ../output/gigpress_sidebar.php:166
 msgid "Ignored when not grouping by artist."
 msgstr "不按艺人排列则无效"
 
-#: ../output/gigpress_sidebar.php:169
+#: ../output/gigpress_sidebar.php:172
 msgid "Group by tour"
 msgstr "按巡演分组"
 
-#: ../output/gigpress_sidebar.php:176
+#: ../output/gigpress_sidebar.php:179
 msgid "Show RSS and iCal feeds"
 msgstr "显示RSS和iCal供稿"
 
-#: ../output/gigpress_sidebar.php:181
+#: ../output/gigpress_sidebar.php:184
 msgid "Link text"
 msgstr "链接文字"
 
-#: ../output/gigpress_sidebar.php:183
+#: ../output/gigpress_sidebar.php:186
 msgid "This phrase is used to link to the page specified in your GigPress settings. (Leave blank to disable this link.)"
 msgstr "这会链接到您在GigPress设置中定义的页面。（留空则不显示此链接。）"
 
@@ -1140,3 +1180,5 @@ msgstr "这会链接到您在GigPress设置中定义的页面。（留空则不�
 msgid "Subscribe"
 msgstr "订阅"
 
+#~ msgid "opens in a new window"
+#~ msgstr "新窗口打开"

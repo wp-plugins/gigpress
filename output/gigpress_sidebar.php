@@ -141,7 +141,7 @@ class Gigpress_widget extends WP_Widget
 		  	$venues = fetch_gigpress_venues();
 			if($venues != FALSE) :
 			foreach($venues as $this_venue) : ?>
-				<option value="<?php echo $this_venue->venue_id; ?>"<?php if($venue == $this_venue->venue_id) echo(' selected="selected"'); ?>><?php echo gigpress_db_out($this_venue->venue_name).' ('.gigpress_db_out($this_venue->venue_city).')'; ?></option>
+				<option value="<?php echo $this_venue->venue_id; ?>"<?php if($venue == $this_venue->venue_id) echo(' selected="selected"'); ?>><?php echo gigpress_db_out($this_venue->venue_name).' ('.gigpress_db_out($this_venue->venue_city); if(!empty($this_venue->venue_state)) echo ', '.gigpress_db_out($this_venue->venue_state); echo ')'; ?></option>
 			<?php endforeach; endif; ?>
 			</select>
 		</p>			
@@ -224,7 +224,8 @@ function gigpress_sidebar($filter = null) {
 			if(!isset($sort)) $sort = 'desc';
 			break;
 		default:
-			$date_condition = "show_expire >= '".GIGPRESS_NOW."'";	
+			$date_condition = "show_expire >= '".GIGPRESS_NOW."'";
+			if(!isset($sort)) $sort = 'asc';
 	}
 
 	

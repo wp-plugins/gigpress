@@ -32,7 +32,7 @@
 		<span class="gigpress-sidebar-prep"><?php _e("in", "gigpress"); ?></span> 
 		<?php if($group_artists || $artist || $total_artists == 1) : // See above ?></span>
 		<?php endif; // end hiding ?>
-		<span class="gigpress-sidebar-city"><?php echo $showdata['city']; ?></span>
+		<span class="gigpress-sidebar-city"><?php echo $showdata['city']; if(!empty($showdata['state'])) echo ', '.$showdata['state']; ?></span>
 	</span> 
 	<span class="gigpress-sidebar-prep"><?php _e("at", "gigpress"); ?></span> 
 	<span class="location gigpress-sidebar-venue"><?php echo $showdata['venue']; ?></span> 
