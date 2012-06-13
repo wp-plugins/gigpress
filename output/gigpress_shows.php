@@ -123,7 +123,7 @@ function gigpress_shows($filter = null, $content = null) {
 	}
 
 	
-	$limit = ($limit && !$no_limit) ? ' LIMIT ' . $wpdb->prepare('%d', $limit) : '';
+	$limit = ($limit && !isset($no_limit)) ? ' LIMIT ' . $wpdb->prepare('%d', $limit) : '';
 	$artist_order = ($artist_order == 'custom') ?  "artist_order ASC," : '';
 	
 	// With the new 'all' scope, we should probably have a third message option, but I'm too lazy
@@ -166,10 +166,10 @@ function gigpress_shows($filter = null, $content = null) {
 				$current_tour = '';
 				$i = 0;
 				$showdata = array(
-					'artist' => (isset($artist_group->artist_url) && isset($gpo['artist_link']) && $gpo['artist_link'] == 1) ? '<a href="' . esc_url($artist_group->artist_url) . '"' . gigpress_target($artist_group->artist_url) . '>' . wptexturize($artist_group->artist_name) . '</a>' : wptexturize($artist_group->artist_name),
+					'artist' => (!empty($artist_group->artist_url) && isset($gpo['artist_link']) && $gpo['artist_link'] == 1) ? '<a href="' . esc_url($artist_group->artist_url) . '"' . gigpress_target($artist_group->artist_url) . '>' . wptexturize($artist_group->artist_name) . '</a>' : wptexturize($artist_group->artist_name),
 					'artist_plain' => wptexturize($artist_group->artist_name),
 					'artist_id' => $artist_group->artist_id,
-					'artist_url' => (isset($artist_group->artist_url)) ? esc_url($artist_group->artist_url) : '',
+					'artist_url' => (!empty($artist_group->artist_url)) ? esc_url($artist_group->artist_url) : '',
 				);
 			
 				include gigpress_template('shows-artist-heading');
