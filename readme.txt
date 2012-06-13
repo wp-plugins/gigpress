@@ -20,6 +20,12 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.2.1 =
+
+* Updated Bulgarian translation (thanks Ivo Minchev)
+* Fixed some straggling PHP notices
+* More reliable conditional checking on `$showdata` variables
+
 = 2.2 =
 
 * Fixed PHP notices when debugging is on
@@ -30,7 +36,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 * Added "limit" option to the Shows admin screen
 * Venue and Admittance are now "sticky" (saving new defaults with each new show added)
 * The "Related Post" menu is now restricted to the category chosen for Related Posts in your GigPress settings
-* Increased the size of the "price" datbase column to allow for more data
+* Increased the size of the "price" database column to allow for more data
 * "the" is now ignored when sorting artists alphabetically
 * Added Romanian and Belarusian translations (thanks to Web Hosting Geeks)
 
