@@ -558,7 +558,7 @@ function gigpress_add() {
 							<option value="0">------------------</option>
 							
 					  	<?php 
-					  	$entries = $wpdb->get_results("SELECT p.ID, p.post_title FROM " . $wpdb->prefix . "posts p LEFT JOIN " . $wpdb->prefix . "term_relationships tr ON tr.object_id = p.ID LEFT JOIN " . $wpdb->prefix . "term_taxonomy tt ON tt.term_taxonomy_id = tr.term_taxonomy_id WHERE (p.post_status = 'publish' OR p.post_status = 'future') AND p.post_type = 'post' AND tt.term_id = " . $gpo['related_category'] . " ORDER BY p.ID DESC LIMIT 500", ARRAY_A);	
+					  	$entries = $wpdb->get_results("SELECT p.ID, p.post_title FROM " . $wpdb->prefix . "posts p WHERE (p.post_status = 'publish' OR p.post_status = 'future') AND p.post_type != 'page' ORDER BY p.post_date DESC LIMIT 500", ARRAY_A);
 					  	if($entries != FALSE) {				  	
 							foreach($entries as $entry) { ?>
 								<option value="<?php echo $entry['ID']; ?>"<?php if(isset($show_related) && $entry['ID'] == $show_related) { echo(' selected="selected"'); $found_related = TRUE; } ?>><?php echo gigpress_db_out($entry['post_title']); ?></option>
@@ -566,7 +566,7 @@ function gigpress_add() {
 						} ?>
 						
 						<?php if(isset($show_related) && !isset($found_related)) {
-							$old_related = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE post_type = 'post' AND ID = ".$wpdb->prepare('%d', $show_related)." LIMIT 1", ARRAY_A);
+							$old_related = $wpdb->get_results("SELECT ID, post_title FROM " . $wpdb->prefix . "posts WHERE ID = ".$wpdb->prepare('%d', $show_related)." LIMIT 1", ARRAY_A);
 							if($old_related != FALSE) {
 								foreach($old_related as $entry) { ?>
 									<option value="<?php echo $entry['ID']; ?>" selected="selected"><?php echo gigpress_db_out($entry['post_title']); ?></option>

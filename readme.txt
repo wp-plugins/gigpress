@@ -20,6 +20,11 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.2.2 =
+
+* The Related Post menu is no longer restricted to your Related Post category
+* Fixed typo in CSV export which caused it to fail
+
 = 2.2.1 =
 
 * Updated Bulgarian translation (thanks Ivo Minchev)
