@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GigPress 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-11 14:28-0600\n"
+"POT-Creation-Date: 2012-06-20 13:17-0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Derek Hogue <derek@gigress.com>\n"
 "Language-Team:  <derek@gigpress.com>\n"
@@ -64,21 +64,21 @@ msgid "Make a donation"
 msgstr ""
 
 #: ../gigpress.php:242
-#: ../admin/handlers.php:906
-#: ../admin/handlers.php:915
-#: ../admin/handlers.php:924
+#: ../admin/handlers.php:910
+#: ../admin/handlers.php:919
+#: ../admin/handlers.php:928
 #: ../admin/new.php:241
 msgid "at"
 msgstr ""
 
 #: ../gigpress.php:245
 #: ../admin/new.php:496
-#: ../admin/shows.php:273
+#: ../admin/shows.php:270
 msgid "Price"
 msgstr ""
 
 #: ../gigpress.php:246
-#: ../admin/shows.php:277
+#: ../admin/shows.php:274
 #: ../output/feed.php:73
 msgid "Box office"
 msgstr ""
@@ -202,8 +202,8 @@ msgstr ""
 
 #: ../admin/artists.php:126
 #: ../admin/artists.php:171
-#: ../admin/shows.php:230
-#: ../admin/shows.php:242
+#: ../admin/shows.php:227
+#: ../admin/shows.php:239
 #: ../admin/tours.php:114
 #: ../admin/tours.php:152
 #: ../admin/venues.php:188
@@ -212,7 +212,7 @@ msgid "Actions"
 msgstr ""
 
 #: ../admin/artists.php:153
-#: ../admin/shows.php:266
+#: ../admin/shows.php:263
 #: ../admin/tours.php:136
 #: ../admin/venues.php:220
 msgid "Edit"
@@ -227,7 +227,7 @@ msgstr ""
 #: ../admin/artists.php:162
 #: ../admin/import-export.php:64
 #: ../admin/new.php:372
-#: ../admin/shows.php:162
+#: ../admin/shows.php:159
 msgid "No artists in the database"
 msgstr ""
 
@@ -283,154 +283,158 @@ msgstr ""
 msgid "That's not a valid end date."
 msgstr ""
 
-#: ../admin/handlers.php:247
-#: ../admin/handlers.php:305
+#: ../admin/handlers.php:248
+#: ../admin/handlers.php:309
 msgid "Your show  on"
 msgstr ""
 
-#: ../admin/handlers.php:247
+#: ../admin/handlers.php:248
 msgid "was successfully added."
 msgstr ""
 
-#: ../admin/handlers.php:247
-#: ../admin/handlers.php:305
+#: ../admin/handlers.php:249
+msgid "Add a similar show"
+msgstr ""
+
+#: ../admin/handlers.php:250
+#: ../admin/handlers.php:309
 msgid "Edit the related post"
 msgstr ""
 
-#: ../admin/handlers.php:260
-#: ../admin/handlers.php:316
-#: ../admin/handlers.php:404
-#: ../admin/handlers.php:446
-#: ../admin/handlers.php:508
-#: ../admin/handlers.php:548
-#: ../admin/handlers.php:636
-#: ../admin/handlers.php:681
+#: ../admin/handlers.php:264
+#: ../admin/handlers.php:320
+#: ../admin/handlers.php:408
+#: ../admin/handlers.php:450
+#: ../admin/handlers.php:512
+#: ../admin/handlers.php:552
+#: ../admin/handlers.php:640
+#: ../admin/handlers.php:685
 msgid "Something ain't right - try again?"
 msgstr ""
 
-#: ../admin/handlers.php:305
-#: ../admin/handlers.php:444
+#: ../admin/handlers.php:309
+#: ../admin/handlers.php:448
 msgid "was successfully updated."
 msgstr ""
 
-#: ../admin/handlers.php:355
+#: ../admin/handlers.php:359
 msgid "Show(s) successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:356
-#: ../admin/handlers.php:589
+#: ../admin/handlers.php:360
+#: ../admin/handlers.php:593
 msgid "Undo"
 msgstr ""
 
-#: ../admin/handlers.php:362
+#: ../admin/handlers.php:366
 msgid "We ran into some trouble deleting the show(s). Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:402
-#: ../admin/handlers.php:506
-#: ../admin/handlers.php:634
+#: ../admin/handlers.php:406
+#: ../admin/handlers.php:510
+#: ../admin/handlers.php:638
 msgid "was successfully added to the database."
 msgstr ""
 
-#: ../admin/handlers.php:468
+#: ../admin/handlers.php:472
 msgid "Venue successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:470
+#: ../admin/handlers.php:474
 msgid "We ran into some trouble deleting the venue. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:546
+#: ../admin/handlers.php:550
 msgid "Tour name successfully changed to"
 msgstr ""
 
-#: ../admin/handlers.php:589
+#: ../admin/handlers.php:593
 msgid "Tour successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:593
+#: ../admin/handlers.php:597
 msgid "We ran into some trouble deleting the tour. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:679
+#: ../admin/handlers.php:683
 msgid "successfully updated."
 msgstr ""
 
-#: ../admin/handlers.php:704
+#: ../admin/handlers.php:708
 msgid "Artist successfully deleted."
 msgstr ""
 
-#: ../admin/handlers.php:707
+#: ../admin/handlers.php:711
 msgid "We ran into some trouble deleting the artist. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:744
+#: ../admin/handlers.php:748
 msgid "Show(s) successfully restored."
 msgstr ""
 
-#: ../admin/handlers.php:748
+#: ../admin/handlers.php:752
 msgid "We ran into some trouble restoring your show(s). Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:766
+#: ../admin/handlers.php:770
 msgid "Tour successfully restored from the database."
 msgstr ""
 
-#: ../admin/handlers.php:768
+#: ../admin/handlers.php:772
 msgid "We ran into some trouble restoring the tour. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:903
+#: ../admin/handlers.php:907
 msgid "shows were skipped due to errors"
 msgstr ""
 
-#: ../admin/handlers.php:906
-#: ../admin/handlers.php:915
-#: ../admin/handlers.php:924
+#: ../admin/handlers.php:910
+#: ../admin/handlers.php:919
+#: ../admin/handlers.php:928
 #: ../output/feed.php:35
 msgid "in"
 msgstr ""
 
-#: ../admin/handlers.php:906
-#: ../admin/handlers.php:915
-#: ../admin/handlers.php:924
+#: ../admin/handlers.php:910
+#: ../admin/handlers.php:919
+#: ../admin/handlers.php:928
 #: ../output/feed.php:35
 msgid "on"
 msgstr ""
 
-#: ../admin/handlers.php:912
+#: ../admin/handlers.php:916
 msgid "shows were skipped as they were deemed duplicates"
 msgstr ""
 
-#: ../admin/handlers.php:921
+#: ../admin/handlers.php:925
 msgid "shows were successfully imported"
 msgstr ""
 
-#: ../admin/handlers.php:931
+#: ../admin/handlers.php:935
 msgid "Sorry, but there was an error parsing your file. Maybe double-check your formatting and file type?"
 msgstr ""
 
-#: ../admin/handlers.php:940
+#: ../admin/handlers.php:944
 msgid "Sorry, but there was an error uploading"
 msgstr ""
 
-#: ../admin/handlers.php:959
+#: ../admin/handlers.php:963
 msgid "All shows and tours in the trash have been permanently deleted."
 msgstr ""
 
-#: ../admin/handlers.php:961
+#: ../admin/handlers.php:965
 msgid "We ran into some trouble emptying the trash. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:983
+#: ../admin/handlers.php:987
 msgid "All tours have been migrated into artists."
 msgstr ""
 
-#: ../admin/handlers.php:985
+#: ../admin/handlers.php:989
 msgid "There was an error migrating tours to artists. Sorry."
 msgstr ""
 
-#: ../admin/handlers.php:989
+#: ../admin/handlers.php:993
 msgid "There were no tours to migrate."
 msgstr ""
 
@@ -464,7 +468,7 @@ msgstr ""
 
 #: ../admin/import-export.php:78
 #: ../admin/new.php:535
-#: ../admin/shows.php:176
+#: ../admin/shows.php:173
 #: ../admin/tours.php:144
 msgid "No tours in the database"
 msgstr ""
@@ -502,7 +506,7 @@ msgid "documentation"
 msgstr ""
 
 #: ../admin/new.php:33
-#: ../admin/shows.php:306
+#: ../admin/shows.php:303
 msgid "and"
 msgstr ""
 
@@ -528,8 +532,8 @@ msgstr ""
 
 #: ../admin/new.php:213
 #: ../admin/settings.php:134
-#: ../admin/shows.php:224
-#: ../admin/shows.php:236
+#: ../admin/shows.php:221
+#: ../admin/shows.php:233
 #: ../output/feed.php:42
 msgid "Date"
 msgstr ""
@@ -548,8 +552,8 @@ msgid "End date"
 msgstr ""
 
 #: ../admin/new.php:358
-#: ../admin/shows.php:225
-#: ../admin/shows.php:237
+#: ../admin/shows.php:222
+#: ../admin/shows.php:234
 msgid "Artist"
 msgstr ""
 
@@ -558,8 +562,8 @@ msgid "Add a new artist"
 msgstr ""
 
 #: ../admin/new.php:396
-#: ../admin/shows.php:226
-#: ../admin/shows.php:238
+#: ../admin/shows.php:223
+#: ../admin/shows.php:235
 #: ../output/feed.php:52
 msgid "Venue"
 msgstr ""
@@ -573,7 +577,7 @@ msgid "Select a venue"
 msgstr ""
 
 #: ../admin/new.php:414
-#: ../admin/shows.php:190
+#: ../admin/shows.php:187
 #: ../admin/venues.php:229
 msgid "No venues in the database"
 msgstr ""
@@ -836,8 +840,8 @@ msgid "Place a link to each show's related post in the following fields"
 msgstr ""
 
 #: ../admin/settings.php:135
-#: ../admin/shows.php:227
-#: ../admin/shows.php:239
+#: ../admin/shows.php:224
+#: ../admin/shows.php:236
 #: ../admin/venues.php:183
 #: ../admin/venues.php:236
 #: ../output/feed.php:50
@@ -940,68 +944,68 @@ msgstr ""
 msgid "Past"
 msgstr ""
 
-#: ../admin/shows.php:154
+#: ../admin/shows.php:151
 msgid "View all artists"
 msgstr ""
 
-#: ../admin/shows.php:168
+#: ../admin/shows.php:165
 msgid "View all tours"
 msgstr ""
 
-#: ../admin/shows.php:182
+#: ../admin/shows.php:179
 msgid "View all venues"
 msgstr ""
 
-#: ../admin/shows.php:196
+#: ../admin/shows.php:193
 msgid "Descending"
 msgstr ""
 
-#: ../admin/shows.php:197
+#: ../admin/shows.php:194
 msgid "Ascending"
 msgstr ""
 
-#: ../admin/shows.php:228
-#: ../admin/shows.php:240
+#: ../admin/shows.php:225
+#: ../admin/shows.php:237
 #: ../admin/venues.php:185
 #: ../admin/venues.php:238
 #: ../output/feed.php:62
 msgid "Country"
 msgstr ""
 
-#: ../admin/shows.php:229
-#: ../admin/shows.php:241
+#: ../admin/shows.php:226
+#: ../admin/shows.php:238
 msgid "Tour"
 msgstr ""
 
-#: ../admin/shows.php:266
+#: ../admin/shows.php:263
 msgid "Copy"
 msgstr ""
 
-#: ../admin/shows.php:286
+#: ../admin/shows.php:283
 msgid "Sorry, no shows to display based on your criteria."
 msgstr ""
 
-#: ../admin/shows.php:292
+#: ../admin/shows.php:289
 msgid "Trash selected shows"
 msgstr ""
 
-#: ../admin/shows.php:306
+#: ../admin/shows.php:303
 msgid "You have"
 msgstr ""
 
-#: ../admin/shows.php:306
+#: ../admin/shows.php:303
 msgid "shows"
 msgstr ""
 
-#: ../admin/shows.php:306
+#: ../admin/shows.php:303
 msgid "tours"
 msgstr ""
 
-#: ../admin/shows.php:306
+#: ../admin/shows.php:303
 msgid "in your trash"
 msgstr ""
 
-#: ../admin/shows.php:308
+#: ../admin/shows.php:305
 msgid "Take out the trash now"
 msgstr ""
 

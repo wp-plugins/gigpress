@@ -28,43 +28,43 @@ function gigpress_admin_shows() {
 	$url_args = '';
 	$further_where = '';
 	$pagination_args = array();
+
+	global $current_user;
+	get_currentuserinfo();
 	
-	$scope = (isset($_GET['scope'])) ? $_GET['scope'] : 'none';
+	if(isset($_GET['scope']))
+	{
+		$scope = $_GET['scope'];
+		update_user_meta($current_user->ID, 'gigpress_scope', $scope);
+	}
+	else
+	{
+		if( ! $scope = get_user_meta($current_user->ID, 'gigpress_scope', true) ) {
+			$scope = 'upcoming';
+			update_user_meta($current_user->ID, 'gigpress_scope', $scope);
+		}
+	}
 	
 	switch($scope) {
 		case 'upcoming':
 			$condition = ">= '" . GIGPRESS_NOW . "'";
-			$url_args .= '&amp;scope=upcoming';
-			$pagination_args['scope'] = 'upcoming';
 			break;
 		case 'past':
 			$condition = "< '" . GIGPRESS_NOW . "'";
-			$url_args .= '&amp;scope=past';
-			$pagination_args['scope'] = 'past';
 			break;
 		default:
 			$condition = 'IS NOT NULL';
 	}
 
-	global $current_user;
-	get_currentuserinfo();
-
-	$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'none';
-
-	switch($sort) {
-		case 'asc':
-			$sort = 'ASC';
-			update_user_meta($current_user->ID, 'gigpress_sort', $sort);
-			break;
-		case 'desc':
-			$sort = 'DESC';
-			update_user_meta($current_user->ID, 'gigpress_sort', $sort);
-			break;
+	if(isset($_GET['sort']))
+	{
+		$sort = strtoupper($_GET['sort']);
+		update_user_meta($current_user->ID, 'gigpress_sort', $sort);
 	}
-	
-	if(!isset($_GET['sort'])) {
-		if( ! $sort = get_user_meta($current_user->ID, 'gigpress_sort', true)) {
-			$sort = 'DESC';
+	else
+	{
+		if( ! $sort = get_user_meta($current_user->ID, 'gigpress_sort', true) ) {
+			$sort = 'ASC';
 			update_user_meta($current_user->ID, 'gigpress_sort', $sort);
 		}
 	}
@@ -130,14 +130,14 @@ function gigpress_admin_shows() {
 			$all = $wpdb->get_var("SELECT COUNT(show_id) FROM " . GIGPRESS_SHOWS ." WHERE show_status != 'deleted'");
 			$upcoming = $wpdb->get_var("SELECT count(show_id) FROM " . GIGPRESS_SHOWS . " WHERE show_expire >= '" . GIGPRESS_NOW . "' AND show_status != 'deleted'");
 			$past = $wpdb->get_var("SELECT count(show_id) FROM " . GIGPRESS_SHOWS . " WHERE show_expire < '" . GIGPRESS_NOW . "' AND show_status != 'deleted'");
-			echo('<li><a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-shows"');
-			if(!isset($_GET['scope'])) echo(' class="current"');
+			echo('<li><a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-shows&amp;scope=all"');
+			if($scope == 'all') echo(' class="current"');
 			echo('>' . __("All", "gigpress") . '</a> <span class="count">(' . $all	. ')</span> | </li>');
 			echo('<li><a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-shows&amp;scope=upcoming"');
-			if(isset($_GET['scope']) && $_GET['scope'] == 'upcoming') echo(' class="current"');
+			if($scope == 'upcoming') echo(' class="current"');
 			echo('>' . __("Upcoming", "gigpress") . '</a> <span class="count">(' . $upcoming	. ')</span> | </li>');
 			echo('<li><a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-shows&amp;scope=past"');
-			if(isset($_GET['scope']) && $_GET['scope'] == 'past') echo(' class="current"');
+			if($scope == 'past') echo(' class="current"');
 			echo('>' . __("Past", "gigpress") . '</a> <span class="count">(' . $past	. ')</span></li>');
 		?>
 		</ul>
@@ -147,9 +147,6 @@ function gigpress_admin_shows() {
 				<form action="" method="get">
 					<div>
 						<input type="hidden" name="page" value="gigpress-shows" />
-						<?php if(isset($_GET['scope'])) : ?>
-						<input type="hidden" name="scope" value="<?php echo $_GET['scope']; ?>" />
-						<?php endif; ?>
 						<select name="artist_id">
 							<option value="-1"><?php _e("View all artists", "gigpress"); ?></option>
 						<?php $artistdata = fetch_gigpress_artists();
@@ -199,7 +196,7 @@ function gigpress_admin_shows() {
 
 						<select name="limit">
 						<?php
-							$limits = array(10,25,50,100);
+							$limits = array(10,25,50,100,150,200,250);
 							foreach($limits as $limit_option) : ?>
 							<option value="<?php echo $limit_option; ?>"<?php if($limit == $limit_option) echo(' selected="selected"'); ?>><?php echo $limit_option; ?></option>
 						<?php endforeach; ?>

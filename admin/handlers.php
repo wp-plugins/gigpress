@@ -244,7 +244,11 @@ function gigpress_add_show() {
 		{
 			$gpo = get_option('gigpress_settings'); ?>
 			
-			<div id="message" class="updated fade"><p><?php echo __("Your show  on", "gigpress") . ' ' . mysql2date($gpo['date_format_long'], $show['show_date']) . ' ' . __("was successfully added.", "gigpress"); if($show['show_related']) echo(' <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $show['show_related'] . '">' . __("Edit the related post", "gigpress"). '.</a>'); ?></p>
+			<div id="message" class="updated fade">
+				<p><?php echo __("Your show  on", "gigpress") . ' ' . mysql2date($gpo['date_format_long'], $show['show_date']) . ' ' . __("was successfully added.", "gigpress");
+				echo(' <a href="' . get_bloginfo('wpurl') . '/wp-admin/?page=gigpress/gigpress.php&amp;gpaction=copy&amp;show_id=' . $wpdb->insert_id . '">' . __("Add a similar show", "gigpress"). '</a>');
+				if($show['show_related']) echo(' | <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $show['show_related'] . '">' . __("Edit the related post", "gigpress"). '</a>');
+				?></p>
 		<?php
 			global $errors; if($errors) {
 				foreach($errors as $error) {

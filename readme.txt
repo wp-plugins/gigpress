@@ -11,7 +11,7 @@ GigPress is a live performance listing and management plugin that's been serving
 
 GigPress is a powerful live performance listing and management plugin designed for musicians and other performers. Manage all of your upcoming and past performances right from within the WordPress admin, and display them on your site using simple shortcodes, PHP template tags, or the GigPress widget on your WordPress-powered website.
 
-* GigPress is well-designed and easy-to-use. Add artists, venues, tours, and related posts on-the-fly, all saved in your database for re-use, all seamlessly within the WordPress admin.
+* GigPress is intuitive and easy-to-use. Add artists, venues, tours, and related posts on-the-fly, all saved in your database for re-use, all seamlessly within the WordPress admin.
 * Manage multiple artists within GigPress, and display them either as a combined listing, or grouped by artist. Add an artist parameter to the shortcode and list only shows from a particular artist.
 * GigPress features RSS and iCalendar feeds for your upcoming shows and for individual artists and tours, plus Google Calendar and iCal download links for each individual show. Also: hCalendar markup!
 * Advanced users can fully-customize the HTML and CSS used by GigPress to display your shows without altering any plugin files, making all changes upgrade-safe.
@@ -19,6 +19,13 @@ GigPress is a powerful live performance listing and management plugin designed f
 * No lock-in here. Import your shows from a CSV file, without fear of duplicate data. Export your shows database to CSV - filtered by artist, tour, and date.
 
 == Changelog ==
+
+= 2.2.3 =
+
+* Added link to add a similar show (copying all previous info) to the post-add success message - generously sponsored by Lee Eiseman
+* Added more limit options to the Manage Shows screen
+* Show scope is now sticky per-user on the Manage Shows screen
+* Changed `.divider` CSS class to `.gigpress-divider` to prevent CSS conflicts with some themes
 
 = 2.2.2 =
 

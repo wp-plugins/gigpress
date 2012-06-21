@@ -38,7 +38,7 @@ function gigpress_artists() {
 
 		$artist_id = (isset($_REQUEST['artist_id'])) ? $wpdb->prepare('%d', $_REQUEST['artist_id']) : '';
 	
-		$artist = $wpdb->get_row("SELECT artist_name, artist_url from ". GIGPRESS_ARTISTS ." WHERE artist_id = ". $artist_id);
+		$artist = $wpdb->get_row("SELECT artist_name, artist_url FROM ". GIGPRESS_ARTISTS ." WHERE artist_id = ". $artist_id);
 		if($artist) {
 			
 			$submit = '<span class="submit"><input type="submit" name="Submit" class="button-primary" value="' .  __("Update artist", "gigpress") . '" /></span> ' . __("or", "gigpress") . ' <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=gigpress-artists' . $url_args . '">' . __("cancel", "gigpress") . '</a>'; ?>

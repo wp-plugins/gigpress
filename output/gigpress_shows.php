@@ -190,7 +190,7 @@ function gigpress_shows($filter = null, $content = null) {
 					++ $i; $class .= ($i % 2) ? '' : ' gigpress-alt';
 					if(!$showdata['tour'] && $current_tour) {
 						$current_tour = '';
-						$class .= ' divider';
+						$class .= ' gigpress-divider';
 					}
 					$class .= ($showdata['tour'] && !$tour) ? ' gigpress-tour' : '';
 					
@@ -238,7 +238,7 @@ function gigpress_shows($filter = null, $content = null) {
 				++ $i; $class .= ($i % 2) ? '' : ' gigpress-alt';
 				if(!$showdata['tour'] && $current_tour) {
 					$current_tour = '';
-					$class .= ' divider';
+					$class .= ' gigpress-divider';
 				}
 				$class .= ($showdata['tour'] && !$tour) ? ' gigpress-tour' : '';
 				

@@ -185,7 +185,7 @@ function gigpress_add() {
 		screen_icon('gigpress');	
 		
 		// We're editing a show
-		if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || isset($show_edit) || (isset($result['editing']))) { ?>
+		if(isset($_GET['gpaction']) && $_GET['gpaction'] == "edit" || (isset($result['editing']))) { ?>
 		
 			<h2><?php _e("Edit this show", "gigpress"); ?></h2>
 		

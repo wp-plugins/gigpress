@@ -108,7 +108,7 @@ tr.gigpress-tour td {
 }
 
 /* Style for the first row after a tour ends in the list */
-tr.divider.gigpress-row td {
+tr.gigpress-divider.gigpress-row td {
 	border-top: 2px solid #CCC;
 }
 
@@ -121,7 +121,7 @@ tr.gigpress-info td {
 
 /* Fix for themes that hide .description */
 tr.gigpress-info td.description {
-	visibility: visible;
+	visibility: visible !important;
 }
 
 /* Greys-out cancelled shows */
