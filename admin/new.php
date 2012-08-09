@@ -554,7 +554,7 @@ function gigpress_add() {
 						<select name="show_related" id="show_related" class="can-add-new">
 					  		<option value="0"><?php _e("None", "gigpress"); ?></option>
 							<option value="0">------------------</option>
-					  		<option value="new"<?php if( (isset($_GET['gpaction']) && !in_array($_GET['gpaction'], array('edit', 'killwelcome'))) || (isset($gpo['autocreate_post']) && $gpo['autocreate_post'] == "1") ) echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
+					  		<option value="new"<?php if( ( (isset($show_related) && $show_related !== "0") || (!isset($show_related) ) && isset($gpo['autocreate_post']) && $gpo['autocreate_post'] == "1") || (isset($show_related) && $show_related == 'new') ) echo(' selected="selected"'); ?>><?php _e("Add a new post", "gigpress") ?></option>
 							<option value="0">------------------</option>
 							
 					  	<?php 
@@ -578,7 +578,7 @@ function gigpress_add() {
 				  </tr>
 				 </tbody>
 				 				 
-				<tbody id="show_related_new" class="gigpress-addition<?php if( (isset($show_related) && $show_related != 'new') || (isset($gpo['autocreate_post']) && empty($gpo['autocreate_post'])) || !isset($gpo['autocreate_post']) ) echo(' gigpress-inactive'); ?>">
+				<tbody id="show_related_new" class="gigpress-addition<?php if( (isset($show_related) && $show_related != 'new') || (empty($show_related) && empty($gpo['autocreate_post'])) ) echo(' gigpress-inactive'); ?>">
 				<tr>
 					<th scope="row"><label for="show_related_title"><?php _e("Related post title", "gigpress"); ?>:</label></th>
 					<td><input type="text" size="48" name="show_related_title" id="show_related_title" value="<?php if(isset($show_related_title)) echo $show_related_title; ?>" /><br />

@@ -196,7 +196,7 @@ function gigpress_admin_shows() {
 
 						<select name="limit">
 						<?php
-							$limits = array(10,25,50,100,150,200,250);
+							$limits = array(10,25,50,100,150,200,250,300);
 							foreach($limits as $limit_option) : ?>
 							<option value="<?php echo $limit_option; ?>"<?php if($limit == $limit_option) echo(' selected="selected"'); ?>><?php echo $limit_option; ?></option>
 						<?php endforeach; ?>

@@ -20,6 +20,12 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.2.4 =
+
+* Fixed glitch in shows list footer template when filtering by artist
+* Improved display logic in related post menu when adding/editing shows
+* Added limit option for 300 shows in the admin
+
 = 2.2.3 =
 
 * Added link to add a similar show (copying all previous info) to the post-add success message - generously sponsored by Lee Eiseman
