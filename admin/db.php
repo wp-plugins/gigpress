@@ -106,6 +106,7 @@ $default_settings = array(
 	'relatedlink_date' => 0,
 	'relatedlink_notes' => 1,			
 	'rss_head' => 1,
+	'rss_limit' => 100,
 	'rss_list' => 1,
 	'rss_title' => 'Upcoming shows',
 	'shows_page' => '',
@@ -117,6 +118,8 @@ $default_settings = array(
 	'welcome' => 'yes'
 );
 
+global $gpo;
+$gpo = array_merge($default_settings, get_option('gigpress_settings'));
 
 function gigpress_install() {
 
@@ -131,19 +134,6 @@ function gigpress_install() {
 
 
 // Upgrade checks and functions
-
-// If we haven't upgraded to serialized options yet
-if ( $gpo == FALSE ) {
-	foreach ( $default_settings as $key => $value ) {
-		if ( $existing = get_option( 'gigpress_' . $key ) ) {
-			$default_settings[$key] = $existing;
-			delete_option( 'gigpress_' . $key );
-		}
-	}
-	
-	add_option('gigpress_settings', $default_settings);
-	$gpo = get_option('gigpress_settings');
-}	
 
 if ( $gpo['db_version'] < GIGPRESS_DB_VERSION ) {
 	

@@ -163,6 +163,12 @@ function gigpress_settings() {
 			</td>
 		</tr>
 		<tr>
+			<th scope="row"><?php _e("RSS/iCal feed limit", "gigpress") ?>:</th>
+			<td>
+				<input type="text" name="gigpress_settings[rss_limit]" size="48" value="<?php echo $gpo['rss_limit']; ?>" />
+			</td>
+		</tr>
+		<tr>
 			<th scope="row"><?php _e("Country display", "gigpress") ?></th>
 			<td>	
 				<p><label><input type="checkbox" name="gigpress_settings[display_country]" value="1" <?php if(isset($gpo['display_country']) && $gpo['display_country'] == 1) echo('checked="checked"'); ?> /> <?php _e("Display country column.", "gigpress") ?></label> &nbsp; <label><input type="checkbox" name="gigpress_settings[country_view]" value="long" <?php if(isset($gpo['country_view']) && $gpo['country_view'] == 'long') echo('checked="checked"'); ?> /> <?php _e("Use full country names.", "gigpress") ?></label></p>

@@ -25,7 +25,7 @@ if($show_feeds) : ?>
 	<?php endif; ?>
 
 	<?php if($artist) : ?>
-		<a href="<?php echo GIGPRESS_RSS; ?>&amp;artist=<?php echo $showdata['artist_id']; ?>" title="<?php echo $showdata['artist']; ?> RSS" class="gigpress-rss">RSS</a> | <a href="<?php echo GIGPRESS_WEBCAL; ?>&amp;artist=<?php echo $showdata['artist_id']; ?>" title="<?php echo $showdata['artist']; ?> iCalendar" class="gigpress-ical">iCal</a>
+		<a href="<?php echo GIGPRESS_RSS; ?>&amp;artist=<?php echo $showdata['artist_id']; ?>" title="<?php echo $showdata['artist_plain']; ?> RSS" class="gigpress-rss">RSS</a> | <a href="<?php echo GIGPRESS_WEBCAL; ?>&amp;artist=<?php echo $showdata['artist_id']; ?>" title="<?php echo $showdata['artist_plain']; ?> iCalendar" class="gigpress-ical">iCal</a>
 	<?php endif; ?>	
 		
 	<?php if($tour) : ?>

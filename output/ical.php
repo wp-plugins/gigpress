@@ -18,7 +18,7 @@ function gigpress_ical() {
 	}
 
 	$shows = $wpdb->get_results(
-		"SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where . " AND s.show_expire >= '" . GIGPRESS_NOW . "' ORDER BY s.show_date ASC, s.show_expire ASC, s.show_time ASC"
+		"SELECT * FROM " . GIGPRESS_ARTISTS . " AS a, " . GIGPRESS_VENUES . " as v, " . GIGPRESS_SHOWS ." AS s LEFT JOIN  " . GIGPRESS_TOURS . " AS t ON s.show_tour_id = t.tour_id WHERE show_status != 'deleted' AND s.show_artist_id = a.artist_id AND s.show_venue_id = v.venue_id" . $further_where . " AND s.show_expire >= '" . GIGPRESS_NOW . "' ORDER BY s.show_date ASC, s.show_expire ASC, s.show_time ASC LIMIT ".$gpo['rss_limit']
 		);
 	if($shows) {
 		$count = 1;
@@ -64,7 +64,7 @@ function gigpress_ical() {
 				"END:VTIMEZONE\r\n");
 			}
 				echo("BEGIN:VEVENT\r\n" . 
-				"SUMMARY:" . $showdata['calendar_summary'] . "\r\n" .
+				"SUMMARY:" . $showdata['calendar_summary_ical'] . "\r\n" .
 				"DESCRIPTION:" . $showdata['calendar_details_ical'] . "\r\n" . 
 				"LOCATION:" . $showdata['calendar_location_ical'] . "\r\n" . 
 				"UID:" . $showdata['calendar_start'] . '-' . $showdata['id'] . '-' . get_bloginfo('admin_email') . "\r\n" .
