@@ -20,9 +20,20 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
-= 2.2.4 =
+= 2.2.6 =
+
+* Fixes for artist and venue iCal links in default footer template (h/t Jeremiah Hester)
+* Added Finnish, Japanese, and Slovak translations (thanks Niilo Sirola, @takipone, and Branco Radenovich)
+* Various bug fixes
+
+= 2.2.5 =
 
 * Fixed glitch in shows list footer template when filtering by artist
+* Added escaping of commas in iCalendar summaries; new `$showdata` parameter 'calendar_summary_ical'
+* Added option to limit the number of shows in the RSS and iCal feeds
+
+= 2.2.4 =
+
 * Improved display logic in related post menu when adding/editing shows
 * Added limit option for 300 shows in the admin
 
@@ -405,5 +416,7 @@ GigPress is a powerful live performance listing and management plugin designed f
 Please check the [FAQ on the GigPress website](http://gigpress.com/faq/)
 
 == For more info... ==
+
+[Contribute on GitHub!](http://github.com/amphibian/gigpress)
 
 [Please visit the GigPress website](http://gigpress.com/) for screenshots, full documentation, and the latest news about plugin updates, or to report bugs, suggest features, and the like.
