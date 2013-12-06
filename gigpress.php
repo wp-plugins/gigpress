@@ -125,7 +125,7 @@ function gigpress_head() {
 		// If there's a custom stylesheet, load it.
 		// First check the child theme.
 		if(file_exists(get_stylesheet_directory()."/gigpress.css")) {
-			wp_enqueue_style('gigpress-css-custom', get_stylesheet_directoty_uri().'/gigpress.css', 'gigpress-css');
+			wp_enqueue_style('gigpress-css-custom', get_stylesheet_directory_uri().'/gigpress.css', 'gigpress-css');
 		// If not, check the parent theme.
 		} elseif(file_exists(get_template_directory()."/gigpress.css")) {
 			wp_enqueue_style('gigpress-css-custom', get_template_directory_uri().'/gigpress.css', 'gigpress-css');
