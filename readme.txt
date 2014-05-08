@@ -20,6 +20,10 @@ GigPress is a powerful live performance listing and management plugin designed f
 
 == Changelog ==
 
+= 2.3.3 =
+
+* Fix improper escaping of quotes in up_json_encode function (for PHP < 5.4) - h/t Alex Unger
+
 = 2.3.2 =
 
 * Now enabling JSON-LD output by default when upgrading
