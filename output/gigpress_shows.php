@@ -419,7 +419,7 @@ function gigpress_json_ld($showdata)
 	$show_markup = array("@context" => "http://schema.org", "@type" => "Event");
 	
 	// Add show level attributes
-	if(!empty($showdata['tour'])) { $show_markup['name'] = $showdata['tour']; }
+	$show_markup['name'] = (!empty($showdata['tour'])) ? $showdata['tour'] : $showdata['artist_plain'];
 	$show_markup['startDate'] = $showdata['iso_date'];
 	if(!empty($showdata['related_url']))
 	{
@@ -467,19 +467,18 @@ function gigpress_json_ld($showdata)
 
 	// Merge venue into show
 	$show_markup['location'] = $location_markup;
-	
-	// Create offer (if price exists)
-	if(!empty($showdata['price']))
-	{
-		$offer_markup = array("@type" => "Offer");
-		
-		// Add offer attributes
-		if(!empty($showdata['price'])) { $offer_markup['price'] = $showdata['price']; }
-		if(!empty($showdata['ticket_url'])) { $offer_markup['url'] = $showdata['ticket_url']; }
-		if(!empty($showdata['ticket_phone'])) { $offer_markup['seller'] = array("@type" => "Organization", "telephone" => $showdata['ticket_phone']); }
-		if(!empty($showdata['status']) && $showdata['status'] == "soldout") { $offer_markup['availability'] = "SoldOut"; }
-		
-		// Merge offer into show
+
+	// Create offer
+	$offer_markup = array("@type" => "Offer");
+
+	// Add offer attributes
+	if(!empty($showdata['price'])) { $offer_markup['price'] = $showdata['price']; }
+	if(!empty($showdata['ticket_url'])) { $offer_markup['url'] = $showdata['ticket_url']; }
+	if(!empty($showdata['ticket_phone'])) { $offer_markup['seller'] = array("@type" => "Organization", "telephone" => $showdata['ticket_phone']); }
+	if(!empty($showdata['status']) && $showdata['status'] == "soldout") { $offer_markup['availability'] = "SoldOut"; }
+
+	// Merge offer into show (if any fields were added)
+	if(count($offer_markup) > 1) {
 		$show_markup['offers'] = $offer_markup;
 	}
 	
